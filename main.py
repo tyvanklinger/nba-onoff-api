@@ -65,6 +65,83 @@ def get_player_id(name: str, roster: list) -> Optional[int]:
             return player['id']
     return None
 
+def calculate_player_stats(events, roster, on_ids, off_ids, min_minutes=5):
+    """Calculate stats for players given filter conditions"""
+    player_stats = defaultdict(lambda: defaultdict(float))
+    player_time = defaultdict(float)
+    player_team_stats = defaultdict(lambda: defaultdict(float))
+    
+    for ev in events:
+        lineup = set(ev['lineup'])
+        
+        if not on_ids.issubset(lineup):
+            continue
+        
+        if off_ids.intersection(lineup):
+            continue
+        
+        pid = ev['player_id']
+        player_time[pid] += ev.get('time', 0)
+        
+        for stat, val in ev.get('stats', {}).items():
+            player_stats[pid][stat] += val
+        
+        if ev.get('is_team_stat'):
+            for stat in ['FGA', 'FTA', 'TOV']:
+                if stat in ev.get('stats', {}):
+                    for player_on_court in lineup:
+                        player_team_stats[player_on_court][stat] += ev['stats'][stat]
+    
+    # Build results
+    results = {}
+    for teammate in roster:
+        pid = teammate['id']
+        mins = player_time.get(pid, 0) / 60
+        
+        if mins < min_minutes:
+            continue
+        
+        stats = player_stats.get(pid, {})
+        mult = 36 / mins if mins > 0 else 0
+        
+        fga = stats.get('FGA', 0)
+        fta = stats.get('FTA', 0)
+        tov = stats.get('TOV', 0)
+        fg3a = stats.get('FG3A', 0)
+        fg3m = stats.get('FG3M', 0)
+        fgm = stats.get('FGM', 0)
+        pts = stats.get('PTS', 0)
+        reb = stats.get('REB', 0)
+        ast = stats.get('AST', 0)
+        
+        usg = calculate_usg(fga, fta, tov,
+                           player_team_stats[pid]['FGA'],
+                           player_team_stats[pid]['FTA'],
+                           player_team_stats[pid]['TOV'])
+        
+        results[pid] = {
+            'id': pid,
+            'name': teammate['name'],
+            'pos': teammate.get('pos', ''),
+            'min': round(mins, 1),
+            'usg': round(usg, 1),
+            'pts': round(pts * mult, 1),
+            'reb': round(reb * mult, 1),
+            'ast': round(ast * mult, 1),
+            'fg3m': round(fg3m * mult, 1),
+            'fg3a': round(fg3a * mult, 1),
+            'fg3_pct': round(100 * fg3m / fg3a, 1) if fg3a > 0 else 0,
+            'fgm': round(fgm * mult, 1),
+            'fga': round(fga * mult, 1),
+            'fg_pct': round(100 * fgm / fga, 1) if fga > 0 else 0,
+            'tov': round(tov * mult, 1),
+            'pra': round((pts + reb + ast) * mult, 1),
+            'pr': round((pts + reb) * mult, 1),
+            'pa': round((pts + ast) * mult, 1),
+        }
+    
+    return results
+
 def query_stats(team_name: str, players_on: List[str] = None, players_off: List[str] = None, season: str = "2025-26"):
     """Query on/off stats with filters."""
     players_on = players_on or []
@@ -101,81 +178,44 @@ def query_stats(team_name: str, players_on: List[str] = None, players_off: List[
                     off_names.append(p['name'])
                     break
     
-    # Filter events
-    player_stats = defaultdict(lambda: defaultdict(float))
-    player_time = defaultdict(float)
-    player_team_stats = defaultdict(lambda: defaultdict(float))
+    # Calculate main stats (with current filters)
+    main_stats = calculate_player_stats(events, roster, on_ids, off_ids)
     
-    for ev in events:
-        lineup = set(ev['lineup'])
-        
-        if not on_ids.issubset(lineup):
-            continue
-        
-        if off_ids.intersection(lineup):
-            continue
-        
-        pid = ev['player_id']
-        player_time[pid] += ev.get('time', 0)
-        
-        for stat, val in ev.get('stats', {}).items():
-            player_stats[pid][stat] += val
-        
-        if ev.get('is_team_stat'):
-            for stat in ['FGA', 'FTA', 'TOV']:
-                if stat in ev.get('stats', {}):
-                    for player_on_court in lineup:
-                        player_team_stats[player_on_court][stat] += ev['stats'][stat]
-    
-    # Build results
-    results = []
-    for teammate in roster:
-        pid = teammate['id']
-        mins = player_time.get(pid, 0) / 60
-        
-        if mins < 5:
-            continue
-        
-        stats = player_stats.get(pid, {})
-        mult = 36 / mins if mins > 0 else 0
-        
-        fga = stats.get('FGA', 0)
-        fta = stats.get('FTA', 0)
-        tov = stats.get('TOV', 0)
-        fg3a = stats.get('FG3A', 0)
-        fg3m = stats.get('FG3M', 0)
-        fgm = stats.get('FGM', 0)
-        pts = stats.get('PTS', 0)
-        reb = stats.get('REB', 0)
-        ast = stats.get('AST', 0)
-        
-        usg = calculate_usg(fga, fta, tov,
-                           player_team_stats[pid]['FGA'],
-                           player_team_stats[pid]['FTA'],
-                           player_team_stats[pid]['TOV'])
-        
-        results.append({
-            'id': pid,
-            'name': teammate['name'],
-            'pos': teammate.get('pos', ''),
-            'min': round(mins, 1),
-            'usg': round(usg, 1),
-            'pts': round(pts * mult, 1),
-            'reb': round(reb * mult, 1),
-            'ast': round(ast * mult, 1),
-            'fg3m': round(fg3m * mult, 1),
-            'fg3a': round(fg3a * mult, 1),
-            'fg3_pct': round(100 * fg3m / fg3a, 1) if fg3a > 0 else 0,
-            'fgm': round(fgm * mult, 1),
-            'fga': round(fga * mult, 1),
-            'fg_pct': round(100 * fgm / fga, 1) if fga > 0 else 0,
-            'tov': round(tov * mult, 1),
-            'pra': round((pts + reb + ast) * mult, 1),
-            'pr': round((pts + reb) * mult, 1),
-            'pa': round((pts + ast) * mult, 1),
-        })
-    
+    # Convert to sorted list
+    results = list(main_stats.values())
     results.sort(key=lambda x: x['min'], reverse=True)
+    
+    # Calculate comparison if there are OFF players
+    comparison = []
+    if off_ids:
+        # Get stats when OFF players are ON (baseline)
+        baseline_stats = calculate_player_stats(events, roster, on_ids | off_ids, set())
+        
+        # Build comparison for players who appear in both
+        for pid, off_stat in main_stats.items():
+            if pid in baseline_stats and pid not in off_ids:
+                on_stat = baseline_stats[pid]
+                
+                # Calculate differences
+                diff = {
+                    'id': pid,
+                    'name': off_stat['name'],
+                    'min_with': round(on_stat['min'], 1),
+                    'usg_diff': round(off_stat['usg'] - on_stat['usg'], 1),
+                    'pts_diff': round(off_stat['pts'] - on_stat['pts'], 1),
+                    'reb_diff': round(off_stat['reb'] - on_stat['reb'], 1),
+                    'ast_diff': round(off_stat['ast'] - on_stat['ast'], 1),
+                    'fg3a_diff': round(off_stat['fg3a'] - on_stat['fg3a'], 1),
+                    'fga_diff': round(off_stat['fga'] - on_stat['fga'], 1),
+                    'pra_diff': round(off_stat['pra'] - on_stat['pra'], 1),
+                    'pa_diff': round(off_stat['pa'] - on_stat['pa'], 1),
+                    'pr_diff': round(off_stat['pr'] - on_stat['pr'], 1),
+                }
+                comparison.append(diff)
+        
+        # Sort by minutes with the OFF player(s) ON
+        comparison.sort(key=lambda x: x['min_with'], reverse=True)
+        comparison = comparison[:10]  # Top 10
     
     return {
         'team': team_name,
@@ -184,6 +224,7 @@ def query_stats(team_name: str, players_on: List[str] = None, players_off: List[
         'filter': {'on': on_names, 'off': off_names},
         'roster': [{'id': p['id'], 'name': p['name']} for p in roster],
         'players': results,
+        'comparison': comparison,
     }
 
 
