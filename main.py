@@ -208,8 +208,8 @@ def query_stats(team_name: str, players_on: List[str] = None, players_off: List[
                     'fg3a_diff': round(off_stat['fg3a'] - on_stat['fg3a'], 1),
                     'fga_diff': round(off_stat['fga'] - on_stat['fga'], 1),
                     'pra_diff': round(off_stat['pra'] - on_stat['pra'], 1),
-                    'pa_diff': round(off_stat['pa'] - on_stat['pa'], 1),
                     'pr_diff': round(off_stat['pr'] - on_stat['pr'], 1),
+                    'pa_diff': round(off_stat['pa'] - on_stat['pa'], 1),
                 }
                 comparison.append(diff)
         
