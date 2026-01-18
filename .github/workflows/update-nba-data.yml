@@ -2,9 +2,8 @@ name: Update NBA On/Off Data
 
 on:
   schedule:
-    # Run at 3:00 AM EST (8:00 AM UTC) every day
     - cron: '0 8 * * *'
-  workflow_dispatch: # Allow manual trigger
+  workflow_dispatch:
 
 jobs:
   update-data:
@@ -21,7 +20,7 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install requests
+          pip install requests pandas nba_api
       
       - name: Update all teams
         run: |
