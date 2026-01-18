@@ -65,10 +65,9 @@ jobs:
             sleep 2
           done
       
-      - name: Export data for website
+      - name: Copy updated files to onoff_cache
         run: |
-          cd python
-          python3 export_for_website.py
+          cp python/*_combo.json onoff_cache/
       
       - name: Commit and push changes
         run: |
