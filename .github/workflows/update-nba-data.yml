@@ -24,8 +24,6 @@ jobs:
       
       - name: Update all teams
         run: |
-          cd python
-          
           teams=(
             "Atlanta Hawks"
             "Boston Celtics"
@@ -61,13 +59,9 @@ jobs:
           
           for team in "${teams[@]}"; do
             echo "📊 Updating $team..."
-            python3 "${team} 2025-2026.py" --update || echo "⚠️ Failed: $team"
+            python3 "python/${team} 2025-2026.py" --update || echo "⚠️ Failed: $team"
             sleep 2
           done
-      
-      - name: Copy updated files to onoff_cache
-        run: |
-          cp python/*_combo.json onoff_cache/
       
       - name: Commit and push changes
         run: |
