@@ -1,19 +1,10 @@
 #!/usr/bin/env python3
 """
-🚨 TEAM ON/OFF STATS - UNLIMITED COMBOS VERSION
+TEAM ON/OFF STATS - UNLIMITED COMBOS VERSION
 ================================================
 
 Filter by ANY combination of players ON or OFF court.
-
-Examples:
-  python3 "Celtics Team 25-26.py" --out "Jaylen Brown"
-  python3 "Celtics Team 25-26.py" --out "Jaylen Brown" --out "Derrick White"
-  python3 "Celtics Team 25-26.py" --on "Payton Pritchard" --out "Jaylen Brown"
-  python3 "Celtics Team 25-26.py" --on "Payton Pritchard" --on "Neemias Queta" --out "Jaylen Brown" --out "Derrick White"
-
-WORKFLOW:
-1. Build cache: python3 "Celtics Team 25-26.py" --build
-2. Query any combo: python3 "Celtics Team 25-26.py" --out "Jaylen Brown" --out "Derrick White"
+Updated: Now includes traded players in historical data.
 
 Requirements: pip install nba_api pandas requests
 """
@@ -78,7 +69,7 @@ def calculate_usg(player_fga, player_fta, player_tov, team_fga, team_fta, team_t
     return 100 * player_usage / team_usage
 
 # ============================================
-# ROSTER
+# ROSTER (current roster - used for reference only)
 # ============================================
 def get_roster(team_id, season):
     time.sleep(REQUEST_DELAY)
@@ -192,10 +183,13 @@ def parse_clock(clock_str):
 # ============================================
 # PROCESS GAME - STORE RAW EVENTS WITH LINEUP
 # ============================================
-def process_game_raw(game_id, team_id, roster_ids):
+def process_game_raw(game_id, team_id):
     """
     Process game and return list of stat events with lineup info.
     Each event: {player_id, lineup (set), stats (dict), time_elapsed}
+    
+    NOTE: No roster filtering - captures ALL player events for the team.
+    This ensures traded players are still included in historical data.
     """
     events = []
     
@@ -224,7 +218,6 @@ def process_game_raw(game_id, team_id, roster_ids):
             prev_period = period
             prev_clock = 720 if period <= 4 else 300
         
-        # Calculate time elapsed BEFORE any subs
         time_elapsed = 0
         if clock is not None:
             time_elapsed = prev_clock - clock
@@ -232,41 +225,32 @@ def process_game_raw(game_id, team_id, roster_ids):
                 time_elapsed = 0
             prev_clock = clock
         
-        # Capture lineup snapshot BEFORE processing subs
-        # This is the lineup during the time that just elapsed
         lineup_snapshot = frozenset(current_lineup)
         
-        # Track time for players who were on court during elapsed time
         if time_elapsed > 0:
             for pid in current_lineup:
-                if pid in roster_ids:
-                    events.append({
-                        'player_id': pid,
-                        'lineup': lineup_snapshot,
-                        'stats': {},
-                        'time': time_elapsed,
-                        'is_team_stat': False
-                    })
+                events.append({
+                    'player_id': pid,
+                    'lineup': lineup_snapshot,
+                    'stats': {},
+                    'time': time_elapsed,
+                    'is_team_stat': False
+                })
         
-        # NOW handle substitution (affects future events, not this time segment)
         if 'substitution' in action_type:
             person_id = action.get('personId')
             team_sub = action.get('teamId')
             
             if team_sub == team_id and person_id:
-                # Use subType field ONLY - it's more reliable than parsing description
                 if sub_type == 'in':
                     current_lineup.add(person_id)
                 elif sub_type == 'out':
                     current_lineup.discard(person_id)
                 
-                # Safety check: lineup should never exceed 5
                 if len(current_lineup) > 5:
-                    # Something went wrong - reset to 5 most recent
                     current_lineup = set(list(current_lineup)[-5:])
             continue
         
-        # Parse action stats (using lineup AFTER any subs for stat attribution)
         person_id = action.get('personId')
         assist_person = action.get('assistPersonId')
         
@@ -274,10 +258,8 @@ def process_game_raw(game_id, team_id, roster_ids):
         is_made = 'made' in description or shot_result == 'made'
         is_missed = 'miss' in description or shot_result == 'missed'
         
-        # Stat events use current lineup (after any subs processed above)
         stat_lineup = frozenset(current_lineup)
         
-        # Field goals (time=0, time tracked separately)
         if person_id and person_id in current_lineup and ('2pt' in action_type or '3pt' in action_type or 'dunk' in action_type or 'layup' in action_type or 'shot' in action_type):
             stats = {}
             if is_made:
@@ -303,7 +285,6 @@ def process_game_raw(game_id, team_id, roster_ids):
                     'is_team_stat': True
                 })
         
-        # Free throws
         elif person_id and person_id in current_lineup and ('freethrow' in action_type or 'free throw' in description):
             stats = {'FTA': 1}
             if is_made or 'made' in description:
@@ -318,7 +299,6 @@ def process_game_raw(game_id, team_id, roster_ids):
                 'is_team_stat': True
             })
         
-        # Rebounds
         elif person_id and person_id in current_lineup and 'rebound' in action_type:
             events.append({
                 'player_id': person_id,
@@ -328,7 +308,6 @@ def process_game_raw(game_id, team_id, roster_ids):
                 'is_team_stat': False
             })
         
-        # Turnovers
         elif person_id and person_id in current_lineup and 'turnover' in action_type:
             events.append({
                 'player_id': person_id,
@@ -338,7 +317,6 @@ def process_game_raw(game_id, team_id, roster_ids):
                 'is_team_stat': True
             })
         
-        # Assists
         if assist_person and assist_person in current_lineup and is_made:
             events.append({
                 'player_id': assist_person,
@@ -351,65 +329,96 @@ def process_game_raw(game_id, team_id, roster_ids):
     return events
 
 # ============================================
+# BUILD ROSTER FROM EVENTS
+# ============================================
+def build_roster_from_events(events):
+    """
+    Build roster from actual play-by-play data.
+    This includes ALL players who played for the team this season,
+    including those who were later traded.
+    """
+    player_time = defaultdict(float)
+    
+    for ev in events:
+        pid = ev['player_id']
+        player_time[pid] += ev.get('time', 0)
+    
+    roster = []
+    for pid, total_time in player_time.items():
+        if total_time > 0:
+            name = get_player_name(pid)
+            roster.append({
+                'id': pid,
+                'name': name,
+                'pos': '',
+                'num': ''
+            })
+    
+    roster.sort(key=lambda x: player_time[x['id']], reverse=True)
+    
+    return roster
+
+# ============================================
 # BUILD CACHE - STORE RAW EVENTS
 # ============================================
 def build_cache(team_name=TEAM_NAME, season=SEASON):
     print("\n" + "=" * 70)
-    print(f"  🏗️  BUILDING ON/OFF CACHE (Combo Version)")
+    print(f"  BUILDING ON/OFF CACHE (Combo Version)")
     print(f"  {team_name} | {season}")
     print("=" * 70)
     
     team_id = get_team_id(team_name)
     if not team_id:
-        print(f"❌ Team not found: {team_name}")
+        print(f"Team not found: {team_name}")
         return None
     
-    print(f"\n✓ Team ID: {team_id}")
+    print(f"\nTeam ID: {team_id}")
     
-    print("\n📋 Getting roster...")
-    roster = get_roster(team_id, season)
-    if not roster:
-        print("❌ Could not get roster")
-        return None
-    print(f"   Found {len(roster)} players:")
-    for p in roster:
-        print(f"      {p['name']} ({p['pos']})")
+    print("\nGetting current roster (for reference)...")
+    current_roster = get_roster(team_id, season)
+    if current_roster:
+        print(f"   Current roster has {len(current_roster)} players")
     
-    roster_ids = set(p['id'] for p in roster)
-    
-    print("\n📅 Getting games...")
+    print("\nGetting games...")
     game_ids = get_team_games(team_id, season)
     if not game_ids:
-        print("❌ No games found")
+        print("No games found")
         return None
     print(f"   Found {len(game_ids)} games")
     
     all_events = []
     games_ok = 0
     
-    print(f"\n🔄 Processing {len(game_ids)} games...")
+    print(f"\nProcessing {len(game_ids)} games...")
     print("-" * 70)
     
     for i, gid in enumerate(game_ids):
         pct = (i + 1) / len(game_ids) * 100
         print(f"[{i+1:3d}/{len(game_ids)}] {gid} ({pct:5.1f}%)", end="")
         
-        game_events = process_game_raw(gid, team_id, roster_ids)
+        game_events = process_game_raw(gid, team_id)
         
         if game_events:
             games_ok += 1
-            # Convert frozensets to lists for JSON and add game_id
             for ev in game_events:
                 ev['lineup'] = list(ev['lineup'])
                 ev['game_id'] = gid
             all_events.extend(game_events)
-            print(f" ✓ ({len(game_events)} events)")
+            print(f" OK ({len(game_events)} events)")
         else:
             print(" -")
     
     print("-" * 70)
-    print(f"✓ Processed {games_ok}/{len(game_ids)} games")
-    print(f"✓ Total events: {len(all_events)}")
+    print(f"Processed {games_ok}/{len(game_ids)} games")
+    print(f"Total events: {len(all_events)}")
+    
+    print("\nBuilding roster from play-by-play data...")
+    roster = build_roster_from_events(all_events)
+    print(f"   Found {len(roster)} players who played this season:")
+    for p in roster[:15]:
+        print(f"      {p['name']}")
+    if len(roster) > 15:
+        print(f"      ... and {len(roster) - 15} more")
     
     CACHE_DIR.mkdir(exist_ok=True)
     
@@ -427,7 +436,7 @@ def build_cache(team_name=TEAM_NAME, season=SEASON):
     with open(cache_file, 'w') as f:
         json.dump(cache_data, f)
     
-    print(f"\n💾 Cache saved: {cache_file}")
+    print(f"\nCache saved: {cache_file}")
     print(f"   Size: {cache_file.stat().st_size / 1024 / 1024:.1f} MB")
     
     return cache_file
@@ -436,100 +445,89 @@ def build_cache(team_name=TEAM_NAME, season=SEASON):
 # UPDATE CACHE - ONLY FETCH NEW GAMES
 # ============================================
 def update_cache(team_name=TEAM_NAME, season=SEASON):
-    """
-    Incremental update - only fetches new games since last build.
-    Much faster than full rebuild (~1-2 min vs 30-45 min).
-    """
     cache_file = CACHE_DIR / f"{team_name.replace(' ', '_')}_{season}_combo.json"
     
     if not cache_file.exists():
-        print(f"❌ No existing cache found. Run --build first.")
+        print(f"No existing cache found. Run --build first.")
         return None
     
     print("\n" + "=" * 70)
-    print(f"  🔄 UPDATING ON/OFF CACHE")
+    print(f"  UPDATING ON/OFF CACHE")
     print(f"  {team_name} | {season}")
     print("=" * 70)
     
-    # Load existing cache
-    print("\n📂 Loading existing cache...")
+    print("\nLoading existing cache...")
     with open(cache_file, 'r') as f:
         cache = json.load(f)
     
     existing_events = cache.get('events', [])
+    existing_roster = cache.get('roster', [])
     
-    # Get game IDs already in cache by scanning events
     existing_game_ids = set()
     for ev in existing_events:
         if 'game_id' in ev:
             existing_game_ids.add(ev['game_id'])
     
     print(f"   Existing games in cache: {cache.get('games_processed', 0)}")
+    print(f"   Existing roster: {len(existing_roster)} players")
     
     team_id = get_team_id(team_name)
     if not team_id:
-        print(f"❌ Team not found: {team_name}")
+        print(f"Team not found: {team_name}")
         return None
     
-    # Get fresh roster (in case of trades)
-    print("\n📋 Updating roster...")
-    roster = get_roster(team_id, season)
-    if not roster:
-        print("❌ Could not get roster")
-        return None
-    print(f"   Found {len(roster)} players")
-    
-    roster_ids = set(p['id'] for p in roster)
-    
-    # Get all current games
-    print("\n📅 Checking for new games...")
+    print("\nChecking for new games...")
     all_game_ids = get_team_games(team_id, season)
     if not all_game_ids:
-        print("❌ No games found")
+        print("No games found")
         return None
     
-    # Find new games
     new_game_ids = [gid for gid in all_game_ids if gid not in existing_game_ids]
     
     if not new_game_ids:
-        print(f"\n✓ Cache is up to date! ({len(all_game_ids)} games)")
+        print(f"\nCache is up to date! ({len(all_game_ids)} games)")
         return cache_file
     
     print(f"   Found {len(new_game_ids)} new games to process")
     
-    # Process only new games
     new_events = []
     games_ok = 0
     
-    print(f"\n🔄 Processing {len(new_game_ids)} new games...")
+    print(f"\nProcessing {len(new_game_ids)} new games...")
     print("-" * 70)
     
     for i, gid in enumerate(new_game_ids):
         pct = (i + 1) / len(new_game_ids) * 100
         print(f"[{i+1:3d}/{len(new_game_ids)}] {gid} ({pct:5.1f}%)", end="")
         
-        game_events = process_game_raw(gid, team_id, roster_ids)
+        game_events = process_game_raw(gid, team_id)
         
         if game_events:
             games_ok += 1
-            # Convert frozensets to lists and add game_id for tracking
             for ev in game_events:
                 ev['lineup'] = list(ev['lineup'])
                 ev['game_id'] = gid
             new_events.extend(game_events)
-            print(f" ✓ ({len(game_events)} events)")
+            print(f" OK ({len(game_events)} events)")
         else:
             print(" -")
     
     print("-" * 70)
-    print(f"✓ Processed {games_ok}/{len(new_game_ids)} new games")
-    print(f"✓ New events: {len(new_events)}")
+    print(f"Processed {games_ok}/{len(new_game_ids)} new games")
+    print(f"New events: {len(new_events)}")
     
-    # Merge with existing events
     all_events = existing_events + new_events
     total_games = cache.get('games_processed', 0) + games_ok
     
-    # Save updated cache
+    print("\nRebuilding roster from all play-by-play data...")
+    roster = build_roster_from_events(all_events)
+    print(f"   Found {len(roster)} players who played this season")
+    
+    existing_ids = set(p['id'] for p in existing_roster)
+    new_players = [p for p in roster if p['id'] not in existing_ids]
+    if new_players:
+        print(f"   New players added: {', '.join(p['name'] for p in new_players)}")
+    
     cache_data = {
         'team': team_name,
         'team_id': team_id,
@@ -543,7 +541,7 @@ def update_cache(team_name=TEAM_NAME, season=SEASON):
     with open(cache_file, 'w') as f:
         json.dump(cache_data, f)
     
-    print(f"\n💾 Cache updated: {cache_file}")
+    print(f"\nCache updated: {cache_file}")
     print(f"   Total games: {total_games}")
     print(f"   Total events: {len(all_events)}")
     print(f"   Size: {cache_file.stat().st_size / 1024 / 1024:.1f} MB")
@@ -554,19 +552,13 @@ def update_cache(team_name=TEAM_NAME, season=SEASON):
 # QUERY WITH FILTERS
 # ============================================
 def query_combo(players_on=None, players_off=None, team_name=TEAM_NAME, season=SEASON, debug=False):
-    """
-    Query stats with any combination of players ON/OFF.
-    
-    players_on: list of player names who must be ON court
-    players_off: list of player names who must be OFF court
-    """
     players_on = players_on or []
     players_off = players_off or []
     
     cache_file = CACHE_DIR / f"{team_name.replace(' ', '_')}_{season}_combo.json"
     
     if not cache_file.exists():
-        print(f"❌ Cache not found: {cache_file}")
+        print(f"Cache not found: {cache_file}")
         print(f"   Run with --build first")
         return
     
@@ -575,7 +567,6 @@ def query_combo(players_on=None, players_off=None, team_name=TEAM_NAME, season=S
         cache = json.load(f)
     print("done")
     
-    # Debug: Calculate TOTAL minutes per player (no filter)
     if debug:
         print("\n[DEBUG] Calculating total minutes per player (no filter)...")
         total_time_per_player = defaultdict(float)
@@ -590,10 +581,8 @@ def query_combo(players_on=None, players_off=None, team_name=TEAM_NAME, season=S
             print(f"   {teammate['name']}: {mins:.0f} min")
         print()
     
-    # Convert player names to IDs
     on_ids = set()
     off_ids = set()
-    
     on_names = []
     off_names = []
     
@@ -603,7 +592,7 @@ def query_combo(players_on=None, players_off=None, team_name=TEAM_NAME, season=S
             on_ids.add(pid)
             on_names.append(name.split()[-1])
         else:
-            print(f"❌ Player not found: {name}")
+            print(f"Player not found: {name}")
             return
     
     for name in players_off:
@@ -612,10 +601,9 @@ def query_combo(players_on=None, players_off=None, team_name=TEAM_NAME, season=S
             off_ids.add(pid)
             off_names.append(name.split()[-1])
         else:
-            print(f"❌ Player not found: {name}")
+            print(f"Player not found: {name}")
             return
     
-    # Build header
     filter_desc = []
     if on_names:
         filter_desc.append(f"{', '.join(on_names)} ON")
@@ -624,57 +612,44 @@ def query_combo(players_on=None, players_off=None, team_name=TEAM_NAME, season=S
     
     filter_text = ' + '.join(filter_desc) if filter_desc else "ALL PLAYERS (no filter)"
     
-    # Get short team name (e.g., "Celtics" from "Boston Celtics")
     short_team = team_name.split()[-1].upper()
     
     print("\n" + "=" * 130)
-    print(f"  🏀 {short_team} STATS: {filter_text}")
+    print(f"  {short_team} STATS: {filter_text}")
     print(f"  {team_name} | {season} | {cache['games_processed']} games")
     print("=" * 130)
     
-    # Filter events
     events = cache['events']
     
-    # Aggregate stats per player
     player_stats = defaultdict(lambda: defaultdict(float))
     player_time = defaultdict(float)
-    player_team_stats = defaultdict(lambda: defaultdict(float))  # Team stats PER PLAYER for USG%
+    player_team_stats = defaultdict(lambda: defaultdict(float))
     
     for ev in events:
         lineup = set(ev['lineup'])
         
-        # Check filter conditions
-        # All ON players must be in lineup
         if not on_ids.issubset(lineup):
             continue
-        # All OFF players must NOT be in lineup
         if off_ids.intersection(lineup):
             continue
         
         pid = ev['player_id']
-        
-        # Track time
         player_time[pid] += ev['time']
         
-        # Track individual stats
         for stat, val in ev['stats'].items():
             player_stats[pid][stat] += val
         
-        # Track team stats for USG% - attribute to ALL players on court
         if ev.get('is_team_stat'):
             for stat in ['FGA', 'FTA', 'TOV']:
                 if stat in ev['stats']:
-                    # Add to team stats for every player who was on court
                     for player_on_court in lineup:
                         player_team_stats[player_on_court][stat] += ev['stats'][stat]
     
-    # Build results
     results = []
     
     for teammate in cache['roster']:
         pid = teammate['id']
         
-        # Skip players in the OFF filter (they have no stats)
         if pid in off_ids:
             continue
         
@@ -720,10 +695,8 @@ def query_combo(players_on=None, players_off=None, team_name=TEAM_NAME, season=S
             'pa': (stats.get('PTS', 0) + stats.get('AST', 0)) * mult,
         })
     
-    # Sort by minutes
     results.sort(key=lambda x: x['min'], reverse=True)
     
-    # Print results
     print(f"\n{'PLAYER':<20} {'MIN':<7} {'USG%':<7} {'PTS':<7} {'REB':<7} {'AST':<7} {'3PM':<6} {'3PA':<6} {'3P%':<7} {'FGM':<6} {'FGA':<6} {'FG%':<7} {'TOV':<6} {'PRA':<7} {'PR':<7} {'PA':<7}")
     print("-" * 130)
     
@@ -731,161 +704,6 @@ def query_combo(players_on=None, players_off=None, team_name=TEAM_NAME, season=S
         print(f"{r['name']:<20} {r['min']:<7.0f} {r['usg']:<7.1f} {r['pts']:<7.1f} {r['reb']:<7.1f} {r['ast']:<7.1f} {r['fg3m']:<6.1f} {r['fg3a']:<6.1f} {r['fg3_pct']:<7.1f} {r['fgm']:<6.1f} {r['fga']:<6.1f} {r['fg_pct']:<7.1f} {r['tov']:<6.1f} {r['pra']:<7.1f} {r['pr']:<7.1f} {r['pa']:<7.1f}")
     
     print("=" * 130)
-    
-    # Insights
-    print("\n📊 KEY INSIGHTS:")
-    if results:
-        sig = [r for r in results if r['min'] >= 30]
-        if sig:
-            top = max(sig, key=lambda x: x['pts'])
-            print(f"   🔥 {top['name']}: {top['pts']:.1f} PTS/36")
-            top = max(sig, key=lambda x: x['usg'])
-            print(f"   📈 {top['name']}: {top['usg']:.1f}% USG")
-    
-    # If we have --out filters, compare OFF stats vs ON stats
-    if players_off and results:
-        # Get the player names for display
-        off_names_display = [p.split()[-1] for p in players_off]
-        off_label = ', '.join(off_names_display)
-        
-        # Include ON players in the label if present
-        if players_on:
-            on_names_display = [p.split()[-1] for p in players_on]
-            on_label = ', '.join(on_names_display)
-            current_filter = f"{on_label} ON + {off_label} OFF"
-            compare_filter = f"{on_label} ON + {off_label} ON"
-        else:
-            current_filter = f"{off_label} OFF"
-            compare_filter = f"{off_label} ON"
-        
-        print("\n" + "=" * 150)
-        print(f"  📊 COMPARISON: {current_filter} vs {compare_filter} (top 10 by minutes with {compare_filter})")
-        print("=" * 150)
-        
-        # Convert off player names to IDs
-        compare_off_ids = set()
-        for name in players_off:
-            pid = get_player_id(name)
-            if pid:
-                compare_off_ids.add(pid)
-        
-        # Convert on player names to IDs (for comparison filter)
-        compare_on_ids = set()
-        for name in players_on:
-            pid = get_player_id(name)
-            if pid:
-                compare_on_ids.add(pid)
-        
-        # Calculate stats when OFF players are ON court (the opposite filter)
-        # But KEEP the --on players requirement
-        on_player_stats = defaultdict(lambda: defaultdict(float))
-        on_player_time = defaultdict(float)
-        on_player_team_stats = defaultdict(lambda: defaultdict(float))
-        
-        for ev in events:
-            lineup = set(ev['lineup'])
-            
-            # Check if ALL the --out players are ON court (opposite of current filter)
-            if not compare_off_ids.issubset(lineup):
-                continue
-            
-            # ALSO check that --on players are still ON court (same as current filter)
-            if not compare_on_ids.issubset(lineup):
-                continue
-            
-            pid = ev['player_id']
-            on_player_time[pid] += ev['time']
-            
-            for stat, val in ev['stats'].items():
-                on_player_stats[pid][stat] += val
-            
-            if ev.get('is_team_stat'):
-                for stat in ['FGA', 'FTA', 'TOV']:
-                    if stat in ev['stats']:
-                        for player_on_court in lineup:
-                            on_player_team_stats[player_on_court][stat] += ev['stats'][stat]
-        
-        # Build ON results for comparison
-        on_results = {}
-        for teammate in cache['roster']:
-            pid = teammate['id']
-            mins = on_player_time.get(pid, 0) / 60
-            
-            if mins < 5:
-                continue
-            
-            stats = on_player_stats.get(pid, {})
-            mult = 36 / mins if mins > 0 else 0
-            
-            fga = stats.get('FGA', 0)
-            fta = stats.get('FTA', 0)
-            tov = stats.get('TOV', 0)
-            fg3a = stats.get('FG3A', 0)
-            
-            usg = calculate_usg(fga, fta, tov,
-                               on_player_team_stats[pid]['FGA'],
-                               on_player_team_stats[pid]['FTA'],
-                               on_player_team_stats[pid]['TOV'])
-            
-            on_results[teammate['name']] = {
-                'min': mins,
-                'pts': stats.get('PTS', 0) * mult,
-                'reb': stats.get('REB', 0) * mult,
-                'ast': stats.get('AST', 0) * mult,
-                'fg3a': fg3a * mult,
-                'fga': fga * mult,
-                'pra': (stats.get('PTS', 0) + stats.get('REB', 0) + stats.get('AST', 0)) * mult,
-                'pa': (stats.get('PTS', 0) + stats.get('AST', 0)) * mult,
-                'pr': (stats.get('PTS', 0) + stats.get('REB', 0)) * mult,
-                'usg': usg,
-            }
-        
-        # Get top 10 by minutes with OFF players ON court, exclude the OFF players themselves
-        comparison_players = []
-        for name, on_r in on_results.items():
-            # Skip the players who are in the --out filter
-            skip = False
-            for off_name in players_off:
-                if off_name.lower() in name.lower():
-                    skip = True
-                    break
-            if skip:
-                continue
-            
-            # Find matching result from current query
-            matching = [r for r in results if r['name'] == name]
-            if matching:
-                comparison_players.append({
-                    'name': name,
-                    'on_min': on_r['min'],
-                    'off_r': matching[0],
-                    'on_r': on_r
-                })
-        
-        # Sort by minutes with OFF players ON court
-        comparison_players.sort(key=lambda x: x['on_min'], reverse=True)
-        comparison_players = comparison_players[:10]
-        
-        for cp in comparison_players:
-            name = cp['name']
-            off_r = cp['off_r']
-            on_r = cp['on_r']
-            
-            usg_diff = off_r['usg'] - on_r['usg']
-            pts_diff = off_r['pts'] - on_r['pts']
-            ast_diff = off_r['ast'] - on_r['ast']
-            reb_diff = off_r['reb'] - on_r['reb']
-            fg3a_diff = off_r['fg3a'] - on_r['fg3a']
-            fga_diff = off_r['fga'] - on_r['fga']
-            pra_diff = off_r['pra'] - on_r['pra']
-            pa_diff = off_r['pa'] - on_r['pa']
-            pr_diff = off_r['pr'] - on_r['pr']
-            
-            print(f"\n  {name} ({on_r['min']:.0f} min with {compare_filter}):")
-            print(f"     {usg_diff:+.1f}% USG  |  {pts_diff:+.1f} PTS  |  {ast_diff:+.1f} AST  |  {reb_diff:+.1f} REB  |  {fg3a_diff:+.1f} 3PA  |  {fga_diff:+.1f} FGA  |  {pra_diff:+.1f} PRA  |  {pa_diff:+.1f} PA  |  {pr_diff:+.1f} PR")
-        
-        print()
-    
     print()
 
 # ============================================
@@ -896,8 +714,8 @@ def main():
     parser.add_argument('--build', action='store_true', help='Build cache (full, ~30-45 min)')
     parser.add_argument('--update', action='store_true', help='Update cache (only new games, ~1-2 min)')
     parser.add_argument('--all', action='store_true', help='Show all team stats (no filter)')
-    parser.add_argument('--on', action='append', default=[], help='Player(s) who must be ON court (can use multiple times)')
-    parser.add_argument('--out', action='append', default=[], help='Player(s) who must be OFF court (can use multiple times)')
+    parser.add_argument('--on', action='append', default=[], help='Player(s) who must be ON court')
+    parser.add_argument('--out', action='append', default=[], help='Player(s) who must be OFF court')
     parser.add_argument('--debug', action='store_true', help='Show debug info')
     parser.add_argument('--team', type=str, default=TEAM_NAME, help='Team name')
     parser.add_argument('--season', type=str, default=SEASON, help='Season')
@@ -913,32 +731,13 @@ def main():
     elif args.on or args.out:
         query_combo(players_on=args.on, players_off=args.out, team_name=args.team, season=args.season, debug=args.debug)
     else:
-        print("\n🏀 TEAM ON/OFF STATS - UNLIMITED COMBOS")
+        print("\nTEAM ON/OFF STATS - UNLIMITED COMBOS")
         print("=" * 60)
         print("\nUsage:")
-        print("\n  # Build cache first (one time, ~30-45 min)")
-        print('  python3 "Celtics Team 25-26.py" --build')
-        print()
-        print("  # Update cache (nightly, only new games, ~1-2 min)")
-        print('  python3 "Celtics Team 25-26.py" --update')
-        print()
-        print("  # Full team stats (no filter)")
-        print('  python3 "Celtics Team 25-26.py" --all')
-        print()
-        print("  # Single player OFF")
-        print('  python3 "Celtics Team 25-26.py" --out "Jaylen Brown"')
-        print()
-        print("  # Single player ON")
-        print('  python3 "Celtics Team 25-26.py" --on "Jaylen Brown"')
-        print()
-        print("  # Multiple players OFF")
-        print('  python3 "Celtics Team 25-26.py" --out "Jaylen Brown" --out "Derrick White"')
-        print()
-        print("  # Mix of ON and OFF")
-        print('  python3 "Celtics Team 25-26.py" --on "Payton Pritchard" --out "Jaylen Brown"')
-        print()
-        print("  # Complex combo")
-        print('  python3 "Celtics Team 25-26.py" --on "Payton Pritchard" --on "Neemias Queta" --out "Jaylen Brown" --out "Derrick White"')
+        print('  python3 "<team>.py" --build    # Build cache (first time)')
+        print('  python3 "<team>.py" --update   # Update cache (daily)')
+        print('  python3 "<team>.py" --all      # Show all stats')
+        print('  python3 "<team>.py" --out "Player Name"  # Player OFF filter')
 
 if __name__ == "__main__":
     main()
