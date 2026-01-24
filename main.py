@@ -7,6 +7,7 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List, Optional
 import json
+import os
 from pathlib import Path
 from collections import defaultdict
 
@@ -286,6 +287,29 @@ def get_onoff_stats(
         raise HTTPException(status_code=404, detail=f"Team not found: {team}")
     
     return result
+
+
+@app.get("/api/funnels")
+def get_funnels():
+    """Return the latest funnels data"""
+    try:
+        # Check multiple possible locations for funnels data
+        possible_paths = [
+            "funnels_data.json",
+            "funnels_cache/funnels.json",
+            Path(__file__).parent / "funnels_data.json",
+            Path(__file__).parent / "funnels_cache" / "funnels.json",
+        ]
+        
+        for fpath in possible_paths:
+            if os.path.exists(fpath):
+                with open(fpath, "r") as f:
+                    return json.load(f)
+        
+        return {"error": "Funnels data not available", "overs": [], "unders": []}
+    except Exception as e:
+        return {"error": str(e), "overs": [], "unders": []}
+
 
 @app.get("/health")
 def health_check():
