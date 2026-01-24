@@ -12,10 +12,6 @@
       {
         "name": "Kevin McCullarJr.",
         "status": "Out"
-      },
-      {
-        "name": "Karl-Anthony Towns",
-        "status": "Questionable"
       }
     ],
     "Philadelphia 76ers": [
@@ -25,38 +21,6 @@
       },
       {
         "name": "Johni Broome",
-        "status": "Out"
-      }
-    ],
-    "Golden State Warriors": [
-      {
-        "name": "LJ Cryer",
-        "status": "Out"
-      },
-      {
-        "name": "Seth Curry",
-        "status": "Out"
-      },
-      {
-        "name": "Jonathan Kuminga",
-        "status": "Out"
-      },
-      {
-        "name": "Malevy Leons",
-        "status": "Out"
-      }
-    ],
-    "Minnesota Timberwolves": [
-      {
-        "name": "Enrique Freeman",
-        "status": "Out"
-      },
-      {
-        "name": "Terrence ShannonJr.",
-        "status": "Out"
-      },
-      {
-        "name": "Rocco Zikarsky",
         "status": "Out"
       }
     ],
@@ -259,8 +223,40 @@
         "name": "KJ Simpson",
         "status": "Out"
       }
+    ],
+    "Golden State Warriors": [
+      {
+        "name": "LJ Cryer",
+        "status": "Out"
+      },
+      {
+        "name": "Seth Curry",
+        "status": "Out"
+      },
+      {
+        "name": "Jonathan Kuminga",
+        "status": "Out"
+      },
+      {
+        "name": "Malevy Leons",
+        "status": "Out"
+      }
+    ],
+    "Minnesota Timberwolves": [
+      {
+        "name": "Enrique Freeman",
+        "status": "Out"
+      },
+      {
+        "name": "Terrence ShannonJr.",
+        "status": "Out"
+      },
+      {
+        "name": "Rocco Zikarsky",
+        "status": "Out"
+      }
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-24 02:28 PM ET"
+  "updated": "2026-01-24 03:10 PM ET"
 }
