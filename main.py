@@ -311,6 +311,26 @@ def get_funnels():
         return {"error": str(e), "overs": [], "unders": []}
 
 
+@app.get("/api/injuries")
+def get_injuries():
+    """Return the latest injuries data"""
+    try:
+        # Check multiple possible locations for injuries data
+        possible_paths = [
+            "injuries_data.json",
+            Path(__file__).parent / "injuries_data.json",
+        ]
+        
+        for fpath in possible_paths:
+            if os.path.exists(fpath):
+                with open(fpath, "r") as f:
+                    return json.load(f)
+        
+        return {"error": "Injuries data not available", "injuries": {}, "not_yet_submitted": []}
+    except Exception as e:
+        return {"error": str(e), "injuries": {}, "not_yet_submitted": []}
+
+
 @app.get("/health")
 def health_check():
     return {"status": "healthy"}
