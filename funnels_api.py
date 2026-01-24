@@ -10,6 +10,9 @@ import pytz
 import pandas as pd
 import requests
 import os
+from bs4 import BeautifulSoup
+import pdfplumber
+from io import BytesIO
 
 API_DELAY = 0.8
 SEASON = "2025-26"
@@ -62,8 +65,89 @@ TEAM_ID_TO_NAME = {v: k for k, v in TEAM_IDS.items()}
 
 # Global data stores
 MATCHUPS = {}  # team -> opponent
-INJURIES = {}  # player_name -> status (OUT, DOUBTFUL, etc.)
-PLAYER_STATS = {}  # player_name -> {'min': mpg, 'gp': games_played}
+INJURIES = set()  # Set of player names who are OUT or DOUBTFUL
+PLAYER_STATS = {}  # player_name -> {'min': mpg, 'gp': games_played, 'fgm': fgm, 'fga': fga}
+
+
+def load_injuries():
+    """Scrape the latest NBA injury report and load OUT/DOUBTFUL players"""
+    global INJURIES
+    INJURIES = set()
+    
+    print("Fetching injury report...")
+    
+    try:
+        # Get the injury report page
+        url = "https://official.nba.com/nba-injury-report-2025-26-season/"
+        response = requests.get(url, headers=HEADERS, timeout=30)
+        
+        if response.status_code != 200:
+            print(f"  ✗ Failed to fetch injury page: {response.status_code}")
+            return
+        
+        soup = BeautifulSoup(response.text, 'html.parser')
+        
+        # Find injury report PDFs
+        injury_pdfs = []
+        for link in soup.find_all('a', href=True):
+            href = link['href']
+            if '.pdf' in href.lower() and ('injury-report' in href.lower() or 'referee/injury' in href.lower()):
+                injury_pdfs.append(href)
+        
+        if not injury_pdfs:
+            print("  ✗ No injury PDFs found")
+            return
+        
+        # Get the LAST one (most recent)
+        latest_pdf = injury_pdfs[-1]
+        filename = latest_pdf.split('/')[-1]
+        print(f"  ✓ Found latest: {filename}")
+        
+        # Download PDF
+        pdf_response = requests.get(latest_pdf, headers=HEADERS, timeout=60)
+        if pdf_response.status_code != 200:
+            print(f"  ✗ Failed to download PDF")
+            return
+        
+        # Parse PDF
+        import re
+        player_pattern = re.compile(
+            r'([A-Za-z\-\']+(?:Jr\.|Sr\.|III|II|IV)?,\s*[A-Za-z\-\']+(?:\s+[A-Za-z\-\']+)?)\s+(Out|Doubtful)\b',
+            re.IGNORECASE
+        )
+        
+        with pdfplumber.open(BytesIO(pdf_response.content)) as pdf:
+            for page in pdf.pages:
+                text = page.extract_text()
+                if text:
+                    matches = player_pattern.findall(text)
+                    for match in matches:
+                        player_raw = match[0]
+                        # Convert "Last,First" to "First Last"
+                        name_parts = player_raw.split(',')
+                        if len(name_parts) >= 2:
+                            last = name_parts[0].strip()
+                            first = name_parts[1].strip()
+                            full_name = f"{first} {last}"
+                            INJURIES.add(full_name)
+        
+        print(f"  ✓ Loaded {len(INJURIES)} OUT/DOUBTFUL players")
+        
+    except Exception as e:
+        print(f"  ✗ Error loading injuries: {e}")
+
+
+def is_injured(player_name):
+    """Check if a player is OUT or DOUBTFUL"""
+    return player_name in INJURIES
+
+
+def is_on_team(player_name, team_id):
+    """Check if a player is currently on the specified team"""
+    stats = PLAYER_STATS.get(player_name)
+    if not stats:
+        return True  # If we don't have data, assume they're on the team
+    return stats.get('team_id') == team_id
 
 
 def get_todays_games():
@@ -152,12 +236,12 @@ def get_injury_report():
 
 
 def get_player_minutes():
-    """Get average minutes and games played for all players"""
+    """Get average minutes, games played, FGM and FGA for all players"""
     global PLAYER_STATS
     PLAYER_STATS = {}
     
     try:
-        print("Fetching player minutes...")
+        print("Fetching player stats...")
         
         url = "https://stats.nba.com/stats/leaguedashplayerstats"
         params = {
@@ -203,11 +287,17 @@ def get_player_minutes():
                 name_idx = headers.index('PLAYER_NAME')
                 min_idx = headers.index('MIN')
                 gp_idx = headers.index('GP')
+                fgm_idx = headers.index('FGM')
+                fga_idx = headers.index('FGA')
+                team_id_idx = headers.index('TEAM_ID')
                 
                 for row in rows:
                     PLAYER_STATS[row[name_idx]] = {
                         'min': row[min_idx],
-                        'gp': row[gp_idx]
+                        'gp': row[gp_idx],
+                        'fgm': row[fgm_idx],
+                        'fga': row[fga_idx],
+                        'team_id': row[team_id_idx]
                     }
                 
                 print(f"  ✓ Loaded stats for {len(PLAYER_STATS)} players")
@@ -444,6 +534,11 @@ def get_player_shots_for_team(team_id, general_range, sort_col="FGA_FREQUENCY"):
                 filtered = []
                 for _, row in df.iterrows():
                     player_name = row['PLAYER_NAME']
+                    
+                    # Check if player is CURRENTLY on this team (API data can be stale)
+                    if not is_on_team(player_name, team_id):
+                        continue
+                    
                     stats = PLAYER_STATS.get(player_name, {'min': 0, 'gp': 0})
                     mpg = stats['min']
                     gp = stats['gp']
@@ -460,6 +555,10 @@ def get_player_shots_for_team(team_id, general_range, sort_col="FGA_FREQUENCY"):
                 
                 # Sort by frequency
                 filtered.sort(key=lambda x: x['freq'], reverse=True)
+                
+                # Filter out injured players
+                filtered = [p for p in filtered if not is_injured(p['name'])]
+                
                 return filtered[:5]  # Top 5
                 
     except Exception as e:
@@ -504,6 +603,11 @@ def get_player_synergy_for_team(team_id, play_type):
                     if row.get('TEAM_ID') != team_id:
                         continue
                     player_name = row['PLAYER_NAME']
+                    
+                    # Check if player is CURRENTLY on this team (API data can be stale)
+                    if not is_on_team(player_name, team_id):
+                        continue
+                    
                     stats = PLAYER_STATS.get(player_name, {'min': 0, 'gp': 0})
                     mpg = stats['min']
                     gp = stats['gp']
@@ -520,6 +624,10 @@ def get_player_synergy_for_team(team_id, play_type):
                 
                 # Sort by frequency (not points) - rank by highest FREQ%
                 filtered.sort(key=lambda x: x['freq'], reverse=True)
+                
+                # Filter out injured players
+                filtered = [p for p in filtered if not is_injured(p['name'])]
+                
                 return filtered[:5]
                 
     except Exception as e:
@@ -584,6 +692,11 @@ def get_player_stats_for_team(team_id, stat_type):
                 filtered = []
                 for _, row in df.iterrows():
                     player_name = row['PLAYER_NAME']
+                    
+                    # Check if player is CURRENTLY on this team (API data can be stale)
+                    if not is_on_team(player_name, team_id):
+                        continue
+                    
                     mpg = row.get('MIN', 0)
                     gp = row.get('GP', 0)
                     if mpg >= MIN_MINUTES and gp >= MIN_GAMES:
@@ -595,6 +708,10 @@ def get_player_stats_for_team(team_id, stat_type):
                         })
                 
                 filtered.sort(key=lambda x: x['value'], reverse=True)
+                
+                # Filter out injured players
+                filtered = [p for p in filtered if not is_injured(p['name'])]
+                
                 return filtered[:5]
                 
     except Exception as e:
@@ -604,26 +721,19 @@ def get_player_stats_for_team(team_id, stat_type):
 
 
 def get_player_shot_locations_for_team(team_id, zone_type):
-    """Get player shooting stats by zone for a specific team"""
+    """Get player shooting stats by zone for a specific team, sorted by zone percentage"""
     try:
         url = "https://stats.nba.com/stats/leaguedashplayershotlocations"
         params = {
+            "DistanceRange": "By Zone",
+            "TeamID": team_id,
             "LeagueID": "00",
             "Season": SEASON,
             "SeasonType": "Regular Season",
             "PerMode": "PerGame",
-            "DistanceRange": "By Zone",
-            "TeamID": team_id,
             "MeasureType": "Base",
-            "LastNGames": 0,
-            "DateFrom": "",
-            "DateTo": "",
-            "GameScope": "",
-            "GameSegment": "",
-            "Location": "",
             "Month": 0,
             "OpponentTeamID": 0,
-            "Outcome": "",
             "PORound": 0,
             "PaceAdjust": "N",
             "Period": 0,
@@ -637,98 +747,129 @@ def get_player_shot_locations_for_team(team_id, zone_type):
             "VsConference": "",
             "VsDivision": "",
             "Conference": "",
-            "Division": ""
+            "Division": "",
+            "GameScope": "",
+            "GameSegment": "",
+            "DateFrom": "",
+            "DateTo": "",
+            "LastNGames": 0,
+            "Location": "",
+            "Outcome": "",
         }
         
         response = requests.get(url, headers=HEADERS, params=params, timeout=30)
         time.sleep(API_DELAY)
         
-        if response.status_code == 200:
-            data = response.json()
-            if 'resultSets' in data and len(data['resultSets']) > 0:
-                rs = data['resultSets'][0]
-                headers = rs.get('headers', [])
-                rows = rs.get('rowSet', [])
-                
-                # The shot locations endpoint has a complex header structure
-                # Headers are nested - we need to find the right columns
-                # Typical structure: PLAYER_ID, PLAYER_NAME, TEAM_ID, TEAM_ABBREVIATION, AGE, 
-                # then zone stats: RA_FGM, RA_FGA, RA_FG_PCT, etc.
-                
-                # Map zone_type to column prefixes
-                zone_col_map = {
-                    'restricted_area': ('RA_FGM', 'RA_FGA'),
-                    'mid_range': ('MR_FGM', 'MR_FGA'),
-                    'corner3': ('C3_FGM', 'C3_FGA'),  # Corner 3 = LC3 + RC3
-                    'above_break3': ('AB3_FGM', 'AB3_FGA')
-                }
-                
-                fgm_col, fga_col = zone_col_map.get(zone_type, ('RA_FGM', 'RA_FGA'))
-                
-                # Build column name list - the API returns a flattened structure
-                # We need to parse the headers which come as a list of column group headers
-                
-                filtered = []
-                for row in rows:
-                    if len(row) < 5:
-                        continue
-                    
-                    player_name = row[1] if len(row) > 1 else ''
-                    
-                    # Get MPG and GP from global cache
-                    stats = PLAYER_STATS.get(player_name, {'min': 0, 'gp': 0})
-                    mpg = stats['min']
-                    gp = stats['gp']
-                    if mpg < MIN_MINUTES or gp < MIN_GAMES:
-                        continue
-                    
-                    # Parse the row based on typical structure
-                    # The exact indices depend on the API response structure
-                    # This is approximate - may need adjustment
-                    try:
-                        # Try to find FGM/FGA values based on zone
-                        # Typical order after player info: RA, Paint(Non-RA), MR, LC3, RC3, AB3, BC
-                        if zone_type == 'restricted_area':
-                            fgm = row[5] if len(row) > 5 else 0
-                            fga = row[6] if len(row) > 6 else 0
-                        elif zone_type == 'mid_range':
-                            fgm = row[11] if len(row) > 11 else 0
-                            fga = row[12] if len(row) > 12 else 0
-                        elif zone_type == 'corner3':
-                            # Corner 3 = Left Corner + Right Corner
-                            lc3_fgm = row[14] if len(row) > 14 else 0
-                            lc3_fga = row[15] if len(row) > 15 else 0
-                            rc3_fgm = row[17] if len(row) > 17 else 0
-                            rc3_fga = row[18] if len(row) > 18 else 0
-                            fgm = (lc3_fgm or 0) + (rc3_fgm or 0)
-                            fga = (lc3_fga or 0) + (rc3_fga or 0)
-                        elif zone_type == 'above_break3':
-                            fgm = row[20] if len(row) > 20 else 0
-                            fga = row[21] if len(row) > 21 else 0
-                        else:
-                            fgm = 0
-                            fga = 0
-                        
-                        filtered.append({
-                            'name': player_name,
-                            'team': row[3] if len(row) > 3 else '',
-                            'fgm': round(fgm or 0, 1),
-                            'fga': round(fga or 0, 1),
-                            'mpg': round(mpg, 1)
-                        })
-                    except (IndexError, TypeError):
-                        continue
-                
-                # Sort by FGM for restricted area, FGA for others
+        if response.status_code != 200:
+            print(f"  ✗ Shot locations API returned status {response.status_code}")
+            return []
+            
+        data = response.json()
+        
+        # resultSets is a DICT with keys: name, headers, rowSet
+        if 'resultSets' not in data:
+            print(f"  ✗ No resultSets in response")
+            return []
+        
+        rs = data['resultSets']
+        rows = rs.get('rowSet', [])
+        
+        if not rows:
+            return []
+        
+        # Column structure:
+        # Index 0: PLAYER_ID
+        # Index 1: PLAYER_NAME
+        # Index 2: TEAM_ID
+        # Index 3: TEAM_ABBREVIATION
+        # Index 4: AGE
+        # Index 5: NICKNAME
+        # Index 6-8: Restricted Area (FGM, FGA, FG_PCT)
+        # Index 9-11: In The Paint (Non-RA)
+        # Index 12-14: Mid-Range (FGM, FGA, FG_PCT)
+        # Index 15-17: Left Corner 3
+        # Index 18-20: Right Corner 3
+        # Index 21-23: Above the Break 3
+        # Index 24-26: Backcourt
+        # Index 27-29: Corner 3 (combined)
+        
+        filtered = []
+        for row in rows:
+            if len(row) < 24:
+                continue
+            
+            player_name = row[1]
+            team_abbr = row[3]
+            
+            # Check if player is CURRENTLY on this team (API data can be stale)
+            if not is_on_team(player_name, team_id):
+                continue
+            
+            # Get player stats from global cache (includes total FGM/FGA)
+            stats = PLAYER_STATS.get(player_name, {'min': 0, 'gp': 0, 'fgm': 0, 'fga': 0})
+            mpg = stats['min']
+            gp = stats['gp']
+            total_fgm = stats.get('fgm', 0)
+            total_fga = stats.get('fga', 0)
+            
+            if mpg < MIN_MINUTES or gp < MIN_GAMES:
+                continue
+            
+            try:
                 if zone_type == 'restricted_area':
-                    filtered.sort(key=lambda x: x['fgm'], reverse=True)
+                    zone_fgm = row[6] if row[6] else 0
+                    zone_fga = row[7] if row[7] else 0
+                    # Calculate % of FGM from this zone
+                    if total_fgm > 0:
+                        zone_pct = (zone_fgm / total_fgm) * 100
+                    else:
+                        zone_pct = 0
+                elif zone_type == 'mid_range':
+                    zone_fgm = row[12] if row[12] else 0
+                    zone_fga = row[13] if row[13] else 0
+                    # Calculate % of FGA from this zone
+                    if total_fga > 0:
+                        zone_pct = (zone_fga / total_fga) * 100
+                    else:
+                        zone_pct = 0
+                elif zone_type == 'corner3':
+                    zone_fgm = row[27] if row[27] else 0
+                    zone_fga = row[28] if row[28] else 0
+                    # Calculate % of FGA from this zone
+                    if total_fga > 0:
+                        zone_pct = (zone_fga / total_fga) * 100
+                    else:
+                        zone_pct = 0
+                elif zone_type == 'above_break3':
+                    zone_fgm = row[21] if row[21] else 0
+                    zone_fga = row[22] if row[22] else 0
+                    # Calculate % of FGA from this zone
+                    if total_fga > 0:
+                        zone_pct = (zone_fga / total_fga) * 100
+                    else:
+                        zone_pct = 0
                 else:
-                    filtered.sort(key=lambda x: x['fga'], reverse=True)
+                    zone_pct = 0
                 
-                return filtered[:5]
+                filtered.append({
+                    'name': player_name,
+                    'team': team_abbr,
+                    'zone_pct': round(zone_pct, 1),
+                    'mpg': round(mpg, 1)
+                })
+            except (IndexError, TypeError) as e:
+                continue
+        
+        # Sort by zone percentage (highest first)
+        filtered.sort(key=lambda x: x['zone_pct'], reverse=True)
+        
+        # Filter out injured players
+        filtered = [p for p in filtered if not is_injured(p['name'])]
+        
+        return filtered[:5]
                 
     except Exception as e:
-        print(f"  ✗ Error fetching player shot locations: {e}")
+        print(f"  ✗ Error fetching player shot locations: {type(e).__name__}: {e}")
     
     return []
 
@@ -739,14 +880,21 @@ def shorten_name(name):
 
 
 def process_funnel(df, col, is_ascending=False, is_percent=False):
-    """Process a funnel and return top/bottom 5 with player recommendations"""
+    """Process a funnel and return only actual top 5 or bottom 5 teams playing today"""
     if df is None or col not in df.columns:
         return []
     
-    df_sorted = df.sort_values(col, ascending=is_ascending)
+    df_sorted = df.sort_values(col, ascending=is_ascending).reset_index(drop=True)
     results = []
     
-    for _, row in df_sorted.head(5).iterrows():
+    # Go through teams to find their actual rank (only check first 5)
+    for idx, row in df_sorted.iterrows():
+        actual_rank = idx + 1  # 1-based ranking
+        
+        # Only include teams ranked 1-5
+        if actual_rank > 5:
+            break
+        
         team_name = row.get('TEAM_NAME', '')
         team = shorten_name(team_name)
         opponent = MATCHUPS.get(team, '')
@@ -765,8 +913,10 @@ def process_funnel(df, col, is_ascending=False, is_percent=False):
             'team': team,
             'opponent': opponent,
             'value': display_val,
-            'rank': len(results) + 1
+            'rank': actual_rank
         })
+    
+    return results
     
     return results
 
@@ -780,6 +930,7 @@ def build_funnels_data():
     # Fetch all base data
     get_todays_games()
     get_player_minutes()
+    load_injuries()  # Load OUT/DOUBTFUL players from NBA injury report
     
     # Print today's matchups
     print("\n" + "=" * 50)
@@ -827,8 +978,8 @@ def build_funnels_data():
         # Catch & Shoot - 4 players, always show FREQ%
         {
             'id': 'catch_shoot_fgm',
-            'title': 'Catch & Shoot FGM Allowed',
-            'description': 'Target shooters, generally good for lower usage guys',
+            'title': 'Catch & Shoot FGM Allowed L10 Games',
+            'description': '',
             'df': catch_shoot,
             'col': 'FGM',
             'player_type': 'shooting',
@@ -838,10 +989,10 @@ def build_funnels_data():
         },
         {
             'id': 'catch_shoot_freq',
-            'title': 'Catch & Shoot FREQ% Allowed',
-            'description': 'Target shooters, generally good for lower usage guys',
+            'title': 'Catch & Shoot FREQ% Allowed L10 Games',
+            'description': '',
             'df': catch_shoot,
-            'col': 'FG2A_FREQUENCY' if catch_shoot is not None and 'FG2A_FREQUENCY' in catch_shoot.columns else 'FGA_FREQUENCY',
+            'col': 'FGA_FREQUENCY',
             'is_percent': True,
             'player_type': 'shooting',
             'general_range': 'Catch and Shoot',
@@ -851,8 +1002,8 @@ def build_funnels_data():
         # Pull-Up - 3 players, always show FREQ%
         {
             'id': 'pullup_fgm',
-            'title': 'Pull-Up FGM Allowed',
-            'description': 'Target ball handlers who are self creators',
+            'title': 'Pull-Up FGM Allowed L10 Games',
+            'description': '',
             'df': pullup,
             'col': 'FGM',
             'player_type': 'shooting',
@@ -862,8 +1013,8 @@ def build_funnels_data():
         },
         {
             'id': 'pullup_freq',
-            'title': 'Pull-Up FREQ% Allowed',
-            'description': 'Target ball handlers who are self creators',
+            'title': 'Pull-Up FREQ% Allowed L10 Games',
+            'description': '',
             'df': pullup,
             'col': 'FGA_FREQUENCY',
             'is_percent': True,
@@ -875,8 +1026,8 @@ def build_funnels_data():
         # Less Than 10 Ft - 4 players, always show FREQ%
         {
             'id': 'less10_fgm',
-            'title': 'Less Than 10 Ft FGM Allowed',
-            'description': 'Target players who do their work in the paint',
+            'title': 'Less Than 10 Ft FGM Allowed L10 Games',
+            'description': '',
             'df': less_than_10,
             'col': 'FGM',
             'player_type': 'shooting',
@@ -886,8 +1037,8 @@ def build_funnels_data():
         },
         {
             'id': 'less10_freq',
-            'title': 'Less Than 10 Ft FREQ% Allowed',
-            'description': 'Target paint players',
+            'title': 'Less Than 10 Ft FREQ% Allowed L10 Games',
+            'description': '',
             'df': less_than_10,
             'col': 'FGA_FREQUENCY',
             'is_percent': True,
@@ -900,7 +1051,7 @@ def build_funnels_data():
         {
             'id': 'spotup_ppg',
             'title': 'Spot-Up PPG Allowed',
-            'description': 'Target low usage guys, fade high usage guys',
+            'description': '',
             'df': spotup,
             'col': 'PTS',
             'player_type': 'synergy',
@@ -911,7 +1062,7 @@ def build_funnels_data():
         {
             'id': 'pr_handler_ppg',
             'title': 'P&R Ball-Handler PPG Allowed',
-            'description': 'Target high usage players, typically guards',
+            'description': '',
             'df': pr_handler,
             'col': 'PTS',
             'player_type': 'synergy',
@@ -922,7 +1073,7 @@ def build_funnels_data():
         {
             'id': 'pr_rollman_ppg',
             'title': 'P&R Roll Man PPG Allowed',
-            'description': 'Target bigs who act as a roll/pop man',
+            'description': '',
             'df': pr_rollman,
             'col': 'PTS',
             'player_type': 'synergy',
@@ -934,7 +1085,7 @@ def build_funnels_data():
         {
             'id': 'transition_ppg',
             'title': 'Transition PPG Allowed',
-            'description': 'Target players who get out and run, typically guards and wings',
+            'description': '',
             'df': transition,
             'col': 'PTS',
             'player_type': 'synergy',
@@ -945,8 +1096,8 @@ def build_funnels_data():
         # General stats - NO players
         {
             'id': 'opp_oreb',
-            'title': 'Opponent O-Reb Allowed',
-            'description': 'Target offensive rebounders',
+            'title': 'Opponent O-Reb Allowed L10 Games',
+            'description': '',
             'df': opponent,
             'col': 'OPP_OREB',
             'player_type': 'stats',
@@ -956,8 +1107,8 @@ def build_funnels_data():
         },
         {
             'id': 'opp_reb',
-            'title': 'Opponent Reb Allowed',
-            'description': 'Target rebounders',
+            'title': 'Opponent Reb Allowed L10 Games',
+            'description': '',
             'df': opponent,
             'col': 'OPP_REB',
             'player_type': 'stats',
@@ -967,8 +1118,8 @@ def build_funnels_data():
         },
         {
             'id': 'opp_ast',
-            'title': 'Opponent Assists Allowed',
-            'description': 'Target playmakers',
+            'title': 'Opponent Assists Allowed L10 Games',
+            'description': '',
             'df': opponent,
             'col': 'OPP_AST',
             'player_type': 'stats',
@@ -978,8 +1129,8 @@ def build_funnels_data():
         },
         {
             'id': 'opp_pts',
-            'title': 'Opponent PPG Allowed',
-            'description': 'Target scorers',
+            'title': 'Opponent PPG Allowed L10 Games',
+            'description': '',
             'df': opponent,
             'col': 'OPP_PTS',
             'player_type': 'stats',
@@ -990,47 +1141,47 @@ def build_funnels_data():
         # Shot zone funnels - DISABLED player fetching for now (need different API approach)
         {
             'id': 'ra_fgm',
-            'title': 'Restricted Area FGM Allowed',
-            'description': 'Good matchup for rim runners and bigs',
+            'title': 'Restricted Area FGM Allowed L10 Games',
+            'description': '',
             'df': zones,
             'col': 'RA_FGM',
             'player_type': 'zone',
             'zone_type': 'restricted_area',
-            'player_count': 0,
-            'display_stat': 'fgm'
+            'player_count': 3,
+            'display_stat': 'zone_pct'
         },
         {
             'id': 'mr_fga',
-            'title': 'Mid-Range FGA Allowed',
-            'description': 'Target mid-range shooters',
+            'title': 'Mid-Range FGA Allowed L10 Games',
+            'description': '',
             'df': zones,
             'col': 'MR_FGA',
             'player_type': 'zone',
             'zone_type': 'mid_range',
-            'player_count': 0,
-            'display_stat': 'fga'
+            'player_count': 2,
+            'display_stat': 'zone_pct'
         },
         {
             'id': 'corner3_fga',
-            'title': 'Corner 3PA Allowed',
-            'description': 'Usually low usage role players sitting in the corner',
+            'title': 'Corner 3PA Allowed L10 Games',
+            'description': '',
             'df': zones,
             'col': 'C3_FGA',
             'player_type': 'zone',
             'zone_type': 'corner3',
-            'player_count': 0,
-            'display_stat': 'fga'
+            'player_count': 2,
+            'display_stat': 'zone_pct'
         },
         {
             'id': 'atb3_fga',
-            'title': 'Above Break 3PA Allowed',
-            'description': 'Non-corner threes, typically higher usage players',
+            'title': 'Above Break 3PA Allowed L10 Games',
+            'description': '',
             'df': zones,
             'col': 'ATB3_FGA',
             'player_type': 'zone',
             'zone_type': 'above_break3',
-            'player_count': 0,
-            'display_stat': 'fga'
+            'player_count': 3,
+            'display_stat': 'zone_pct'
         },
     ]
     
@@ -1140,9 +1291,8 @@ def build_funnels_data():
     }
 
 
-def save_funnels_data(data, filepath='funnels_cache/funnels.json'):
+def save_funnels_data(data, filepath='funnels_data.json'):
     """Save funnels data to JSON file"""
-    os.makedirs(os.path.dirname(filepath), exist_ok=True)
     with open(filepath, 'w') as f:
         json.dump(data, f, indent=2)
     print(f"\n✓ Saved to {filepath}")
@@ -1151,54 +1301,141 @@ def save_funnels_data(data, filepath='funnels_cache/funnels.json'):
 if __name__ == "__main__":
     data = build_funnels_data()
     
+    # Mapping of funnel_id to short stat label
+    STAT_LABELS = {
+        'cs_fgm': 'Catch & Shoot FREQ%',
+        'cs_freq': 'Catch & Shoot FREQ%',
+        'pullup_fgm': 'Pull-Up FREQ%',
+        'pullup_freq': 'Pull-Up FREQ%',
+        'lt10_fgm': 'Less Than 10 ft FREQ%',
+        'lt10_freq': 'Less Than 10 ft FREQ%',
+        'spotup': 'Spot-Up FREQ%',
+        'prr_bh': 'P&R Ball-Handler FREQ%',
+        'prr_rm': 'P&R Roll Man FREQ%',
+        'transition': 'Transition FREQ%',
+        'ra_fgm': 'Restricted Area %',
+        'mr_fga': 'Mid-Range %',
+        'corner3_fga': 'Corner 3 %',
+        'atb3_fga': 'Above Break 3 %',
+    }
+    
     # Print results for verification
     print("\n" + "=" * 60)
-    print("OVERS - Teams that ALLOW the most (target these players)")
+    print("OVERS - Teams that ALLOW the most:")
     print("=" * 60)
     
     for funnel in data.get('overs', []):
         print(f"\n🔥 {funnel['title']}")
-        print(f"   {funnel['description']}")
         print("-" * 50)
         
-        for team_data in funnel.get('teams', []):
-            unit = '%' if funnel.get('is_percent') else ''
-            print(f"   #{team_data['rank']} {team_data['team']} ({team_data['value']}{unit}) vs {team_data['opponent']}")
-            
-            players = team_data.get('players', [])
-            if players:
-                print(f"      → {team_data['opponent']} players to TARGET:")
-                for p in players:
-                    freq = p.get('freq', '')
-                    fgm = p.get('fgm', '')
-                    fga = p.get('fga', '')
-                    stat_str = f"{freq}% FREQ" if freq else (f"{fgm} FGM" if fgm else (f"{fga} FGA" if fga else ''))
-                    print(f"         • {p['name']} - {stat_str} ({p['mpg']} MPG)")
+        teams = funnel.get('teams', [])
+        if not teams:
+            print("   No Top 5 Teams Playing Today")
+        else:
+            for team_data in teams:
+                unit = '%' if funnel.get('is_percent') else ''
+                print(f"   #{team_data['rank']} {team_data['team']} ({team_data['value']}{unit}) vs {team_data['opponent']}")
+                
+                players = team_data.get('players', [])
+                if players:
+                    display_stat = funnel.get('display_stat', 'freq')
+                    funnel_id = funnel.get('id', '')
+                    
+                    # Get stat label for player header
+                    stat_label = STAT_LABELS.get(funnel_id, 'FREQ%')
+                    
+                    # Build header with context for zone stats
+                    if display_stat == 'zone_pct':
+                        if funnel_id == 'ra_fgm':
+                            context = " (% of FGM that are in the Restricted Area)"
+                        elif funnel_id == 'mr_fga':
+                            context = " (% of FGA that are in the Mid-Range)"
+                        elif funnel_id == 'corner3_fga':
+                            context = " (% of FGA that are Corner Threes)"
+                        elif funnel_id == 'atb3_fga':
+                            context = " (% of FGA that are ABTB Threes)"
+                        else:
+                            context = ""
+                    else:
+                        context = ""
+                    
+                    print(f"      → {team_data['opponent']} players {stat_label}{context}:")
+                    
+                    for p in players:
+                        if display_stat == 'freq':
+                            stat_str = f"{p.get('freq', '')}% FREQ"
+                        elif display_stat == 'fgm':
+                            stat_str = f"{p.get('fgm', '')} FGM"
+                        elif display_stat == 'fga':
+                            stat_str = f"{p.get('fga', '')} FGA"
+                        elif display_stat == '3pa':
+                            stat_str = f"{p.get('3pa', p.get('fga', ''))} 3PA"
+                        elif display_stat == 'zone_pct':
+                            stat_str = f"{p.get('zone_pct', '')}%"
+                        else:
+                            stat_str = ''
+                        print(f"         • {p['name']} - {stat_str}")
     
     print("\n" + "=" * 60)
-    print("UNDERS - Teams that ALLOW the least (fade these players)")
+    print("UNDERS - Teams that ALLOW the least:")
     print("=" * 60)
     
     for funnel in data.get('unders', []):
         print(f"\n❄️ {funnel['title']}")
-        print(f"   {funnel['description']}")
         print("-" * 50)
         
-        for team_data in funnel.get('teams', []):
-            unit = '%' if funnel.get('is_percent') else ''
-            print(f"   #{team_data['rank']} {team_data['team']} ({team_data['value']}{unit}) vs {team_data['opponent']}")
-            
-            players = team_data.get('players', [])
-            if players:
-                print(f"      → {team_data['opponent']} players to FADE:")
-                for p in players:
-                    freq = p.get('freq', '')
-                    fgm = p.get('fgm', '')
-                    fga = p.get('fga', '')
-                    stat_str = f"{freq}% FREQ" if freq else (f"{fgm} FGM" if fgm else (f"{fga} FGA" if fga else ''))
-                    print(f"         • {p['name']} - {stat_str} ({p['mpg']} MPG)")
+        teams = funnel.get('teams', [])
+        if not teams:
+            print("   No Bottom 5 Teams Playing Today")
+        else:
+            for team_data in teams:
+                unit = '%' if funnel.get('is_percent') else ''
+                print(f"   #{team_data['rank']} {team_data['team']} ({team_data['value']}{unit}) vs {team_data['opponent']}")
+                
+                players = team_data.get('players', [])
+                if players:
+                    display_stat = funnel.get('display_stat', 'freq')
+                    funnel_id = funnel.get('id', '')
+                    
+                    # Get stat label for player header
+                    stat_label = STAT_LABELS.get(funnel_id, 'FREQ%')
+                    
+                    # Build header with context for zone stats
+                    if display_stat == 'zone_pct':
+                        if funnel_id == 'ra_fgm':
+                            context = " (% of FGM that are in the Restricted Area)"
+                        elif funnel_id == 'mr_fga':
+                            context = " (% of FGA that are in the Mid-Range)"
+                        elif funnel_id == 'corner3_fga':
+                            context = " (% of FGA that are Corner Threes)"
+                        elif funnel_id == 'atb3_fga':
+                            context = " (% of FGA that are ABTB Threes)"
+                        else:
+                            context = ""
+                    else:
+                        context = ""
+                    
+                    print(f"      → {team_data['opponent']} players {stat_label}{context}:")
+                    
+                    for p in players:
+                        if display_stat == 'freq':
+                            stat_str = f"{p.get('freq', '')}% FREQ"
+                        elif display_stat == 'fgm':
+                            stat_str = f"{p.get('fgm', '')} FGM"
+                        elif display_stat == 'fga':
+                            stat_str = f"{p.get('fga', '')} FGA"
+                        elif display_stat == '3pa':
+                            stat_str = f"{p.get('3pa', p.get('fga', ''))} 3PA"
+                        elif display_stat == 'zone_pct':
+                            stat_str = f"{p.get('zone_pct', '')}%"
+                        else:
+                            stat_str = ''
+                        print(f"         • {p['name']} - {stat_str}")
     
-    print("\n")
-    save_funnels_data(data)
+    print("\n" + "=" * 60)
+    print("Note: Qualifier to be shown is 15 MPG & 15 GP.")
+    print("Players who are OUT or DOUBTFUL are excluded.")
+    print("=" * 60)
+    
     save_funnels_data(data)
     print("\nDone!")
