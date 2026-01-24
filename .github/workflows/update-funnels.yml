@@ -1,0 +1,61 @@
+name: 🏀 Update Funnels Data
+
+on:
+  schedule:
+    # 12:00 AM ET - Full daily refresh (5:00 AM UTC during EST)
+    - cron: '0 5 * * *'
+    # 12:00 PM ET - Injury update (5:00 PM UTC during EST)
+    - cron: '0 17 * * *'
+    # 4:00 PM ET - Final injury update before games (9:00 PM UTC during EST)
+    - cron: '0 21 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  update-funnels:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests pandas pytz beautifulsoup4 pdfplumber
+
+      - name: Run Funnels Script
+        run: |
+          python funnels_api.py
+          echo "Funnels data updated at $(date)"
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet funnels_data.json 2>/dev/null; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push if changed
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          # Get current time in ET
+          TIMESTAMP=$(TZ='America/New_York' date '+%Y-%m-%d %I:%M %p ET')
+          
+          git add funnels_data.json
+          git commit -m "🏀 Auto-update Funnels data ${TIMESTAMP}"
+          git push
+
+      - name: No changes detected
+        if: steps.check_changes.outputs.changed == 'false'
+        run: echo "No changes to funnels data"
