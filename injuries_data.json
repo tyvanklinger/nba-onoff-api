@@ -1,249 +1,5 @@
 {
   "injuries": {
-    "New York Knicks": [
-      {
-        "name": "Pacome Dadiet",
-        "status": "Out"
-      },
-      {
-        "name": "Trey JemisonIII",
-        "status": "Out"
-      },
-      {
-        "name": "Dillon Jones",
-        "status": "Out"
-      },
-      {
-        "name": "Kevin McCullarJr.",
-        "status": "Out"
-      }
-    ],
-    "Philadelphia 76ers": [
-      {
-        "name": "MarJon Beauchamp",
-        "status": "Out"
-      },
-      {
-        "name": "Johni Broome",
-        "status": "Out"
-      }
-    ],
-    "Cleveland Cavaliers": [
-      {
-        "name": "Darius Garland",
-        "status": "Out"
-      },
-      {
-        "name": "De'Andre Hunter",
-        "status": "Out"
-      },
-      {
-        "name": "Chris Livingston",
-        "status": "Out"
-      },
-      {
-        "name": "Sam Merrill",
-        "status": "Out"
-      },
-      {
-        "name": "Max Strus",
-        "status": "Out"
-      },
-      {
-        "name": "Luke Travers",
-        "status": "Out"
-      }
-    ],
-    "Orlando Magic": [
-      {
-        "name": "Colin Castleton",
-        "status": "Out"
-      },
-      {
-        "name": "Franz Wagner",
-        "status": "Out"
-      }
-    ],
-    "Boston Celtics": [
-      {
-        "name": "Josh Minott",
-        "status": "Out"
-      },
-      {
-        "name": "Max Shulga",
-        "status": "Out"
-      },
-      {
-        "name": "Jayson Tatum",
-        "status": "Out"
-      }
-    ],
-    "Chicago Bulls": [
-      {
-        "name": "Zach Collins",
-        "status": "Out"
-      },
-      {
-        "name": "Noa Essengue",
-        "status": "Out"
-      },
-      {
-        "name": "Tre Jones",
-        "status": "Out"
-      },
-      {
-        "name": "Yuki Kawamura",
-        "status": "Out"
-      },
-      {
-        "name": "Emanuel Miller",
-        "status": "Out"
-      }
-    ],
-    "Los Angeles Lakers": [
-      {
-        "name": "Austin Reaves",
-        "status": "Out"
-      },
-      {
-        "name": "Adou Thiero",
-        "status": "Out"
-      }
-    ],
-    "Dallas Mavericks": [
-      {
-        "name": "Moussa Cisse",
-        "status": "Out"
-      },
-      {
-        "name": "Anthony Davis",
-        "status": "Out"
-      },
-      {
-        "name": "Dante Exum",
-        "status": "Out"
-      },
-      {
-        "name": "Kyrie Irving",
-        "status": "Out"
-      },
-      {
-        "name": "Dereck LivelyII",
-        "status": "Out"
-      }
-    ],
-    "Miami Heat": [
-      {
-        "name": "Vladislav Goldin",
-        "status": "Out"
-      },
-      {
-        "name": "Tyler Herro",
-        "status": "Out"
-      },
-      {
-        "name": "Terry Rozier",
-        "status": "Out"
-      },
-      {
-        "name": "Kel'el Ware",
-        "status": "Out"
-      },
-      {
-        "name": "Jahmir Young",
-        "status": "Out"
-      },
-      {
-        "name": "Davion Mitchell",
-        "status": "Doubtful"
-      }
-    ],
-    "Utah Jazz": [
-      {
-        "name": "Elijah Harkless",
-        "status": "Out"
-      },
-      {
-        "name": "Walker Kessler",
-        "status": "Out"
-      },
-      {
-        "name": "Kevin Love",
-        "status": "Out"
-      },
-      {
-        "name": "Lauri Markkanen",
-        "status": "Out"
-      },
-      {
-        "name": "Georges Niang",
-        "status": "Out"
-      },
-      {
-        "name": "John Tonje",
-        "status": "Out"
-      },
-      {
-        "name": "Oscar Tshiebwe",
-        "status": "Out"
-      },
-      {
-        "name": "Jusuf Nurkic",
-        "status": "Questionable"
-      }
-    ],
-    "Washington Wizards": [
-      {
-        "name": "Marvin BagleyIII",
-        "status": "Out"
-      },
-      {
-        "name": "Bilal Coulibaly",
-        "status": "Out"
-      },
-      {
-        "name": "AJ Johnson",
-        "status": "Out"
-      },
-      {
-        "name": "Khris Middleton",
-        "status": "Out"
-      },
-      {
-        "name": "Tristan Vukcevic",
-        "status": "Out"
-      },
-      {
-        "name": "Cam Whitmore",
-        "status": "Out"
-      },
-      {
-        "name": "Trae Young",
-        "status": "Out"
-      }
-    ],
-    "Charlotte Hornets": [
-      {
-        "name": "PJ Hall",
-        "status": "Out"
-      },
-      {
-        "name": "Liam McNeeley",
-        "status": "Out"
-      },
-      {
-        "name": "Mason Plumlee",
-        "status": "Out"
-      },
-      {
-        "name": "Antonio Reeves",
-        "status": "Out"
-      },
-      {
-        "name": "KJ Simpson",
-        "status": "Out"
-      }
-    ],
     "Sacramento Kings": [
       {
         "name": "Keegan Murray",
@@ -256,6 +12,10 @@
       {
         "name": "Isaiah Stevens",
         "status": "Out"
+      },
+      {
+        "name": "Zach LaVine",
+        "status": "Questionable"
       }
     ],
     "Detroit Pistons": [
@@ -452,6 +212,10 @@
         "status": "Questionable"
       },
       {
+        "name": "Immanuel Quickley",
+        "status": "Questionable"
+      },
+      {
         "name": "Ja'Kobe Walter",
         "status": "Questionable"
       }
@@ -486,6 +250,16 @@
         "status": "Questionable"
       }
     ],
+    "Phoenix Suns": [
+      {
+        "name": "Devin Booker",
+        "status": "Out"
+      },
+      {
+        "name": "Jalen Green",
+        "status": "Questionable"
+      }
+    ],
     "Brooklyn Nets": [
       {
         "name": "Tyson Etienne",
@@ -511,8 +285,30 @@
         "name": "Noah Clowney",
         "status": "Doubtful"
       }
+    ],
+    "Los Angeles Clippers": [
+      {
+        "name": "Bradley Beal",
+        "status": "Out"
+      },
+      {
+        "name": "Bogdan Bogdanovic",
+        "status": "Out"
+      },
+      {
+        "name": "Derrick JonesJr.",
+        "status": "Out"
+      },
+      {
+        "name": "Chris Paul",
+        "status": "Out"
+      },
+      {
+        "name": "Kawhi Leonard",
+        "status": "Questionable"
+      }
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-24 07:09 PM ET"
+  "updated": "2026-01-25 08:53 AM ET"
 }
