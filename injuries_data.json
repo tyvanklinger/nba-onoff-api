@@ -2,6 +2,10 @@
   "injuries": {
     "New York Knicks": [
       {
+        "name": "Pacome Dadiet",
+        "status": "Out"
+      },
+      {
         "name": "Trey JemisonIII",
         "status": "Out"
       },
@@ -25,6 +29,10 @@
       }
     ],
     "Cleveland Cavaliers": [
+      {
+        "name": "Darius Garland",
+        "status": "Out"
+      },
       {
         "name": "De'Andre Hunter",
         "status": "Out"
@@ -94,6 +102,10 @@
     ],
     "Los Angeles Lakers": [
       {
+        "name": "Austin Reaves",
+        "status": "Out"
+      },
+      {
         "name": "Adou Thiero",
         "status": "Out"
       }
@@ -121,6 +133,10 @@
       }
     ],
     "Miami Heat": [
+      {
+        "name": "Vladislav Goldin",
+        "status": "Out"
+      },
       {
         "name": "Tyler Herro",
         "status": "Out"
@@ -178,6 +194,10 @@
     ],
     "Washington Wizards": [
       {
+        "name": "Marvin BagleyIII",
+        "status": "Out"
+      },
+      {
         "name": "Bilal Coulibaly",
         "status": "Out"
       },
@@ -226,6 +246,10 @@
     ],
     "Sacramento Kings": [
       {
+        "name": "Keegan Murray",
+        "status": "Out"
+      },
+      {
         "name": "Daeqwon Plowden",
         "status": "Out"
       },
@@ -253,6 +277,10 @@
       }
     ],
     "Denver Nuggets": [
+      {
+        "name": "Tamar Bates",
+        "status": "Out"
+      },
       {
         "name": "Christian Braun",
         "status": "Out"
@@ -313,6 +341,10 @@
       }
     ],
     "Golden State Warriors": [
+      {
+        "name": "Jimmy ButlerIII",
+        "status": "Out"
+      },
       {
         "name": "Seth Curry",
         "status": "Out"
@@ -474,9 +506,13 @@
       {
         "name": "Nolan Traore",
         "status": "Out"
+      },
+      {
+        "name": "Noah Clowney",
+        "status": "Doubtful"
       }
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-24 07:07 PM ET"
+  "updated": "2026-01-24 07:09 PM ET"
 }
