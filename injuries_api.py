@@ -122,7 +122,9 @@ def scrape_injuries():
                 text = page.extract_text() or ""
                 full_text += text + "\n"
             
-            # Process the text
+            # Process the text - don't skip any lines with game times!
+            # Just extract team names and player info from each line
+            
             current_team = None
             
             # Split by lines
@@ -133,17 +135,19 @@ def scrape_injuries():
                 if not line:
                     continue
                 
-                # Skip header/footer lines
-                if 'GameDate' in line or 'Injury Report:' in line or line.startswith('Page'):
+                # Skip only true header/footer lines
+                if 'GameDate' in line and 'GameTime' in line:
+                    continue
+                if line.startswith('Injury Report:'):
+                    continue
+                if re.match(r'^Page\s*\d+\s*of\s*\d+$', line):
                     continue
                 
-                # Check for team name (no-space format)
-                # Team names appear either at start of line or standalone
+                # Check for team name (no-space format) ANYWHERE in the line
                 for nospace_name, proper_name in TEAM_NAMES_NOSPACE.items():
                     if nospace_name in line:
                         current_team = proper_name
-                        # Remove team name to process remainder
-                        line = line.replace(nospace_name, ' ').strip()
+                        # Don't remove team name - just note it and continue processing
                         break
                 
                 # Check for NOT YET SUBMITTED
@@ -151,26 +155,22 @@ def scrape_injuries():
                     not_yet_submitted.add(current_team)
                     continue
                 
-                # Skip if no current team or line is just game time info
+                # Skip if no current team yet
                 if not current_team:
-                    continue
-                if re.match(r'^\d{2}:\d{2}\(ET\)', line):
-                    continue
-                if re.match(r'^\d{2}/\d{2}/\d{4}', line):
                     continue
                 
                 # Find all player entries in the line
-                # Pattern: Name,Name Status (handles Jr., Sr., III, etc.)
-                # Examples: "Dadiet,Pacome Out", "Towns,Karl-Anthony Questionable", "ButlerIII,Jimmy Out"
-                player_pattern = r'([A-Za-z\-\']+(?:Jr\.|Sr\.|III|II|IV|V)?,\s*[A-Za-z\-\']+)\s+(Out|Doubtful|Questionable|Probable|Available)'
+                # Pattern handles: Name,Name Status (with optional Jr., Sr., III, etc.)
+                # Also handles names with apostrophes like De'Andre
+                player_pattern = r"([A-Za-z\-\'\.]+(?:(?:Jr\.|Sr\.|III|II|IV|V))?),\s*([A-Za-z\-\'\.]+(?:\s*[A-Za-z\-\'\.]+)?)\s+(Out|Doubtful|Questionable|Probable|Available)"
                 
                 matches = re.findall(player_pattern, line, re.IGNORECASE)
                 
-                for player_raw, status in matches:
+                for last_name, first_name, status in matches:
                     status = status.title()
                     
-                    # Convert "Last,First" to "First Last"
-                    player_name = convert_player_name(player_raw)
+                    # Build full name
+                    player_name = f"{first_name.strip()} {last_name.strip()}"
                     
                     # Only include Out, Doubtful, Questionable
                     if status in ['Out', 'Doubtful', 'Questionable']:
