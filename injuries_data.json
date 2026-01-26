@@ -312,6 +312,32 @@
         "status": "Questionable"
       }
     ],
+    "Washington Wizards": [
+      {
+        "name": "Marvin Bagley III",
+        "status": "Out"
+      },
+      {
+        "name": "Tristan Vukcevic",
+        "status": "Out"
+      },
+      {
+        "name": "Cam Whitmore",
+        "status": "Out"
+      },
+      {
+        "name": "Trae Young",
+        "status": "Out"
+      },
+      {
+        "name": "Bilal Coulibaly",
+        "status": "Questionable"
+      },
+      {
+        "name": "Khris Middleton",
+        "status": "Questionable"
+      }
+    ],
     "Sacramento Kings": [
       {
         "name": "Keegan Murray",
@@ -333,8 +359,80 @@
         "name": "Malik Monk",
         "status": "Questionable"
       }
+    ],
+    "New York Knicks": [
+      {
+        "name": "Trey Jemison III",
+        "status": "Questionable"
+      },
+      {
+        "name": "Dillon Jones",
+        "status": "Questionable"
+      },
+      {
+        "name": "Kevin McCullar Jr.",
+        "status": "Questionable"
+      }
+    ],
+    "Milwaukee Bucks": [
+      {
+        "name": "Alex Antetokounmpo",
+        "status": "Out"
+      },
+      {
+        "name": "Giannis Antetokounmpo",
+        "status": "Out"
+      },
+      {
+        "name": "Kevin Porter Jr.",
+        "status": "Out"
+      },
+      {
+        "name": "Taurean Prince",
+        "status": "Out"
+      }
+    ],
+    "Detroit Pistons": [
+      {
+        "name": "Isaac Jones",
+        "status": "Out"
+      },
+      {
+        "name": "Caris LeVert",
+        "status": "Out"
+      },
+      {
+        "name": "Wendell Moore Jr.",
+        "status": "Out"
+      },
+      {
+        "name": "Tolu Smith",
+        "status": "Out"
+      }
+    ],
+    "Denver Nuggets": [
+      {
+        "name": "Tamar Bates",
+        "status": "Out"
+      },
+      {
+        "name": "Christian Braun",
+        "status": "Out"
+      },
+      {
+        "name": "Aaron Gordon",
+        "status": "Out"
+      },
+      {
+        "name": "Cameron Johnson",
+        "status": "Out"
+      },
+      {
+        "name": "Nikola Jokic",
+        "status": "Out"
+      }
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-26 03:55 PM ET"
+  "updated": "2026-01-26 04:47 PM ET"
 }
