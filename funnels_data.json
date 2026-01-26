@@ -9,134 +9,90 @@
       "display_stat": "freq",
       "teams": [
         {
-          "team": "Jazz",
-          "opponent": "Clippers",
-          "value": 14.6,
-          "rank": 1,
+          "team": "Celtics",
+          "opponent": "Blazers",
+          "value": 12.7,
+          "rank": 4,
           "players": [
             {
-              "name": "Nicolas Batum",
+              "name": "Sidy Cissoko",
               "team": "",
-              "freq": 93.3,
-              "fgm": 1.4,
-              "fga": 3.5,
-              "fg_pct": 39.5,
-              "mpg": 20.0
+              "freq": 55.6,
+              "fgm": 0.9,
+              "fga": 2.9,
+              "fg_pct": 31.9,
+              "mpg": 21.6
             },
             {
-              "name": "Brook Lopez",
+              "name": "Toumani Camara",
               "team": "",
-              "freq": 66.5,
-              "fgm": 1.4,
-              "fga": 4.0,
-              "fg_pct": 34.0,
-              "mpg": 17.0
+              "freq": 52.7,
+              "fgm": 2.0,
+              "fga": 5.6,
+              "fg_pct": 36.0,
+              "mpg": 33.9
             },
             {
-              "name": "Kris Dunn",
+              "name": "Jerami Grant",
               "team": "",
-              "freq": 48.7,
-              "fgm": 1.1,
-              "fga": 3.0,
-              "fg_pct": 38.2,
-              "mpg": 27.2
-            },
-            {
-              "name": "Kobe Sanders",
-              "team": "",
-              "freq": 46.7,
-              "fgm": 1.0,
-              "fga": 2.6,
-              "fg_pct": 39.1,
-              "mpg": 20.9
-            }
-          ]
-        },
-        {
-          "team": "Nets",
-          "opponent": "Suns",
-          "value": 13.4,
-          "rank": 2,
-          "players": [
-            {
-              "name": "Royce O'Neale",
-              "team": "",
-              "freq": 64.8,
-              "fgm": 2.2,
-              "fga": 5.4,
-              "fg_pct": 41.5,
+              "freq": 43.2,
+              "fgm": 2.1,
+              "fga": 5.7,
+              "fg_pct": 37.4,
               "mpg": 29.4
             },
             {
-              "name": "Ryan Dunn",
+              "name": "Caleb Love",
               "team": "",
-              "freq": 44.0,
-              "fgm": 0.8,
-              "fga": 2.5,
-              "fg_pct": 32.6,
-              "mpg": 20.5
-            },
-            {
-              "name": "Jordan Goodwin",
-              "team": "",
-              "freq": 43.7,
-              "fgm": 1.3,
-              "fga": 3.6,
-              "fg_pct": 34.9,
-              "mpg": 21.5
-            },
-            {
-              "name": "Grayson Allen",
-              "team": "",
-              "freq": 39.0,
-              "fgm": 2.0,
-              "fga": 5.1,
-              "fg_pct": 38.7,
-              "mpg": 29.6
+              "freq": 41.3,
+              "fgm": 1.5,
+              "fga": 4.3,
+              "fg_pct": 35.2,
+              "mpg": 22.4
             }
           ]
         },
         {
-          "team": "Bucks",
-          "opponent": "76ers",
-          "value": 13.0,
-          "rank": 3,
+          "team": "Cavaliers",
+          "opponent": "Magic",
+          "value": 12.6,
+          "rank": 5,
           "players": [
             {
-              "name": "Quentin Grimes",
+              "name": "Tyus Jones",
               "team": "",
-              "freq": 38.8,
-              "fgm": 1.5,
-              "fga": 3.8,
-              "fg_pct": 38.8,
-              "mpg": 30.6
+              "freq": 50.0,
+              "fgm": 0.5,
+              "fga": 1.7,
+              "fg_pct": 28.4,
+              "mpg": 16.1
             },
             {
-              "name": "Kelly Oubre Jr.",
+              "name": "Wendell Carter Jr.",
               "team": "",
-              "freq": 37.8,
+              "freq": 47.4,
               "fgm": 1.6,
-              "fga": 4.1,
-              "fg_pct": 38.5,
-              "mpg": 32.5
+              "fga": 4.0,
+              "fg_pct": 39.4,
+              "mpg": 30.1
             },
             {
-              "name": "Jared McCain",
+              "name": "Tristan da Silva",
               "team": "",
-              "freq": 31.8,
-              "fgm": 0.7,
-              "fga": 2.0,
-              "fg_pct": 35.5,
-              "mpg": 16.7
+              "freq": 45.5,
+              "fgm": 1.3,
+              "fga": 3.6,
+              "fg_pct": 36.4,
+              "mpg": 22.9
             },
             {
-              "name": "VJ Edgecombe",
+              "name": "Jalen Suggs",
               "team": "",
-              "freq": 30.9,
-              "fgm": 1.6,
-              "fga": 4.2,
-              "fg_pct": 39.2,
-              "mpg": 36.0
+              "freq": 29.3,
+              "fgm": 1.3,
+              "fga": 3.2,
+              "fg_pct": 40.3,
+              "mpg": 25.3
             }
           ]
         }
@@ -151,98 +107,98 @@
       "display_stat": "freq",
       "teams": [
         {
-          "team": "Jazz",
-          "opponent": "Clippers",
-          "value": 39.3,
-          "rank": 1,
+          "team": "Celtics",
+          "opponent": "Blazers",
+          "value": 38.1,
+          "rank": 2,
           "players": [
             {
-              "name": "Nicolas Batum",
+              "name": "Sidy Cissoko",
               "team": "",
-              "freq": 93.3,
-              "fgm": 1.4,
-              "fga": 3.5,
-              "fg_pct": 39.5,
-              "mpg": 20.0
+              "freq": 55.6,
+              "fgm": 0.9,
+              "fga": 2.9,
+              "fg_pct": 31.9,
+              "mpg": 21.6
             },
             {
-              "name": "Brook Lopez",
+              "name": "Toumani Camara",
               "team": "",
-              "freq": 66.5,
-              "fgm": 1.4,
-              "fga": 4.0,
-              "fg_pct": 34.0,
-              "mpg": 17.0
+              "freq": 52.7,
+              "fgm": 2.0,
+              "fga": 5.6,
+              "fg_pct": 36.0,
+              "mpg": 33.9
             },
             {
-              "name": "Kris Dunn",
+              "name": "Jerami Grant",
               "team": "",
-              "freq": 48.7,
-              "fgm": 1.1,
-              "fga": 3.0,
-              "fg_pct": 38.2,
-              "mpg": 27.2
+              "freq": 43.2,
+              "fgm": 2.1,
+              "fga": 5.7,
+              "fg_pct": 37.4,
+              "mpg": 29.4
             },
             {
-              "name": "Kobe Sanders",
+              "name": "Caleb Love",
               "team": "",
-              "freq": 46.7,
-              "fgm": 1.0,
-              "fga": 2.6,
-              "fg_pct": 39.1,
-              "mpg": 20.9
+              "freq": 41.3,
+              "fgm": 1.5,
+              "fga": 4.3,
+              "fg_pct": 35.2,
+              "mpg": 22.4
             }
           ]
         },
         {
           "team": "Blazers",
-          "opponent": "Wizards",
+          "opponent": "Celtics",
           "value": 37.5,
           "rank": 3,
           "players": [
             {
-              "name": "Bilal Coulibaly",
+              "name": "Sam Hauser",
               "team": "",
-              "freq": 38.3,
+              "freq": 72.0,
+              "fgm": 2.2,
+              "fga": 5.4,
+              "fg_pct": 40.3,
+              "mpg": 23.4
+            },
+            {
+              "name": "Josh Minott",
+              "team": "",
+              "freq": 53.8,
               "fgm": 1.0,
-              "fga": 3.2,
-              "fg_pct": 30.0,
-              "mpg": 26.6
+              "fga": 2.5,
+              "fg_pct": 40.8,
+              "mpg": 17.6
             },
             {
-              "name": "Tre Johnson",
+              "name": "Jordan Walsh",
               "team": "",
-              "freq": 35.4,
-              "fgm": 1.5,
-              "fga": 3.7,
-              "fg_pct": 39.9,
-              "mpg": 25.3
+              "freq": 41.6,
+              "fgm": 0.8,
+              "fga": 1.7,
+              "fg_pct": 44.8,
+              "mpg": 19.0
             },
             {
-              "name": "Justin Champagnie",
+              "name": "Luka Garza",
               "team": "",
-              "freq": 34.2,
-              "fgm": 0.6,
+              "freq": 40.2,
+              "fgm": 0.9,
               "fga": 1.9,
-              "fg_pct": 32.5,
-              "mpg": 18.8
-            },
-            {
-              "name": "Bub Carrington",
-              "team": "",
-              "freq": 30.7,
-              "fgm": 1.0,
-              "fga": 2.6,
-              "fg_pct": 39.1,
-              "mpg": 28.6
+              "fg_pct": 48.6,
+              "mpg": 16.5
             }
           ]
         },
         {
-          "team": "Bucks",
+          "team": "Hornets",
           "opponent": "76ers",
-          "value": 36.5,
-          "rank": 5,
+          "value": 37.2,
+          "rank": 4,
           "players": [
             {
               "name": "Quentin Grimes",
@@ -293,72 +249,72 @@
       "display_stat": "freq",
       "teams": [
         {
-          "team": "Knicks",
-          "opponent": "Kings",
-          "value": 10.2,
-          "rank": 3,
+          "team": "Warriors",
+          "opponent": "Timberwolves",
+          "value": 10.7,
+          "rank": 1,
           "players": [
             {
-              "name": "DeMar DeRozan",
+              "name": "Anthony Edwards",
               "team": "",
-              "freq": 53.2,
-              "fgm": 3.4,
-              "fga": 7.1,
-              "fg_pct": 47.7,
-              "mpg": 33.2
+              "freq": 53.3,
+              "fgm": 4.4,
+              "fga": 11.0,
+              "fg_pct": 39.9,
+              "mpg": 35.1
             },
             {
-              "name": "Zach LaVine",
+              "name": "Mike Conley",
               "team": "",
-              "freq": 41.4,
-              "fgm": 2.3,
-              "fga": 5.8,
-              "fg_pct": 38.7,
-              "mpg": 32.2
+              "freq": 36.7,
+              "fgm": 0.4,
+              "fga": 1.5,
+              "fg_pct": 27.6,
+              "mpg": 18.4
             },
             {
-              "name": "Malik Monk",
+              "name": "Julius Randle",
               "team": "",
-              "freq": 40.7,
-              "fgm": 1.7,
-              "fga": 4.0,
-              "fg_pct": 41.6,
-              "mpg": 22.4
+              "freq": 29.0,
+              "fgm": 1.9,
+              "fga": 4.5,
+              "fg_pct": 42.5,
+              "mpg": 33.7
             }
           ]
         },
         {
           "team": "Blazers",
-          "opponent": "Wizards",
+          "opponent": "Celtics",
           "value": 9.9,
           "rank": 5,
           "players": [
             {
-              "name": "Bub Carrington",
+              "name": "Derrick White",
               "team": "",
-              "freq": 52.1,
-              "fgm": 1.9,
-              "fga": 4.4,
-              "fg_pct": 43.6,
-              "mpg": 28.6
+              "freq": 51.4,
+              "fgm": 3.0,
+              "fga": 8.0,
+              "fg_pct": 37.9,
+              "mpg": 34.2
             },
             {
-              "name": "Khris Middleton",
+              "name": "Anfernee Simons",
               "team": "",
-              "freq": 45.3,
-              "fgm": 1.6,
-              "fga": 3.9,
-              "fg_pct": 41.0,
-              "mpg": 24.5
-            },
-            {
-              "name": "Tre Johnson",
-              "team": "",
-              "freq": 44.6,
+              "freq": 49.3,
               "fgm": 2.2,
-              "fga": 4.7,
-              "fg_pct": 46.0,
-              "mpg": 25.3
+              "fga": 5.6,
+              "fg_pct": 39.0,
+              "mpg": 24.6
+            },
+            {
+              "name": "Jaylen Brown",
+              "team": "",
+              "freq": 48.4,
+              "fgm": 4.7,
+              "fga": 10.9,
+              "fg_pct": 43.1,
+              "mpg": 34.5
             }
           ]
         }
@@ -373,37 +329,37 @@
       "display_stat": "freq",
       "teams": [
         {
-          "team": "Knicks",
-          "opponent": "Kings",
-          "value": 32.0,
-          "rank": 1,
+          "team": "Lakers",
+          "opponent": "Bulls",
+          "value": 28.3,
+          "rank": 5,
           "players": [
             {
-              "name": "DeMar DeRozan",
+              "name": "Coby White",
               "team": "",
-              "freq": 53.2,
-              "fgm": 3.4,
-              "fga": 7.1,
-              "fg_pct": 47.7,
-              "mpg": 33.2
+              "freq": 30.6,
+              "fgm": 1.3,
+              "fga": 4.1,
+              "fg_pct": 31.3,
+              "mpg": 28.7
             },
             {
-              "name": "Zach LaVine",
+              "name": "Josh Giddey",
               "team": "",
-              "freq": 41.4,
-              "fgm": 2.3,
-              "fga": 5.8,
-              "fg_pct": 38.7,
-              "mpg": 32.2
+              "freq": 22.5,
+              "fgm": 1.1,
+              "fga": 3.2,
+              "fg_pct": 33.7,
+              "mpg": 32.3
             },
             {
-              "name": "Malik Monk",
+              "name": "Patrick Williams",
               "team": "",
-              "freq": 40.7,
-              "fgm": 1.7,
-              "fga": 4.0,
-              "fg_pct": 41.6,
-              "mpg": 22.4
+              "freq": 21.4,
+              "fgm": 0.6,
+              "fga": 1.3,
+              "fg_pct": 46.2,
+              "mpg": 18.3
             }
           ]
         }
@@ -418,134 +374,46 @@
       "display_stat": "freq",
       "teams": [
         {
-          "team": "Kings",
-          "opponent": "Knicks",
-          "value": 25.7,
-          "rank": 1,
+          "team": "Pacers",
+          "opponent": "Hawks",
+          "value": 24.0,
+          "rank": 4,
           "players": [
             {
-              "name": "Mitchell Robinson",
+              "name": "Dyson Daniels",
               "team": "",
-              "freq": 100.0,
-              "fgm": 2.1,
-              "fga": 3.1,
-              "fg_pct": 68.0,
-              "mpg": 19.5
+              "freq": 77.8,
+              "fgm": 4.5,
+              "fga": 8.0,
+              "fg_pct": 56.0,
+              "mpg": 34.1
             },
             {
-              "name": "Karl-Anthony Towns",
+              "name": "Jalen Johnson",
               "team": "",
-              "freq": 60.1,
-              "fgm": 4.7,
-              "fga": 8.6,
-              "fg_pct": 55.2,
-              "mpg": 31.7
+              "freq": 52.6,
+              "fgm": 5.5,
+              "fga": 8.9,
+              "fg_pct": 61.9,
+              "mpg": 35.6
             },
             {
-              "name": "OG Anunoby",
+              "name": "Onyeka Okongwu",
               "team": "",
-              "freq": 45.1,
-              "fgm": 3.4,
-              "fga": 5.3,
-              "fg_pct": 63.1,
-              "mpg": 32.8
+              "freq": 51.1,
+              "fgm": 3.8,
+              "fga": 6.4,
+              "fg_pct": 58.8,
+              "mpg": 32.1
             },
             {
-              "name": "Josh Hart",
+              "name": "Mouhamed Gueye",
               "team": "",
-              "freq": 40.9,
-              "fgm": 2.4,
-              "fga": 3.7,
-              "fg_pct": 64.3,
-              "mpg": 30.5
-            }
-          ]
-        },
-        {
-          "team": "Wizards",
-          "opponent": "Blazers",
-          "value": 24.6,
-          "rank": 2,
-          "players": [
-            {
-              "name": "Robert Williams III",
-              "team": "",
-              "freq": 84.8,
-              "fgm": 2.4,
-              "fga": 3.1,
-              "fg_pct": 78.9,
+              "freq": 46.5,
+              "fgm": 1.2,
+              "fga": 1.9,
+              "fg_pct": 64.4,
               "mpg": 16.0
-            },
-            {
-              "name": "Donovan Clingan",
-              "team": "",
-              "freq": 62.2,
-              "fgm": 3.3,
-              "fga": 5.0,
-              "fg_pct": 66.4,
-              "mpg": 27.4
-            },
-            {
-              "name": "Deni Avdija",
-              "team": "",
-              "freq": 51.8,
-              "fgm": 4.8,
-              "fga": 8.7,
-              "fg_pct": 55.3,
-              "mpg": 34.9
-            },
-            {
-              "name": "Shaedon Sharpe",
-              "team": "",
-              "freq": 43.7,
-              "fgm": 4.7,
-              "fga": 7.9,
-              "fg_pct": 59.6,
-              "mpg": 30.1
-            }
-          ]
-        },
-        {
-          "team": "Jazz",
-          "opponent": "Clippers",
-          "value": 23.9,
-          "rank": 5,
-          "players": [
-            {
-              "name": "Ivica Zubac",
-              "team": "",
-              "freq": 93.0,
-              "fgm": 6.0,
-              "fga": 9.8,
-              "fg_pct": 61.8,
-              "mpg": 31.0
-            },
-            {
-              "name": "Jordan Miller",
-              "team": "",
-              "freq": 55.6,
-              "fgm": 1.8,
-              "fga": 3.0,
-              "fg_pct": 60.0,
-              "mpg": 18.6
-            },
-            {
-              "name": "John Collins",
-              "team": "",
-              "freq": 55.3,
-              "fgm": 3.4,
-              "fga": 5.1,
-              "fg_pct": 66.8,
-              "mpg": 27.5
-            },
-            {
-              "name": "Derrick Jones Jr.",
-              "team": "",
-              "freq": 49.6,
-              "fgm": 2.4,
-              "fga": 3.4,
-              "fg_pct": 70.7,
-              "mpg": 24.2
             }
           ]
         }
@@ -560,364 +428,90 @@
       "display_stat": "freq",
       "teams": [
         {
-          "team": "Kings",
-          "opponent": "Knicks",
-          "value": 46.7,
-          "rank": 2,
-          "players": [
-            {
-              "name": "Mitchell Robinson",
-              "team": "",
-              "freq": 100.0,
-              "fgm": 2.1,
-              "fga": 3.1,
-              "fg_pct": 68.0,
-              "mpg": 19.5
-            },
-            {
-              "name": "Karl-Anthony Towns",
-              "team": "",
-              "freq": 60.1,
-              "fgm": 4.7,
-              "fga": 8.6,
-              "fg_pct": 55.2,
-              "mpg": 31.7
-            },
-            {
-              "name": "OG Anunoby",
-              "team": "",
-              "freq": 45.1,
-              "fgm": 3.4,
-              "fga": 5.3,
-              "fg_pct": 63.1,
-              "mpg": 32.8
-            },
-            {
-              "name": "Josh Hart",
-              "team": "",
-              "freq": 40.9,
-              "fgm": 2.4,
-              "fga": 3.7,
-              "fg_pct": 64.3,
-              "mpg": 30.5
-            }
-          ]
-        },
-        {
-          "team": "Thunder",
-          "opponent": "Pelicans",
-          "value": 44.9,
-          "rank": 4,
-          "players": [
-            {
-              "name": "Yves Missi",
-              "team": "",
-              "freq": 96.0,
-              "fgm": 2.4,
-              "fga": 4.3,
-              "fg_pct": 55.4,
-              "mpg": 19.1
-            },
-            {
-              "name": "Zion Williamson",
-              "team": "",
-              "freq": 93.8,
-              "fgm": 7.9,
-              "fga": 13.2,
-              "fg_pct": 59.7,
-              "mpg": 29.1
-            },
-            {
-              "name": "Derik Queen",
-              "team": "",
-              "freq": 68.6,
-              "fgm": 3.8,
-              "fga": 6.7,
-              "fg_pct": 56.5,
-              "mpg": 25.8
-            },
-            {
-              "name": "Jeremiah Fears",
-              "team": "",
-              "freq": 53.5,
-              "fgm": 3.2,
-              "fga": 6.5,
-              "fg_pct": 50.2,
-              "mpg": 26.1
-            }
-          ]
-        },
-        {
-          "team": "Wizards",
-          "opponent": "Blazers",
-          "value": 44.8,
-          "rank": 5,
-          "players": [
-            {
-              "name": "Robert Williams III",
-              "team": "",
-              "freq": 84.8,
-              "fgm": 2.4,
-              "fga": 3.1,
-              "fg_pct": 78.9,
-              "mpg": 16.0
-            },
-            {
-              "name": "Donovan Clingan",
-              "team": "",
-              "freq": 62.2,
-              "fgm": 3.3,
-              "fga": 5.0,
-              "fg_pct": 66.4,
-              "mpg": 27.4
-            },
-            {
-              "name": "Deni Avdija",
-              "team": "",
-              "freq": 51.8,
-              "fgm": 4.8,
-              "fga": 8.7,
-              "fg_pct": 55.3,
-              "mpg": 34.9
-            },
-            {
-              "name": "Shaedon Sharpe",
-              "team": "",
-              "freq": 43.7,
-              "fgm": 4.7,
-              "fga": 7.9,
-              "fg_pct": 59.6,
-              "mpg": 30.1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "spotup_ppg",
-      "title": "Spot-Up PPG Allowed",
-      "description": "",
-      "is_percent": false,
-      "player_count": 4,
-      "display_stat": "freq",
-      "teams": [
-        {
-          "team": "Jazz",
-          "opponent": "Clippers",
-          "value": 34.2,
+          "team": "Pacers",
+          "opponent": "Hawks",
+          "value": 47.3,
           "rank": 1,
           "players": [
             {
-              "name": "Nicolas Batum",
-              "team": "LAC",
-              "poss": 3.1,
-              "pts": 3.6,
-              "ppp": 1.15,
-              "freq": 69.0,
-              "mpg": 20.0
+              "name": "Dyson Daniels",
+              "team": "",
+              "freq": 77.8,
+              "fgm": 4.5,
+              "fga": 8.0,
+              "fg_pct": 56.0,
+              "mpg": 34.1
             },
             {
-              "name": "Derrick Jones Jr.",
-              "team": "LAC",
-              "poss": 3.6,
-              "pts": 4.6,
-              "ppp": 1.28,
-              "freq": 46.0,
-              "mpg": 24.2
+              "name": "Jalen Johnson",
+              "team": "",
+              "freq": 52.6,
+              "fgm": 5.5,
+              "fga": 8.9,
+              "fg_pct": 61.9,
+              "mpg": 35.6
             },
             {
-              "name": "Kobe Sanders",
-              "team": "LAC",
-              "poss": 3.2,
-              "pts": 3.6,
-              "ppp": 1.13,
-              "freq": 42.9,
-              "mpg": 20.9
+              "name": "Onyeka Okongwu",
+              "team": "",
+              "freq": 51.1,
+              "fgm": 3.8,
+              "fga": 6.4,
+              "fg_pct": 58.8,
+              "mpg": 32.1
             },
             {
-              "name": "Kris Dunn",
-              "team": "LAC",
-              "poss": 2.9,
-              "pts": 3.0,
-              "ppp": 1.05,
-              "freq": 38.1,
-              "mpg": 27.2
+              "name": "Mouhamed Gueye",
+              "team": "",
+              "freq": 46.5,
+              "fgm": 1.2,
+              "fga": 1.9,
+              "fg_pct": 64.4,
+              "mpg": 16.0
             }
           ]
         },
         {
-          "team": "Thunder",
-          "opponent": "Pelicans",
-          "value": 33.6,
-          "rank": 2,
-          "players": [
-            {
-              "name": "Micah Peavy",
-              "team": "NOP",
-              "poss": 2.1,
-              "pts": 2.0,
-              "ppp": 0.92,
-              "freq": 38.5,
-              "mpg": 16.1
-            },
-            {
-              "name": "Herbert Jones",
-              "team": "NOP",
-              "poss": 3.9,
-              "pts": 3.9,
-              "ppp": 1.0,
-              "freq": 38.2,
-              "mpg": 28.2
-            },
-            {
-              "name": "Bryce McGowens",
-              "team": "NOP",
-              "poss": 2.6,
-              "pts": 3.1,
-              "ppp": 1.18,
-              "freq": 37.6,
-              "mpg": 19.4
-            },
-            {
-              "name": "Jose Alvarado",
-              "team": "NOP",
-              "poss": 2.5,
-              "pts": 2.2,
-              "ppp": 0.91,
-              "freq": 30.6,
-              "mpg": 21.9
-            }
-          ]
-        },
-        {
-          "team": "Nets",
-          "opponent": "Suns",
-          "value": 33.0,
+          "team": "Timberwolves",
+          "opponent": "Warriors",
+          "value": 45.9,
           "rank": 3,
           "players": [
             {
-              "name": "Royce O'Neale",
-              "team": "PHX",
-              "poss": 4.4,
-              "pts": 5.1,
-              "ppp": 1.17,
-              "freq": 43.2,
-              "mpg": 29.4
+              "name": "Jonathan Kuminga",
+              "team": "",
+              "freq": 55.2,
+              "fgm": 2.9,
+              "fga": 5.3,
+              "fg_pct": 54.2,
+              "mpg": 23.8
             },
             {
-              "name": "Jordan Goodwin",
-              "team": "PHX",
-              "poss": 4.0,
-              "pts": 3.6,
-              "ppp": 0.91,
-              "freq": 42.5,
-              "mpg": 21.5
+              "name": "De'Anthony Melton",
+              "team": "",
+              "freq": 44.4,
+              "fgm": 2.5,
+              "fga": 4.2,
+              "fg_pct": 59.0,
+              "mpg": 20.9
             },
             {
-              "name": "Ryan Dunn",
-              "team": "PHX",
-              "poss": 2.5,
-              "pts": 2.1,
-              "ppp": 0.84,
-              "freq": 35.5,
-              "mpg": 20.5
+              "name": "Draymond Green",
+              "team": "",
+              "freq": 33.7,
+              "fgm": 1.5,
+              "fga": 2.5,
+              "fg_pct": 61.1,
+              "mpg": 26.6
             },
             {
-              "name": "Grayson Allen",
-              "team": "PHX",
-              "poss": 5.3,
-              "pts": 6.6,
-              "ppp": 1.26,
-              "freq": 32.5,
-              "mpg": 29.6
-            }
-          ]
-        },
-        {
-          "team": "Bucks",
-          "opponent": "76ers",
-          "value": 31.6,
-          "rank": 4,
-          "players": [
-            {
-              "name": "Quentin Grimes",
-              "team": "PHI",
-              "poss": 4.8,
-              "pts": 5.6,
-              "ppp": 1.16,
-              "freq": 37.6,
-              "mpg": 30.6
-            },
-            {
-              "name": "Dominick Barlow",
-              "team": "PHI",
-              "poss": 2.3,
-              "pts": 2.0,
-              "ppp": 0.86,
-              "freq": 32.7,
-              "mpg": 23.9
-            },
-            {
-              "name": "Kelly Oubre Jr.",
-              "team": "PHI",
-              "poss": 4.1,
-              "pts": 4.8,
-              "ppp": 1.17,
-              "freq": 29.8,
-              "mpg": 32.5
-            },
-            {
-              "name": "Jared McCain",
-              "team": "PHI",
-              "poss": 2.0,
-              "pts": 1.8,
-              "ppp": 0.88,
-              "freq": 29.6,
-              "mpg": 16.7
-            }
-          ]
-        },
-        {
-          "team": "Wizards",
-          "opponent": "Blazers",
-          "value": 31.3,
-          "rank": 5,
-          "players": [
-            {
-              "name": "Sidy Cissoko",
-              "team": "POR",
-              "poss": 3.6,
-              "pts": 3.5,
-              "ppp": 0.99,
-              "freq": 51.3,
-              "mpg": 21.6
-            },
-            {
-              "name": "Toumani Camara",
-              "team": "POR",
-              "poss": 5.4,
-              "pts": 5.6,
-              "ppp": 1.04,
-              "freq": 40.5,
-              "mpg": 33.9
-            },
-            {
-              "name": "Caleb Love",
-              "team": "POR",
-              "poss": 4.5,
-              "pts": 4.0,
-              "ppp": 0.87,
-              "freq": 36.2,
-              "mpg": 22.4
-            },
-            {
-              "name": "Jerami Grant",
-              "team": "POR",
-              "poss": 6.5,
-              "pts": 7.6,
-              "ppp": 1.18,
-              "freq": 35.4,
-              "mpg": 29.4
+              "name": "Will Richard",
+              "team": "",
+              "freq": 33.2,
+              "fgm": 1.2,
+              "fga": 1.7,
+              "fg_pct": 71.0,
+              "mpg": 19.2
             }
           ]
         }
@@ -932,80 +526,106 @@
       "display_stat": "freq",
       "teams": [
         {
-          "team": "Knicks",
-          "opponent": "Kings",
-          "value": 17.1,
-          "rank": 2,
+          "team": "Timberwolves",
+          "opponent": "Warriors",
+          "value": 17.5,
+          "rank": 1,
           "players": [
             {
-              "name": "Dennis Schr\u00f6der",
-              "team": "SAC",
-              "poss": 5.1,
-              "pts": 4.2,
-              "ppp": 0.82,
-              "freq": 36.7,
-              "mpg": 26.4
+              "name": "Brandin Podziemski",
+              "team": "GSW",
+              "poss": 3.0,
+              "pts": 2.9,
+              "ppp": 0.97,
+              "freq": 25.5,
+              "mpg": 26.7
             },
             {
-              "name": "Russell Westbrook",
-              "team": "SAC",
-              "poss": 4.5,
-              "pts": 3.0,
-              "ppp": 0.67,
-              "freq": 25.6,
-              "mpg": 29.6
+              "name": "Stephen Curry",
+              "team": "GSW",
+              "poss": 5.1,
+              "pts": 4.9,
+              "ppp": 0.97,
+              "freq": 21.5,
+              "mpg": 31.6
             }
           ]
         },
         {
           "team": "Blazers",
-          "opponent": "Wizards",
+          "opponent": "Celtics",
           "value": 17.0,
           "rank": 3,
           "players": [
             {
-              "name": "Bub Carrington",
-              "team": "WAS",
-              "poss": 3.9,
-              "pts": 3.2,
-              "ppp": 0.81,
-              "freq": 33.6,
-              "mpg": 28.6
+              "name": "Derrick White",
+              "team": "BOS",
+              "poss": 6.5,
+              "pts": 5.8,
+              "ppp": 0.9,
+              "freq": 35.1,
+              "mpg": 34.2
             },
             {
-              "name": "Kyshawn George",
-              "team": "WAS",
-              "poss": 5.0,
-              "pts": 4.3,
-              "ppp": 0.85,
-              "freq": 29.6,
-              "mpg": 31.2
+              "name": "Anfernee Simons",
+              "team": "BOS",
+              "poss": 3.8,
+              "pts": 3.4,
+              "ppp": 0.89,
+              "freq": 28.8,
+              "mpg": 24.6
             }
           ]
         },
         {
           "team": "76ers",
-          "opponent": "Bucks",
+          "opponent": "Hornets",
           "value": 16.9,
           "rank": 4,
           "players": [
             {
-              "name": "Cole Anthony",
-              "team": "MIL",
-              "poss": 4.5,
-              "pts": 3.4,
-              "ppp": 0.74,
-              "freq": 51.8,
-              "mpg": 15.1
+              "name": "LaMelo Ball",
+              "team": "CHA",
+              "poss": 8.3,
+              "pts": 6.5,
+              "ppp": 0.79,
+              "freq": 39.4,
+              "mpg": 27.4
             },
             {
-              "name": "Kevin Porter Jr.",
-              "team": "MIL",
-              "poss": 8.2,
-              "pts": 6.9,
-              "ppp": 0.84,
-              "freq": 45.2,
-              "mpg": 33.6
+              "name": "Tre Mann",
+              "team": "CHA",
+              "poss": 3.6,
+              "pts": 2.3,
+              "ppp": 0.64,
+              "freq": 38.0,
+              "mpg": 16.9
+            }
+          ]
+        },
+        {
+          "team": "Magic",
+          "opponent": "Cavaliers",
+          "value": 16.9,
+          "rank": 5,
+          "players": [
+            {
+              "name": "Donovan Mitchell",
+              "team": "CLE",
+              "poss": 9.0,
+              "pts": 9.0,
+              "ppp": 1.0,
+              "freq": 34.1,
+              "mpg": 34.2
+            },
+            {
+              "name": "Craig Porter Jr.",
+              "team": "CLE",
+              "poss": 1.5,
+              "pts": 0.9,
+              "ppp": 0.58,
+              "freq": 27.8,
+              "mpg": 17.7
             }
           ]
         }
@@ -1020,28 +640,106 @@
       "display_stat": "freq",
       "teams": [
         {
-          "team": "Jazz",
-          "opponent": "Clippers",
-          "value": 8.3,
-          "rank": 1,
+          "team": "Bulls",
+          "opponent": "Lakers",
+          "value": 7.9,
+          "rank": 2,
           "players": [
             {
-              "name": "Brook Lopez",
-              "team": "LAC",
-              "poss": 2.3,
-              "pts": 1.8,
-              "ppp": 0.79,
-              "freq": 32.3,
-              "mpg": 17.0
+              "name": "Deandre Ayton",
+              "team": "LAL",
+              "poss": 3.3,
+              "pts": 3.8,
+              "ppp": 1.15,
+              "freq": 28.6,
+              "mpg": 28.7
             },
             {
-              "name": "Ivica Zubac",
-              "team": "LAC",
-              "poss": 2.5,
-              "pts": 2.6,
-              "ppp": 1.01,
-              "freq": 18.9,
-              "mpg": 31.0
+              "name": "Jaxson Hayes",
+              "team": "LAL",
+              "poss": 1.3,
+              "pts": 1.6,
+              "ppp": 1.27,
+              "freq": 26.5,
+              "mpg": 17.5
+            }
+          ]
+        },
+        {
+          "team": "Timberwolves",
+          "opponent": "Warriors",
+          "value": 7.9,
+          "rank": 3,
+          "players": [
+            {
+              "name": "Quinten Post",
+              "team": "GSW",
+              "poss": 1.2,
+              "pts": 1.8,
+              "ppp": 1.48,
+              "freq": 15.7,
+              "mpg": 17.7
+            },
+            {
+              "name": "Al Horford",
+              "team": "GSW",
+              "poss": 0.9,
+              "pts": 0.8,
+              "ppp": 0.91,
+              "freq": 11.8,
+              "mpg": 19.7
+            }
+          ]
+        },
+        {
+          "team": "Hawks",
+          "opponent": "Pacers",
+          "value": 7.7,
+          "rank": 4,
+          "players": [
+            {
+              "name": "Jay Huff",
+              "team": "IND",
+              "poss": 1.8,
+              "pts": 1.9,
+              "ppp": 1.05,
+              "freq": 22.8,
+              "mpg": 19.5
+            },
+            {
+              "name": "Isaiah Jackson",
+              "team": "IND",
+              "poss": 0.8,
+              "pts": 1.0,
+              "ppp": 1.26,
+              "freq": 11.6,
+              "mpg": 17.2
+            }
+          ]
+        },
+        {
+          "team": "Pacers",
+          "opponent": "Hawks",
+          "value": 7.5,
+          "rank": 5,
+          "players": [
+            {
+              "name": "Onyeka Okongwu",
+              "team": "ATL",
+              "poss": 1.8,
+              "pts": 2.2,
+              "ppp": 1.22,
+              "freq": 11.6,
+              "mpg": 32.1
+            },
+            {
+              "name": "Kristaps Porzi\u0146\u0123is",
+              "team": "ATL",
+              "poss": 1.6,
+              "pts": 1.5,
+              "ppp": 0.89,
+              "freq": 11.3,
+              "mpg": 24.3
             }
           ]
         }
@@ -1056,38 +754,10 @@
       "display_stat": "none",
       "teams": [
         {
-          "team": "Jazz",
-          "opponent": "Clippers",
-          "value": 28.6,
-          "rank": 1,
-          "players": []
-        },
-        {
-          "team": "Pelicans",
-          "opponent": "Thunder",
-          "value": 27.5,
-          "rank": 2,
-          "players": []
-        },
-        {
           "team": "Blazers",
-          "opponent": "Wizards",
+          "opponent": "Celtics",
           "value": 26.8,
           "rank": 3,
-          "players": []
-        },
-        {
-          "team": "Wizards",
-          "opponent": "Blazers",
-          "value": 26.6,
-          "rank": 4,
-          "players": []
-        },
-        {
-          "team": "Nets",
-          "opponent": "Suns",
-          "value": 26.1,
-          "rank": 5,
           "players": []
         }
       ]
@@ -1101,38 +771,10 @@
       "display_stat": "none",
       "teams": [
         {
-          "team": "Thunder",
-          "opponent": "Pelicans",
-          "value": 14.5,
-          "rank": 1,
-          "players": []
-        },
-        {
           "team": "76ers",
-          "opponent": "Bucks",
+          "opponent": "Hornets",
           "value": 13.8,
           "rank": 2,
-          "players": []
-        },
-        {
-          "team": "Kings",
-          "opponent": "Knicks",
-          "value": 13.8,
-          "rank": 3,
-          "players": []
-        },
-        {
-          "team": "Suns",
-          "opponent": "Nets",
-          "value": 13.3,
-          "rank": 4,
-          "players": []
-        },
-        {
-          "team": "Nuggets",
-          "opponent": "Pistons",
-          "value": 13.2,
-          "rank": 5,
           "players": []
         }
       ]
@@ -1146,24 +788,10 @@
       "display_stat": "none",
       "teams": [
         {
-          "team": "Thunder",
-          "opponent": "Pelicans",
-          "value": 50.2,
-          "rank": 1,
-          "players": []
-        },
-        {
-          "team": "Nuggets",
-          "opponent": "Pistons",
-          "value": 47.9,
-          "rank": 3,
-          "players": []
-        },
-        {
-          "team": "Suns",
-          "opponent": "Nets",
-          "value": 47.2,
-          "rank": 4,
+          "team": "Hawks",
+          "opponent": "Pacers",
+          "value": 46.6,
+          "rank": 5,
           "players": []
         }
       ]
@@ -1177,69 +805,17 @@
       "display_stat": "none",
       "teams": [
         {
-          "team": "Jazz",
-          "opponent": "Clippers",
-          "value": 33.2,
-          "rank": 1,
-          "players": []
-        },
-        {
           "team": "76ers",
-          "opponent": "Bucks",
+          "opponent": "Hornets",
           "value": 29.6,
           "rank": 2,
           "players": []
         },
         {
-          "team": "Nets",
-          "opponent": "Suns",
-          "value": 28.8,
-          "rank": 4,
-          "players": []
-        },
-        {
-          "team": "Wizards",
-          "opponent": "Blazers",
-          "value": 28.4,
-          "rank": 5,
-          "players": []
-        }
-      ]
-    },
-    {
-      "id": "opp_pts",
-      "title": "Opponent PPG Allowed L10 Games",
-      "description": "",
-      "is_percent": false,
-      "player_count": 0,
-      "display_stat": "none",
-      "teams": [
-        {
-          "team": "Jazz",
-          "opponent": "Clippers",
-          "value": 130.4,
-          "rank": 1,
-          "players": []
-        },
-        {
-          "team": "Kings",
-          "opponent": "Knicks",
-          "value": 119.4,
+          "team": "Timberwolves",
+          "opponent": "Warriors",
+          "value": 28.9,
           "rank": 3,
-          "players": []
-        },
-        {
-          "team": "Nets",
-          "opponent": "Suns",
-          "value": 118.8,
-          "rank": 4,
-          "players": []
-        },
-        {
-          "team": "Wizards",
-          "opponent": "Blazers",
-          "value": 118.7,
-          "rank": 5,
           "players": []
         }
       ]
@@ -1254,79 +830,53 @@
       "teams": [
         {
           "team": "76ers",
-          "opponent": "Bucks",
+          "opponent": "Hornets",
           "value": 18.6,
           "rank": 1,
           "players": [
             {
-              "name": "Giannis Antetokounmpo",
-              "team": "MIL",
-              "zone_pct": 81.9,
-              "mpg": 29.2
+              "name": "Ryan Kalkbrenner",
+              "team": "CHA",
+              "zone_pct": 89.2,
+              "mpg": 24.2
             },
             {
-              "name": "Kyle Kuzma",
-              "team": "MIL",
-              "zone_pct": 55.3,
-              "mpg": 26.2
+              "name": "Moussa Diabat\u00e9",
+              "team": "CHA",
+              "zone_pct": 86.7,
+              "mpg": 24.5
             },
             {
-              "name": "Ryan Rollins",
-              "team": "MIL",
-              "zone_pct": 37.1,
-              "mpg": 31.6
+              "name": "Collin Sexton",
+              "team": "CHA",
+              "zone_pct": 46.0,
+              "mpg": 23.0
             }
           ]
         },
         {
-          "team": "Wizards",
-          "opponent": "Blazers",
-          "value": 18.4,
-          "rank": 2,
-          "players": [
-            {
-              "name": "Robert Williams III",
-              "team": "POR",
-              "zone_pct": 84.6,
-              "mpg": 16.0
-            },
-            {
-              "name": "Donovan Clingan",
-              "team": "POR",
-              "zone_pct": 67.4,
-              "mpg": 27.4
-            },
-            {
-              "name": "Shaedon Sharpe",
-              "team": "POR",
-              "zone_pct": 47.6,
-              "mpg": 30.1
-            }
-          ]
-        },
-        {
-          "team": "Nets",
-          "opponent": "Suns",
+          "team": "Timberwolves",
+          "opponent": "Warriors",
           "value": 17.8,
-          "rank": 4,
+          "rank": 5,
           "players": [
             {
-              "name": "Mark Williams",
-              "team": "PHX",
-              "zone_pct": 78.7,
-              "mpg": 23.9
+              "name": "Jonathan Kuminga",
+              "team": "GSW",
+              "zone_pct": 47.7,
+              "mpg": 23.8
             },
             {
-              "name": "Oso Ighodaro",
-              "team": "PHX",
-              "zone_pct": 70.8,
-              "mpg": 20.0
+              "name": "Will Richard",
+              "team": "GSW",
+              "zone_pct": 44.0,
+              "mpg": 19.2
             },
             {
-              "name": "Ryan Dunn",
-              "team": "PHX",
-              "zone_pct": 57.7,
-              "mpg": 20.5
+              "name": "Draymond Green",
+              "team": "GSW",
+              "zone_pct": 41.9,
+              "mpg": 26.6
             }
           ]
         }
@@ -1342,41 +892,81 @@
       "teams": [
         {
           "team": "Blazers",
-          "opponent": "Wizards",
+          "opponent": "Celtics",
           "value": 12.8,
           "rank": 1,
           "players": [
             {
-              "name": "Khris Middleton",
-              "team": "WAS",
-              "zone_pct": 33.7,
-              "mpg": 24.5
+              "name": "Jaylen Brown",
+              "team": "BOS",
+              "zone_pct": 25.7,
+              "mpg": 34.5
             },
             {
-              "name": "Bub Carrington",
-              "team": "WAS",
-              "zone_pct": 16.5,
-              "mpg": 28.6
+              "name": "Anfernee Simons",
+              "team": "BOS",
+              "zone_pct": 15.8,
+              "mpg": 24.6
+            }
+          ]
+        },
+        {
+          "team": "Cavaliers",
+          "opponent": "Magic",
+          "value": 12.8,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Paolo Banchero",
+              "team": "ORL",
+              "zone_pct": 16.7,
+              "mpg": 33.9
+            },
+            {
+              "name": "Desmond Bane",
+              "team": "ORL",
+              "zone_pct": 11.8,
+              "mpg": 34.0
             }
           ]
         },
         {
           "team": "76ers",
-          "opponent": "Bucks",
+          "opponent": "Hornets",
           "value": 11.5,
           "rank": 4,
           "players": [
             {
-              "name": "Bobby Portis",
-              "team": "MIL",
-              "zone_pct": 25.9,
-              "mpg": 23.7
+              "name": "Brandon Miller",
+              "team": "CHA",
+              "zone_pct": 12.0,
+              "mpg": 30.1
             },
             {
-              "name": "Kevin Porter Jr.",
-              "team": "MIL",
-              "zone_pct": 19.2,
-              "mpg": 33.6
+              "name": "Collin Sexton",
+              "team": "CHA",
+              "zone_pct": 10.9,
+              "mpg": 23.0
+            }
+          ]
+        },
+        {
+          "team": "Warriors",
+          "opponent": "Timberwolves",
+          "value": 10.9,
+          "rank": 5,
+          "players": [
+            {
+              "name": "Anthony Edwards",
+              "team": "MIN",
+              "zone_pct": 18.4,
+              "mpg": 35.1
+            },
+            {
+              "name": "Julius Randle",
+              "team": "MIN",
+              "zone_pct": 13.4,
+              "mpg": 33.7
             }
           ]
         }
@@ -1391,62 +981,22 @@
       "display_stat": "zone_pct",
       "teams": [
         {
-          "team": "Jazz",
-          "opponent": "Clippers",
-          "value": 14.5,
-          "rank": 1,
-          "players": [
-            {
-              "name": "Nicolas Batum",
-              "team": "LAC",
-              "zone_pct": 45.9,
-              "mpg": 20.0
-            },
-            {
-              "name": "Derrick Jones Jr.",
-              "team": "LAC",
-              "zone_pct": 26.1,
-              "mpg": 24.2
-            }
-          ]
-        },
-        {
-          "team": "Thunder",
-          "opponent": "Pelicans",
-          "value": 12.8,
-          "rank": 2,
-          "players": [
-            {
-              "name": "Micah Peavy",
-              "team": "NOP",
-              "zone_pct": 21.6,
-              "mpg": 16.1
-            },
-            {
-              "name": "Jose Alvarado",
-              "team": "NOP",
-              "zone_pct": 19.1,
-              "mpg": 21.9
-            }
-          ]
-        },
-        {
           "team": "Blazers",
-          "opponent": "Wizards",
+          "opponent": "Celtics",
           "value": 12.3,
           "rank": 3,
           "players": [
             {
-              "name": "Bilal Coulibaly",
-              "team": "WAS",
-              "zone_pct": 19.0,
-              "mpg": 26.6
+              "name": "Josh Minott",
+              "team": "BOS",
+              "zone_pct": 22.2,
+              "mpg": 17.6
             },
             {
-              "name": "Justin Champagnie",
-              "team": "WAS",
-              "zone_pct": 12.5,
-              "mpg": 18.8
+              "name": "Jordan Walsh",
+              "team": "BOS",
+              "zone_pct": 17.5,
+              "mpg": 19.0
             }
           ]
         }
@@ -1461,28 +1011,80 @@
       "display_stat": "zone_pct",
       "teams": [
         {
-          "team": "Jazz",
-          "opponent": "Clippers",
-          "value": 29.6,
-          "rank": 5,
+          "team": "Celtics",
+          "opponent": "Blazers",
+          "value": 32.5,
+          "rank": 1,
           "players": [
             {
-              "name": "Brook Lopez",
-              "team": "LAC",
-              "zone_pct": 62.7,
-              "mpg": 17.0
+              "name": "Caleb Love",
+              "team": "POR",
+              "zone_pct": 52.8,
+              "mpg": 22.4
             },
             {
-              "name": "Bogdan Bogdanovi\u0107",
-              "team": "LAC",
-              "zone_pct": 53.4,
-              "mpg": 22.5
+              "name": "Toumani Camara",
+              "team": "POR",
+              "zone_pct": 46.7,
+              "mpg": 33.9
             },
             {
-              "name": "Nicolas Batum",
-              "team": "LAC",
-              "zone_pct": 51.4,
-              "mpg": 20.0
+              "name": "Jrue Holiday",
+              "team": "POR",
+              "zone_pct": 45.3,
+              "mpg": 28.8
+            }
+          ]
+        },
+        {
+          "team": "Hornets",
+          "opponent": "76ers",
+          "value": 31.3,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Quentin Grimes",
+              "team": "PHI",
+              "zone_pct": 44.9,
+              "mpg": 30.6
+            },
+            {
+              "name": "Tyrese Maxey",
+              "team": "PHI",
+              "zone_pct": 36.8,
+              "mpg": 39.5
+            },
+            {
+              "name": "Jared McCain",
+              "team": "PHI",
+              "zone_pct": 36.5,
+              "mpg": 16.7
+            }
+          ]
+        },
+        {
+          "team": "Grizzlies",
+          "opponent": "Rockets",
+          "value": 30.6,
+          "rank": 3,
+          "players": [
+            {
+              "name": "Reed Sheppard",
+              "team": "HOU",
+              "zone_pct": 47.7,
+              "mpg": 25.0
+            },
+            {
+              "name": "Jabari Smith Jr.",
+              "team": "HOU",
+              "zone_pct": 30.2,
+              "mpg": 35.0
+            },
+            {
+              "name": "Kevin Durant",
+              "team": "HOU",
+              "zone_pct": 29.6,
+              "mpg": 36.8
             }
           ]
         }
@@ -1499,90 +1101,46 @@
       "display_stat": "freq",
       "teams": [
         {
-          "team": "Pistons",
-          "opponent": "Nuggets",
-          "value": 7.9,
-          "rank": 1,
-          "players": [
-            {
-              "name": "Spencer Jones",
-              "team": "",
-              "freq": 58.1,
-              "fgm": 1.0,
-              "fga": 2.5,
-              "fg_pct": 39.4,
-              "mpg": 23.5
-            },
-            {
-              "name": "Tim Hardaway Jr.",
-              "team": "",
-              "freq": 56.0,
-              "fgm": 2.2,
-              "fga": 5.7,
-              "fg_pct": 39.2,
-              "mpg": 27.2
-            },
-            {
-              "name": "Cameron Johnson",
-              "team": "",
-              "freq": 45.7,
-              "fgm": 1.6,
-              "fga": 4.0,
-              "fg_pct": 40.2,
-              "mpg": 30.6
-            },
-            {
-              "name": "Jalen Pickett",
-              "team": "",
-              "freq": 40.0,
-              "fgm": 0.9,
-              "fga": 2.2,
-              "fg_pct": 42.6,
-              "mpg": 18.9
-            }
-          ]
-        },
-        {
-          "team": "Nuggets",
-          "opponent": "Pistons",
+          "team": "Pacers",
+          "opponent": "Hawks",
           "value": 8.2,
-          "rank": 3,
+          "rank": 2,
           "players": [
             {
-              "name": "Duncan Robinson",
+              "name": "V\u00edt Krej\u010d\u00ed",
               "team": "",
-              "freq": 59.5,
-              "fgm": 2.2,
-              "fga": 5.4,
-              "fg_pct": 40.7,
-              "mpg": 28.7
+              "freq": 63.4,
+              "fgm": 2.0,
+              "fga": 4.4,
+              "fg_pct": 45.5,
+              "mpg": 23.0
             },
             {
-              "name": "Javonte Green",
+              "name": "Luke Kennard",
               "team": "",
-              "freq": 55.7,
-              "fgm": 1.1,
-              "fga": 3.1,
-              "fg_pct": 36.6,
-              "mpg": 19.2
+              "freq": 56.5,
+              "fgm": 1.5,
+              "fga": 3.0,
+              "fg_pct": 51.2,
+              "mpg": 20.4
             },
             {
-              "name": "Jaden Ivey",
+              "name": "Corey Kispert",
               "team": "",
-              "freq": 38.5,
-              "fgm": 1.0,
-              "fga": 2.6,
-              "fg_pct": 38.6,
-              "mpg": 17.0
-            },
-            {
-              "name": "Tobias Harris",
-              "team": "",
-              "freq": 34.1,
-              "fgm": 1.1,
+              "freq": 52.1,
+              "fgm": 1.3,
               "fga": 3.6,
-              "fg_pct": 31.6,
-              "mpg": 27.3
+              "fg_pct": 36.0,
+              "mpg": 19.0
+            },
+            {
+              "name": "Mouhamed Gueye",
+              "team": "",
+              "freq": 46.5,
+              "fgm": 0.5,
+              "fga": 1.9,
+              "fg_pct": 26.4,
+              "mpg": 16.0
             }
           ]
         }
@@ -1597,46 +1155,90 @@
       "display_stat": "freq",
       "teams": [
         {
-          "team": "Nuggets",
-          "opponent": "Pistons",
-          "value": 28.7,
-          "rank": 3,
+          "team": "Pacers",
+          "opponent": "Hawks",
+          "value": 25.7,
+          "rank": 1,
           "players": [
             {
-              "name": "Duncan Robinson",
+              "name": "V\u00edt Krej\u010d\u00ed",
               "team": "",
-              "freq": 59.5,
-              "fgm": 2.2,
-              "fga": 5.4,
-              "fg_pct": 40.7,
-              "mpg": 28.7
+              "freq": 63.4,
+              "fgm": 2.0,
+              "fga": 4.4,
+              "fg_pct": 45.5,
+              "mpg": 23.0
             },
             {
-              "name": "Javonte Green",
+              "name": "Luke Kennard",
               "team": "",
-              "freq": 55.7,
-              "fgm": 1.1,
-              "fga": 3.1,
-              "fg_pct": 36.6,
-              "mpg": 19.2
+              "freq": 56.5,
+              "fgm": 1.5,
+              "fga": 3.0,
+              "fg_pct": 51.2,
+              "mpg": 20.4
             },
             {
-              "name": "Jaden Ivey",
+              "name": "Corey Kispert",
               "team": "",
-              "freq": 38.5,
-              "fgm": 1.0,
-              "fga": 2.6,
-              "fg_pct": 38.6,
-              "mpg": 17.0
-            },
-            {
-              "name": "Tobias Harris",
-              "team": "",
-              "freq": 34.1,
-              "fgm": 1.1,
+              "freq": 52.1,
+              "fgm": 1.3,
               "fga": 3.6,
-              "fg_pct": 31.6,
-              "mpg": 27.3
+              "fg_pct": 36.0,
+              "mpg": 19.0
+            },
+            {
+              "name": "Mouhamed Gueye",
+              "team": "",
+              "freq": 46.5,
+              "fgm": 0.5,
+              "fga": 1.9,
+              "fg_pct": 26.4,
+              "mpg": 16.0
+            }
+          ]
+        },
+        {
+          "team": "Rockets",
+          "opponent": "Grizzlies",
+          "value": 29.8,
+          "rank": 5,
+          "players": [
+            {
+              "name": "Jaylen Wells",
+              "team": "",
+              "freq": 43.5,
+              "fgm": 1.5,
+              "fga": 4.4,
+              "fg_pct": 34.0,
+              "mpg": 27.0
+            },
+            {
+              "name": "Santi Aldama",
+              "team": "",
+              "freq": 41.0,
+              "fgm": 1.7,
+              "fga": 4.5,
+              "fg_pct": 36.6,
+              "mpg": 28.0
+            },
+            {
+              "name": "Jock Landale",
+              "team": "",
+              "freq": 39.9,
+              "fgm": 1.4,
+              "fga": 3.4,
+              "fg_pct": 40.4,
+              "mpg": 23.1
+            },
+            {
+              "name": "GG Jackson",
+              "team": "",
+              "freq": 38.9,
+              "fgm": 0.8,
+              "fga": 2.2,
+              "fg_pct": 35.3,
+              "mpg": 15.7
             }
           ]
         }
@@ -1651,45 +1253,10 @@
       "display_stat": "freq",
       "teams": [
         {
-          "team": "Thunder",
-          "opponent": "Pelicans",
-          "value": 6.4,
-          "rank": 1,
-          "players": [
-            {
-              "name": "Jordan Poole",
-              "team": "",
-              "freq": 37.0,
-              "fgm": 1.4,
-              "fga": 4.5,
-              "fg_pct": 31.2,
-              "mpg": 25.4
-            },
-            {
-              "name": "Jose Alvarado",
-              "team": "",
-              "freq": 33.6,
-              "fgm": 0.8,
-              "fga": 2.3,
-              "fg_pct": 35.0,
-              "mpg": 21.9
-            },
-            {
-              "name": "Trey Murphy III",
-              "team": "",
-              "freq": 30.8,
-              "fgm": 1.6,
-              "fga": 4.9,
-              "fg_pct": 33.0,
-              "mpg": 35.7
-            }
-          ]
-        },
-        {
-          "team": "Bucks",
+          "team": "Hornets",
           "opponent": "76ers",
-          "value": 7.4,
-          "rank": 4,
+          "value": 7.0,
+          "rank": 2,
           "players": [
             {
               "name": "Tyrese Maxey",
@@ -1721,37 +1288,37 @@
           ]
         },
         {
-          "team": "Kings",
-          "opponent": "Knicks",
+          "team": "Timberwolves",
+          "opponent": "Warriors",
           "value": 7.4,
-          "rank": 5,
+          "rank": 3,
           "players": [
             {
-              "name": "Jalen Brunson",
+              "name": "Brandin Podziemski",
               "team": "",
-              "freq": 52.3,
-              "fgm": 4.8,
-              "fga": 10.9,
-              "fg_pct": 43.4,
-              "mpg": 34.5
+              "freq": 42.6,
+              "fgm": 1.6,
+              "fga": 4.0,
+              "fg_pct": 39.1,
+              "mpg": 26.7
             },
             {
-              "name": "Miles McBride",
+              "name": "Stephen Curry",
               "team": "",
-              "freq": 39.9,
-              "fgm": 1.8,
-              "fga": 4.1,
-              "fg_pct": 44.3,
-              "mpg": 28.0
+              "freq": 42.0,
+              "fgm": 3.6,
+              "fga": 8.1,
+              "fg_pct": 44.9,
+              "mpg": 31.6
             },
             {
-              "name": "Mikal Bridges",
+              "name": "Buddy Hield",
               "team": "",
-              "freq": 29.5,
-              "fgm": 1.7,
-              "fga": 3.7,
-              "fg_pct": 45.8,
-              "mpg": 34.5
+              "freq": 23.4,
+              "fgm": 0.5,
+              "fga": 1.5,
+              "fg_pct": 30.0,
+              "mpg": 16.9
             }
           ]
         }
@@ -1766,107 +1333,72 @@
       "display_stat": "freq",
       "teams": [
         {
-          "team": "Thunder",
-          "opponent": "Pelicans",
-          "value": 18.3,
-          "rank": 1,
+          "team": "Celtics",
+          "opponent": "Blazers",
+          "value": 22.3,
+          "rank": 4,
           "players": [
             {
-              "name": "Jordan Poole",
+              "name": "Jrue Holiday",
               "team": "",
-              "freq": 37.0,
-              "fgm": 1.4,
-              "fga": 4.5,
-              "fg_pct": 31.2,
-              "mpg": 25.4
+              "freq": 48.5,
+              "fgm": 2.5,
+              "fga": 6.2,
+              "fg_pct": 40.5,
+              "mpg": 28.8
             },
             {
-              "name": "Jose Alvarado",
+              "name": "Shaedon Sharpe",
               "team": "",
-              "freq": 33.6,
-              "fgm": 0.8,
-              "fga": 2.3,
-              "fg_pct": 35.0,
-              "mpg": 21.9
+              "freq": 46.4,
+              "fgm": 2.9,
+              "fga": 8.4,
+              "fg_pct": 34.3,
+              "mpg": 30.1
             },
             {
-              "name": "Trey Murphy III",
+              "name": "Caleb Love",
               "team": "",
-              "freq": 30.8,
-              "fgm": 1.6,
-              "fga": 4.9,
-              "fg_pct": 33.0,
-              "mpg": 35.7
+              "freq": 28.8,
+              "fgm": 1.1,
+              "fga": 3.0,
+              "fg_pct": 34.8,
+              "mpg": 22.4
             }
           ]
         },
         {
-          "team": "Jazz",
-          "opponent": "Clippers",
-          "value": 20.4,
-          "rank": 2,
+          "team": "Hornets",
+          "opponent": "76ers",
+          "value": 22.7,
+          "rank": 5,
           "players": [
             {
-              "name": "Kawhi Leonard",
+              "name": "Tyrese Maxey",
               "team": "",
-              "freq": 58.6,
-              "fgm": 5.3,
-              "fga": 11.4,
-              "fg_pct": 46.8,
-              "mpg": 33.3
+              "freq": 42.8,
+              "fgm": 3.8,
+              "fga": 9.6,
+              "fg_pct": 39.4,
+              "mpg": 39.5
             },
             {
-              "name": "James Harden",
+              "name": "Jared McCain",
               "team": "",
-              "freq": 52.2,
-              "fgm": 3.4,
-              "fga": 9.3,
-              "fg_pct": 36.9,
-              "mpg": 35.6
+              "freq": 33.8,
+              "fgm": 0.7,
+              "fga": 2.1,
+              "fg_pct": 30.3,
+              "mpg": 16.7
             },
             {
-              "name": "Bogdan Bogdanovi\u0107",
+              "name": "VJ Edgecombe",
               "team": "",
-              "freq": 47.9,
-              "fgm": 1.5,
-              "fga": 3.5,
-              "fg_pct": 42.9,
-              "mpg": 22.5
-            }
-          ]
-        },
-        {
-          "team": "Kings",
-          "opponent": "Knicks",
-          "value": 22.0,
-          "rank": 3,
-          "players": [
-            {
-              "name": "Jalen Brunson",
-              "team": "",
-              "freq": 52.3,
-              "fgm": 4.8,
-              "fga": 10.9,
-              "fg_pct": 43.4,
-              "mpg": 34.5
-            },
-            {
-              "name": "Miles McBride",
-              "team": "",
-              "freq": 39.9,
-              "fgm": 1.8,
-              "fga": 4.1,
-              "fg_pct": 44.3,
-              "mpg": 28.0
-            },
-            {
-              "name": "Mikal Bridges",
-              "team": "",
-              "freq": 29.5,
-              "fgm": 1.7,
-              "fga": 3.7,
-              "fg_pct": 45.8,
-              "mpg": 34.5
+              "freq": 28.1,
+              "fgm": 1.3,
+              "fga": 3.8,
+              "fg_pct": 35.1,
+              "mpg": 36.0
             }
           ]
         }
@@ -1881,90 +1413,90 @@
       "display_stat": "freq",
       "teams": [
         {
-          "team": "Pistons",
-          "opponent": "Nuggets",
-          "value": 18.0,
-          "rank": 1,
+          "team": "Celtics",
+          "opponent": "Blazers",
+          "value": 18.8,
+          "rank": 3,
           "players": [
             {
-              "name": "Bruce Brown",
+              "name": "Robert Williams III",
               "team": "",
-              "freq": 62.4,
-              "fgm": 2.1,
-              "fga": 3.9,
-              "fg_pct": 54.2,
-              "mpg": 24.4
+              "freq": 84.8,
+              "fgm": 2.4,
+              "fga": 3.1,
+              "fg_pct": 78.9,
+              "mpg": 16.0
             },
             {
-              "name": "Nikola Joki\u0107",
+              "name": "Donovan Clingan",
               "team": "",
-              "freq": 58.0,
-              "fgm": 7.0,
-              "fga": 10.2,
-              "fg_pct": 68.9,
-              "mpg": 34.6
-            },
-            {
-              "name": "Peyton Watson",
-              "team": "",
-              "freq": 49.4,
-              "fgm": 3.0,
-              "fga": 5.0,
-              "fg_pct": 59.4,
-              "mpg": 29.9
-            },
-            {
-              "name": "Aaron Gordon",
-              "team": "",
-              "freq": 42.1,
+              "freq": 62.2,
               "fgm": 3.3,
               "fga": 5.0,
-              "fg_pct": 66.1,
-              "mpg": 27.9
+              "fg_pct": 66.4,
+              "mpg": 27.4
+            },
+            {
+              "name": "Deni Avdija",
+              "team": "",
+              "freq": 51.8,
+              "fgm": 4.8,
+              "fga": 8.7,
+              "fg_pct": 55.3,
+              "mpg": 34.9
+            },
+            {
+              "name": "Shaedon Sharpe",
+              "team": "",
+              "freq": 43.7,
+              "fgm": 4.7,
+              "fga": 7.9,
+              "fg_pct": 59.6,
+              "mpg": 30.1
             }
           ]
         },
         {
-          "team": "Knicks",
-          "opponent": "Kings",
-          "value": 18.6,
-          "rank": 2,
+          "team": "Cavaliers",
+          "opponent": "Magic",
+          "value": 19.2,
+          "rank": 5,
           "players": [
             {
-              "name": "Dylan Cardwell",
+              "name": "Goga Bitadze",
               "team": "",
-              "freq": 94.2,
-              "fgm": 2.0,
-              "fga": 3.4,
-              "fg_pct": 58.5,
-              "mpg": 19.5
+              "freq": 89.5,
+              "fgm": 2.4,
+              "fga": 3.2,
+              "fg_pct": 74.2,
+              "mpg": 16.4
             },
             {
-              "name": "Domantas Sabonis",
+              "name": "Paolo Banchero",
               "team": "",
-              "freq": 76.7,
-              "fgm": 5.1,
-              "fga": 9.0,
-              "fg_pct": 57.0,
-              "mpg": 29.9
+              "freq": 52.8,
+              "fgm": 4.7,
+              "fga": 8.2,
+              "fg_pct": 56.4,
+              "mpg": 33.9
             },
             {
-              "name": "Precious Achiuwa",
+              "name": "Desmond Bane",
               "team": "",
-              "freq": 76.1,
-              "fgm": 2.7,
-              "fga": 4.6,
-              "fg_pct": 57.5,
-              "mpg": 20.8
+              "freq": 50.9,
+              "fgm": 4.3,
+              "fga": 7.7,
+              "fg_pct": 55.8,
+              "mpg": 34.0
             },
             {
-              "name": "Maxime Raynaud",
+              "name": "Anthony Black",
               "team": "",
-              "freq": 74.7,
-              "fgm": 3.3,
-              "fga": 5.7,
-              "fg_pct": 58.3,
-              "mpg": 23.0
+              "freq": 48.7,
+              "fgm": 3.5,
+              "fga": 6.0,
+              "fg_pct": 57.8,
+              "mpg": 30.7
             }
           ]
         }
@@ -1980,133 +1512,89 @@
       "teams": [
         {
           "team": "Blazers",
-          "opponent": "Wizards",
+          "opponent": "Celtics",
           "value": 35.2,
           "rank": 1,
           "players": [
             {
-              "name": "Marvin Bagley III",
+              "name": "Neemias Queta",
               "team": "",
-              "freq": 88.7,
-              "fgm": 3.7,
-              "fga": 5.7,
-              "fg_pct": 64.9,
-              "mpg": 19.3
+              "freq": 93.3,
+              "fgm": 4.2,
+              "fga": 6.1,
+              "fg_pct": 68.2,
+              "mpg": 24.9
             },
             {
-              "name": "Alex Sarr",
-              "team": "",
-              "freq": 68.0,
-              "fgm": 5.4,
-              "fga": 9.4,
-              "fg_pct": 57.3,
-              "mpg": 28.3
-            },
-            {
-              "name": "Justin Champagnie",
-              "team": "",
-              "freq": 63.7,
-              "fgm": 2.2,
-              "fga": 3.5,
-              "fg_pct": 63.1,
-              "mpg": 18.8
-            },
-            {
-              "name": "Cam Whitmore",
+              "name": "Luka Garza",
               "team": "",
               "freq": 58.6,
-              "fgm": 2.7,
-              "fga": 4.7,
-              "fg_pct": 57.6,
-              "mpg": 16.9
-            }
-          ]
-        },
-        {
-          "team": "Knicks",
-          "opponent": "Kings",
-          "value": 37.1,
-          "rank": 2,
-          "players": [
-            {
-              "name": "Dylan Cardwell",
-              "team": "",
-              "freq": 94.2,
-              "fgm": 2.0,
-              "fga": 3.4,
-              "fg_pct": 58.5,
-              "mpg": 19.5
-            },
-            {
-              "name": "Domantas Sabonis",
-              "team": "",
-              "freq": 76.7,
-              "fgm": 5.1,
-              "fga": 9.0,
-              "fg_pct": 57.0,
-              "mpg": 29.9
-            },
-            {
-              "name": "Precious Achiuwa",
-              "team": "",
-              "freq": 76.1,
-              "fgm": 2.7,
-              "fga": 4.6,
-              "fg_pct": 57.5,
-              "mpg": 20.8
-            },
-            {
-              "name": "Maxime Raynaud",
-              "team": "",
-              "freq": 74.7,
-              "fgm": 3.3,
-              "fga": 5.7,
-              "fg_pct": 58.3,
-              "mpg": 23.0
-            }
-          ]
-        },
-        {
-          "team": "Bucks",
-          "opponent": "76ers",
-          "value": 38.4,
-          "rank": 4,
-          "players": [
-            {
-              "name": "Adem Bona",
-              "team": "",
-              "freq": 94.0,
-              "fgm": 1.3,
-              "fga": 2.2,
-              "fg_pct": 60.3,
-              "mpg": 16.6
-            },
-            {
-              "name": "Andre Drummond",
-              "team": "",
-              "freq": 74.6,
-              "fgm": 2.3,
-              "fga": 4.1,
-              "fg_pct": 54.9,
-              "mpg": 20.0
-            },
-            {
-              "name": "Trendon Watford",
-              "team": "",
-              "freq": 72.8,
               "fgm": 1.8,
-              "fga": 3.3,
-              "fg_pct": 56.0,
-              "mpg": 15.7
+              "fga": 2.8,
+              "fg_pct": 66.7,
+              "mpg": 16.5
             },
             {
-              "name": "Dominick Barlow",
+              "name": "Jordan Walsh",
               "team": "",
-              "freq": 67.3,
-              "fgm": 2.7,
-              "fga": 3.9,
-              "fg_pct": 69.7,
-              "mpg": 23.9
+              "freq": 55.3,
+              "fgm": 1.5,
+              "fga": 2.2,
+              "fg_pct": 67.4,
+              "mpg": 19.0
+            },
+            {
+              "name": "Josh Minott",
+              "team": "",
+              "freq": 40.9,
+              "fgm": 1.1,
+              "fga": 1.9,
+              "fg_pct": 61.1,
+              "mpg": 17.6
+            }
+          ]
+        },
+        {
+          "team": "Cavaliers",
+          "opponent": "Magic",
+          "value": 38.6,
+          "rank": 5,
+          "players": [
+            {
+              "name": "Goga Bitadze",
+              "team": "",
+              "freq": 89.5,
+              "fgm": 2.4,
+              "fga": 3.2,
+              "fg_pct": 74.2,
+              "mpg": 16.4
+            },
+            {
+              "name": "Paolo Banchero",
+              "team": "",
+              "freq": 52.8,
+              "fgm": 4.7,
+              "fga": 8.2,
+              "fg_pct": 56.4,
+              "mpg": 33.9
+            },
+            {
+              "name": "Desmond Bane",
+              "team": "",
+              "freq": 50.9,
+              "fgm": 4.3,
+              "fga": 7.7,
+              "fg_pct": 55.8,
+              "mpg": 34.0
+            },
+            {
+              "name": "Anthony Black",
+              "team": "",
+              "freq": 48.7,
+              "fgm": 3.5,
+              "fga": 6.0,
+              "fg_pct": 57.8,
+              "mpg": 30.7
             }
           ]
         }
@@ -2121,46 +1609,178 @@
       "display_stat": "freq",
       "teams": [
         {
-          "team": "Pistons",
-          "opponent": "Nuggets",
+          "team": "Timberwolves",
+          "opponent": "Warriors",
           "value": 24.8,
-          "rank": 1,
+          "rank": 2,
           "players": [
             {
-              "name": "Spencer Jones",
-              "team": "DEN",
-              "poss": 2.2,
+              "name": "Moses Moody",
+              "team": "GSW",
+              "poss": 4.0,
+              "pts": 5.2,
+              "ppp": 1.3,
+              "freq": 39.8,
+              "mpg": 24.5
+            },
+            {
+              "name": "Draymond Green",
+              "team": "GSW",
+              "poss": 4.2,
+              "pts": 4.1,
+              "ppp": 0.99,
+              "freq": 39.7,
+              "mpg": 26.6
+            },
+            {
+              "name": "Al Horford",
+              "team": "GSW",
+              "poss": 3.0,
+              "pts": 3.1,
+              "ppp": 1.05,
+              "freq": 39.6,
+              "mpg": 19.7
+            },
+            {
+              "name": "Quinten Post",
+              "team": "GSW",
+              "poss": 3.0,
               "pts": 2.5,
-              "ppp": 1.13,
-              "freq": 40.8,
-              "mpg": 23.5
+              "ppp": 0.81,
+              "freq": 39.1,
+              "mpg": 17.7
+            }
+          ]
+        },
+        {
+          "team": "Rockets",
+          "opponent": "Grizzlies",
+          "value": 25.2,
+          "rank": 3,
+          "players": [
+            {
+              "name": "GG Jackson",
+              "team": "MEM",
+              "poss": 3.3,
+              "pts": 2.7,
+              "ppp": 0.81,
+              "freq": 44.0,
+              "mpg": 15.7
             },
             {
-              "name": "Tim Hardaway Jr.",
-              "team": "DEN",
-              "poss": 3.7,
-              "pts": 4.3,
-              "ppp": 1.17,
-              "freq": 32.4,
-              "mpg": 27.2
+              "name": "Santi Aldama",
+              "team": "MEM",
+              "poss": 5.4,
+              "pts": 5.4,
+              "ppp": 0.99,
+              "freq": 40.1,
+              "mpg": 28.0
             },
             {
-              "name": "Jalen Pickett",
-              "team": "DEN",
+              "name": "Jaylen Wells",
+              "team": "MEM",
+              "poss": 5.0,
+              "pts": 4.7,
+              "ppp": 0.95,
+              "freq": 39.8,
+              "mpg": 27.0
+            },
+            {
+              "name": "Kentavious Caldwell-Pope",
+              "team": "MEM",
+              "poss": 3.1,
+              "pts": 3.3,
+              "ppp": 1.07,
+              "freq": 33.7,
+              "mpg": 21.0
+            }
+          ]
+        },
+        {
+          "team": "Pacers",
+          "opponent": "Hawks",
+          "value": 26.1,
+          "rank": 4,
+          "players": [
+            {
+              "name": "Mouhamed Gueye",
+              "team": "ATL",
+              "poss": 1.9,
+              "pts": 1.6,
+              "ppp": 0.81,
+              "freq": 39.0,
+              "mpg": 16.0
+            },
+            {
+              "name": "V\u00edt Krej\u010d\u00ed",
+              "team": "ATL",
+              "poss": 2.6,
+              "pts": 3.3,
+              "ppp": 1.26,
+              "freq": 33.4,
+              "mpg": 23.0
+            },
+            {
+              "name": "Luke Kennard",
+              "team": "ATL",
               "poss": 2.0,
-              "pts": 2.5,
-              "ppp": 1.29,
-              "freq": 30.3,
-              "mpg": 18.9
+              "pts": 2.9,
+              "ppp": 1.49,
+              "freq": 32.0,
+              "mpg": 20.4
             },
             {
-              "name": "Cameron Johnson",
-              "team": "DEN",
+              "name": "Onyeka Okongwu",
+              "team": "ATL",
+              "poss": 4.4,
+              "pts": 5.1,
+              "ppp": 1.16,
+              "freq": 28.0,
+              "mpg": 32.1
+            }
+          ]
+        },
+        {
+          "team": "Magic",
+          "opponent": "Cavaliers",
+          "value": 26.4,
+          "rank": 5,
+          "players": [
+            {
+              "name": "Dean Wade",
+              "team": "CLE",
+              "poss": 2.6,
+              "pts": 2.8,
+              "ppp": 1.07,
+              "freq": 46.7,
+              "mpg": 22.8
+            },
+            {
+              "name": "Sam Merrill",
+              "team": "CLE",
+              "poss": 4.1,
+              "pts": 5.2,
+              "ppp": 1.26,
+              "freq": 36.8,
+              "mpg": 25.8
+            },
+            {
+              "name": "Lonzo Ball",
+              "team": "CLE",
               "poss": 2.7,
-              "pts": 3.0,
-              "ppp": 1.1,
-              "freq": 26.5,
-              "mpg": 30.6
+              "pts": 1.9,
+              "ppp": 0.73,
+              "freq": 36.3,
+              "mpg": 21.3
+            },
+            {
+              "name": "Jaylon Tyson",
+              "team": "CLE",
+              "poss": 4.3,
+              "pts": 5.7,
+              "ppp": 1.32,
+              "freq": 34.7,
+              "mpg": 27.8
             }
           ]
         }
@@ -2175,80 +1795,54 @@
       "display_stat": "freq",
       "teams": [
         {
-          "team": "Nets",
-          "opponent": "Suns",
-          "value": 9.3,
-          "rank": 1,
+          "team": "Cavaliers",
+          "opponent": "Magic",
+          "value": 12.6,
+          "rank": 2,
           "players": [
             {
-              "name": "Collin Gillespie",
-              "team": "PHX",
-              "poss": 4.2,
-              "pts": 3.9,
-              "ppp": 0.93,
-              "freq": 33.5,
-              "mpg": 28.3
-            },
-            {
-              "name": "Devin Booker",
-              "team": "PHX",
-              "poss": 8.3,
-              "pts": 7.3,
-              "ppp": 0.88,
-              "freq": 33.1,
+              "name": "Desmond Bane",
+              "team": "ORL",
+              "poss": 4.7,
+              "pts": 4.2,
+              "ppp": 0.9,
+              "freq": 25.5,
               "mpg": 34.0
-            }
-          ]
-        },
-        {
-          "team": "Suns",
-          "opponent": "Nets",
-          "value": 13.4,
-          "rank": 4,
-          "players": [
-            {
-              "name": "Cam Thomas",
-              "team": "BKN",
-              "poss": 4.8,
-              "pts": 4.4,
-              "ppp": 0.91,
-              "freq": 28.1,
-              "mpg": 24.3
             },
             {
-              "name": "Nolan Traore",
-              "team": "BKN",
-              "poss": 2.1,
-              "pts": 1.2,
-              "ppp": 0.57,
-              "freq": 27.7,
-              "mpg": 18.6
-            }
-          ]
-        },
-        {
-          "team": "Jazz",
-          "opponent": "Clippers",
-          "value": 13.5,
-          "rank": 5,
-          "players": [
-            {
-              "name": "Bogdan Bogdanovi\u0107",
-              "team": "LAC",
-              "poss": 3.0,
+              "name": "Jalen Suggs",
+              "team": "ORL",
+              "poss": 3.6,
               "pts": 2.6,
-              "ppp": 0.87,
-              "freq": 34.4,
-              "mpg": 22.5
-            },
+              "ppp": 0.71,
+              "freq": 25.2,
+              "mpg": 25.3
+            }
+          ]
+        },
+        {
+          "team": "Warriors",
+          "opponent": "Timberwolves",
+          "value": 13.1,
+          "rank": 3,
+          "players": [
             {
-              "name": "Kawhi Leonard",
-              "team": "LAC",
+              "name": "Anthony Edwards",
+              "team": "MIN",
               "poss": 6.2,
               "pts": 6.8,
-              "ppp": 1.11,
-              "freq": 25.5,
-              "mpg": 33.3
+              "ppp": 1.08,
+              "freq": 24.0,
+              "mpg": 35.1
+            },
+            {
+              "name": "Mike Conley",
+              "team": "MIN",
+              "poss": 1.1,
+              "pts": 0.6,
+              "ppp": 0.6,
+              "freq": 20.9,
+              "mpg": 18.4
             }
           ]
         }
@@ -2263,106 +1857,28 @@
       "display_stat": "freq",
       "teams": [
         {
-          "team": "Pistons",
-          "opponent": "Nuggets",
-          "value": 5.4,
-          "rank": 1,
+          "team": "Celtics",
+          "opponent": "Blazers",
+          "value": 5.7,
+          "rank": 3,
           "players": [
             {
-              "name": "Nikola Joki\u0107",
-              "team": "DEN",
-              "poss": 3.2,
-              "pts": 4.0,
-              "ppp": 1.26,
-              "freq": 13.0,
-              "mpg": 34.6
-            },
-            {
-              "name": "Aaron Gordon",
-              "team": "DEN",
-              "poss": 0.9,
-              "pts": 1.5,
-              "ppp": 1.65,
-              "freq": 5.9,
-              "mpg": 27.9
-            }
-          ]
-        },
-        {
-          "team": "Nuggets",
-          "opponent": "Pistons",
-          "value": 5.6,
-          "rank": 2,
-          "players": [
-            {
-              "name": "Jalen Duren",
-              "team": "DET",
+              "name": "Donovan Clingan",
+              "team": "POR",
               "poss": 2.3,
-              "pts": 3.1,
-              "ppp": 1.38,
-              "freq": 14.6,
-              "mpg": 28.2
+              "pts": 2.5,
+              "ppp": 1.09,
+              "freq": 23.3,
+              "mpg": 27.4
             },
             {
-              "name": "Isaiah Stewart",
-              "team": "DET",
-              "poss": 1.3,
-              "pts": 1.4,
-              "ppp": 1.04,
-              "freq": 13.8,
-              "mpg": 23.6
-            }
-          ]
-        },
-        {
-          "team": "Clippers",
-          "opponent": "Jazz",
-          "value": 5.8,
-          "rank": 4,
-          "players": [
-            {
-              "name": "Jusuf Nurki\u0107",
-              "team": "UTA",
-              "poss": 2.9,
-              "pts": 2.8,
-              "ppp": 0.98,
-              "freq": 22.4,
-              "mpg": 26.5
-            },
-            {
-              "name": "Kevin Love",
-              "team": "UTA",
-              "poss": 1.0,
-              "pts": 0.8,
-              "ppp": 0.75,
-              "freq": 14.6,
-              "mpg": 17.3
-            }
-          ]
-        },
-        {
-          "team": "Suns",
-          "opponent": "Nets",
-          "value": 5.8,
-          "rank": 5,
-          "players": [
-            {
-              "name": "Day'Ron Sharpe",
-              "team": "BKN",
-              "poss": 1.2,
-              "pts": 1.3,
-              "ppp": 1.08,
-              "freq": 15.2,
-              "mpg": 18.2
-            },
-            {
-              "name": "Nic Claxton",
-              "team": "BKN",
-              "poss": 1.3,
-              "pts": 1.6,
-              "ppp": 1.29,
-              "freq": 11.0,
-              "mpg": 29.7
+              "name": "Robert Williams III",
+              "team": "POR",
+              "poss": 0.8,
+              "pts": 1.1,
+              "ppp": 1.43,
+              "freq": 17.1,
+              "mpg": 16.0
             }
           ]
         }
@@ -2377,17 +1893,10 @@
       "display_stat": "none",
       "teams": [
         {
-          "team": "Thunder",
-          "opponent": "Pelicans",
-          "value": 18.9,
-          "rank": 1,
-          "players": []
-        },
-        {
-          "team": "Suns",
-          "opponent": "Nets",
-          "value": 21.0,
-          "rank": 4,
+          "team": "Grizzlies",
+          "opponent": "Rockets",
+          "value": 21.7,
+          "rank": 5,
           "players": []
         }
       ]
@@ -2401,24 +1910,17 @@
       "display_stat": "none",
       "teams": [
         {
-          "team": "Bucks",
-          "opponent": "76ers",
-          "value": 9.1,
-          "rank": 1,
+          "team": "Hawks",
+          "opponent": "Pacers",
+          "value": 9.3,
+          "rank": 2,
           "players": []
         },
         {
-          "team": "Nets",
-          "opponent": "Suns",
-          "value": 9.4,
-          "rank": 4,
-          "players": []
-        },
-        {
-          "team": "Knicks",
-          "opponent": "Kings",
-          "value": 9.4,
-          "rank": 5,
+          "team": "Timberwolves",
+          "opponent": "Warriors",
+          "value": 9.3,
+          "rank": 3,
           "players": []
         }
       ]
@@ -2432,55 +1934,17 @@
       "display_stat": "none",
       "teams": [
         {
-          "team": "Knicks",
-          "opponent": "Kings",
-          "value": 39.6,
-          "rank": 2,
-          "players": []
-        },
-        {
-          "team": "Pistons",
-          "opponent": "Nuggets",
-          "value": 40.6,
-          "rank": 3,
-          "players": []
-        }
-      ]
-    },
-    {
-      "id": "opp_ast",
-      "title": "Opponent Assists Allowed L10 Games",
-      "description": "",
-      "is_percent": false,
-      "player_count": 0,
-      "display_stat": "none",
-      "teams": [
-        {
-          "team": "Pistons",
-          "opponent": "Nuggets",
-          "value": 20.6,
+          "team": "Hornets",
+          "opponent": "76ers",
+          "value": 38.1,
           "rank": 1,
           "players": []
         },
         {
-          "team": "Knicks",
-          "opponent": "Kings",
-          "value": 22.8,
-          "rank": 2,
-          "players": []
-        },
-        {
-          "team": "Nuggets",
-          "opponent": "Pistons",
-          "value": 23.1,
-          "rank": 3,
-          "players": []
-        },
-        {
-          "team": "Suns",
-          "opponent": "Nets",
-          "value": 23.7,
-          "rank": 5,
+          "team": "Cavaliers",
+          "opponent": "Magic",
+          "value": 41.1,
+          "rank": 4,
           "players": []
         }
       ]
@@ -2494,24 +1958,10 @@
       "display_stat": "none",
       "teams": [
         {
-          "team": "Pistons",
-          "opponent": "Nuggets",
-          "value": 100.8,
-          "rank": 1,
-          "players": []
-        },
-        {
-          "team": "Suns",
-          "opponent": "Nets",
-          "value": 108.0,
-          "rank": 4,
-          "players": []
-        },
-        {
-          "team": "Nuggets",
-          "opponent": "Pistons",
-          "value": 108.6,
-          "rank": 5,
+          "team": "Hornets",
+          "opponent": "76ers",
+          "value": 106.9,
+          "rank": 3,
           "players": []
         }
       ]
@@ -2525,80 +1975,54 @@
       "display_stat": "zone_pct",
       "teams": [
         {
-          "team": "Pistons",
-          "opponent": "Nuggets",
-          "value": 12.3,
-          "rank": 2,
+          "team": "Celtics",
+          "opponent": "Blazers",
+          "value": 12.0,
+          "rank": 1,
           "players": [
             {
-              "name": "Bruce Brown",
-              "team": "DEN",
-              "zone_pct": 64.3,
-              "mpg": 24.4
+              "name": "Robert Williams III",
+              "team": "POR",
+              "zone_pct": 84.6,
+              "mpg": 16.0
             },
             {
-              "name": "Aaron Gordon",
-              "team": "DEN",
-              "zone_pct": 48.3,
-              "mpg": 27.9
+              "name": "Donovan Clingan",
+              "team": "POR",
+              "zone_pct": 67.4,
+              "mpg": 27.4
             },
             {
-              "name": "Peyton Watson",
-              "team": "DEN",
-              "zone_pct": 44.2,
-              "mpg": 29.9
+              "name": "Shaedon Sharpe",
+              "team": "POR",
+              "zone_pct": 47.6,
+              "mpg": 30.1
             }
           ]
         },
         {
-          "team": "Knicks",
-          "opponent": "Kings",
-          "value": 12.8,
-          "rank": 4,
+          "team": "Warriors",
+          "opponent": "Timberwolves",
+          "value": 12.5,
+          "rank": 3,
           "players": [
             {
-              "name": "Domantas Sabonis",
-              "team": "SAC",
-              "zone_pct": 69.4,
-              "mpg": 29.9
+              "name": "Rudy Gobert",
+              "team": "MIN",
+              "zone_pct": 88.9,
+              "mpg": 31.5
             },
             {
-              "name": "Dylan Cardwell",
-              "team": "SAC",
-              "zone_pct": 61.9,
-              "mpg": 19.5
+              "name": "Julius Randle",
+              "team": "MIN",
+              "zone_pct": 46.8,
+              "mpg": 33.7
             },
             {
-              "name": "Precious Achiuwa",
-              "team": "SAC",
-              "zone_pct": 61.3,
-              "mpg": 20.8
-            }
-          ]
-        },
-        {
-          "team": "Kings",
-          "opponent": "Knicks",
-          "value": 14.4,
-          "rank": 5,
-          "players": [
-            {
-              "name": "Mitchell Robinson",
-              "team": "NYK",
-              "zone_pct": 100.0,
-              "mpg": 19.5
-            },
-            {
-              "name": "Karl-Anthony Towns",
-              "team": "NYK",
-              "zone_pct": 56.7,
-              "mpg": 31.7
-            },
-            {
-              "name": "OG Anunoby",
-              "team": "NYK",
-              "zone_pct": 54.5,
-              "mpg": 32.8
+              "name": "Jaden McDaniels",
+              "team": "MIN",
+              "zone_pct": 39.3,
+              "mpg": 32.1
             }
           ]
         }
@@ -2613,42 +2037,62 @@
       "display_stat": "zone_pct",
       "teams": [
         {
-          "team": "Pistons",
-          "opponent": "Nuggets",
-          "value": 7.5,
-          "rank": 2,
+          "team": "Grizzlies",
+          "opponent": "Rockets",
+          "value": 5.6,
+          "rank": 1,
           "players": [
             {
-              "name": "Jamal Murray",
-              "team": "DEN",
-              "zone_pct": 21.2,
-              "mpg": 35.4
+              "name": "Kevin Durant",
+              "team": "HOU",
+              "zone_pct": 31.3,
+              "mpg": 36.8
             },
             {
-              "name": "Jalen Pickett",
-              "team": "DEN",
-              "zone_pct": 20.0,
-              "mpg": 18.9
+              "name": "Jabari Smith Jr.",
+              "team": "HOU",
+              "zone_pct": 16.3,
+              "mpg": 35.0
             }
           ]
         },
         {
-          "team": "Jazz",
-          "opponent": "Clippers",
-          "value": 7.6,
-          "rank": 3,
+          "team": "Hornets",
+          "opponent": "76ers",
+          "value": 7.7,
+          "rank": 4,
           "players": [
             {
-              "name": "Kawhi Leonard",
-              "team": "LAC",
-              "zone_pct": 21.0,
-              "mpg": 33.3
+              "name": "Tyrese Maxey",
+              "team": "PHI",
+              "zone_pct": 11.7,
+              "mpg": 39.5
             },
             {
-              "name": "Kobe Sanders",
-              "team": "LAC",
-              "zone_pct": 14.5,
-              "mpg": 20.9
+              "name": "VJ Edgecombe",
+              "team": "PHI",
+              "zone_pct": 10.4,
+              "mpg": 36.0
+            }
+          ]
+        },
+        {
+          "team": "Magic",
+          "opponent": "Cavaliers",
+          "value": 7.8,
+          "rank": 5,
+          "players": [
+            {
+              "name": "De'Andre Hunter",
+              "team": "CLE",
+              "zone_pct": 15.5,
+              "mpg": 26.4
+            },
+            {
+              "name": "Donovan Mitchell",
+              "team": "CLE",
+              "zone_pct": 11.9,
+              "mpg": 34.2
             }
           ]
         }
@@ -2663,22 +2107,42 @@
       "display_stat": "zone_pct",
       "teams": [
         {
-          "team": "Pistons",
-          "opponent": "Nuggets",
-          "value": 7.4,
-          "rank": 2,
+          "team": "Pacers",
+          "opponent": "Hawks",
+          "value": 6.2,
+          "rank": 1,
           "players": [
             {
-              "name": "Spencer Jones",
-              "team": "DEN",
-              "zone_pct": 38.6,
-              "mpg": 23.5
+              "name": "Mouhamed Gueye",
+              "team": "ATL",
+              "zone_pct": 33.3,
+              "mpg": 16.0
             },
             {
-              "name": "Cameron Johnson",
-              "team": "DEN",
-              "zone_pct": 15.9,
-              "mpg": 30.6
+              "name": "Luke Kennard",
+              "team": "ATL",
+              "zone_pct": 21.2,
+              "mpg": 20.4
+            }
+          ]
+        },
+        {
+          "team": "Rockets",
+          "opponent": "Grizzlies",
+          "value": 8.3,
+          "rank": 5,
+          "players": [
+            {
+              "name": "GG Jackson",
+              "team": "MEM",
+              "zone_pct": 24.6,
+              "mpg": 15.7
+            },
+            {
+              "name": "Jaylen Wells",
+              "team": "MEM",
+              "zone_pct": 19.0,
+              "mpg": 27.0
             }
           ]
         }
@@ -2693,90 +2157,90 @@
       "display_stat": "zone_pct",
       "teams": [
         {
-          "team": "Thunder",
-          "opponent": "Pelicans",
-          "value": 24.5,
-          "rank": 2,
+          "team": "Pacers",
+          "opponent": "Hawks",
+          "value": 24.0,
+          "rank": 1,
           "players": [
             {
-              "name": "Jordan Poole",
-              "team": "NOP",
-              "zone_pct": 57.0,
-              "mpg": 25.4
+              "name": "V\u00edt Krej\u010d\u00ed",
+              "team": "ATL",
+              "zone_pct": 59.4,
+              "mpg": 23.0
             },
             {
-              "name": "Trey Murphy III",
-              "team": "NOP",
-              "zone_pct": 45.9,
-              "mpg": 35.7
+              "name": "Corey Kispert",
+              "team": "ATL",
+              "zone_pct": 56.2,
+              "mpg": 19.0
             },
             {
-              "name": "Jose Alvarado",
-              "team": "NOP",
-              "zone_pct": 45.6,
-              "mpg": 21.9
+              "name": "Luke Kennard",
+              "team": "ATL",
+              "zone_pct": 40.4,
+              "mpg": 20.4
             }
           ]
         },
         {
-          "team": "Wizards",
-          "opponent": "Blazers",
-          "value": 24.9,
-          "rank": 5,
+          "team": "Lakers",
+          "opponent": "Bulls",
+          "value": 24.5,
+          "rank": 3,
           "players": [
             {
-              "name": "Caleb Love",
-              "team": "POR",
-              "zone_pct": 52.8,
-              "mpg": 22.4
-            },
-            {
-              "name": "Toumani Camara",
-              "team": "POR",
+              "name": "Coby White",
+              "team": "CHI",
               "zone_pct": 46.7,
-              "mpg": 33.9
+              "mpg": 28.7
             },
             {
-              "name": "Jrue Holiday",
-              "team": "POR",
-              "zone_pct": 45.3,
-              "mpg": 28.8
+              "name": "Patrick Williams",
+              "team": "CHI",
+              "zone_pct": 44.1,
+              "mpg": 18.3
+            },
+            {
+              "name": "Jalen Smith",
+              "team": "CHI",
+              "zone_pct": 42.1,
+              "mpg": 19.6
             }
           ]
         }
       ]
     }
   ],
-  "updated": "2026-01-26 12:49:27 ET",
+  "updated": "2026-01-26 13:47:21 ET",
   "games_today": 7,
   "matchups": [
     {
-      "home": "Blazers",
-      "away": "Wizards"
+      "home": "Hawks",
+      "away": "Pacers"
     },
     {
-      "home": "Knicks",
-      "away": "Kings"
+      "home": "76ers",
+      "away": "Hornets"
     },
     {
-      "home": "Bucks",
-      "away": "76ers"
+      "home": "Cavaliers",
+      "away": "Magic"
     },
     {
-      "home": "Pelicans",
-      "away": "Thunder"
+      "home": "Celtics",
+      "away": "Blazers"
     },
     {
-      "home": "Nuggets",
-      "away": "Pistons"
+      "home": "Bulls",
+      "away": "Lakers"
     },
     {
-      "home": "Nets",
-      "away": "Suns"
+      "home": "Rockets",
+      "away": "Grizzlies"
     },
     {
-      "home": "Clippers",
-      "away": "Jazz"
+      "home": "Warriors",
+      "away": "Timberwolves"
     }
   ]
 }
