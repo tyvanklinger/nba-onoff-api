@@ -12,19 +12,27 @@
       {
         "name": "Obi Toppin",
         "status": "Out"
-      },
-      {
-        "name": "Quenton Jackson",
-        "status": "Questionable"
-      },
-      {
-        "name": "Bennedict Mathurin",
-        "status": "Questionable"
       }
     ],
     "Atlanta Hawks": [
       {
         "name": "N'Faly Dante",
+        "status": "Out"
+      },
+      {
+        "name": "RayJ Dennis",
+        "status": "Out"
+      },
+      {
+        "name": "Nikola Djurisic",
+        "status": "Out"
+      },
+      {
+        "name": "Caleb Houstan",
+        "status": "Out"
+      },
+      {
+        "name": "Asa Newell",
         "status": "Out"
       },
       {
@@ -34,25 +42,21 @@
       {
         "name": "Zaccharie Risacher",
         "status": "Out"
-      },
-      {
-        "name": "RayJ Dennis",
-        "status": "Doubtful"
-      },
-      {
-        "name": "Nikola Djurisic",
-        "status": "Doubtful"
-      },
-      {
-        "name": "Caleb Houstan",
-        "status": "Doubtful"
-      },
-      {
-        "name": "Asa Newell",
-        "status": "Doubtful"
       }
     ],
     "Philadelphia 76ers": [
+      {
+        "name": "Charles Bassey",
+        "status": "Out"
+      },
+      {
+        "name": "MarJon Beauchamp",
+        "status": "Out"
+      },
+      {
+        "name": "Johni Broome",
+        "status": "Out"
+      },
       {
         "name": "Joel Embiid",
         "status": "Out"
@@ -60,14 +64,6 @@
       {
         "name": "Paul George",
         "status": "Out"
-      },
-      {
-        "name": "MarJon Beauchamp",
-        "status": "Doubtful"
-      },
-      {
-        "name": "Johni Broome",
-        "status": "Doubtful"
       }
     ],
     "Charlotte Hornets": [
@@ -152,16 +148,16 @@
         "status": "Out"
       },
       {
+        "name": "Tre Jones",
+        "status": "Out"
+      },
+      {
         "name": "Yuki Kawamura",
         "status": "Out"
       },
       {
         "name": "Emanuel Miller",
         "status": "Out"
-      },
-      {
-        "name": "Tre Jones",
-        "status": "Doubtful"
       }
     ],
     "Houston Rockets": [
@@ -226,6 +222,10 @@
         "status": "Out"
       },
       {
+        "name": "Luka Garza",
+        "status": "Questionable"
+      },
+      {
         "name": "Josh Minott",
         "status": "Questionable"
       },
@@ -236,5 +236,5 @@
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-26 12:08 AM ET"
+  "updated": "2026-01-26 12:35 PM ET"
 }
