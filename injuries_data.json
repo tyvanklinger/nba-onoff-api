@@ -104,6 +104,10 @@
         "status": "Out"
       },
       {
+        "name": "De'Andre Hunter",
+        "status": "Out"
+      },
+      {
         "name": "Chris Livingston",
         "status": "Out"
       },
@@ -118,10 +122,6 @@
       {
         "name": "Luke Travers",
         "status": "Out"
-      },
-      {
-        "name": "De'Andre Hunter",
-        "status": "Questionable"
       }
     ],
     "Los Angeles Lakers": [
@@ -470,5 +470,5 @@
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-26 06:43 PM ET"
+  "updated": "2026-01-26 06:58 PM ET"
 }
