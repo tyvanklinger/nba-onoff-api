@@ -210,6 +210,10 @@
     ],
     "Portland Trail Blazers": [
       {
+        "name": "Deni Avdija",
+        "status": "Out"
+      },
+      {
         "name": "Scoot Henderson",
         "status": "Out"
       },
@@ -232,17 +236,13 @@
       {
         "name": "Blake Wesley",
         "status": "Out"
-      },
-      {
-        "name": "Deni Avdija",
-        "status": "Questionable"
-      },
-      {
-        "name": "Robert Williams III",
-        "status": "Questionable"
       }
     ],
     "Boston Celtics": [
+      {
+        "name": "Chris Boucher",
+        "status": "Out"
+      },
       {
         "name": "Luka Garza",
         "status": "Out"
@@ -250,10 +250,6 @@
       {
         "name": "Jayson Tatum",
         "status": "Out"
-      },
-      {
-        "name": "Chris Boucher",
-        "status": "Questionable"
       }
     ],
     "Golden State Warriors": [
@@ -263,6 +259,14 @@
       },
       {
         "name": "Seth Curry",
+        "status": "Out"
+      },
+      {
+        "name": "Stephen Curry",
+        "status": "Out"
+      },
+      {
+        "name": "Draymond Green",
         "status": "Out"
       },
       {
@@ -279,14 +283,6 @@
       },
       {
         "name": "LJ Cryer",
-        "status": "Questionable"
-      },
-      {
-        "name": "Stephen Curry",
-        "status": "Questionable"
-      },
-      {
-        "name": "Draymond Green",
         "status": "Questionable"
       }
     ],
@@ -388,6 +384,50 @@
         "status": "Out"
       }
     ],
+    "New Orleans Pelicans": [
+      {
+        "name": "Trey Alexander",
+        "status": "Out"
+      },
+      {
+        "name": "Hunter Dickinson",
+        "status": "Out"
+      },
+      {
+        "name": "Dejounte Murray",
+        "status": "Out"
+      }
+    ],
+    "Oklahoma City Thunder": [
+      {
+        "name": "Alex Caruso",
+        "status": "Out"
+      },
+      {
+        "name": "Isaiah Hartenstein",
+        "status": "Out"
+      },
+      {
+        "name": "Ajay Mitchell",
+        "status": "Out"
+      },
+      {
+        "name": "Thomas Sorber",
+        "status": "Out"
+      },
+      {
+        "name": "Nikola Topic",
+        "status": "Out"
+      },
+      {
+        "name": "Jalen Williams",
+        "status": "Out"
+      },
+      {
+        "name": "Cason Wallace",
+        "status": "Questionable"
+      }
+    ],
     "Detroit Pistons": [
       {
         "name": "Isaac Jones",
@@ -430,5 +470,5 @@
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-26 05:50 PM ET"
+  "updated": "2026-01-26 06:43 PM ET"
 }
