@@ -1,13 +1,11 @@
-name: 🏀 Update Funnels Data
+name: 🎯 Update Funnels Data
 
 on:
   schedule:
-    # 12:00 AM ET - Full daily refresh (5:00 AM UTC during EST)
-    - cron: '0 5 * * *'
-    # 12:00 PM ET - Injury update (5:00 PM UTC during EST)
-    - cron: '0 17 * * *'
-    # 4:00 PM ET - Final injury update before games (9:00 PM UTC during EST)
-    - cron: '0 21 * * *'
+    # Run at 11:00 PM ET (4:00 AM UTC next day)
+    # ET is UTC-5 (standard) or UTC-4 (daylight saving)
+    # Using 4 AM UTC covers 11 PM ET during standard time
+    - cron: '0 4 * * *'
   workflow_dispatch:  # Allow manual trigger
 
 jobs:
@@ -19,21 +17,19 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-
+      
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
+      
       - name: Install dependencies
         run: |
-          pip install requests pandas pytz beautifulsoup4 pdfplumber
-
-      - name: Run Funnels Script
-        run: |
-          python funnels_api.py
-          echo "Funnels data updated at $(date)"
-
+          pip install requests beautifulsoup4 pdfplumber pytz pandas
+      
+      - name: Run funnels scraper
+        run: python funnels_api.py
+      
       - name: Check for changes
         id: check_changes
         run: |
@@ -42,20 +38,12 @@ jobs:
           else
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
-
+      
       - name: Commit and push if changed
         if: steps.check_changes.outputs.changed == 'true'
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          
-          # Get current time in ET
-          TIMESTAMP=$(TZ='America/New_York' date '+%Y-%m-%d %I:%M %p ET')
-          
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add funnels_data.json
-          git commit -m "🏀 Auto-update Funnels data ${TIMESTAMP}"
+          git commit -m "🎯 Auto-update funnels data"
           git push
-
-      - name: No changes detected
-        if: steps.check_changes.outputs.changed == 'false'
-        run: echo "No changes to funnels data"

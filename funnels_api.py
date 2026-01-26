@@ -5,7 +5,7 @@ Includes opponent player recommendations with injury filtering
 
 import time
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 import pytz
 import pandas as pd
 import requests
@@ -151,19 +151,19 @@ def is_on_team(player_name, team_id):
 
 
 def get_todays_games():
-    """Get today's NBA matchups"""
+    """Get TOMORROW's NBA matchups (for 11 PM ET update)"""
     global MATCHUPS
     MATCHUPS = {}
     
     try:
-        print("Fetching today's games...")
         et = pytz.timezone('US/Eastern')
-        today = datetime.now(et).strftime("%Y-%m-%d")
+        tomorrow = (datetime.now(et) + timedelta(days=1)).strftime("%Y-%m-%d")
+        print(f"Fetching games for {tomorrow}...")
         
         url = "https://stats.nba.com/stats/scoreboardv2"
         params = {
             "LeagueID": "00",
-            "GameDate": today,
+            "GameDate": tomorrow,
             "DayOffset": 0
         }
         
@@ -190,7 +190,7 @@ def get_todays_games():
                             MATCHUPS[away_name] = home_name
                         break
                 
-                print(f"  ✓ Found {len(MATCHUPS)//2} games today")
+                print(f"  ✓ Found {len(MATCHUPS)//2} games tomorrow")
                 return True
         else:
             print(f"  ✗ Status {response.status_code}")
