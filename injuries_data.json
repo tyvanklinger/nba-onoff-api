@@ -160,6 +160,7 @@
         "status": "Out"
       }
     ],
+    "Memphis Grizzlies": [],
     "Houston Rockets": [
       {
         "name": "Steven Adams",
@@ -233,8 +234,22 @@
         "name": "Neemias Queta",
         "status": "Questionable"
       }
-    ]
+    ],
+    "Golden State Warriors": [],
+    "Minnesota Timberwolves": [],
+    "Washington Wizards": [],
+    "Sacramento Kings": [],
+    "New York Knicks": [],
+    "Milwaukee Bucks": [],
+    "New Orleans Pelicans": [],
+    "Oklahoma City Thunder": [],
+    "Brooklyn Nets": [],
+    "Phoenix Suns": [],
+    "Detroit Pistons": [],
+    "Denver Nuggets": [],
+    "Los Angeles Clippers": [],
+    "Utah Jazz": []
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-26 12:35 PM ET"
+  "updated": "2026-01-26 12:53 PM ET"
 }
