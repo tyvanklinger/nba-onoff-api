@@ -2,7 +2,7 @@
 NBA Injury Report Scraper for On/Off Page Display
 Scrapes official.nba.com injury report PDF
 Captures OUT, DOUBTFUL, and QUESTIONABLE players by team
-Runs every 30 minutes via GitHub Actions
+Runs every 15 minutes via GitHub Actions
 """
 
 import requests
@@ -14,7 +14,7 @@ import re
 from datetime import datetime
 import pytz
 
-# Team name mappings - PDF uses no-space names like "NewYorkKnicks"
+# Team name mappings - PDF uses no-space names like "MinnesotaTimberwolves"
 TEAM_NAMES_NOSPACE = {
     "AtlantaHawks": "Atlanta Hawks",
     "BostonCeltics": "Boston Celtics",
@@ -50,17 +50,42 @@ TEAM_NAMES_NOSPACE = {
     "WashingtonWizards": "Washington Wizards",
 }
 
-def convert_player_name(name_str):
-    """Convert 'Last,First' to 'First Last'"""
-    if not name_str or ',' not in name_str:
-        return name_str
-    
-    parts = name_str.split(',', 1)
-    if len(parts) == 2:
-        last = parts[0].strip()
-        first = parts[1].strip()
-        return f"{first} {last}"
-    return name_str
+# Also match spaced names (in case PDF extracts them with spaces)
+TEAM_NAMES_SPACED = {
+    "Atlanta Hawks": "Atlanta Hawks",
+    "Boston Celtics": "Boston Celtics",
+    "Brooklyn Nets": "Brooklyn Nets",
+    "Charlotte Hornets": "Charlotte Hornets",
+    "Chicago Bulls": "Chicago Bulls",
+    "Cleveland Cavaliers": "Cleveland Cavaliers",
+    "Dallas Mavericks": "Dallas Mavericks",
+    "Denver Nuggets": "Denver Nuggets",
+    "Detroit Pistons": "Detroit Pistons",
+    "Golden State Warriors": "Golden State Warriors",
+    "Houston Rockets": "Houston Rockets",
+    "Indiana Pacers": "Indiana Pacers",
+    "Los Angeles Clippers": "Los Angeles Clippers",
+    "LA Clippers": "Los Angeles Clippers",
+    "Los Angeles Lakers": "Los Angeles Lakers",
+    "LA Lakers": "Los Angeles Lakers",
+    "Memphis Grizzlies": "Memphis Grizzlies",
+    "Miami Heat": "Miami Heat",
+    "Milwaukee Bucks": "Milwaukee Bucks",
+    "Minnesota Timberwolves": "Minnesota Timberwolves",
+    "New Orleans Pelicans": "New Orleans Pelicans",
+    "New York Knicks": "New York Knicks",
+    "Oklahoma City Thunder": "Oklahoma City Thunder",
+    "Orlando Magic": "Orlando Magic",
+    "Philadelphia 76ers": "Philadelphia 76ers",
+    "Phoenix Suns": "Phoenix Suns",
+    "Portland Trail Blazers": "Portland Trail Blazers",
+    "Sacramento Kings": "Sacramento Kings",
+    "San Antonio Spurs": "San Antonio Spurs",
+    "Toronto Raptors": "Toronto Raptors",
+    "Utah Jazz": "Utah Jazz",
+    "Washington Wizards": "Washington Wizards",
+}
+
 
 def scrape_injuries():
     """
@@ -73,8 +98,6 @@ def scrape_injuries():
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.5',
-        'Connection': 'keep-alive',
     }
     
     try:
@@ -86,7 +109,7 @@ def scrape_injuries():
     
     soup = BeautifulSoup(response.text, 'html.parser')
     
-    # Find injury report PDFs
+    # Find injury report PDFs (filter out brochures)
     all_pdf_links = soup.find_all('a', href=lambda x: x and x.endswith('.pdf'))
     injury_pdf_links = [
         link for link in all_pdf_links 
@@ -99,8 +122,7 @@ def scrape_injuries():
     
     # Get the last (most recent) PDF
     latest_pdf_url = injury_pdf_links[-1]['href']
-    pdf_filename = latest_pdf_url.split('/')[-1]
-    print(f"Found PDF: {pdf_filename}")
+    print(f"Found PDF: {latest_pdf_url.split('/')[-1]}")
     
     try:
         pdf_response = requests.get(latest_pdf_url, headers=headers, timeout=60)
@@ -122,12 +144,8 @@ def scrape_injuries():
                 text = page.extract_text() or ""
                 full_text += text + "\n"
             
-            # Process the text - don't skip any lines with game times!
-            # Just extract team names and player info from each line
-            
+            # Process the text
             current_team = None
-            
-            # Split by lines
             lines = full_text.split('\n')
             
             for line in lines:
@@ -135,7 +153,7 @@ def scrape_injuries():
                 if not line:
                     continue
                 
-                # Skip only true header/footer lines
+                # Skip header lines
                 if 'GameDate' in line and 'GameTime' in line:
                     continue
                 if line.startswith('Injury Report:'):
@@ -144,32 +162,50 @@ def scrape_injuries():
                     continue
                 
                 # Check for team name (no-space format) ANYWHERE in the line
+                found_team = None
                 for nospace_name, proper_name in TEAM_NAMES_NOSPACE.items():
                     if nospace_name in line:
-                        current_team = proper_name
-                        # Don't remove team name - just note it and continue processing
+                        found_team = proper_name
                         break
                 
-                # Check for NOT YET SUBMITTED
-                if 'NOT YET SUBMITTED' in line.upper() and current_team:
+                # Also check spaced names
+                if not found_team:
+                    for spaced_name, proper_name in TEAM_NAMES_SPACED.items():
+                        if spaced_name in line:
+                            found_team = proper_name
+                            break
+                
+                if found_team:
+                    current_team = found_team
+                    
+                    # Check if NOT YET SUBMITTED is on the SAME line as team name
+                    if 'NOT YET SUBMITTED' in line.upper():
+                        not_yet_submitted.add(current_team)
+                        print(f"  Not yet submitted: {current_team}")
+                        continue
+                    
+                    # Initialize team in injuries dict if not exists
+                    if current_team not in injuries_by_team:
+                        injuries_by_team[current_team] = []
+                
+                # Check for NOT YET SUBMITTED on its own line
+                if current_team and 'NOT YET SUBMITTED' in line.upper() and not found_team:
                     not_yet_submitted.add(current_team)
+                    print(f"  Not yet submitted: {current_team}")
                     continue
                 
                 # Skip if no current team yet
                 if not current_team:
                     continue
                 
-                # Find all player entries in the line
-                # Pattern handles: Name,Name Status (with optional Jr., Sr., III, etc.)
-                # Also handles names with apostrophes like De'Andre
-                player_pattern = r"([A-Za-z\-\'\.]+(?:(?:Jr\.|Sr\.|III|II|IV|V))?),\s*([A-Za-z\-\'\.]+(?:\s*[A-Za-z\-\'\.]+)?)\s+(Out|Doubtful|Questionable|Probable|Available)"
+                # Find player entries in the line
+                # Pattern handles: Last,First Status (with Jr., Sr., III, etc. and apostrophes)
+                player_pattern = r"([A-Za-z\-\'\.]+(?:(?:\s*Jr\.|Sr\.|III|II|IV|V))?),\s*([A-Za-z\-\'\.]+(?:\s*[A-Za-z\-\'\.]+)?)\s+(Out|Doubtful|Questionable|Probable|Available)"
                 
                 matches = re.findall(player_pattern, line, re.IGNORECASE)
                 
                 for last_name, first_name, status in matches:
                     status = status.title()
-                    
-                    # Build full name
                     player_name = f"{first_name.strip()} {last_name.strip()}"
                     
                     # Only include Out, Doubtful, Questionable
@@ -191,42 +227,29 @@ def scrape_injuries():
         traceback.print_exc()
         return None
     
-    # Sort players within each team: Out first, then Doubtful, then Questionable
+    # Sort players: Out first, then Doubtful, then Questionable
     status_order = {'Out': 0, 'Doubtful': 1, 'Questionable': 2}
     for team in injuries_by_team:
         injuries_by_team[team].sort(key=lambda x: status_order.get(x['status'], 3))
     
-    # Count totals
     total_players = sum(len(players) for players in injuries_by_team.values())
     print(f"Loaded {total_players} injured players across {len(injuries_by_team)} teams")
-    
-    if total_players > 0:
-        print("\nSample injuries found:")
-        count = 0
-        for team, players in injuries_by_team.items():
-            if count >= 3:
-                break
-            print(f"  {team}:")
-            for p in players[:3]:
-                print(f"    - {p['name']} ({p['status']})")
-            count += 1
+    print(f"Teams not yet submitted: {len(not_yet_submitted)}")
     
     return {
         'injuries': injuries_by_team,
         'not_yet_submitted': list(not_yet_submitted)
     }
 
+
 def build_injuries_data():
-    """
-    Build the complete injuries data structure
-    """
+    """Build the complete injuries data structure"""
     result = scrape_injuries()
     
     et = pytz.timezone('America/New_York')
     now = datetime.now(et)
     
     if not result:
-        # Return empty structure on failure
         return {
             'injuries': {},
             'not_yet_submitted': [],
@@ -234,22 +257,18 @@ def build_injuries_data():
             'error': 'Failed to fetch injury report'
         }
     
-    # Add timestamp
     result['updated'] = now.strftime('%Y-%m-%d %I:%M %p ET')
-    
     return result
 
+
 def main():
-    """
-    Main function - scrape injuries and save to JSON
-    """
+    """Main function - scrape injuries and save to JSON"""
     print("=" * 50)
     print("NBA Injury Report Scraper")
     print("=" * 50)
     
     data = build_injuries_data()
     
-    # Save to file
     output_path = "injuries_data.json"
     with open(output_path, 'w') as f:
         json.dump(data, f, indent=2)
@@ -257,12 +276,12 @@ def main():
     print(f"\nSaved to {output_path}")
     print(f"Updated: {data.get('updated')}")
     
-    # Print summary
     if 'error' not in data:
-        print(f"\nTeams with injuries: {len(data['injuries'])}")
+        print(f"Teams with injuries: {len(data['injuries'])}")
         print(f"Teams not yet submitted: {len(data['not_yet_submitted'])}")
-    else:
-        print(f"\nError: {data.get('error')}")
+        if data['not_yet_submitted']:
+            print(f"  {', '.join(data['not_yet_submitted'])}")
+
 
 if __name__ == "__main__":
     main()
