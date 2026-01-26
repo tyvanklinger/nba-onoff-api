@@ -244,19 +244,15 @@
     ],
     "Boston Celtics": [
       {
+        "name": "Luka Garza",
+        "status": "Out"
+      },
+      {
         "name": "Jayson Tatum",
         "status": "Out"
       },
       {
-        "name": "Luka Garza",
-        "status": "Questionable"
-      },
-      {
-        "name": "Josh Minott",
-        "status": "Questionable"
-      },
-      {
-        "name": "Neemias Queta",
+        "name": "Chris Boucher",
         "status": "Questionable"
       }
     ],
@@ -434,5 +430,5 @@
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-26 04:47 PM ET"
+  "updated": "2026-01-26 05:50 PM ET"
 }
