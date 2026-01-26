@@ -1,314 +1,240 @@
 {
   "injuries": {
-    "Sacramento Kings": [
+    "Indiana Pacers": [
       {
-        "name": "Keegan Murray",
+        "name": "Tyrese Haliburton",
         "status": "Out"
       },
       {
-        "name": "Daeqwon Plowden",
+        "name": "Taelon Peter",
         "status": "Out"
       },
       {
-        "name": "Isaiah Stevens",
+        "name": "Obi Toppin",
         "status": "Out"
       },
       {
-        "name": "Zach LaVine",
+        "name": "Quenton Jackson",
+        "status": "Questionable"
+      },
+      {
+        "name": "Bennedict Mathurin",
         "status": "Questionable"
       }
     ],
-    "Detroit Pistons": [
+    "Atlanta Hawks": [
       {
-        "name": "Isaac Jones",
+        "name": "N'Faly Dante",
         "status": "Out"
       },
       {
-        "name": "Wendell MooreJr.",
+        "name": "Kristaps Porzingis",
         "status": "Out"
       },
       {
-        "name": "Tolu Smith",
+        "name": "Zaccharie Risacher",
         "status": "Out"
       },
       {
-        "name": "Caris LeVert",
+        "name": "RayJ Dennis",
+        "status": "Doubtful"
+      },
+      {
+        "name": "Nikola Djurisic",
+        "status": "Doubtful"
+      },
+      {
+        "name": "Caleb Houstan",
+        "status": "Doubtful"
+      },
+      {
+        "name": "Asa Newell",
         "status": "Doubtful"
       }
     ],
-    "Denver Nuggets": [
+    "Philadelphia 76ers": [
       {
-        "name": "Tamar Bates",
+        "name": "Joel Embiid",
         "status": "Out"
       },
       {
-        "name": "Christian Braun",
+        "name": "Paul George",
         "status": "Out"
       },
       {
-        "name": "Aaron Gordon",
-        "status": "Out"
+        "name": "MarJon Beauchamp",
+        "status": "Doubtful"
       },
       {
-        "name": "Cameron Johnson",
-        "status": "Out"
-      },
-      {
-        "name": "Nikola Jokic",
-        "status": "Out"
-      },
-      {
-        "name": "Jamal Murray",
-        "status": "Questionable"
-      },
-      {
-        "name": "Jonas Valanciunas",
-        "status": "Questionable"
-      },
-      {
-        "name": "Peyton Watson",
-        "status": "Questionable"
-      }
-    ],
-    "Memphis Grizzlies": [
-      {
-        "name": "Santi Aldama",
-        "status": "Out"
-      },
-      {
-        "name": "Brandon Clarke",
-        "status": "Out"
-      },
-      {
-        "name": "Zach Edey",
-        "status": "Out"
-      },
-      {
-        "name": "Ty Jerome",
-        "status": "Out"
-      },
-      {
-        "name": "Jahmai Mashack",
-        "status": "Out"
-      },
-      {
-        "name": "Ja Morant",
-        "status": "Out"
-      },
-      {
-        "name": "Scotty PippenJr.",
-        "status": "Out"
-      }
-    ],
-    "Golden State Warriors": [
-      {
-        "name": "Jimmy ButlerIII",
-        "status": "Out"
-      },
-      {
-        "name": "Seth Curry",
-        "status": "Out"
-      },
-      {
-        "name": "Jonathan Kuminga",
-        "status": "Out"
-      },
-      {
-        "name": "Stephen Curry",
-        "status": "Questionable"
-      },
-      {
-        "name": "Al Horford",
-        "status": "Questionable"
-      },
-      {
-        "name": "De'Anthony Melton",
-        "status": "Questionable"
-      }
-    ],
-    "Minnesota Timberwolves": [
-      {
-        "name": "Enrique Freeman",
-        "status": "Out"
-      },
-      {
-        "name": "Terrence ShannonJr.",
-        "status": "Out"
-      },
-      {
-        "name": "Rocco Zikarsky",
-        "status": "Out"
-      }
-    ],
-    "Milwaukee Bucks": [
-      {
-        "name": "Alex Antetokounmpo",
-        "status": "Out"
-      },
-      {
-        "name": "Giannis Antetokounmpo",
-        "status": "Out"
-      },
-      {
-        "name": "Kevin PorterJr.",
-        "status": "Out"
-      },
-      {
-        "name": "Taurean Prince",
-        "status": "Out"
-      },
-      {
-        "name": "AJ Green",
-        "status": "Questionable"
-      }
-    ],
-    "New Orleans Pelicans": [
-      {
-        "name": "Trey Alexander",
-        "status": "Out"
-      },
-      {
-        "name": "Hunter Dickinson",
-        "status": "Out"
-      },
-      {
-        "name": "Dejounte Murray",
-        "status": "Out"
-      },
-      {
-        "name": "Jose Alvarado",
-        "status": "Questionable"
-      }
-    ],
-    "San Antonio Spurs": [
-      {
-        "name": "Harrison Ingram",
-        "status": "Out"
-      },
-      {
-        "name": "David JonesGarcia",
-        "status": "Out"
-      },
-      {
-        "name": "Stanley Umude",
-        "status": "Out"
-      },
-      {
-        "name": "Luke Kornet",
-        "status": "Questionable"
-      }
-    ],
-    "Toronto Raptors": [
-      {
-        "name": "Chucky Hepburn",
-        "status": "Out"
-      },
-      {
-        "name": "Jakob Poeltl",
-        "status": "Out"
-      },
-      {
-        "name": "Collin Murray-Boyles",
-        "status": "Questionable"
-      },
-      {
-        "name": "Immanuel Quickley",
-        "status": "Questionable"
-      },
-      {
-        "name": "Ja'Kobe Walter",
-        "status": "Questionable"
-      }
-    ],
-    "Oklahoma City Thunder": [
-      {
-        "name": "Alex Caruso",
-        "status": "Out"
-      },
-      {
-        "name": "Isaiah Hartenstein",
-        "status": "Out"
-      },
-      {
-        "name": "Ajay Mitchell",
-        "status": "Out"
-      },
-      {
-        "name": "Thomas Sorber",
-        "status": "Out"
-      },
-      {
-        "name": "Nikola Topic",
-        "status": "Out"
-      },
-      {
-        "name": "Jalen Williams",
-        "status": "Out"
-      },
-      {
-        "name": "Aaron Wiggins",
-        "status": "Questionable"
-      }
-    ],
-    "Phoenix Suns": [
-      {
-        "name": "Devin Booker",
-        "status": "Out"
-      },
-      {
-        "name": "Jalen Green",
-        "status": "Questionable"
-      }
-    ],
-    "Brooklyn Nets": [
-      {
-        "name": "Tyson Etienne",
-        "status": "Out"
-      },
-      {
-        "name": "Haywood Highsmith",
-        "status": "Out"
-      },
-      {
-        "name": "Chaney Johnson",
-        "status": "Out"
-      },
-      {
-        "name": "Cam Thomas",
-        "status": "Out"
-      },
-      {
-        "name": "Nolan Traore",
-        "status": "Out"
-      },
-      {
-        "name": "Noah Clowney",
+        "name": "Johni Broome",
         "status": "Doubtful"
       }
     ],
-    "Los Angeles Clippers": [
+    "Charlotte Hornets": [
       {
-        "name": "Bradley Beal",
+        "name": "PJ Hall",
         "status": "Out"
       },
       {
-        "name": "Bogdan Bogdanovic",
+        "name": "Liam McNeeley",
         "status": "Out"
       },
       {
-        "name": "Derrick JonesJr.",
+        "name": "Mason Plumlee",
         "status": "Out"
       },
       {
-        "name": "Chris Paul",
+        "name": "Antonio Reeves",
         "status": "Out"
       },
       {
-        "name": "Kawhi Leonard",
+        "name": "KJ Simpson",
+        "status": "Out"
+      }
+    ],
+    "Orlando Magic": [
+      {
+        "name": "Colin Castleton",
+        "status": "Out"
+      },
+      {
+        "name": "Franz Wagner",
+        "status": "Out"
+      }
+    ],
+    "Cleveland Cavaliers": [
+      {
+        "name": "Darius Garland",
+        "status": "Out"
+      },
+      {
+        "name": "Chris Livingston",
+        "status": "Out"
+      },
+      {
+        "name": "Max Strus",
+        "status": "Out"
+      },
+      {
+        "name": "Luke Travers",
+        "status": "Out"
+      },
+      {
+        "name": "De'Andre Hunter",
+        "status": "Questionable"
+      },
+      {
+        "name": "Sam Merrill",
+        "status": "Questionable"
+      }
+    ],
+    "Los Angeles Lakers": [
+      {
+        "name": "Austin Reaves",
+        "status": "Out"
+      },
+      {
+        "name": "Adou Thiero",
+        "status": "Out"
+      },
+      {
+        "name": "Jake LaRavia",
+        "status": "Questionable"
+      }
+    ],
+    "Chicago Bulls": [
+      {
+        "name": "Zach Collins",
+        "status": "Out"
+      },
+      {
+        "name": "Noa Essengue",
+        "status": "Out"
+      },
+      {
+        "name": "Yuki Kawamura",
+        "status": "Out"
+      },
+      {
+        "name": "Emanuel Miller",
+        "status": "Out"
+      },
+      {
+        "name": "Tre Jones",
+        "status": "Doubtful"
+      }
+    ],
+    "Houston Rockets": [
+      {
+        "name": "Steven Adams",
+        "status": "Out"
+      },
+      {
+        "name": "Isaiah Crawford",
+        "status": "Out"
+      },
+      {
+        "name": "JD Davison",
+        "status": "Out"
+      },
+      {
+        "name": "Tristen Newton",
+        "status": "Out"
+      },
+      {
+        "name": "Fred VanVleet",
+        "status": "Out"
+      }
+    ],
+    "Portland Trail Blazers": [
+      {
+        "name": "Scoot Henderson",
+        "status": "Out"
+      },
+      {
+        "name": "Damian Lillard",
+        "status": "Out"
+      },
+      {
+        "name": "Kris Murray",
+        "status": "Out"
+      },
+      {
+        "name": "Duop Reath",
+        "status": "Out"
+      },
+      {
+        "name": "Matisse Thybulle",
+        "status": "Out"
+      },
+      {
+        "name": "Blake Wesley",
+        "status": "Out"
+      },
+      {
+        "name": "Deni Avdija",
+        "status": "Questionable"
+      },
+      {
+        "name": "Robert WilliamsIII",
+        "status": "Questionable"
+      }
+    ],
+    "Boston Celtics": [
+      {
+        "name": "Jayson Tatum",
+        "status": "Out"
+      },
+      {
+        "name": "Josh Minott",
+        "status": "Questionable"
+      },
+      {
+        "name": "Neemias Queta",
         "status": "Questionable"
       }
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-25 08:53 AM ET"
+  "updated": "2026-01-26 12:08 AM ET"
 }
