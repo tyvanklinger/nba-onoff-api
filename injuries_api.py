@@ -50,42 +50,6 @@ TEAM_NAMES_NOSPACE = {
     "WashingtonWizards": "Washington Wizards",
 }
 
-# Also match spaced names (in case PDF extracts them with spaces)
-TEAM_NAMES_SPACED = {
-    "Atlanta Hawks": "Atlanta Hawks",
-    "Boston Celtics": "Boston Celtics",
-    "Brooklyn Nets": "Brooklyn Nets",
-    "Charlotte Hornets": "Charlotte Hornets",
-    "Chicago Bulls": "Chicago Bulls",
-    "Cleveland Cavaliers": "Cleveland Cavaliers",
-    "Dallas Mavericks": "Dallas Mavericks",
-    "Denver Nuggets": "Denver Nuggets",
-    "Detroit Pistons": "Detroit Pistons",
-    "Golden State Warriors": "Golden State Warriors",
-    "Houston Rockets": "Houston Rockets",
-    "Indiana Pacers": "Indiana Pacers",
-    "Los Angeles Clippers": "Los Angeles Clippers",
-    "LA Clippers": "Los Angeles Clippers",
-    "Los Angeles Lakers": "Los Angeles Lakers",
-    "LA Lakers": "Los Angeles Lakers",
-    "Memphis Grizzlies": "Memphis Grizzlies",
-    "Miami Heat": "Miami Heat",
-    "Milwaukee Bucks": "Milwaukee Bucks",
-    "Minnesota Timberwolves": "Minnesota Timberwolves",
-    "New Orleans Pelicans": "New Orleans Pelicans",
-    "New York Knicks": "New York Knicks",
-    "Oklahoma City Thunder": "Oklahoma City Thunder",
-    "Orlando Magic": "Orlando Magic",
-    "Philadelphia 76ers": "Philadelphia 76ers",
-    "Phoenix Suns": "Phoenix Suns",
-    "Portland Trail Blazers": "Portland Trail Blazers",
-    "Sacramento Kings": "Sacramento Kings",
-    "San Antonio Spurs": "San Antonio Spurs",
-    "Toronto Raptors": "Toronto Raptors",
-    "Utah Jazz": "Utah Jazz",
-    "Washington Wizards": "Washington Wizards",
-}
-
 
 def scrape_injuries():
     """
@@ -133,9 +97,15 @@ def scrape_injuries():
     
     pdf_file = BytesIO(pdf_response.content)
     
+    # Get today's date in ET
+    et = pytz.timezone('America/New_York')
+    today = datetime.now(et).strftime('%m/%d/%Y')
+    print(f"Today's date: {today}")
+    
     # Extract data from PDF
     injuries_by_team = {}
     not_yet_submitted = set()
+    teams_playing_today = set()  # Track all teams playing today
     
     try:
         with pdfplumber.open(pdf_file) as pdf:
@@ -146,6 +116,7 @@ def scrape_injuries():
             
             # Process the text
             current_team = None
+            current_date = None
             lines = full_text.split('\n')
             
             for line in lines:
@@ -153,13 +124,19 @@ def scrape_injuries():
                 if not line:
                     continue
                 
-                # Skip header lines
+                # Skip header/footer lines
                 if 'GameDate' in line and 'GameTime' in line:
                     continue
                 if line.startswith('Injury Report:'):
                     continue
                 if re.match(r'^Page\s*\d+\s*of\s*\d+$', line):
                     continue
+                
+                # Check for date change (format: 01/26/2026 or MM/DD/YYYY at start of line)
+                date_match = re.match(r'^(\d{2}/\d{2}/\d{4})', line)
+                if date_match:
+                    current_date = date_match.group(1)
+                    print(f"  Found date: {current_date}")
                 
                 # Check for team name (no-space format) ANYWHERE in the line
                 found_team = None
@@ -168,31 +145,25 @@ def scrape_injuries():
                         found_team = proper_name
                         break
                 
-                # Also check spaced names
-                if not found_team:
-                    for spaced_name, proper_name in TEAM_NAMES_SPACED.items():
-                        if spaced_name in line:
-                            found_team = proper_name
-                            break
-                
                 if found_team:
                     current_team = found_team
                     
-                    # Check if NOT YET SUBMITTED is on the SAME line as team name
-                    if 'NOT YET SUBMITTED' in line.upper():
-                        not_yet_submitted.add(current_team)
-                        print(f"  Not yet submitted: {current_team}")
+                    # Check if this is today's game
+                    is_today = (current_date == today) if current_date else True
+                    
+                    if is_today:
+                        teams_playing_today.add(current_team)
+                    
+                    # Check if NOTYETSUBMITTED (no spaces) or NOT YET SUBMITTED on same line
+                    if 'NOTYETSUBMITTED' in line.replace(' ', '').upper():
+                        if is_today:
+                            not_yet_submitted.add(current_team)
+                            print(f"  Not yet submitted (today): {current_team}")
                         continue
                     
                     # Initialize team in injuries dict if not exists
                     if current_team not in injuries_by_team:
                         injuries_by_team[current_team] = []
-                
-                # Check for NOT YET SUBMITTED on its own line
-                if current_team and 'NOT YET SUBMITTED' in line.upper() and not found_team:
-                    not_yet_submitted.add(current_team)
-                    print(f"  Not yet submitted: {current_team}")
-                    continue
                 
                 # Skip if no current team yet
                 if not current_team:
@@ -233,8 +204,11 @@ def scrape_injuries():
         injuries_by_team[team].sort(key=lambda x: status_order.get(x['status'], 3))
     
     total_players = sum(len(players) for players in injuries_by_team.values())
-    print(f"Loaded {total_players} injured players across {len(injuries_by_team)} teams")
+    print(f"\nLoaded {total_players} injured players across {len(injuries_by_team)} teams")
+    print(f"Teams playing today: {len(teams_playing_today)}")
     print(f"Teams not yet submitted: {len(not_yet_submitted)}")
+    if not_yet_submitted:
+        print(f"  {', '.join(sorted(not_yet_submitted))}")
     
     return {
         'injuries': injuries_by_team,
