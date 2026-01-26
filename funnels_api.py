@@ -19,6 +19,8 @@ SEASON = "2025-26"
 LAST_N_GAMES = 10
 MIN_MINUTES = 15.0  # Minimum MPG to be included
 MIN_GAMES = 15      # Minimum games played to be included
+# Long-term injured players excluded until specified date
+LONG_TERM_OUT = {"Jimmy Butler III": "2026-07-01", "Jimmy Butler": "2026-07-01"}
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
@@ -138,7 +140,10 @@ def load_injuries():
 
 
 def is_injured(player_name):
-    """Check if a player is OUT or DOUBTFUL"""
+    """Check if a player is OUT, DOUBTFUL, or long-term injured"""
+    if player_name in LONG_TERM_OUT:
+        if datetime.now() < datetime.strptime(LONG_TERM_OUT[player_name], "%Y-%m-%d"):
+            return True
     return player_name in INJURIES
 
 
@@ -157,7 +162,7 @@ def get_todays_games():
     
     try:
         et = pytz.timezone('US/Eastern')
-        tomorrow = (datetime.now(et) + timedelta(days=1)).strftime("%Y-%m-%d")
+        tomorrow = (datetime.now(et) ).strftime("%Y-%m-%d")
         print(f"Fetching games for {tomorrow}...")
         
         url = "https://stats.nba.com/stats/scoreboardv2"
