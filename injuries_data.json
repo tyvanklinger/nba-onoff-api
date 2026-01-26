@@ -311,8 +311,30 @@
         "name": "Leonard Miller",
         "status": "Questionable"
       }
+    ],
+    "Sacramento Kings": [
+      {
+        "name": "Keegan Murray",
+        "status": "Out"
+      },
+      {
+        "name": "Daeqwon Plowden",
+        "status": "Out"
+      },
+      {
+        "name": "Isaiah Stevens",
+        "status": "Out"
+      },
+      {
+        "name": "Zach LaVine",
+        "status": "Questionable"
+      },
+      {
+        "name": "Malik Monk",
+        "status": "Questionable"
+      }
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-26 02:47 PM ET"
+  "updated": "2026-01-26 03:55 PM ET"
 }
