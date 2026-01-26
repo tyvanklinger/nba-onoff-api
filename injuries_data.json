@@ -108,6 +108,10 @@
         "status": "Out"
       },
       {
+        "name": "Sam Merrill",
+        "status": "Out"
+      },
+      {
         "name": "Max Strus",
         "status": "Out"
       },
@@ -117,10 +121,6 @@
       },
       {
         "name": "De'Andre Hunter",
-        "status": "Questionable"
-      },
-      {
-        "name": "Sam Merrill",
         "status": "Questionable"
       }
     ],
@@ -314,5 +314,5 @@
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-26 02:42 PM ET"
+  "updated": "2026-01-26 02:47 PM ET"
 }
