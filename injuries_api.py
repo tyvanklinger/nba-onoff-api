@@ -177,6 +177,8 @@ def scrape_injuries():
                 
                 for last_name, first_name, status in matches:
                     status = status.title()
+                    # Add space before suffixes (ButlerIII -> Butler III)
+                    last_name = re.sub(r'(Jr\.?|Sr\.?|III|II|IV|V)$', r' ', last_name.strip())
                     player_name = f"{first_name.strip()} {last_name.strip()}"
                     
                     # Only include Out, Doubtful, Questionable
