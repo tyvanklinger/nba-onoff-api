@@ -1,0 +1,33 @@
+name: Update Funnels Data
+
+on:
+  schedule:
+    # 11 PM ET = 4 AM UTC (during EST) or 3 AM UTC (during EDT)
+    # Using 4 AM UTC for EST (winter), will be midnight EDT in summer
+    - cron: '0 4 * * *'
+  workflow_dispatch:  # Allow manual trigger from GitHub UI
+
+jobs:
+  update-funnels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Funnels Update
+        run: |
+          echo "Triggering funnels data update for tomorrow's games..."
+          response=$(curl -s -X POST "https://web-production-a0459.up.railway.app/api/funnels/refresh" \
+            -H "Content-Type: application/json" \
+            --max-time 300 \
+            -w "\n%{http_code}")
+          
+          http_code=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | sed '$d')
+          
+          echo "Response: $body"
+          echo "HTTP Status: $http_code"
+          
+          if [ "$http_code" != "200" ]; then
+            echo "Failed with status $http_code"
+            exit 1
+          fi
+          
+          echo "Funnels update complete!"

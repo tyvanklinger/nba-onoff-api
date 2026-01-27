@@ -311,6 +311,28 @@ def get_funnels():
         return {"error": str(e), "overs": [], "unders": []}
 
 
+@app.post("/api/funnels/refresh")
+def refresh_funnels():
+    """Regenerate funnels data - called by GitHub Action at 11 PM ET"""
+    try:
+        from funnels_api import build_funnels_data, save_funnels_data
+        
+        print("Starting funnels refresh...")
+        data = build_funnels_data()
+        save_funnels_data(data, 'funnels_data.json')
+        
+        return {
+            "success": True,
+            "games": data.get('games_today', 0),
+            "overs": len(data.get('overs', [])),
+            "unders": len(data.get('unders', [])),
+            "updated": data.get('updated')
+        }
+    except Exception as e:
+        import traceback
+        return {"success": False, "error": str(e), "traceback": traceback.format_exc()}
+
+
 @app.get("/api/injuries")
 def get_injuries():
     """Return the latest injuries data"""
