@@ -1,5 +1,39 @@
 {
   "injuries": {
+    "Portland Trail Blazers": [
+      {
+        "name": "Scoot Henderson",
+        "status": "Out"
+      },
+      {
+        "name": "Damian Lillard",
+        "status": "Out"
+      },
+      {
+        "name": "Kris Murray",
+        "status": "Out"
+      },
+      {
+        "name": "Duop Reath",
+        "status": "Out"
+      },
+      {
+        "name": "Matisse Thybulle",
+        "status": "Out"
+      },
+      {
+        "name": "Blake Wesley",
+        "status": "Out"
+      },
+      {
+        "name": "Deni Avdija",
+        "status": "Questionable"
+      },
+      {
+        "name": "Robert Williams III",
+        "status": "Questionable"
+      }
+    ],
     "Washington Wizards": [
       {
         "name": "Marvin Bagley III",
@@ -16,10 +50,6 @@
       {
         "name": "Trae Young",
         "status": "Out"
-      },
-      {
-        "name": "Bilal Coulibaly",
-        "status": "Questionable"
       },
       {
         "name": "Khris Middleton",
@@ -51,15 +81,15 @@
     "New York Knicks": [
       {
         "name": "Trey Jemison III",
-        "status": "Questionable"
+        "status": "Out"
       },
       {
         "name": "Dillon Jones",
-        "status": "Questionable"
+        "status": "Out"
       },
       {
         "name": "Kevin McCullar Jr.",
-        "status": "Questionable"
+        "status": "Out"
       }
     ],
     "Milwaukee Bucks": [
@@ -262,8 +292,7 @@
     ]
   },
   "not_yet_submitted": [
-    "Philadelphia 76ers",
-    "Portland Trail Blazers"
+    "Philadelphia 76ers"
   ],
-  "updated": "2026-01-27 06:47 AM ET"
+  "updated": "2026-01-27 12:59 PM ET"
 }
