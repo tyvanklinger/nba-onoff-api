@@ -367,10 +367,34 @@ if __name__ == "__main__":
 # GAME LOGS / MINUTES PROJECTION ENDPOINT
 # ============================================
 
-from gamelogs_api import fetch_and_process_team, get_filtered_stats, get_player_stats
+from gamelogs_api import get_filtered_stats
 
-# Cache for game logs data (expensive to fetch)
-_gamelogs_cache = {}
+# Cache for minutes data (loaded from JSON file)
+_minutes_cache = None
+_minutes_cache_time = 0
+
+def load_minutes_cache():
+    """Load minutes data from JSON file"""
+    global _minutes_cache, _minutes_cache_time
+    import time
+    
+    # Reload every 5 minutes to pick up new commits
+    if _minutes_cache and time.time() - _minutes_cache_time < 300:
+        return _minutes_cache
+    
+    possible_paths = [
+        "minutes_data.json",
+        Path(__file__).parent / "minutes_data.json",
+    ]
+    
+    for fpath in possible_paths:
+        if os.path.exists(fpath):
+            with open(fpath, 'r') as f:
+                _minutes_cache = json.load(f)
+                _minutes_cache_time = time.time()
+                return _minutes_cache
+    
+    return None
 
 @app.get("/api/minutes/{team_name}")
 def get_minutes(
@@ -395,28 +419,21 @@ def get_minutes(
     import urllib.parse
     team_name = urllib.parse.unquote(team_name)
     
-    # Check cache first (cache for 6 hours)
-    import time
-    cache_key = team_name
-    if cache_key in _gamelogs_cache:
-        cached_time, cached_data = _gamelogs_cache[cache_key]
-        if time.time() - cached_time < 21600:  # 6 hours
-            data = cached_data
-        else:
-            data = None
-    else:
-        data = None
+    # Load from cached JSON file
+    cache = load_minutes_cache()
     
-    # Fetch if not cached
-    if data is None:
-        data = fetch_and_process_team(team_name)
-        if 'error' in data:
-            raise HTTPException(status_code=404, detail=data['error'])
-        _gamelogs_cache[cache_key] = (time.time(), data)
+    if not cache or 'teams' not in cache:
+        raise HTTPException(status_code=503, detail="Minutes data not available - cache not loaded")
+    
+    if team_name not in cache['teams']:
+        raise HTTPException(status_code=404, detail=f"Team not found: {team_name}")
+    
+    team_data = cache['teams'][team_name]
     
     response = {
         'team': team_name,
-        'players': data['players'],
+        'players': team_data['players'],
+        'updated': cache.get('updated'),
     }
     
     # If specific player requested with filters
@@ -432,8 +449,8 @@ def get_minutes(
             without_list = [urllib.parse.unquote(p) for p in without_list if p]
         
         filtered = get_filtered_stats(
-            data['games'],
-            data['player_logs'],
+            team_data['games'],
+            team_data['player_logs'],
             player,
             with_list,
             without_list
