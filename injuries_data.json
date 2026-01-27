@@ -105,7 +105,7 @@
     "Philadelphia 76ers": [
       {
         "name": "Charles Bassey",
-        "status": "Doubtful"
+        "status": "Out"
       },
       {
         "name": "MarJon Beauchamp",
@@ -474,6 +474,46 @@
         "status": "Questionable"
       }
     ],
+    "Charlotte Hornets": [
+      {
+        "name": "PJ Hall",
+        "status": "Out"
+      },
+      {
+        "name": "Mason Plumlee",
+        "status": "Out"
+      },
+      {
+        "name": "Antonio Reeves",
+        "status": "Out"
+      },
+      {
+        "name": "KJ Simpson",
+        "status": "Out"
+      }
+    ],
+    "Memphis Grizzlies": [
+      {
+        "name": "Brandon Clarke",
+        "status": "Out"
+      },
+      {
+        "name": "Zach Edey",
+        "status": "Out"
+      },
+      {
+        "name": "Ty Jerome",
+        "status": "Out"
+      },
+      {
+        "name": "Ja Morant",
+        "status": "Out"
+      },
+      {
+        "name": "Scotty Pippen Jr.",
+        "status": "Out"
+      }
+    ],
     "Minnesota Timberwolves": [
       {
         "name": "Enrique Freeman",
@@ -525,8 +565,40 @@
         "name": "Miles Kelly",
         "status": "Questionable"
       }
+    ],
+    "San Antonio Spurs": [
+      {
+        "name": "Harrison Ingram",
+        "status": "Out"
+      },
+      {
+        "name": "David JonesGarcia",
+        "status": "Out"
+      },
+      {
+        "name": "Stanley Umude",
+        "status": "Out"
+      },
+      {
+        "name": "Jeremy Sochan",
+        "status": "Questionable"
+      }
+    ],
+    "Houston Rockets": [
+      {
+        "name": "Steven Adams",
+        "status": "Out"
+      },
+      {
+        "name": "Tristen Newton",
+        "status": "Out"
+      },
+      {
+        "name": "Fred VanVleet",
+        "status": "Out"
+      }
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-27 06:00 PM ET"
+  "updated": "2026-01-27 06:44 PM ET"
 }
