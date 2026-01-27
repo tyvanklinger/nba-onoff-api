@@ -339,3 +339,89 @@ def health_check():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
+
+# ============================================
+# GAME LOGS / MINUTES PROJECTION ENDPOINT
+# ============================================
+
+from gamelogs_api import fetch_and_process_team, get_filtered_stats, get_player_stats
+
+# Cache for game logs data (expensive to fetch)
+_gamelogs_cache = {}
+
+@app.get("/api/minutes/{team_name}")
+def get_minutes(
+    team_name: str,
+    player: Optional[str] = None,
+    with_players: Optional[str] = Query(None, alias="with"),
+    without_players: Optional[str] = Query(None, alias="without")
+):
+    """
+    Get player minute stats with optional teammate filters
+    
+    Args:
+        team_name: Team name (e.g., "Atlanta Hawks")
+        player: (optional) Specific player to get filtered stats for
+        with: (optional) Comma-separated list of teammates who must have played
+        without: (optional) Comma-separated list of teammates who must NOT have played
+    
+    Example:
+        /api/minutes/Atlanta%20Hawks
+        /api/minutes/Atlanta%20Hawks?player=Dyson%20Daniels&with=Jalen%20Johnson&without=Trae%20Young
+    """
+    import urllib.parse
+    team_name = urllib.parse.unquote(team_name)
+    
+    # Check cache first (cache for 6 hours)
+    import time
+    cache_key = team_name
+    if cache_key in _gamelogs_cache:
+        cached_time, cached_data = _gamelogs_cache[cache_key]
+        if time.time() - cached_time < 21600:  # 6 hours
+            data = cached_data
+        else:
+            data = None
+    else:
+        data = None
+    
+    # Fetch if not cached
+    if data is None:
+        data = fetch_and_process_team(team_name)
+        if 'error' in data:
+            raise HTTPException(status_code=404, detail=data['error'])
+        _gamelogs_cache[cache_key] = (time.time(), data)
+    
+    response = {
+        'team': team_name,
+        'players': data['players'],
+    }
+    
+    # If specific player requested with filters
+    if player:
+        player = urllib.parse.unquote(player)
+        with_list = [p.strip() for p in with_players.split(',')] if with_players else None
+        without_list = [p.strip() for p in without_players.split(',')] if without_players else None
+        
+        # URL decode the player names in lists
+        if with_list:
+            with_list = [urllib.parse.unquote(p) for p in with_list if p]
+        if without_list:
+            without_list = [urllib.parse.unquote(p) for p in without_list if p]
+        
+        filtered = get_filtered_stats(
+            data['games'],
+            data['player_logs'],
+            player,
+            with_list,
+            without_list
+        )
+        
+        response['filtered'] = {
+            'player': player,
+            'with': with_list,
+            'without': without_list,
+            'stats': filtered,
+        }
+    
+    return response
