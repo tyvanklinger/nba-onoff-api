@@ -330,6 +330,118 @@
         "status": "Out"
       }
     ],
+    "Indiana Pacers": [
+      {
+        "name": "Tyrese Haliburton",
+        "status": "Out"
+      },
+      {
+        "name": "Obi Toppin",
+        "status": "Out"
+      },
+      {
+        "name": "Taelon Peter",
+        "status": "Doubtful"
+      },
+      {
+        "name": "Jarace Walker",
+        "status": "Questionable"
+      }
+    ],
+    "Los Angeles Lakers": [
+      {
+        "name": "Austin Reaves",
+        "status": "Out"
+      },
+      {
+        "name": "Adou Thiero",
+        "status": "Out"
+      }
+    ],
+    "Cleveland Cavaliers": [
+      {
+        "name": "Darius Garland",
+        "status": "Out"
+      },
+      {
+        "name": "Evan Mobley",
+        "status": "Out"
+      },
+      {
+        "name": "Max Strus",
+        "status": "Out"
+      },
+      {
+        "name": "Luke Travers",
+        "status": "Out"
+      }
+    ],
+    "Atlanta Hawks": [
+      {
+        "name": "N'Faly Dante",
+        "status": "Out"
+      },
+      {
+        "name": "Kristaps Porzingis",
+        "status": "Out"
+      },
+      {
+        "name": "Zaccharie Risacher",
+        "status": "Out"
+      },
+      {
+        "name": "RayJ Dennis",
+        "status": "Doubtful"
+      },
+      {
+        "name": "Nikola Djurisic",
+        "status": "Doubtful"
+      },
+      {
+        "name": "Caleb Houstan",
+        "status": "Doubtful"
+      },
+      {
+        "name": "Asa Newell",
+        "status": "Doubtful"
+      }
+    ],
+    "Boston Celtics": [
+      {
+        "name": "Jayson Tatum",
+        "status": "Out"
+      },
+      {
+        "name": "Neemias Queta",
+        "status": "Doubtful"
+      },
+      {
+        "name": "Luka Garza",
+        "status": "Questionable"
+      }
+    ],
+    "Toronto Raptors": [
+      {
+        "name": "Chucky Hepburn",
+        "status": "Out"
+      },
+      {
+        "name": "A.J. Lawson",
+        "status": "Out"
+      },
+      {
+        "name": "Alijah Martin",
+        "status": "Out"
+      },
+      {
+        "name": "Jakob Poeltl",
+        "status": "Out"
+      },
+      {
+        "name": "Collin Murray-Boyles",
+        "status": "Questionable"
+      }
+    ],
     "Orlando Magic": [
       {
         "name": "Colin Castleton",
@@ -338,6 +450,36 @@
       {
         "name": "Franz Wagner",
         "status": "Out"
+      }
+    ],
+    "Miami Heat": [
+      {
+        "name": "Vladislav Goldin",
+        "status": "Out"
+      },
+      {
+        "name": "Tyler Herro",
+        "status": "Out"
+      },
+      {
+        "name": "Terry Rozier",
+        "status": "Out"
+      },
+      {
+        "name": "Jahmir Young",
+        "status": "Out"
+      },
+      {
+        "name": "Davion Mitchell",
+        "status": "Questionable"
+      },
+      {
+        "name": "Norman Powell",
+        "status": "Questionable"
+      },
+      {
+        "name": "Kel'el Ware",
+        "status": "Questionable"
       }
     ],
     "Dallas Mavericks": [
@@ -372,5 +514,5 @@
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-27 04:56 PM ET"
+  "updated": "2026-01-27 05:46 PM ET"
 }
