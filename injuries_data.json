@@ -26,12 +26,8 @@
         "status": "Out"
       },
       {
-        "name": "Deni Avdija",
-        "status": "Questionable"
-      },
-      {
         "name": "Robert Williams III",
-        "status": "Questionable"
+        "status": "Out"
       }
     ],
     "Washington Wizards": [
@@ -50,10 +46,6 @@
       {
         "name": "Trae Young",
         "status": "Out"
-      },
-      {
-        "name": "Khris Middleton",
-        "status": "Questionable"
       }
     ],
     "Sacramento Kings": [
@@ -482,6 +474,28 @@
         "status": "Questionable"
       }
     ],
+    "Minnesota Timberwolves": [
+      {
+        "name": "Enrique Freeman",
+        "status": "Out"
+      },
+      {
+        "name": "Terrence Shannon Jr.",
+        "status": "Out"
+      },
+      {
+        "name": "Rocco Zikarsky",
+        "status": "Out"
+      },
+      {
+        "name": "Anthony Edwards",
+        "status": "Questionable"
+      },
+      {
+        "name": "Leonard Miller",
+        "status": "Questionable"
+      }
+    ],
     "Dallas Mavericks": [
       {
         "name": "Anthony Davis",
@@ -514,5 +528,5 @@
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-27 05:46 PM ET"
+  "updated": "2026-01-27 06:00 PM ET"
 }
