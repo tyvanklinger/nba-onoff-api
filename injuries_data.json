@@ -58,6 +58,14 @@
     ],
     "Sacramento Kings": [
       {
+        "name": "Zach LaVine",
+        "status": "Out"
+      },
+      {
+        "name": "Malik Monk",
+        "status": "Out"
+      },
+      {
         "name": "Keegan Murray",
         "status": "Out"
       },
@@ -68,14 +76,6 @@
       {
         "name": "Isaiah Stevens",
         "status": "Out"
-      },
-      {
-        "name": "Zach LaVine",
-        "status": "Questionable"
-      },
-      {
-        "name": "Malik Monk",
-        "status": "Questionable"
       }
     ],
     "New York Knicks": [
@@ -108,6 +108,28 @@
       {
         "name": "Taurean Prince",
         "status": "Out"
+      }
+    ],
+    "Philadelphia 76ers": [
+      {
+        "name": "Charles Bassey",
+        "status": "Doubtful"
+      },
+      {
+        "name": "MarJon Beauchamp",
+        "status": "Questionable"
+      },
+      {
+        "name": "Johni Broome",
+        "status": "Questionable"
+      },
+      {
+        "name": "Joel Embiid",
+        "status": "Questionable"
+      },
+      {
+        "name": "Quentin Grimes",
+        "status": "Questionable"
       }
     ],
     "New Orleans Pelicans": [
@@ -173,7 +195,7 @@
       },
       {
         "name": "Tyrese Martin",
-        "status": "Questionable"
+        "status": "Out"
       }
     ],
     "Phoenix Suns": [
@@ -248,10 +270,6 @@
         "status": "Out"
       },
       {
-        "name": "Kris Dunn",
-        "status": "Questionable"
-      },
-      {
         "name": "Kawhi Leonard",
         "status": "Questionable"
       }
@@ -274,25 +292,19 @@
         "status": "Out"
       },
       {
+        "name": "Jusuf Nurkic",
+        "status": "Out"
+      },
+      {
         "name": "John Tonje",
         "status": "Out"
       },
       {
         "name": "Oscar Tshiebwe",
         "status": "Out"
-      },
-      {
-        "name": "Jusuf Nurkic",
-        "status": "Doubtful"
-      },
-      {
-        "name": "Lauri Markkanen",
-        "status": "Questionable"
       }
     ]
   },
-  "not_yet_submitted": [
-    "Philadelphia 76ers"
-  ],
-  "updated": "2026-01-27 12:59 PM ET"
+  "not_yet_submitted": [],
+  "updated": "2026-01-27 02:19 PM ET"
 }
