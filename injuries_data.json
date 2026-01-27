@@ -174,16 +174,16 @@
         "status": "Out"
       },
       {
+        "name": "Jahmai Mashack",
+        "status": "Out"
+      },
+      {
         "name": "Ja Morant",
         "status": "Out"
       },
       {
         "name": "Scotty Pippen Jr.",
         "status": "Out"
-      },
-      {
-        "name": "Santi Aldama",
-        "status": "Questionable"
       }
     ],
     "Houston Rockets": [
@@ -258,6 +258,10 @@
         "status": "Out"
       },
       {
+        "name": "LJ Cryer",
+        "status": "Out"
+      },
+      {
         "name": "Seth Curry",
         "status": "Out"
       },
@@ -280,13 +284,13 @@
       {
         "name": "De'Anthony Melton",
         "status": "Out"
-      },
-      {
-        "name": "LJ Cryer",
-        "status": "Questionable"
       }
     ],
     "Minnesota Timberwolves": [
+      {
+        "name": "Anthony Edwards",
+        "status": "Out"
+      },
       {
         "name": "Enrique Freeman",
         "status": "Out"
@@ -298,10 +302,6 @@
       {
         "name": "Rocco Zikarsky",
         "status": "Out"
-      },
-      {
-        "name": "Leonard Miller",
-        "status": "Questionable"
       }
     ],
     "Washington Wizards": [
@@ -428,6 +428,38 @@
         "status": "Questionable"
       }
     ],
+    "Brooklyn Nets": [
+      {
+        "name": "Noah Clowney",
+        "status": "Out"
+      },
+      {
+        "name": "Tyson Etienne",
+        "status": "Out"
+      },
+      {
+        "name": "Haywood Highsmith",
+        "status": "Out"
+      },
+      {
+        "name": "Chaney Johnson",
+        "status": "Out"
+      },
+      {
+        "name": "Tyrese Martin",
+        "status": "Questionable"
+      }
+    ],
+    "Phoenix Suns": [
+      {
+        "name": "Devin Booker",
+        "status": "Out"
+      },
+      {
+        "name": "Jalen Green",
+        "status": "Questionable"
+      }
+    ],
     "Detroit Pistons": [
       {
         "name": "Isaac Jones",
@@ -467,8 +499,72 @@
         "name": "Nikola Jokic",
         "status": "Out"
       }
+    ],
+    "Los Angeles Clippers": [
+      {
+        "name": "Bradley Beal",
+        "status": "Out"
+      },
+      {
+        "name": "Bogdan Bogdanovic",
+        "status": "Out"
+      },
+      {
+        "name": "Derrick Jones Jr.",
+        "status": "Out"
+      },
+      {
+        "name": "Chris Paul",
+        "status": "Out"
+      },
+      {
+        "name": "TyTy Washington Jr.",
+        "status": "Out"
+      },
+      {
+        "name": "Kris Dunn",
+        "status": "Questionable"
+      },
+      {
+        "name": "Kawhi Leonard",
+        "status": "Questionable"
+      }
+    ],
+    "Utah Jazz": [
+      {
+        "name": "Keyonte George",
+        "status": "Out"
+      },
+      {
+        "name": "Elijah Harkless",
+        "status": "Out"
+      },
+      {
+        "name": "Walker Kessler",
+        "status": "Out"
+      },
+      {
+        "name": "Georges Niang",
+        "status": "Out"
+      },
+      {
+        "name": "John Tonje",
+        "status": "Out"
+      },
+      {
+        "name": "Oscar Tshiebwe",
+        "status": "Out"
+      },
+      {
+        "name": "Jusuf Nurkic",
+        "status": "Doubtful"
+      },
+      {
+        "name": "Lauri Markkanen",
+        "status": "Questionable"
+      }
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-26 06:58 PM ET"
+  "updated": "2026-01-26 11:15 PM ET"
 }
