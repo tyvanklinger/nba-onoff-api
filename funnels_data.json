@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "overs": [
     {
       "id": "catch_shoot_fgm",
@@ -2919,4 +2920,10 @@
       "away": "Jazz"
     }
   ]
+=======
+  "overs": [],
+  "unders": [],
+  "updated": "2026-01-27T05:20:02.987702",
+  "games_today": 0
+>>>>>>> 189b113f6e0b94864aec607997363674542e47c7
 }
