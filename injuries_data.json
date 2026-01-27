@@ -308,6 +308,38 @@
         "status": "Out"
       }
     ],
+    "Chicago Bulls": [
+      {
+        "name": "Zach Collins",
+        "status": "Out"
+      },
+      {
+        "name": "Noa Essengue",
+        "status": "Out"
+      },
+      {
+        "name": "Tre Jones",
+        "status": "Out"
+      },
+      {
+        "name": "Yuki Kawamura",
+        "status": "Out"
+      },
+      {
+        "name": "Emanuel Miller",
+        "status": "Out"
+      }
+    ],
+    "Orlando Magic": [
+      {
+        "name": "Colin Castleton",
+        "status": "Out"
+      },
+      {
+        "name": "Franz Wagner",
+        "status": "Out"
+      }
+    ],
     "Dallas Mavericks": [
       {
         "name": "Anthony Davis",
@@ -340,5 +372,5 @@
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-27 03:50 PM ET"
+  "updated": "2026-01-27 04:39 PM ET"
 }
