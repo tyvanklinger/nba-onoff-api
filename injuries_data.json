@@ -1,301 +1,5 @@
 {
   "injuries": {
-    "Portland Trail Blazers": [
-      {
-        "name": "Scoot Henderson",
-        "status": "Out"
-      },
-      {
-        "name": "Damian Lillard",
-        "status": "Out"
-      },
-      {
-        "name": "Kris Murray",
-        "status": "Out"
-      },
-      {
-        "name": "Duop Reath",
-        "status": "Out"
-      },
-      {
-        "name": "Matisse Thybulle",
-        "status": "Out"
-      },
-      {
-        "name": "Blake Wesley",
-        "status": "Out"
-      },
-      {
-        "name": "Robert Williams III",
-        "status": "Out"
-      }
-    ],
-    "Washington Wizards": [
-      {
-        "name": "Marvin Bagley III",
-        "status": "Out"
-      },
-      {
-        "name": "Tristan Vukcevic",
-        "status": "Out"
-      },
-      {
-        "name": "Cam Whitmore",
-        "status": "Out"
-      },
-      {
-        "name": "Trae Young",
-        "status": "Out"
-      }
-    ],
-    "Sacramento Kings": [
-      {
-        "name": "Zach LaVine",
-        "status": "Out"
-      },
-      {
-        "name": "Malik Monk",
-        "status": "Out"
-      },
-      {
-        "name": "Keegan Murray",
-        "status": "Out"
-      },
-      {
-        "name": "Daeqwon Plowden",
-        "status": "Out"
-      },
-      {
-        "name": "Isaiah Stevens",
-        "status": "Out"
-      }
-    ],
-    "New York Knicks": [
-      {
-        "name": "Trey Jemison III",
-        "status": "Out"
-      },
-      {
-        "name": "Dillon Jones",
-        "status": "Out"
-      },
-      {
-        "name": "Kevin McCullar Jr.",
-        "status": "Out"
-      }
-    ],
-    "Milwaukee Bucks": [
-      {
-        "name": "Alex Antetokounmpo",
-        "status": "Out"
-      },
-      {
-        "name": "Giannis Antetokounmpo",
-        "status": "Out"
-      },
-      {
-        "name": "Kevin Porter Jr.",
-        "status": "Out"
-      },
-      {
-        "name": "Taurean Prince",
-        "status": "Out"
-      }
-    ],
-    "Philadelphia 76ers": [
-      {
-        "name": "Charles Bassey",
-        "status": "Out"
-      },
-      {
-        "name": "MarJon Beauchamp",
-        "status": "Out"
-      },
-      {
-        "name": "Quentin Grimes",
-        "status": "Out"
-      }
-    ],
-    "New Orleans Pelicans": [
-      {
-        "name": "Trey Alexander",
-        "status": "Out"
-      },
-      {
-        "name": "Hunter Dickinson",
-        "status": "Out"
-      },
-      {
-        "name": "Dejounte Murray",
-        "status": "Out"
-      }
-    ],
-    "Oklahoma City Thunder": [
-      {
-        "name": "Alex Caruso",
-        "status": "Out"
-      },
-      {
-        "name": "Isaiah Hartenstein",
-        "status": "Out"
-      },
-      {
-        "name": "Ajay Mitchell",
-        "status": "Out"
-      },
-      {
-        "name": "Thomas Sorber",
-        "status": "Out"
-      },
-      {
-        "name": "Nikola Topic",
-        "status": "Out"
-      },
-      {
-        "name": "Cason Wallace",
-        "status": "Out"
-      },
-      {
-        "name": "Jalen Williams",
-        "status": "Out"
-      }
-    ],
-    "Brooklyn Nets": [
-      {
-        "name": "Noah Clowney",
-        "status": "Out"
-      },
-      {
-        "name": "Tyson Etienne",
-        "status": "Out"
-      },
-      {
-        "name": "Haywood Highsmith",
-        "status": "Out"
-      },
-      {
-        "name": "Chaney Johnson",
-        "status": "Out"
-      },
-      {
-        "name": "Tyrese Martin",
-        "status": "Out"
-      }
-    ],
-    "Phoenix Suns": [
-      {
-        "name": "Devin Booker",
-        "status": "Out"
-      },
-      {
-        "name": "Koby Brea",
-        "status": "Out"
-      },
-      {
-        "name": "Collin Gillespie",
-        "status": "Out"
-      },
-      {
-        "name": "Jalen Green",
-        "status": "Out"
-      },
-      {
-        "name": "Isaiah Livers",
-        "status": "Out"
-      }
-    ],
-    "Detroit Pistons": [
-      {
-        "name": "Isaac Jones",
-        "status": "Out"
-      },
-      {
-        "name": "Caris LeVert",
-        "status": "Out"
-      },
-      {
-        "name": "Wendell Moore Jr.",
-        "status": "Out"
-      },
-      {
-        "name": "Tolu Smith",
-        "status": "Out"
-      }
-    ],
-    "Denver Nuggets": [
-      {
-        "name": "Tamar Bates",
-        "status": "Out"
-      },
-      {
-        "name": "Christian Braun",
-        "status": "Out"
-      },
-      {
-        "name": "Aaron Gordon",
-        "status": "Out"
-      },
-      {
-        "name": "Cameron Johnson",
-        "status": "Out"
-      },
-      {
-        "name": "Nikola Jokic",
-        "status": "Out"
-      }
-    ],
-    "Los Angeles Clippers": [
-      {
-        "name": "Bradley Beal",
-        "status": "Out"
-      },
-      {
-        "name": "Bogdan Bogdanovic",
-        "status": "Out"
-      },
-      {
-        "name": "Derrick Jones Jr.",
-        "status": "Out"
-      },
-      {
-        "name": "Chris Paul",
-        "status": "Out"
-      },
-      {
-        "name": "TyTy Washington Jr.",
-        "status": "Out"
-      }
-    ],
-    "Utah Jazz": [
-      {
-        "name": "Keyonte George",
-        "status": "Out"
-      },
-      {
-        "name": "Elijah Harkless",
-        "status": "Out"
-      },
-      {
-        "name": "Walker Kessler",
-        "status": "Out"
-      },
-      {
-        "name": "Georges Niang",
-        "status": "Out"
-      },
-      {
-        "name": "Jusuf Nurkic",
-        "status": "Out"
-      },
-      {
-        "name": "John Tonje",
-        "status": "Out"
-      },
-      {
-        "name": "Oscar Tshiebwe",
-        "status": "Out"
-      }
-    ],
     "Chicago Bulls": [
       {
         "name": "Zach Collins",
@@ -315,6 +19,18 @@
       },
       {
         "name": "Emanuel Miller",
+        "status": "Out"
+      },
+      {
+        "name": "Josh Giddey",
+        "status": "Out"
+      },
+      {
+        "name": "Kevin Huerter",
+        "status": "Out"
+      },
+      {
+        "name": "Jalen Smith",
         "status": "Out"
       }
     ],
@@ -613,6 +329,9 @@
       }
     ]
   },
-  "not_yet_submitted": [],
-  "updated": "2026-01-27 11:07 PM ET"
+  "not_yet_submitted": [
+    "New York Knicks",
+    "Utah Jazz"
+  ],
+  "updated": "2026-01-28 12:48 AM ET"
 }
