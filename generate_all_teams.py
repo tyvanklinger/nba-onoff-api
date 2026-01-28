@@ -88,13 +88,35 @@ def get_player_id(name):
             return p['id']
     return None
 
+# Cache for player names to avoid repeated API calls
+_player_name_cache = {}
+
 def get_player_name(player_id):
+    # Check cache first
+    if player_id in _player_name_cache:
+        return _player_name_cache[player_id]
+    
+    # Try static list first
     all_players = players.get_players()
     for p in all_players:
         if p['id'] == player_id:
+            _player_name_cache[player_id] = p['full_name']
             return p['full_name']
-    return f"Unknown-{{player_id}}"
-
+    
+    # Fallback: fetch from API
+    try:
+        from nba_api.stats.endpoints import commonplayerinfo
+        info = commonplayerinfo.CommonPlayerInfo(player_id=player_id)
+        df = info.get_data_frames()[0]
+        if not df.empty:
+            name = df['DISPLAY_FIRST_LAST'].iloc[0]
+            _player_name_cache[player_id] = name
+            return name
+    except Exception as e:
+        pass
+    
+    _player_name_cache[player_id] = f"Unknown-{player_id}"
+    return f"Unknown-{player_id}"
 def get_team_id(name):
     all_teams = teams.get_teams()
     for t in all_teams:
