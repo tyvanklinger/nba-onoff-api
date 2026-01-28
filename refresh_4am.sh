@@ -9,7 +9,7 @@ echo "=========================================="
 # 1. Minutes data
 echo ""
 echo ">>> Updating Minutes data..."
-python3 generate_minutes.py
+/opt/homebrew/bin/python3 generate_minutes.py
 
 # 2. On/Off data
 echo ""
