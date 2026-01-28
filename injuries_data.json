@@ -46,10 +46,6 @@
       {
         "name": "Taelon Peter",
         "status": "Doubtful"
-      },
-      {
-        "name": "Jarace Walker",
-        "status": "Questionable"
       }
     ],
     "Los Angeles Lakers": [
@@ -86,41 +82,71 @@
         "status": "Out"
       },
       {
+        "name": "RayJ Dennis",
+        "status": "Out"
+      },
+      {
+        "name": "Nikola Djurisic",
+        "status": "Out"
+      },
+      {
+        "name": "Caleb Houstan",
+        "status": "Out"
+      },
+      {
+        "name": "Asa Newell",
+        "status": "Out"
+      },
+      {
         "name": "Kristaps Porzingis",
         "status": "Out"
       },
       {
         "name": "Zaccharie Risacher",
         "status": "Out"
-      },
-      {
-        "name": "RayJ Dennis",
-        "status": "Doubtful"
-      },
-      {
-        "name": "Nikola Djurisic",
-        "status": "Doubtful"
-      },
-      {
-        "name": "Caleb Houstan",
-        "status": "Doubtful"
-      },
-      {
-        "name": "Asa Newell",
-        "status": "Doubtful"
       }
     ],
     "Boston Celtics": [
       {
-        "name": "Jayson Tatum",
+        "name": "Neemias Queta",
         "status": "Out"
       },
       {
-        "name": "Neemias Queta",
-        "status": "Doubtful"
+        "name": "Jayson Tatum",
+        "status": "Out"
+      }
+    ],
+    "New York Knicks": [
+      {
+        "name": "Pacome Dadiet",
+        "status": "Out"
       },
       {
-        "name": "Luka Garza",
+        "name": "Trey Jemison III",
+        "status": "Out"
+      },
+      {
+        "name": "Dillon Jones",
+        "status": "Out"
+      },
+      {
+        "name": "Miles McBride",
+        "status": "Out"
+      },
+      {
+        "name": "Kevin McCullar Jr.",
+        "status": "Out"
+      },
+      {
+        "name": "Mitchell Robinson",
+        "status": "Out"
+      },
+      {
+        "name": "Jalen Brunson",
+        "status": "Questionable"
+      },
+      {
+        "name": "Josh Hart",
         "status": "Questionable"
       }
     ],
@@ -166,24 +192,16 @@
         "status": "Out"
       },
       {
+        "name": "Davion Mitchell",
+        "status": "Out"
+      },
+      {
         "name": "Terry Rozier",
         "status": "Out"
       },
       {
         "name": "Jahmir Young",
         "status": "Out"
-      },
-      {
-        "name": "Davion Mitchell",
-        "status": "Questionable"
-      },
-      {
-        "name": "Norman Powell",
-        "status": "Questionable"
-      },
-      {
-        "name": "Kel'el Ware",
-        "status": "Questionable"
       }
     ],
     "Charlotte Hornets": [
@@ -238,14 +256,6 @@
       {
         "name": "Rocco Zikarsky",
         "status": "Out"
-      },
-      {
-        "name": "Anthony Edwards",
-        "status": "Questionable"
-      },
-      {
-        "name": "Leonard Miller",
-        "status": "Questionable"
       }
     ],
     "Dallas Mavericks": [
@@ -267,7 +277,7 @@
       },
       {
         "name": "Moussa Cisse",
-        "status": "Questionable"
+        "status": "Doubtful"
       },
       {
         "name": "Cooper Flagg",
@@ -275,6 +285,10 @@
       },
       {
         "name": "Miles Kelly",
+        "status": "Questionable"
+      },
+      {
+        "name": "Klay Thompson",
         "status": "Questionable"
       }
     ],
@@ -293,6 +307,40 @@
       },
       {
         "name": "LJ Cryer",
+        "status": "Questionable"
+      }
+    ],
+    "Utah Jazz": [
+      {
+        "name": "Elijah Harkless",
+        "status": "Out"
+      },
+      {
+        "name": "Walker Kessler",
+        "status": "Out"
+      },
+      {
+        "name": "Kevin Love",
+        "status": "Out"
+      },
+      {
+        "name": "Georges Niang",
+        "status": "Out"
+      },
+      {
+        "name": "John Tonje",
+        "status": "Out"
+      },
+      {
+        "name": "Oscar Tshiebwe",
+        "status": "Out"
+      },
+      {
+        "name": "Jusuf Nurkic",
+        "status": "Questionable"
+      },
+      {
+        "name": "Cody Williams",
         "status": "Questionable"
       }
     ],
@@ -327,11 +375,88 @@
         "name": "Fred VanVleet",
         "status": "Out"
       }
+    ],
+    "Milwaukee Bucks": [
+      {
+        "name": "Alex Antetokounmpo",
+        "status": "Out"
+      },
+      {
+        "name": "Giannis Antetokounmpo",
+        "status": "Out"
+      },
+      {
+        "name": "Kevin Porter Jr.",
+        "status": "Out"
+      },
+      {
+        "name": "Taurean Prince",
+        "status": "Out"
+      }
+    ],
+    "Washington Wizards": [
+      {
+        "name": "Marvin Bagley III",
+        "status": "Out"
+      },
+      {
+        "name": "Tristan Vukcevic",
+        "status": "Out"
+      },
+      {
+        "name": "Cam Whitmore",
+        "status": "Out"
+      },
+      {
+        "name": "Trae Young",
+        "status": "Out"
+      },
+      {
+        "name": "Alex Sarr",
+        "status": "Questionable"
+      }
+    ],
+    "Sacramento Kings": [
+      {
+        "name": "Keegan Murray",
+        "status": "Out"
+      },
+      {
+        "name": "Daeqwon Plowden",
+        "status": "Out"
+      },
+      {
+        "name": "Isaiah Stevens",
+        "status": "Out"
+      },
+      {
+        "name": "Malik Monk",
+        "status": "Questionable"
+      },
+      {
+        "name": "Russell Westbrook",
+        "status": "Questionable"
+      }
+    ],
+    "Philadelphia 76ers": [
+      {
+        "name": "Charles Bassey",
+        "status": "Doubtful"
+      },
+      {
+        "name": "MarJon Beauchamp",
+        "status": "Doubtful"
+      },
+      {
+        "name": "Johni Broome",
+        "status": "Doubtful"
+      },
+      {
+        "name": "Quentin Grimes",
+        "status": "Questionable"
+      }
     ]
   },
-  "not_yet_submitted": [
-    "New York Knicks",
-    "Utah Jazz"
-  ],
-  "updated": "2026-01-28 05:00 PM ET"
+  "not_yet_submitted": [],
+  "updated": "2026-01-28 06:00 PM ET"
 }
