@@ -162,7 +162,7 @@ def get_todays_games():
     
     try:
         et = pytz.timezone('US/Eastern')
-        tomorrow = (datetime.now(et) + timedelta(days=1)).strftime("%Y-%m-%d")
+        tomorrow = (datetime.now(et)).strftime("%Y-%m-%d")
         print(f"Fetching games for {tomorrow}...")
         
         url = "https://stats.nba.com/stats/scoreboardv2"
