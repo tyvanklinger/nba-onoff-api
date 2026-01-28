@@ -10,6 +10,6 @@ python3 funnels_api.py
 
 git add funnels_data.json
 git commit -m "Funnels refresh $(date +'%Y-%m-%d %H:%M')"
-git push
+git pull --rebase && git push
 
 echo "✓ Done: $(date)"

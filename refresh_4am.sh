@@ -21,7 +21,7 @@ echo ""
 echo ">>> Committing and pushing..."
 git add minutes_data.json onoff_cache/
 git commit -m "4 AM data refresh $(date +'%Y-%m-%d')"
-git push
+git pull --rebase && git push
 
 echo ""
 echo "✓ Done: $(date)"
