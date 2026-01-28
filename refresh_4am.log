@@ -1,0 +1,752 @@
+==========================================
+4 AM Data Refresh: Wed Jan 28 04:00:01 EST 2026
+==========================================
+
+>>> Updating Minutes data...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Fetching league game logs...
+Got 15137 game log entries
+Processing Atlanta Hawks...
+  ✓ 19 players, 48 games
+Processing Boston Celtics...
+  ✓ 15 players, 46 games
+Processing Brooklyn Nets...
+  ✓ 16 players, 45 games
+Processing Charlotte Hornets...
+  ✓ 19 players, 47 games
+Processing Chicago Bulls...
+  ✓ 18 players, 46 games
+Processing Cleveland Cavaliers...
+  ✓ 16 players, 48 games
+Processing Dallas Mavericks...
+  ✓ 17 players, 46 games
+Processing Denver Nuggets...
+  ✓ 16 players, 47 games
+Processing Detroit Pistons...
+  ✓ 19 players, 45 games
+Processing Golden State Warriors...
+  ✓ 18 players, 48 games
+Processing Houston Rockets...
+  ✓ 15 players, 44 games
+Processing Indiana Pacers...
+  ✓ 24 players, 47 games
+Processing LA Clippers...
+  ✓ 20 players, 46 games
+Processing Los Angeles Lakers...
+  ✓ 19 players, 45 games
+Processing Memphis Grizzlies...
+  ✓ 19 players, 44 games
+Processing Miami Heat...
+  ✓ 16 players, 47 games
+Processing Milwaukee Bucks...
+  ✓ 17 players, 45 games
+Processing Minnesota Timberwolves...
+  ✓ 15 players, 47 games
+Processing New Orleans Pelicans...
+  ✓ 17 players, 49 games
+Processing New York Knicks...
+  ✓ 17 players, 46 games
+Processing Oklahoma City Thunder...
+  ✓ 16 players, 48 games
+Processing Orlando Magic...
+  ✓ 16 players, 45 games
+Processing Philadelphia 76ers...
+  ✓ 17 players, 46 games
+Processing Phoenix Suns...
+  ✓ 17 players, 47 games
+Processing Portland Trail Blazers...
+  ✓ 16 players, 48 games
+Processing Sacramento Kings...
+  ✓ 18 players, 48 games
+Processing San Antonio Spurs...
+  ✓ 18 players, 46 games
+Processing Toronto Raptors...
+  ✓ 18 players, 48 games
+Processing Utah Jazz...
+  ✓ 16 players, 47 games
+Processing Washington Wizards...
+  ✓ 19 players, 45 games
+
+✓ Saved to minutes_data.json
+  Updated: 2026-01-28 04:00:11 ET
+  Teams: 30
+
+>>> Updating On/Off data...
+Updating Atlanta Hawks...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Atlanta Hawks | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 48
+   Existing roster: 19 players
+
+Checking for new games...
+
+Cache is up to date! (48 games)
+Updating Boston Celtics...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Boston Celtics | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 46
+   Existing roster: 15 players
+
+Checking for new games...
+
+Cache is up to date! (46 games)
+Updating Brooklyn Nets...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Brooklyn Nets | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 44
+   Existing roster: 16 players
+
+Checking for new games...
+   Found 1 new games to process
+
+Processing 1 new games...
+----------------------------------------------------------------------
+[  1/1] 0022500669 (100.0%) OK (1607 events)
+----------------------------------------------------------------------
+Processed 1/1 new games
+New events: 1607
+
+Rebuilding roster from all play-by-play data...
+   Found 16 players who played this season
+
+Cache updated: onoff_cache/Brooklyn_Nets_2025-26_combo.json
+   Total games: 45
+   Total events: 79111
+   Size: 11.7 MB
+Updating Charlotte Hornets...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Charlotte Hornets | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 47
+   Existing roster: 19 players
+
+Checking for new games...
+
+Cache is up to date! (47 games)
+Updating Chicago Bulls...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Chicago Bulls | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 46
+   Existing roster: 18 players
+
+Checking for new games...
+
+Cache is up to date! (46 games)
+Updating Cleveland Cavaliers...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Cleveland Cavaliers | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 48
+   Existing roster: 16 players
+
+Checking for new games...
+
+Cache is up to date! (48 games)
+Updating Dallas Mavericks...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Dallas Mavericks | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 46
+   Existing roster: 17 players
+
+Checking for new games...
+
+Cache is up to date! (46 games)
+Updating Denver Nuggets...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Denver Nuggets | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 46
+   Existing roster: 16 players
+
+Checking for new games...
+   Found 1 new games to process
+
+Processing 1 new games...
+----------------------------------------------------------------------
+[  1/1] 0022500668 (100.0%) OK (1748 events)
+----------------------------------------------------------------------
+Processed 1/1 new games
+New events: 1748
+
+Rebuilding roster from all play-by-play data...
+   Found 16 players who played this season
+
+Cache updated: onoff_cache/Denver_Nuggets_2025-26_combo.json
+   Total games: 47
+   Total events: 83880
+   Size: 12.3 MB
+Updating Detroit Pistons...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Detroit Pistons | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 44
+   Existing roster: 19 players
+
+Checking for new games...
+   Found 1 new games to process
+
+Processing 1 new games...
+----------------------------------------------------------------------
+[  1/1] 0022500668 (100.0%) OK (1738 events)
+----------------------------------------------------------------------
+Processed 1/1 new games
+New events: 1738
+
+Rebuilding roster from all play-by-play data...
+   Found 19 players who played this season
+
+Cache updated: onoff_cache/Detroit_Pistons_2025-26_combo.json
+   Total games: 45
+   Total events: 83187
+   Size: 12.3 MB
+Updating Golden State Warriors...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Golden State Warriors | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 48
+   Existing roster: 18 players
+
+Checking for new games...
+
+Cache is up to date! (48 games)
+Updating Houston Rockets...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Houston Rockets | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 44
+   Existing roster: 15 players
+
+Checking for new games...
+
+Cache is up to date! (44 games)
+Updating Indiana Pacers...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Indiana Pacers | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 47
+   Existing roster: 24 players
+
+Checking for new games...
+
+Cache is up to date! (47 games)
+Updating Los Angeles Clippers...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Los Angeles Clippers | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 45
+   Existing roster: 20 players
+
+Checking for new games...
+   Found 1 new games to process
+
+Processing 1 new games...
+----------------------------------------------------------------------
+[  1/1] 0022500670 (100.0%) OK (1774 events)
+----------------------------------------------------------------------
+Processed 1/1 new games
+New events: 1774
+
+Rebuilding roster from all play-by-play data...
+   Found 20 players who played this season
+
+Cache updated: onoff_cache/Los_Angeles_Clippers_2025-26_combo.json
+   Total games: 46
+   Total events: 81300
+   Size: 11.8 MB
+Updating Los Angeles Lakers...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Los Angeles Lakers | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 45
+   Existing roster: 19 players
+
+Checking for new games...
+
+Cache is up to date! (45 games)
+Updating Memphis Grizzlies...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Memphis Grizzlies | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 44
+   Existing roster: 19 players
+
+Checking for new games...
+
+Cache is up to date! (44 games)
+Updating Miami Heat...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Miami Heat | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 47
+   Existing roster: 16 players
+
+Checking for new games...
+
+Cache is up to date! (47 games)
+Updating Milwaukee Bucks...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Milwaukee Bucks | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 44
+   Existing roster: 17 players
+
+Checking for new games...
+   Found 1 new games to process
+
+Processing 1 new games...
+----------------------------------------------------------------------
+[  1/1] 0022500666 (100.0%) OK (1786 events)
+----------------------------------------------------------------------
+Processed 1/1 new games
+New events: 1786
+
+Rebuilding roster from all play-by-play data...
+   Found 17 players who played this season
+
+Cache updated: onoff_cache/Milwaukee_Bucks_2025-26_combo.json
+   Total games: 45
+   Total events: 79774
+   Size: 11.7 MB
+Updating Minnesota Timberwolves...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Minnesota Timberwolves | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 47
+   Existing roster: 15 players
+
+Checking for new games...
+
+Cache is up to date! (47 games)
+Updating New Orleans Pelicans...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  New Orleans Pelicans | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 48
+   Existing roster: 17 players
+
+Checking for new games...
+   Found 1 new games to process
+
+Processing 1 new games...
+----------------------------------------------------------------------
+[  1/1] 0022500667 (100.0%) OK (1943 events)
+----------------------------------------------------------------------
+Processed 1/1 new games
+New events: 1943
+
+Rebuilding roster from all play-by-play data...
+   Found 17 players who played this season
+
+Cache updated: onoff_cache/New_Orleans_Pelicans_2025-26_combo.json
+   Total games: 49
+   Total events: 90402
+   Size: 13.4 MB
+Updating New York Knicks...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  New York Knicks | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 45
+   Existing roster: 17 players
+
+Checking for new games...
+   Found 1 new games to process
+
+Processing 1 new games...
+----------------------------------------------------------------------
+[  1/1] 0022500665 (100.0%) OK (1757 events)
+----------------------------------------------------------------------
+Processed 1/1 new games
+New events: 1757
+
+Rebuilding roster from all play-by-play data...
+   Found 17 players who played this season
+
+Cache updated: onoff_cache/New_York_Knicks_2025-26_combo.json
+   Total games: 46
+   Total events: 83243
+   Size: 12.3 MB
+Updating Oklahoma City Thunder...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Oklahoma City Thunder | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 47
+   Existing roster: 16 players
+
+Checking for new games...
+   Found 1 new games to process
+
+Processing 1 new games...
+----------------------------------------------------------------------
+[  1/1] 0022500667 (100.0%) OK (1939 events)
+----------------------------------------------------------------------
+Processed 1/1 new games
+New events: 1939
+
+Rebuilding roster from all play-by-play data...
+   Found 16 players who played this season
+
+Cache updated: onoff_cache/Oklahoma_City_Thunder_2025-26_combo.json
+   Total games: 48
+   Total events: 88273
+   Size: 13.1 MB
+Updating Orlando Magic...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Orlando Magic | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 45
+   Existing roster: 16 players
+
+Checking for new games...
+
+Cache is up to date! (45 games)
+Updating Philadelphia 76ers...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Philadelphia 76ers | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 45
+   Existing roster: 17 players
+
+Checking for new games...
+   Found 1 new games to process
+
+Processing 1 new games...
+----------------------------------------------------------------------
+[  1/1] 0022500666 (100.0%) OK (1798 events)
+----------------------------------------------------------------------
+Processed 1/1 new games
+New events: 1798
+
+Rebuilding roster from all play-by-play data...
+   Found 17 players who played this season
+
+Cache updated: onoff_cache/Philadelphia_76ers_2025-26_combo.json
+   Total games: 46
+   Total events: 84798
+   Size: 12.4 MB
+Updating Phoenix Suns...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Phoenix Suns | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 46
+   Existing roster: 17 players
+
+Checking for new games...
+   Found 1 new games to process
+
+Processing 1 new games...
+----------------------------------------------------------------------
+[  1/1] 0022500669 (100.0%) OK (1596 events)
+----------------------------------------------------------------------
+Processed 1/1 new games
+New events: 1596
+
+Rebuilding roster from all play-by-play data...
+   Found 17 players who played this season
+
+Cache updated: onoff_cache/Phoenix_Suns_2025-26_combo.json
+   Total games: 47
+   Total events: 85793
+   Size: 12.7 MB
+Updating Portland Trail Blazers...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Portland Trail Blazers | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 47
+   Existing roster: 16 players
+
+Checking for new games...
+   Found 1 new games to process
+
+Processing 1 new games...
+----------------------------------------------------------------------
+[  1/1] 0022500664 (100.0%) OK (2100 events)
+----------------------------------------------------------------------
+Processed 1/1 new games
+New events: 2100
+
+Rebuilding roster from all play-by-play data...
+   Found 16 players who played this season
+
+Cache updated: onoff_cache/Portland_Trail_Blazers_2025-26_combo.json
+   Total games: 48
+   Total events: 89637
+   Size: 13.2 MB
+Updating Sacramento Kings...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Sacramento Kings | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 47
+   Existing roster: 18 players
+
+Checking for new games...
+   Found 1 new games to process
+
+Processing 1 new games...
+----------------------------------------------------------------------
+[  1/1] 0022500665 (100.0%) OK (1754 events)
+----------------------------------------------------------------------
+Processed 1/1 new games
+New events: 1754
+
+Rebuilding roster from all play-by-play data...
+   Found 18 players who played this season
+
+Cache updated: onoff_cache/Sacramento_Kings_2025-26_combo.json
+   Total games: 48
+   Total events: 86525
+   Size: 12.6 MB
+Updating San Antonio Spurs...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  San Antonio Spurs | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 46
+   Existing roster: 18 players
+
+Checking for new games...
+
+Cache is up to date! (46 games)
+Updating Toronto Raptors...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Toronto Raptors | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 48
+   Existing roster: 18 players
+
+Checking for new games...
+
+Cache is up to date! (48 games)
+Updating Utah Jazz...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Utah Jazz | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 46
+   Existing roster: 16 players
+
+Checking for new games...
+   Found 1 new games to process
+
+Processing 1 new games...
+----------------------------------------------------------------------
+[  1/1] 0022500670 (100.0%) OK (1721 events)
+----------------------------------------------------------------------
+Processed 1/1 new games
+New events: 1721
+
+Rebuilding roster from all play-by-play data...
+   Found 16 players who played this season
+
+Cache updated: onoff_cache/Utah_Jazz_2025-26_combo.json
+   Total games: 47
+   Total events: 87504
+   Size: 12.9 MB
+Updating Washington Wizards...
+/Users/tyvanklinger/Library/Python/3.8/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+  UPDATING ON/OFF CACHE
+  Washington Wizards | 2025-26
+======================================================================
+
+Loading existing cache...
+   Existing games in cache: 44
+   Existing roster: 18 players
+
+Checking for new games...
+   Found 1 new games to process
+
+Processing 1 new games...
+----------------------------------------------------------------------
+[  1/1] 0022500664 (100.0%) OK (2065 events)
+----------------------------------------------------------------------
+Processed 1/1 new games
+New events: 2065
+
+Rebuilding roster from all play-by-play data...
+   Found 19 players who played this season
+   New players added: Skal Labissiere
+
+Cache updated: onoff_cache/Washington_Wizards_2025-26_combo.json
+   Total games: 45
+   Total events: 83397
+   Size: 12.2 MB
