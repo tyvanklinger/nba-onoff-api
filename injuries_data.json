@@ -109,19 +109,11 @@
       },
       {
         "name": "MarJon Beauchamp",
-        "status": "Questionable"
-      },
-      {
-        "name": "Johni Broome",
-        "status": "Questionable"
-      },
-      {
-        "name": "Joel Embiid",
-        "status": "Questionable"
+        "status": "Out"
       },
       {
         "name": "Quentin Grimes",
-        "status": "Questionable"
+        "status": "Out"
       }
     ],
     "New Orleans Pelicans": [
@@ -196,12 +188,20 @@
         "status": "Out"
       },
       {
-        "name": "Jalen Green",
+        "name": "Koby Brea",
         "status": "Out"
       },
       {
         "name": "Collin Gillespie",
-        "status": "Questionable"
+        "status": "Out"
+      },
+      {
+        "name": "Jalen Green",
+        "status": "Out"
+      },
+      {
+        "name": "Isaiah Livers",
+        "status": "Out"
       }
     ],
     "Detroit Pistons": [
@@ -264,10 +264,6 @@
       {
         "name": "TyTy Washington Jr.",
         "status": "Out"
-      },
-      {
-        "name": "Kawhi Leonard",
-        "status": "Questionable"
       }
     ],
     "Utah Jazz": [
@@ -566,6 +562,24 @@
         "status": "Questionable"
       }
     ],
+    "Golden State Warriors": [
+      {
+        "name": "Jimmy Butler III",
+        "status": "Out"
+      },
+      {
+        "name": "Seth Curry",
+        "status": "Out"
+      },
+      {
+        "name": "Jonathan Kuminga",
+        "status": "Out"
+      },
+      {
+        "name": "LJ Cryer",
+        "status": "Questionable"
+      }
+    ],
     "San Antonio Spurs": [
       {
         "name": "Harrison Ingram",
@@ -600,5 +614,5 @@
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-27 06:57 PM ET"
+  "updated": "2026-01-27 11:07 PM ET"
 }
