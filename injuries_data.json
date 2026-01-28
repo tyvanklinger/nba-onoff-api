@@ -40,12 +40,12 @@
         "status": "Out"
       },
       {
-        "name": "Obi Toppin",
+        "name": "Taelon Peter",
         "status": "Out"
       },
       {
-        "name": "Taelon Peter",
-        "status": "Doubtful"
+        "name": "Obi Toppin",
+        "status": "Out"
       }
     ],
     "Los Angeles Lakers": [
@@ -166,10 +166,6 @@
       {
         "name": "Jakob Poeltl",
         "status": "Out"
-      },
-      {
-        "name": "Collin Murray-Boyles",
-        "status": "Questionable"
       }
     ],
     "Orlando Magic": [
@@ -336,11 +332,11 @@
         "status": "Out"
       },
       {
-        "name": "Jusuf Nurkic",
-        "status": "Questionable"
+        "name": "Cody Williams",
+        "status": "Out"
       },
       {
-        "name": "Cody Williams",
+        "name": "Jusuf Nurkic",
         "status": "Questionable"
       }
     ],
@@ -455,8 +451,94 @@
         "name": "Quentin Grimes",
         "status": "Questionable"
       }
+    ],
+    "Brooklyn Nets": [
+      {
+        "name": "Noah Clowney",
+        "status": "Out"
+      },
+      {
+        "name": "Egor Demin",
+        "status": "Out"
+      },
+      {
+        "name": "Tyson Etienne",
+        "status": "Out"
+      },
+      {
+        "name": "Haywood Highsmith",
+        "status": "Out"
+      },
+      {
+        "name": "Chaney Johnson",
+        "status": "Out"
+      },
+      {
+        "name": "Cam Thomas",
+        "status": "Out"
+      },
+      {
+        "name": "Ziaire Williams",
+        "status": "Out"
+      },
+      {
+        "name": "Terance Mann",
+        "status": "Questionable"
+      }
+    ],
+    "Denver Nuggets": [
+      {
+        "name": "Tamar Bates",
+        "status": "Out"
+      },
+      {
+        "name": "Christian Braun",
+        "status": "Out"
+      },
+      {
+        "name": "Aaron Gordon",
+        "status": "Out"
+      },
+      {
+        "name": "Cameron Johnson",
+        "status": "Out"
+      },
+      {
+        "name": "Nikola Jokic",
+        "status": "Out"
+      },
+      {
+        "name": "Curtis Jones",
+        "status": "Out"
+      }
+    ],
+    "Oklahoma City Thunder": [
+      {
+        "name": "Alex Caruso",
+        "status": "Out"
+      },
+      {
+        "name": "Ajay Mitchell",
+        "status": "Out"
+      },
+      {
+        "name": "Thomas Sorber",
+        "status": "Out"
+      },
+      {
+        "name": "Nikola Topic",
+        "status": "Out"
+      },
+      {
+        "name": "Jalen Williams",
+        "status": "Out"
+      },
+      {
+        "name": "Cason Wallace",
+        "status": "Questionable"
+      }
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-28 06:00 PM ET"
+  "updated": "2026-01-28 06:52 PM ET"
 }
