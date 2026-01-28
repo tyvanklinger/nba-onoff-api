@@ -750,3 +750,22 @@ Cache updated: onoff_cache/Washington_Wizards_2025-26_combo.json
    Total games: 45
    Total events: 83397
    Size: 12.2 MB
+[main da2e18c] 🏀 Auto-update NBA on/off data 2026-01-28
+ 16 files changed, 767 insertions(+), 15 deletions(-)
+ rewrite minutes_data.json (78%)
+ create mode 100644 refresh_4am.log
+fatal: could not read Username for 'https://github.com': Device not configured
+
+>>> Committing and pushing...
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+	modified:   refresh_4am.log
+
+no changes added to commit
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+✓ Done: Wed Jan 28 04:04:18 EST 2026
