@@ -120,6 +120,22 @@
         "status": "Out"
       },
       {
+        "name": "RayJ Dennis",
+        "status": "Out"
+      },
+      {
+        "name": "Nikola Djurisic",
+        "status": "Out"
+      },
+      {
+        "name": "Caleb Houstan",
+        "status": "Out"
+      },
+      {
+        "name": "Jalen Johnson",
+        "status": "Out"
+      },
+      {
         "name": "Onyeka Okongwu",
         "status": "Out"
       },
@@ -130,22 +146,6 @@
       {
         "name": "Zaccharie Risacher",
         "status": "Out"
-      },
-      {
-        "name": "RayJ Dennis",
-        "status": "Doubtful"
-      },
-      {
-        "name": "Nikola Djurisic",
-        "status": "Doubtful"
-      },
-      {
-        "name": "Caleb Houstan",
-        "status": "Doubtful"
-      },
-      {
-        "name": "Jalen Johnson",
-        "status": "Questionable"
       }
     ],
     "Miami Heat": [
@@ -380,6 +380,130 @@
         "status": "Questionable"
       }
     ],
+    "Los Angeles Lakers": [
+      {
+        "name": "Adou Thiero",
+        "status": "Out"
+      },
+      {
+        "name": "Luka Doncic",
+        "status": "Questionable"
+      },
+      {
+        "name": "Austin Reaves",
+        "status": "Questionable"
+      }
+    ],
+    "New Orleans Pelicans": [
+      {
+        "name": "Trey Alexander",
+        "status": "Out"
+      },
+      {
+        "name": "Hunter Dickinson",
+        "status": "Out"
+      },
+      {
+        "name": "Dejounte Murray",
+        "status": "Out"
+      }
+    ],
+    "Portland Trail Blazers": [
+      {
+        "name": "Scoot Henderson",
+        "status": "Out"
+      },
+      {
+        "name": "Damian Lillard",
+        "status": "Out"
+      },
+      {
+        "name": "Kris Murray",
+        "status": "Out"
+      },
+      {
+        "name": "Duop Reath",
+        "status": "Out"
+      },
+      {
+        "name": "Matisse Thybulle",
+        "status": "Out"
+      },
+      {
+        "name": "Blake Wesley",
+        "status": "Out"
+      },
+      {
+        "name": "Deni Avdija",
+        "status": "Questionable"
+      },
+      {
+        "name": "Robert Williams III",
+        "status": "Questionable"
+      }
+    ],
+    "New York Knicks": [
+      {
+        "name": "Pacome Dadiet",
+        "status": "Questionable"
+      },
+      {
+        "name": "Josh Hart",
+        "status": "Questionable"
+      },
+      {
+        "name": "Trey Jemison III",
+        "status": "Questionable"
+      },
+      {
+        "name": "Dillon Jones",
+        "status": "Questionable"
+      },
+      {
+        "name": "Miles McBride",
+        "status": "Questionable"
+      },
+      {
+        "name": "Kevin McCullar Jr.",
+        "status": "Questionable"
+      }
+    ],
+    "Boston Celtics": [
+      {
+        "name": "Ron Harper Jr.",
+        "status": "Out"
+      },
+      {
+        "name": "Max Shulga",
+        "status": "Out"
+      },
+      {
+        "name": "Jayson Tatum",
+        "status": "Out"
+      },
+      {
+        "name": "Jaylen Brown",
+        "status": "Doubtful"
+      }
+    ],
+    "Toronto Raptors": [
+      {
+        "name": "Chucky Hepburn",
+        "status": "Out"
+      },
+      {
+        "name": "A.J. Lawson",
+        "status": "Out"
+      },
+      {
+        "name": "Alijah Martin",
+        "status": "Out"
+      },
+      {
+        "name": "Jakob Poeltl",
+        "status": "Out"
+      }
+    ],
     "Orlando Magic": [
       {
         "name": "Colin Castleton",
@@ -389,8 +513,30 @@
         "name": "Franz Wagner",
         "status": "Out"
       }
+    ],
+    "Cleveland Cavaliers": [
+      {
+        "name": "Tristan Enaruna",
+        "status": "Out"
+      },
+      {
+        "name": "Darius Garland",
+        "status": "Out"
+      },
+      {
+        "name": "Evan Mobley",
+        "status": "Out"
+      },
+      {
+        "name": "Max Strus",
+        "status": "Out"
+      },
+      {
+        "name": "Luke Travers",
+        "status": "Out"
+      }
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-29 04:56 PM ET"
+  "updated": "2026-01-29 06:01 PM ET"
 }
