@@ -20,15 +20,15 @@
       {
         "name": "Taurean Prince",
         "status": "Out"
-      },
-      {
-        "name": "Cole Anthony",
-        "status": "Questionable"
       }
     ],
     "Washington Wizards": [
       {
         "name": "Marvin Bagley III",
+        "status": "Out"
+      },
+      {
+        "name": "Sharife Cooper",
         "status": "Out"
       },
       {
@@ -42,13 +42,13 @@
       {
         "name": "Trae Young",
         "status": "Out"
-      },
-      {
-        "name": "Alex Sarr",
-        "status": "Questionable"
       }
     ],
     "Sacramento Kings": [
+      {
+        "name": "Malik Monk",
+        "status": "Out"
+      },
       {
         "name": "Keegan Murray",
         "status": "Out"
@@ -64,10 +64,6 @@
       {
         "name": "Russell Westbrook",
         "status": "Out"
-      },
-      {
-        "name": "Malik Monk",
-        "status": "Questionable"
       }
     ],
     "Philadelphia 76ers": [
@@ -85,7 +81,7 @@
       },
       {
         "name": "Quentin Grimes",
-        "status": "Questionable"
+        "status": "Out"
       }
     ],
     "Houston Rockets": [
@@ -172,20 +168,16 @@
         "status": "Out"
       },
       {
+        "name": "Josh Giddey",
+        "status": "Out"
+      },
+      {
         "name": "Tre Jones",
         "status": "Out"
       },
       {
-        "name": "Josh Giddey",
-        "status": "Questionable"
-      },
-      {
-        "name": "Yuki Kawamura",
-        "status": "Questionable"
-      },
-      {
         "name": "Emanuel Miller",
-        "status": "Questionable"
+        "status": "Out"
       }
     ],
     "Charlotte Hornets": [
@@ -394,6 +386,32 @@
         "status": "Questionable"
       }
     ],
+    "Memphis Grizzlies": [
+      {
+        "name": "Santi Aldama",
+        "status": "Out"
+      },
+      {
+        "name": "Brandon Clarke",
+        "status": "Out"
+      },
+      {
+        "name": "Zach Edey",
+        "status": "Out"
+      },
+      {
+        "name": "Ja Morant",
+        "status": "Out"
+      },
+      {
+        "name": "Scotty Pippen Jr.",
+        "status": "Out"
+      },
+      {
+        "name": "Ty Jerome",
+        "status": "Doubtful"
+      }
+    ],
     "New Orleans Pelicans": [
       {
         "name": "Trey Alexander",
@@ -538,5 +556,5 @@
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-29 06:01 PM ET"
+  "updated": "2026-01-29 06:53 PM ET"
 }
