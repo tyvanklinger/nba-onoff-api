@@ -1,5 +1,4 @@
 #!/bin/bash
-# 11 PM ET - Refresh funnels for tomorrow's games
 cd ~/Documents/nba-onoff-api
 
 echo "=========================================="
@@ -8,8 +7,9 @@ echo "=========================================="
 
 /opt/homebrew/bin/python3 funnels_api.py
 
-git add funnels_data.json
+git add .
 git commit -m "Funnels refresh $(date +'%Y-%m-%d %H:%M')"
-git pull --rebase && git push
+git pull --rebase || git rebase --abort
+git push
 
 echo "✓ Done: $(date)"
