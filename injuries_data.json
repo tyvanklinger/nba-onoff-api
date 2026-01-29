@@ -140,14 +140,6 @@
       {
         "name": "Mitchell Robinson",
         "status": "Out"
-      },
-      {
-        "name": "Jalen Brunson",
-        "status": "Questionable"
-      },
-      {
-        "name": "Josh Hart",
-        "status": "Questionable"
       }
     ],
     "Toronto Raptors": [
@@ -220,6 +212,10 @@
     ],
     "Memphis Grizzlies": [
       {
+        "name": "Santi Aldama",
+        "status": "Out"
+      },
+      {
         "name": "Brandon Clarke",
         "status": "Out"
       },
@@ -232,11 +228,19 @@
         "status": "Out"
       },
       {
+        "name": "Jahmai Mashack",
+        "status": "Out"
+      },
+      {
         "name": "Ja Morant",
         "status": "Out"
       },
       {
         "name": "Scotty Pippen Jr.",
+        "status": "Out"
+      },
+      {
+        "name": "Javon Small",
         "status": "Out"
       }
     ],
@@ -256,11 +260,19 @@
     ],
     "Dallas Mavericks": [
       {
+        "name": "Moussa Cisse",
+        "status": "Out"
+      },
+      {
         "name": "Anthony Davis",
         "status": "Out"
       },
       {
         "name": "Dante Exum",
+        "status": "Out"
+      },
+      {
+        "name": "Cooper Flagg",
         "status": "Out"
       },
       {
@@ -272,25 +284,17 @@
         "status": "Out"
       },
       {
-        "name": "Moussa Cisse",
-        "status": "Doubtful"
-      },
-      {
-        "name": "Cooper Flagg",
-        "status": "Questionable"
-      },
-      {
-        "name": "Miles Kelly",
-        "status": "Questionable"
-      },
-      {
         "name": "Klay Thompson",
-        "status": "Questionable"
+        "status": "Out"
       }
     ],
     "Golden State Warriors": [
       {
         "name": "Jimmy Butler III",
+        "status": "Out"
+      },
+      {
+        "name": "LJ Cryer",
         "status": "Out"
       },
       {
@@ -300,10 +304,6 @@
       {
         "name": "Jonathan Kuminga",
         "status": "Out"
-      },
-      {
-        "name": "LJ Cryer",
-        "status": "Questionable"
       }
     ],
     "Utah Jazz": [
@@ -334,10 +334,6 @@
       {
         "name": "Cody Williams",
         "status": "Out"
-      },
-      {
-        "name": "Jusuf Nurkic",
-        "status": "Questionable"
       }
     ],
     "San Antonio Spurs": [
@@ -350,12 +346,12 @@
         "status": "Out"
       },
       {
-        "name": "Stanley Umude",
+        "name": "Jeremy Sochan",
         "status": "Out"
       },
       {
-        "name": "Jeremy Sochan",
-        "status": "Questionable"
+        "name": "Stanley Umude",
+        "status": "Out"
       }
     ],
     "Houston Rockets": [
@@ -512,6 +508,38 @@
         "status": "Out"
       }
     ],
+    "Detroit Pistons": [
+      {
+        "name": "Isaac Jones",
+        "status": "Out"
+      },
+      {
+        "name": "Wendell Moore Jr.",
+        "status": "Out"
+      },
+      {
+        "name": "Tolu Smith",
+        "status": "Out"
+      },
+      {
+        "name": "Caris LeVert",
+        "status": "Questionable"
+      }
+    ],
+    "Phoenix Suns": [
+      {
+        "name": "Devin Booker",
+        "status": "Out"
+      },
+      {
+        "name": "Collin Gillespie",
+        "status": "Questionable"
+      },
+      {
+        "name": "Jalen Green",
+        "status": "Questionable"
+      }
+    ],
     "Oklahoma City Thunder": [
       {
         "name": "Alex Caruso",
@@ -540,5 +568,5 @@
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-28 06:52 PM ET"
+  "updated": "2026-01-28 11:55 PM ET"
 }
