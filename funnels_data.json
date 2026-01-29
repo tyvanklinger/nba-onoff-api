@@ -1,6 +1,2944 @@
 {
-  "overs": [],
-  "unders": [],
-  "updated": "2026-01-29T06:07:18.346375",
-  "games_today": 0
+  "overs": [
+    {
+      "id": "catch_shoot_fgm",
+      "title": "Catch & Shoot FGM Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 4,
+      "display_stat": "freq",
+      "teams": [
+        {
+          "team": "Bucks",
+          "opponent": "Wizards",
+          "value": 13.4,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Bilal Coulibaly",
+              "team": "",
+              "freq": 38.4,
+              "fgm": 1.0,
+              "fga": 3.1,
+              "fg_pct": 30.9,
+              "mpg": 26.6
+            },
+            {
+              "name": "Tre Johnson",
+              "team": "",
+              "freq": 35.2,
+              "fgm": 1.5,
+              "fga": 3.7,
+              "fg_pct": 40.1,
+              "mpg": 25.5
+            },
+            {
+              "name": "Justin Champagnie",
+              "team": "",
+              "freq": 34.3,
+              "fgm": 0.6,
+              "fga": 1.9,
+              "fg_pct": 32.1,
+              "mpg": 18.8
+            },
+            {
+              "name": "Bub Carrington",
+              "team": "",
+              "freq": 30.4,
+              "fgm": 1.0,
+              "fga": 2.6,
+              "fg_pct": 39.3,
+              "mpg": 28.6
+            }
+          ]
+        },
+        {
+          "team": "76ers",
+          "opponent": "Kings",
+          "value": 13.2,
+          "rank": 3,
+          "players": [
+            {
+              "name": "Keon Ellis",
+              "team": "",
+              "freq": 48.0,
+              "fgm": 0.8,
+              "fga": 2.3,
+              "fg_pct": 35.8,
+              "mpg": 17.5
+            },
+            {
+              "name": "Nique Clifford",
+              "team": "",
+              "freq": 34.8,
+              "fgm": 0.5,
+              "fga": 1.8,
+              "fg_pct": 27.2,
+              "mpg": 19.1
+            },
+            {
+              "name": "Russell Westbrook",
+              "team": "",
+              "freq": 33.0,
+              "fgm": 1.5,
+              "fga": 4.3,
+              "fg_pct": 34.1,
+              "mpg": 29.6
+            },
+            {
+              "name": "Dennis Schr\u00f6der",
+              "team": "",
+              "freq": 28.6,
+              "fgm": 1.1,
+              "fga": 3.0,
+              "fg_pct": 37.2,
+              "mpg": 26.3
+            }
+          ]
+        },
+        {
+          "team": "Thunder",
+          "opponent": "Timberwolves",
+          "value": 12.6,
+          "rank": 4,
+          "players": [
+            {
+              "name": "Donte DiVincenzo",
+              "team": "",
+              "freq": 62.5,
+              "fgm": 2.6,
+              "fga": 6.8,
+              "fg_pct": 38.5,
+              "mpg": 31.8
+            },
+            {
+              "name": "Mike Conley",
+              "team": "",
+              "freq": 48.8,
+              "fgm": 0.8,
+              "fga": 2.0,
+              "fg_pct": 38.0,
+              "mpg": 18.6
+            },
+            {
+              "name": "Naz Reid",
+              "team": "",
+              "freq": 47.1,
+              "fgm": 2.2,
+              "fga": 5.4,
+              "fg_pct": 41.4,
+              "mpg": 26.2
+            },
+            {
+              "name": "Jaden McDaniels",
+              "team": "",
+              "freq": 22.3,
+              "fgm": 1.1,
+              "fga": 2.4,
+              "fg_pct": 45.8,
+              "mpg": 32.1
+            }
+          ]
+        },
+        {
+          "team": "Nets",
+          "opponent": "Nuggets",
+          "value": 12.4,
+          "rank": 5,
+          "players": [
+            {
+              "name": "Spencer Jones",
+              "team": "",
+              "freq": 59.2,
+              "fgm": 1.1,
+              "fga": 2.6,
+              "fg_pct": 41.3,
+              "mpg": 23.7
+            },
+            {
+              "name": "Tim Hardaway Jr.",
+              "team": "",
+              "freq": 56.0,
+              "fgm": 2.3,
+              "fga": 5.7,
+              "fg_pct": 39.7,
+              "mpg": 27.3
+            },
+            {
+              "name": "Jalen Pickett",
+              "team": "",
+              "freq": 39.3,
+              "fgm": 0.9,
+              "fga": 2.1,
+              "fg_pct": 42.6,
+              "mpg": 18.8
+            },
+            {
+              "name": "Peyton Watson",
+              "team": "",
+              "freq": 29.2,
+              "fgm": 1.4,
+              "fga": 3.0,
+              "fg_pct": 47.0,
+              "mpg": 30.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "catch_shoot_freq",
+      "title": "Catch & Shoot FREQ% Allowed L10 Games",
+      "description": "",
+      "is_percent": true,
+      "player_count": 4,
+      "display_stat": "freq",
+      "teams": [
+        {
+          "team": "Hornets",
+          "opponent": "Mavericks",
+          "value": 36.2,
+          "rank": 4,
+          "players": [
+            {
+              "name": "Klay Thompson",
+              "team": "",
+              "freq": 59.0,
+              "fgm": 2.3,
+              "fga": 6.2,
+              "fg_pct": 37.4,
+              "mpg": 22.0
+            },
+            {
+              "name": "Jeremiah Robinson-Earl",
+              "team": "",
+              "freq": 47.1,
+              "fgm": 0.4,
+              "fga": 1.6,
+              "fg_pct": 25.0,
+              "mpg": 16.4
+            },
+            {
+              "name": "Max Christie",
+              "team": "",
+              "freq": 44.3,
+              "fgm": 2.0,
+              "fga": 4.2,
+              "fg_pct": 48.8,
+              "mpg": 29.4
+            },
+            {
+              "name": "P.J. Washington",
+              "team": "",
+              "freq": 32.5,
+              "fgm": 1.3,
+              "fga": 3.8,
+              "fg_pct": 33.3,
+              "mpg": 31.0
+            }
+          ]
+        },
+        {
+          "team": "Thunder",
+          "opponent": "Timberwolves",
+          "value": 36.1,
+          "rank": 5,
+          "players": [
+            {
+              "name": "Donte DiVincenzo",
+              "team": "",
+              "freq": 62.5,
+              "fgm": 2.6,
+              "fga": 6.8,
+              "fg_pct": 38.5,
+              "mpg": 31.8
+            },
+            {
+              "name": "Mike Conley",
+              "team": "",
+              "freq": 48.8,
+              "fgm": 0.8,
+              "fga": 2.0,
+              "fg_pct": 38.0,
+              "mpg": 18.6
+            },
+            {
+              "name": "Naz Reid",
+              "team": "",
+              "freq": 47.1,
+              "fgm": 2.2,
+              "fga": 5.4,
+              "fg_pct": 41.4,
+              "mpg": 26.2
+            },
+            {
+              "name": "Jaden McDaniels",
+              "team": "",
+              "freq": 22.3,
+              "fgm": 1.1,
+              "fga": 2.4,
+              "fg_pct": 45.8,
+              "mpg": 32.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pullup_fgm",
+      "title": "Pull-Up FGM Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 3,
+      "display_stat": "freq",
+      "teams": [
+        {
+          "team": "Heat",
+          "opponent": "Bulls",
+          "value": 10.8,
+          "rank": 1,
+          "players": [
+            {
+              "name": "Coby White",
+              "team": "",
+              "freq": 31.2,
+              "fgm": 1.4,
+              "fga": 4.2,
+              "fg_pct": 32.4,
+              "mpg": 28.9
+            },
+            {
+              "name": "Patrick Williams",
+              "team": "",
+              "freq": 21.4,
+              "fgm": 0.6,
+              "fga": 1.3,
+              "fg_pct": 47.2,
+              "mpg": 18.1
+            },
+            {
+              "name": "Tre Jones",
+              "team": "",
+              "freq": 12.6,
+              "fgm": 0.5,
+              "fga": 1.0,
+              "fg_pct": 50.0,
+              "mpg": 26.9
+            }
+          ]
+        },
+        {
+          "team": "Mavericks",
+          "opponent": "Hornets",
+          "value": 10.2,
+          "rank": 4,
+          "players": [
+            {
+              "name": "Tre Mann",
+              "team": "",
+              "freq": 43.6,
+              "fgm": 1.1,
+              "fga": 3.4,
+              "fg_pct": 32.7,
+              "mpg": 16.3
+            },
+            {
+              "name": "LaMelo Ball",
+              "team": "",
+              "freq": 38.6,
+              "fgm": 2.0,
+              "fga": 6.4,
+              "fg_pct": 30.8,
+              "mpg": 27.2
+            },
+            {
+              "name": "Brandon Miller",
+              "team": "",
+              "freq": 33.9,
+              "fgm": 2.1,
+              "fga": 5.6,
+              "fg_pct": 37.7,
+              "mpg": 30.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pullup_freq",
+      "title": "Pull-Up FREQ% Allowed L10 Games",
+      "description": "",
+      "is_percent": true,
+      "player_count": 3,
+      "display_stat": "freq",
+      "teams": [
+        {
+          "team": "Heat",
+          "opponent": "Bulls",
+          "value": 29.5,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Coby White",
+              "team": "",
+              "freq": 31.2,
+              "fgm": 1.4,
+              "fga": 4.2,
+              "fg_pct": 32.4,
+              "mpg": 28.9
+            },
+            {
+              "name": "Patrick Williams",
+              "team": "",
+              "freq": 21.4,
+              "fgm": 0.6,
+              "fga": 1.3,
+              "fg_pct": 47.2,
+              "mpg": 18.1
+            },
+            {
+              "name": "Tre Jones",
+              "team": "",
+              "freq": 12.6,
+              "fgm": 0.5,
+              "fga": 1.0,
+              "fg_pct": 50.0,
+              "mpg": 26.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "less10_fgm",
+      "title": "Less Than 10 Ft FGM Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 4,
+      "display_stat": "freq",
+      "teams": [
+        {
+          "team": "Heat",
+          "opponent": "Bulls",
+          "value": 24.6,
+          "rank": 1,
+          "players": [
+            {
+              "name": "Tre Jones",
+              "team": "",
+              "freq": 68.5,
+              "fgm": 3.4,
+              "fga": 5.5,
+              "fg_pct": 62.3,
+              "mpg": 26.9
+            },
+            {
+              "name": "Ayo Dosunmu",
+              "team": "",
+              "freq": 55.3,
+              "fgm": 3.2,
+              "fga": 5.8,
+              "fg_pct": 55.8,
+              "mpg": 26.0
+            },
+            {
+              "name": "Isaac Okoro",
+              "team": "",
+              "freq": 53.1,
+              "fgm": 2.1,
+              "fga": 3.5,
+              "fg_pct": 60.0,
+              "mpg": 25.1
+            },
+            {
+              "name": "Matas Buzelis",
+              "team": "",
+              "freq": 50.1,
+              "fgm": 3.4,
+              "fga": 5.6,
+              "fg_pct": 59.7,
+              "mpg": 27.9
+            }
+          ]
+        },
+        {
+          "team": "Nuggets",
+          "opponent": "Nets",
+          "value": 24.6,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Nic Claxton",
+              "team": "",
+              "freq": 89.7,
+              "fgm": 4.8,
+              "fga": 7.9,
+              "fg_pct": 61.3,
+              "mpg": 29.6
+            },
+            {
+              "name": "Day'Ron Sharpe",
+              "team": "",
+              "freq": 85.2,
+              "fgm": 2.9,
+              "fga": 4.2,
+              "fg_pct": 67.4,
+              "mpg": 18.2
+            },
+            {
+              "name": "Danny Wolf",
+              "team": "",
+              "freq": 47.5,
+              "fgm": 1.5,
+              "fga": 3.2,
+              "fg_pct": 46.4,
+              "mpg": 19.1
+            },
+            {
+              "name": "Terance Mann",
+              "team": "",
+              "freq": 43.6,
+              "fgm": 1.7,
+              "fga": 2.7,
+              "fg_pct": 61.9,
+              "mpg": 25.4
+            }
+          ]
+        },
+        {
+          "team": "Wizards",
+          "opponent": "Bucks",
+          "value": 24.6,
+          "rank": 3,
+          "players": [
+            {
+              "name": "Kyle Kuzma",
+              "team": "",
+              "freq": 61.0,
+              "fgm": 3.5,
+              "fga": 5.9,
+              "fg_pct": 60.2,
+              "mpg": 26.4
+            },
+            {
+              "name": "Kevin Porter Jr.",
+              "team": "",
+              "freq": 40.0,
+              "fgm": 2.6,
+              "fga": 5.2,
+              "fg_pct": 50.0,
+              "mpg": 33.6
+            },
+            {
+              "name": "Ryan Rollins",
+              "team": "",
+              "freq": 39.4,
+              "fgm": 2.9,
+              "fga": 5.2,
+              "fg_pct": 54.8,
+              "mpg": 31.8
+            },
+            {
+              "name": "Cole Anthony",
+              "team": "",
+              "freq": 37.1,
+              "fgm": 1.3,
+              "fga": 2.4,
+              "fg_pct": 53.3,
+              "mpg": 15.1
+            }
+          ]
+        },
+        {
+          "team": "Kings",
+          "opponent": "76ers",
+          "value": 24.5,
+          "rank": 4,
+          "players": [
+            {
+              "name": "Adem Bona",
+              "team": "",
+              "freq": 94.5,
+              "fgm": 1.4,
+              "fga": 2.3,
+              "fg_pct": 59.3,
+              "mpg": 16.7
+            },
+            {
+              "name": "Andre Drummond",
+              "team": "",
+              "freq": 75.0,
+              "fgm": 2.2,
+              "fga": 4.1,
+              "fg_pct": 55.1,
+              "mpg": 20.0
+            },
+            {
+              "name": "Trendon Watford",
+              "team": "",
+              "freq": 73.0,
+              "fgm": 1.8,
+              "fga": 3.2,
+              "fg_pct": 54.3,
+              "mpg": 15.3
+            },
+            {
+              "name": "Dominick Barlow",
+              "team": "",
+              "freq": 68.6,
+              "fgm": 2.7,
+              "fga": 3.9,
+              "fg_pct": 69.0,
+              "mpg": 23.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "less10_freq",
+      "title": "Less Than 10 Ft FREQ% Allowed L10 Games",
+      "description": "",
+      "is_percent": true,
+      "player_count": 4,
+      "display_stat": "freq",
+      "teams": [
+        {
+          "team": "Kings",
+          "opponent": "76ers",
+          "value": 46.7,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Adem Bona",
+              "team": "",
+              "freq": 94.5,
+              "fgm": 1.4,
+              "fga": 2.3,
+              "fg_pct": 59.3,
+              "mpg": 16.7
+            },
+            {
+              "name": "Andre Drummond",
+              "team": "",
+              "freq": 75.0,
+              "fgm": 2.2,
+              "fga": 4.1,
+              "fg_pct": 55.1,
+              "mpg": 20.0
+            },
+            {
+              "name": "Trendon Watford",
+              "team": "",
+              "freq": 73.0,
+              "fgm": 1.8,
+              "fga": 3.2,
+              "fg_pct": 54.3,
+              "mpg": 15.3
+            },
+            {
+              "name": "Dominick Barlow",
+              "team": "",
+              "freq": 68.6,
+              "fgm": 2.7,
+              "fga": 3.9,
+              "fg_pct": 69.0,
+              "mpg": 23.6
+            }
+          ]
+        },
+        {
+          "team": "Nuggets",
+          "opponent": "Nets",
+          "value": 45.6,
+          "rank": 3,
+          "players": [
+            {
+              "name": "Nic Claxton",
+              "team": "",
+              "freq": 89.7,
+              "fgm": 4.8,
+              "fga": 7.9,
+              "fg_pct": 61.3,
+              "mpg": 29.6
+            },
+            {
+              "name": "Day'Ron Sharpe",
+              "team": "",
+              "freq": 85.2,
+              "fgm": 2.9,
+              "fga": 4.2,
+              "fg_pct": 67.4,
+              "mpg": 18.2
+            },
+            {
+              "name": "Danny Wolf",
+              "team": "",
+              "freq": 47.5,
+              "fgm": 1.5,
+              "fga": 3.2,
+              "fg_pct": 46.4,
+              "mpg": 19.1
+            },
+            {
+              "name": "Terance Mann",
+              "team": "",
+              "freq": 43.6,
+              "fgm": 1.7,
+              "fga": 2.7,
+              "fg_pct": 61.9,
+              "mpg": 25.4
+            }
+          ]
+        },
+        {
+          "team": "Timberwolves",
+          "opponent": "Thunder",
+          "value": 44.8,
+          "rank": 4,
+          "players": [
+            {
+              "name": "Isaiah Hartenstein",
+              "team": "",
+              "freq": 78.9,
+              "fgm": 4.1,
+              "fga": 5.9,
+              "fg_pct": 69.7,
+              "mpg": 26.9
+            },
+            {
+              "name": "Chet Holmgren",
+              "team": "",
+              "freq": 51.7,
+              "fgm": 4.3,
+              "fga": 6.1,
+              "fg_pct": 70.4,
+              "mpg": 29.3
+            },
+            {
+              "name": "Aaron Wiggins",
+              "team": "",
+              "freq": 41.1,
+              "fgm": 2.0,
+              "fga": 3.6,
+              "fg_pct": 55.7,
+              "mpg": 23.7
+            },
+            {
+              "name": "Cason Wallace",
+              "team": "",
+              "freq": 38.2,
+              "fgm": 1.3,
+              "fga": 2.5,
+              "fg_pct": 50.0,
+              "mpg": 26.4
+            }
+          ]
+        },
+        {
+          "team": "Wizards",
+          "opponent": "Bucks",
+          "value": 44.8,
+          "rank": 5,
+          "players": [
+            {
+              "name": "Kyle Kuzma",
+              "team": "",
+              "freq": 61.0,
+              "fgm": 3.5,
+              "fga": 5.9,
+              "fg_pct": 60.2,
+              "mpg": 26.4
+            },
+            {
+              "name": "Kevin Porter Jr.",
+              "team": "",
+              "freq": 40.0,
+              "fgm": 2.6,
+              "fga": 5.2,
+              "fg_pct": 50.0,
+              "mpg": 33.6
+            },
+            {
+              "name": "Ryan Rollins",
+              "team": "",
+              "freq": 39.4,
+              "fgm": 2.9,
+              "fga": 5.2,
+              "fg_pct": 54.8,
+              "mpg": 31.8
+            },
+            {
+              "name": "Cole Anthony",
+              "team": "",
+              "freq": 37.1,
+              "fgm": 1.3,
+              "fga": 2.4,
+              "fg_pct": 53.3,
+              "mpg": 15.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spotup_ppg",
+      "title": "Spot-Up PPG Allowed",
+      "description": "",
+      "is_percent": false,
+      "player_count": 4,
+      "display_stat": "freq",
+      "teams": [
+        {
+          "team": "Thunder",
+          "opponent": "Timberwolves",
+          "value": 33.6,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Jaden McDaniels",
+              "team": "MIN",
+              "poss": 5.2,
+              "pts": 5.8,
+              "ppp": 1.1,
+              "freq": 37.2,
+              "mpg": 32.1
+            },
+            {
+              "name": "Mike Conley",
+              "team": "MIN",
+              "poss": 1.7,
+              "pts": 2.2,
+              "ppp": 1.29,
+              "freq": 33.2,
+              "mpg": 18.6
+            },
+            {
+              "name": "Donte DiVincenzo",
+              "team": "MIN",
+              "poss": 4.3,
+              "pts": 5.2,
+              "ppp": 1.22,
+              "freq": 32.5,
+              "mpg": 31.8
+            },
+            {
+              "name": "Naz Reid",
+              "team": "MIN",
+              "poss": 4.3,
+              "pts": 4.6,
+              "ppp": 1.09,
+              "freq": 31.1,
+              "mpg": 26.2
+            }
+          ]
+        },
+        {
+          "team": "Nets",
+          "opponent": "Nuggets",
+          "value": 32.6,
+          "rank": 3,
+          "players": [
+            {
+              "name": "Spencer Jones",
+              "team": "DEN",
+              "poss": 2.3,
+              "pts": 2.7,
+              "ppp": 1.2,
+              "freq": 41.9,
+              "mpg": 23.7
+            },
+            {
+              "name": "Tim Hardaway Jr.",
+              "team": "DEN",
+              "poss": 3.7,
+              "pts": 4.3,
+              "ppp": 1.16,
+              "freq": 32.4,
+              "mpg": 27.3
+            },
+            {
+              "name": "Jalen Pickett",
+              "team": "DEN",
+              "poss": 1.9,
+              "pts": 2.5,
+              "ppp": 1.31,
+              "freq": 30.2,
+              "mpg": 18.8
+            },
+            {
+              "name": "Peyton Watson",
+              "team": "DEN",
+              "poss": 3.4,
+              "pts": 3.7,
+              "ppp": 1.11,
+              "freq": 24.4,
+              "mpg": 30.1
+            }
+          ]
+        },
+        {
+          "team": "Bucks",
+          "opponent": "Wizards",
+          "value": 31.8,
+          "rank": 4,
+          "players": [
+            {
+              "name": "Justin Champagnie",
+              "team": "WAS",
+              "poss": 1.8,
+              "pts": 1.8,
+              "ppp": 0.99,
+              "freq": 26.2,
+              "mpg": 18.8
+            },
+            {
+              "name": "Bilal Coulibaly",
+              "team": "WAS",
+              "poss": 2.8,
+              "pts": 2.5,
+              "ppp": 0.88,
+              "freq": 25.5,
+              "mpg": 26.6
+            },
+            {
+              "name": "Alex Sarr",
+              "team": "WAS",
+              "poss": 3.7,
+              "pts": 3.2,
+              "ppp": 0.86,
+              "freq": 21.8,
+              "mpg": 28.6
+            },
+            {
+              "name": "Tre Johnson",
+              "team": "WAS",
+              "poss": 2.8,
+              "pts": 2.5,
+              "ppp": 0.88,
+              "freq": 21.8,
+              "mpg": 25.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pr_handler_ppg",
+      "title": "P&R Ball-Handler PPG Allowed",
+      "description": "",
+      "is_percent": false,
+      "player_count": 2,
+      "display_stat": "freq",
+      "teams": [
+        {
+          "team": "Timberwolves",
+          "opponent": "Thunder",
+          "value": 17.3,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Shai Gilgeous-Alexander",
+              "team": "OKC",
+              "poss": 9.3,
+              "pts": 11.1,
+              "ppp": 1.19,
+              "freq": 36.5,
+              "mpg": 33.5
+            },
+            {
+              "name": "Cason Wallace",
+              "team": "OKC",
+              "poss": 1.1,
+              "pts": 0.5,
+              "ppp": 0.43,
+              "freq": 13.3,
+              "mpg": 26.4
+            }
+          ]
+        },
+        {
+          "team": "76ers",
+          "opponent": "Kings",
+          "value": 16.9,
+          "rank": 4,
+          "players": [
+            {
+              "name": "Dennis Schr\u00f6der",
+              "team": "SAC",
+              "poss": 5.1,
+              "pts": 4.1,
+              "ppp": 0.81,
+              "freq": 36.7,
+              "mpg": 26.3
+            },
+            {
+              "name": "Russell Westbrook",
+              "team": "SAC",
+              "poss": 4.6,
+              "pts": 3.0,
+              "ppp": 0.65,
+              "freq": 26.0,
+              "mpg": 29.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pr_rollman_ppg",
+      "title": "P&R Roll Man PPG Allowed",
+      "description": "",
+      "is_percent": false,
+      "player_count": 2,
+      "display_stat": "freq",
+      "teams": [
+        {
+          "team": "Bulls",
+          "opponent": "Heat",
+          "value": 7.9,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Bam Adebayo",
+              "team": "MIA",
+              "poss": 1.7,
+              "pts": 1.7,
+              "ppp": 0.98,
+              "freq": 9.3,
+              "mpg": 31.2
+            },
+            {
+              "name": "Kel'el Ware",
+              "team": "MIA",
+              "poss": 0.5,
+              "pts": 0.7,
+              "ppp": 1.45,
+              "freq": 5.0,
+              "mpg": 23.4
+            }
+          ]
+        },
+        {
+          "team": "Timberwolves",
+          "opponent": "Thunder",
+          "value": 7.8,
+          "rank": 3,
+          "players": [
+            {
+              "name": "Jaylin Williams",
+              "team": "OKC",
+              "poss": 1.4,
+              "pts": 1.2,
+              "ppp": 0.85,
+              "freq": 21.7,
+              "mpg": 18.4
+            },
+            {
+              "name": "Isaiah Hartenstein",
+              "team": "OKC",
+              "poss": 2.0,
+              "pts": 2.5,
+              "ppp": 1.23,
+              "freq": 19.9,
+              "mpg": 26.9
+            }
+          ]
+        },
+        {
+          "team": "Hawks",
+          "opponent": "Rockets",
+          "value": 7.7,
+          "rank": 4,
+          "players": [
+            {
+              "name": "Steven Adams",
+              "team": "HOU",
+              "poss": 1.1,
+              "pts": 1.2,
+              "ppp": 1.09,
+              "freq": 15.6,
+              "mpg": 22.8
+            },
+            {
+              "name": "Alperen Sengun",
+              "team": "HOU",
+              "poss": 2.1,
+              "pts": 2.1,
+              "ppp": 1.01,
+              "freq": 9.2,
+              "mpg": 34.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transition_ppg",
+      "title": "Transition PPG Allowed",
+      "description": "",
+      "is_percent": false,
+      "player_count": 0,
+      "display_stat": "none",
+      "teams": [
+        {
+          "team": "Wizards",
+          "opponent": "Bucks",
+          "value": 26.5,
+          "rank": 4,
+          "players": []
+        },
+        {
+          "team": "Nets",
+          "opponent": "Nuggets",
+          "value": 26.0,
+          "rank": 5,
+          "players": []
+        }
+      ]
+    },
+    {
+      "id": "opp_oreb",
+      "title": "Opponent O-Reb Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 0,
+      "display_stat": "none",
+      "teams": [
+        {
+          "team": "Thunder",
+          "opponent": "Timberwolves",
+          "value": 14.7,
+          "rank": 1,
+          "players": []
+        },
+        {
+          "team": "76ers",
+          "opponent": "Kings",
+          "value": 13.8,
+          "rank": 3,
+          "players": []
+        },
+        {
+          "team": "Kings",
+          "opponent": "76ers",
+          "value": 13.6,
+          "rank": 4,
+          "players": []
+        },
+        {
+          "team": "Suns",
+          "opponent": "Pistons",
+          "value": 13.0,
+          "rank": 5,
+          "players": []
+        }
+      ]
+    },
+    {
+      "id": "opp_reb",
+      "title": "Opponent Reb Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 0,
+      "display_stat": "none",
+      "teams": [
+        {
+          "team": "Thunder",
+          "opponent": "Timberwolves",
+          "value": 49.1,
+          "rank": 1,
+          "players": []
+        },
+        {
+          "team": "Hawks",
+          "opponent": "Rockets",
+          "value": 47.3,
+          "rank": 2,
+          "players": []
+        },
+        {
+          "team": "Heat",
+          "opponent": "Bulls",
+          "value": 46.8,
+          "rank": 3,
+          "players": []
+        },
+        {
+          "team": "Nuggets",
+          "opponent": "Nets",
+          "value": 46.7,
+          "rank": 5,
+          "players": []
+        }
+      ]
+    },
+    {
+      "id": "opp_ast",
+      "title": "Opponent Assists Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 0,
+      "display_stat": "none",
+      "teams": [
+        {
+          "team": "76ers",
+          "opponent": "Kings",
+          "value": 30.9,
+          "rank": 2,
+          "players": []
+        },
+        {
+          "team": "Bucks",
+          "opponent": "Wizards",
+          "value": 28.3,
+          "rank": 4,
+          "players": []
+        },
+        {
+          "team": "Nets",
+          "opponent": "Nuggets",
+          "value": 28.2,
+          "rank": 5,
+          "players": []
+        }
+      ]
+    },
+    {
+      "id": "opp_pts",
+      "title": "Opponent PPG Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 0,
+      "display_stat": "none",
+      "teams": [
+        {
+          "team": "Heat",
+          "opponent": "Bulls",
+          "value": 121.4,
+          "rank": 2,
+          "players": []
+        },
+        {
+          "team": "Wizards",
+          "opponent": "Bucks",
+          "value": 118.6,
+          "rank": 3,
+          "players": []
+        },
+        {
+          "team": "76ers",
+          "opponent": "Kings",
+          "value": 117.4,
+          "rank": 5,
+          "players": []
+        }
+      ]
+    },
+    {
+      "id": "ra_fgm",
+      "title": "Restricted Area FGM Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 3,
+      "display_stat": "zone_pct",
+      "teams": [
+        {
+          "team": "Wizards",
+          "opponent": "Bucks",
+          "value": 19.7,
+          "rank": 1,
+          "players": [
+            {
+              "name": "Kyle Kuzma",
+              "team": "MIL",
+              "zone_pct": 55.3,
+              "mpg": 26.4
+            },
+            {
+              "name": "Ryan Rollins",
+              "team": "MIL",
+              "zone_pct": 38.7,
+              "mpg": 31.8
+            },
+            {
+              "name": "Kevin Porter Jr.",
+              "team": "MIL",
+              "zone_pct": 34.5,
+              "mpg": 33.6
+            }
+          ]
+        },
+        {
+          "team": "Nuggets",
+          "opponent": "Nets",
+          "value": 18.3,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Day'Ron Sharpe",
+              "team": "BKN",
+              "zone_pct": 80.0,
+              "mpg": 18.2
+            },
+            {
+              "name": "Nic Claxton",
+              "team": "BKN",
+              "zone_pct": 74.0,
+              "mpg": 29.6
+            },
+            {
+              "name": "Danny Wolf",
+              "team": "BKN",
+              "zone_pct": 48.1,
+              "mpg": 19.1
+            }
+          ]
+        },
+        {
+          "team": "Timberwolves",
+          "opponent": "Thunder",
+          "value": 18.1,
+          "rank": 4,
+          "players": [
+            {
+              "name": "Isaiah Hartenstein",
+              "team": "OKC",
+              "zone_pct": 72.9,
+              "mpg": 26.9
+            },
+            {
+              "name": "Chet Holmgren",
+              "team": "OKC",
+              "zone_pct": 52.2,
+              "mpg": 29.3
+            },
+            {
+              "name": "Aaron Wiggins",
+              "team": "OKC",
+              "zone_pct": 38.5,
+              "mpg": 23.7
+            }
+          ]
+        },
+        {
+          "team": "Mavericks",
+          "opponent": "Hornets",
+          "value": 18.0,
+          "rank": 5,
+          "players": [
+            {
+              "name": "Ryan Kalkbrenner",
+              "team": "CHA",
+              "zone_pct": 86.8,
+              "mpg": 24.0
+            },
+            {
+              "name": "Moussa Diabat\u00e9",
+              "team": "CHA",
+              "zone_pct": 84.4,
+              "mpg": 24.6
+            },
+            {
+              "name": "Collin Sexton",
+              "team": "CHA",
+              "zone_pct": 46.9,
+              "mpg": 22.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mr_fga",
+      "title": "Mid-Range FGA Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 2,
+      "display_stat": "zone_pct",
+      "teams": [
+        {
+          "team": "Bucks",
+          "opponent": "Wizards",
+          "value": 11.2,
+          "rank": 5,
+          "players": [
+            {
+              "name": "Khris Middleton",
+              "team": "WAS",
+              "zone_pct": 34.1,
+              "mpg": 24.5
+            },
+            {
+              "name": "Bub Carrington",
+              "team": "WAS",
+              "zone_pct": 17.4,
+              "mpg": 28.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "corner3_fga",
+      "title": "Corner 3PA Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 2,
+      "display_stat": "zone_pct",
+      "teams": [
+        {
+          "team": "Thunder",
+          "opponent": "Timberwolves",
+          "value": 12.9,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Mike Conley",
+              "team": "MIN",
+              "zone_pct": 22.5,
+              "mpg": 18.6
+            },
+            {
+              "name": "Donte DiVincenzo",
+              "team": "MIN",
+              "zone_pct": 19.4,
+              "mpg": 31.8
+            }
+          ]
+        },
+        {
+          "team": "Mavericks",
+          "opponent": "Hornets",
+          "value": 11.3,
+          "rank": 5,
+          "players": [
+            {
+              "name": "Josh Green",
+              "team": "CHA",
+              "zone_pct": 43.2,
+              "mpg": 16.1
+            },
+            {
+              "name": "Sion James",
+              "team": "CHA",
+              "zone_pct": 27.1,
+              "mpg": 24.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "atb3_fga",
+      "title": "Above Break 3PA Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 3,
+      "display_stat": "zone_pct",
+      "teams": [
+        {
+          "team": "Hornets",
+          "opponent": "Mavericks",
+          "value": 31.4,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Klay Thompson",
+              "team": "DAL",
+              "zone_pct": 54.7,
+              "mpg": 22.0
+            },
+            {
+              "name": "D'Angelo Russell",
+              "team": "DAL",
+              "zone_pct": 40.4,
+              "mpg": 19.0
+            },
+            {
+              "name": "Max Christie",
+              "team": "DAL",
+              "zone_pct": 35.5,
+              "mpg": 29.4
+            }
+          ]
+        },
+        {
+          "team": "Heat",
+          "opponent": "Bulls",
+          "value": 30.3,
+          "rank": 4,
+          "players": [
+            {
+              "name": "Coby White",
+              "team": "CHI",
+              "zone_pct": 46.7,
+              "mpg": 28.9
+            },
+            {
+              "name": "Patrick Williams",
+              "team": "CHI",
+              "zone_pct": 44.8,
+              "mpg": 18.1
+            },
+            {
+              "name": "Matas Buzelis",
+              "team": "CHI",
+              "zone_pct": 31.2,
+              "mpg": 27.9
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "unders": [
+    {
+      "id": "catch_shoot_fgm",
+      "title": "Catch & Shoot FGM Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 4,
+      "display_stat": "freq",
+      "teams": [
+        {
+          "team": "Nuggets",
+          "opponent": "Nets",
+          "value": 7.9,
+          "rank": 1,
+          "players": [
+            {
+              "name": "Tyrese Martin",
+              "team": "",
+              "freq": 47.5,
+              "fgm": 1.2,
+              "fga": 3.3,
+              "fg_pct": 37.2,
+              "mpg": 19.1
+            },
+            {
+              "name": "Egor D\u00ebmin",
+              "team": "",
+              "freq": 42.9,
+              "fgm": 1.6,
+              "fga": 3.7,
+              "fg_pct": 43.8,
+              "mpg": 24.7
+            },
+            {
+              "name": "Drake Powell",
+              "team": "",
+              "freq": 40.7,
+              "fgm": 0.6,
+              "fga": 2.0,
+              "fg_pct": 28.8,
+              "mpg": 19.0
+            },
+            {
+              "name": "Nolan Traore",
+              "team": "",
+              "freq": 39.6,
+              "fgm": 0.8,
+              "fga": 2.3,
+              "fg_pct": 34.0,
+              "mpg": 18.6
+            }
+          ]
+        },
+        {
+          "team": "Pistons",
+          "opponent": "Suns",
+          "value": 8.0,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Royce O'Neale",
+              "team": "",
+              "freq": 64.0,
+              "fgm": 2.2,
+              "fga": 5.3,
+              "fg_pct": 41.0,
+              "mpg": 29.5
+            },
+            {
+              "name": "Ryan Dunn",
+              "team": "",
+              "freq": 43.7,
+              "fgm": 0.8,
+              "fga": 2.5,
+              "fg_pct": 33.0,
+              "mpg": 20.5
+            },
+            {
+              "name": "Jordan Goodwin",
+              "team": "",
+              "freq": 43.5,
+              "fgm": 1.2,
+              "fga": 3.6,
+              "fg_pct": 34.4,
+              "mpg": 21.7
+            },
+            {
+              "name": "Grayson Allen",
+              "team": "",
+              "freq": 38.7,
+              "fgm": 2.0,
+              "fga": 5.0,
+              "fg_pct": 39.3,
+              "mpg": 29.8
+            }
+          ]
+        },
+        {
+          "team": "Mavericks",
+          "opponent": "Hornets",
+          "value": 9.1,
+          "rank": 5,
+          "players": [
+            {
+              "name": "Josh Green",
+              "team": "",
+              "freq": 71.4,
+              "fgm": 1.2,
+              "fga": 2.6,
+              "fg_pct": 45.0,
+              "mpg": 16.1
+            },
+            {
+              "name": "Sion James",
+              "team": "",
+              "freq": 53.5,
+              "fgm": 1.0,
+              "fga": 2.6,
+              "fg_pct": 37.2,
+              "mpg": 24.8
+            },
+            {
+              "name": "Tidjane Sala\u00fcn",
+              "team": "",
+              "freq": 48.2,
+              "fgm": 1.0,
+              "fga": 2.2,
+              "fg_pct": 43.3,
+              "mpg": 16.2
+            },
+            {
+              "name": "Kon Knueppel",
+              "team": "",
+              "freq": 48.1,
+              "fgm": 2.7,
+              "fga": 6.5,
+              "fg_pct": 42.1,
+              "mpg": 31.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "catch_shoot_freq",
+      "title": "Catch & Shoot FREQ% Allowed L10 Games",
+      "description": "",
+      "is_percent": true,
+      "player_count": 4,
+      "display_stat": "freq",
+      "teams": [
+        {
+          "team": "Pistons",
+          "opponent": "Suns",
+          "value": 28.2,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Royce O'Neale",
+              "team": "",
+              "freq": 64.0,
+              "fgm": 2.2,
+              "fga": 5.3,
+              "fg_pct": 41.0,
+              "mpg": 29.5
+            },
+            {
+              "name": "Ryan Dunn",
+              "team": "",
+              "freq": 43.7,
+              "fgm": 0.8,
+              "fga": 2.5,
+              "fg_pct": 33.0,
+              "mpg": 20.5
+            },
+            {
+              "name": "Jordan Goodwin",
+              "team": "",
+              "freq": 43.5,
+              "fgm": 1.2,
+              "fga": 3.6,
+              "fg_pct": 34.4,
+              "mpg": 21.7
+            },
+            {
+              "name": "Grayson Allen",
+              "team": "",
+              "freq": 38.7,
+              "fgm": 2.0,
+              "fga": 5.0,
+              "fg_pct": 39.3,
+              "mpg": 29.8
+            }
+          ]
+        },
+        {
+          "team": "Heat",
+          "opponent": "Bulls",
+          "value": 28.2,
+          "rank": 3,
+          "players": [
+            {
+              "name": "Nikola Vu\u010devi\u0107",
+              "team": "",
+              "freq": 44.5,
+              "fgm": 2.6,
+              "fga": 6.1,
+              "fg_pct": 43.2,
+              "mpg": 30.9
+            },
+            {
+              "name": "Patrick Williams",
+              "team": "",
+              "freq": 42.7,
+              "fgm": 1.0,
+              "fga": 2.5,
+              "fg_pct": 39.6,
+              "mpg": 18.1
+            },
+            {
+              "name": "Isaac Okoro",
+              "team": "",
+              "freq": 42.5,
+              "fgm": 0.9,
+              "fga": 2.8,
+              "fg_pct": 32.4,
+              "mpg": 25.1
+            },
+            {
+              "name": "Matas Buzelis",
+              "team": "",
+              "freq": 38.6,
+              "fgm": 1.5,
+              "fga": 4.3,
+              "fg_pct": 35.7,
+              "mpg": 27.9
+            }
+          ]
+        },
+        {
+          "team": "Nuggets",
+          "opponent": "Nets",
+          "value": 28.5,
+          "rank": 4,
+          "players": [
+            {
+              "name": "Tyrese Martin",
+              "team": "",
+              "freq": 47.5,
+              "fgm": 1.2,
+              "fga": 3.3,
+              "fg_pct": 37.2,
+              "mpg": 19.1
+            },
+            {
+              "name": "Egor D\u00ebmin",
+              "team": "",
+              "freq": 42.9,
+              "fgm": 1.6,
+              "fga": 3.7,
+              "fg_pct": 43.8,
+              "mpg": 24.7
+            },
+            {
+              "name": "Drake Powell",
+              "team": "",
+              "freq": 40.7,
+              "fgm": 0.6,
+              "fga": 2.0,
+              "fg_pct": 28.8,
+              "mpg": 19.0
+            },
+            {
+              "name": "Nolan Traore",
+              "team": "",
+              "freq": 39.6,
+              "fgm": 0.8,
+              "fga": 2.3,
+              "fg_pct": 34.0,
+              "mpg": 18.6
+            }
+          ]
+        },
+        {
+          "team": "Rockets",
+          "opponent": "Hawks",
+          "value": 28.9,
+          "rank": 5,
+          "players": [
+            {
+              "name": "V\u00edt Krej\u010d\u00ed",
+              "team": "",
+              "freq": 63.5,
+              "fgm": 1.9,
+              "fga": 4.3,
+              "fg_pct": 45.3,
+              "mpg": 22.2
+            },
+            {
+              "name": "Luke Kennard",
+              "team": "",
+              "freq": 56.9,
+              "fgm": 1.6,
+              "fga": 3.0,
+              "fg_pct": 52.4,
+              "mpg": 20.6
+            },
+            {
+              "name": "Corey Kispert",
+              "team": "",
+              "freq": 51.8,
+              "fgm": 1.1,
+              "fga": 3.6,
+              "fg_pct": 31.0,
+              "mpg": 19.0
+            },
+            {
+              "name": "Mouhamed Gueye",
+              "team": "",
+              "freq": 46.6,
+              "fgm": 0.5,
+              "fga": 1.9,
+              "fg_pct": 27.0,
+              "mpg": 16.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pullup_fgm",
+      "title": "Pull-Up FGM Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 3,
+      "display_stat": "freq",
+      "teams": [
+        {
+          "team": "Thunder",
+          "opponent": "Timberwolves",
+          "value": 6.0,
+          "rank": 1,
+          "players": [
+            {
+              "name": "Anthony Edwards",
+              "team": "",
+              "freq": 53.6,
+              "fgm": 4.5,
+              "fga": 11.1,
+              "fg_pct": 40.9,
+              "mpg": 35.2
+            },
+            {
+              "name": "Mike Conley",
+              "team": "",
+              "freq": 37.0,
+              "fgm": 0.4,
+              "fga": 1.5,
+              "fg_pct": 26.7,
+              "mpg": 18.6
+            },
+            {
+              "name": "Jaden McDaniels",
+              "team": "",
+              "freq": 29.6,
+              "fgm": 1.3,
+              "fga": 3.2,
+              "fg_pct": 41.5,
+              "mpg": 32.1
+            }
+          ]
+        },
+        {
+          "team": "Timberwolves",
+          "opponent": "Thunder",
+          "value": 6.7,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Shai Gilgeous-Alexander",
+              "team": "",
+              "freq": 57.7,
+              "fgm": 5.7,
+              "fga": 11.5,
+              "fg_pct": 49.4,
+              "mpg": 33.5
+            },
+            {
+              "name": "Kenrich Williams",
+              "team": "",
+              "freq": 22.4,
+              "fgm": 0.6,
+              "fga": 1.0,
+              "fg_pct": 57.1,
+              "mpg": 15.5
+            },
+            {
+              "name": "Isaiah Joe",
+              "team": "",
+              "freq": 19.4,
+              "fgm": 0.5,
+              "fga": 1.3,
+              "fg_pct": 40.0,
+              "mpg": 20.0
+            }
+          ]
+        },
+        {
+          "team": "Hornets",
+          "opponent": "Mavericks",
+          "value": 6.9,
+          "rank": 3,
+          "players": [
+            {
+              "name": "Ryan Nembhard",
+              "team": "",
+              "freq": 56.6,
+              "fgm": 1.6,
+              "fga": 3.8,
+              "fg_pct": 43.3,
+              "mpg": 19.5
+            },
+            {
+              "name": "D'Angelo Russell",
+              "team": "",
+              "freq": 50.9,
+              "fgm": 1.7,
+              "fga": 4.5,
+              "fg_pct": 37.3,
+              "mpg": 19.0
+            },
+            {
+              "name": "Cooper Flagg",
+              "team": "",
+              "freq": 35.3,
+              "fgm": 1.9,
+              "fga": 5.3,
+              "fg_pct": 35.3,
+              "mpg": 33.8
+            }
+          ]
+        },
+        {
+          "team": "Wizards",
+          "opponent": "Bucks",
+          "value": 7.6,
+          "rank": 4,
+          "players": [
+            {
+              "name": "Cole Anthony",
+              "team": "",
+              "freq": 44.6,
+              "fgm": 1.3,
+              "fga": 2.9,
+              "fg_pct": 44.4,
+              "mpg": 15.1
+            },
+            {
+              "name": "Kevin Porter Jr.",
+              "team": "",
+              "freq": 42.0,
+              "fgm": 2.1,
+              "fga": 5.5,
+              "fg_pct": 38.9,
+              "mpg": 33.6
+            },
+            {
+              "name": "Ryan Rollins",
+              "team": "",
+              "freq": 35.4,
+              "fgm": 1.9,
+              "fga": 4.7,
+              "fg_pct": 41.1,
+              "mpg": 31.8
+            }
+          ]
+        },
+        {
+          "team": "76ers",
+          "opponent": "Kings",
+          "value": 7.6,
+          "rank": 5,
+          "players": [
+            {
+              "name": "DeMar DeRozan",
+              "team": "",
+              "freq": 53.9,
+              "fgm": 3.4,
+              "fga": 7.3,
+              "fg_pct": 47.1,
+              "mpg": 33.3
+            },
+            {
+              "name": "Zach LaVine",
+              "team": "",
+              "freq": 41.4,
+              "fgm": 2.3,
+              "fga": 5.8,
+              "fg_pct": 38.7,
+              "mpg": 32.2
+            },
+            {
+              "name": "Malik Monk",
+              "team": "",
+              "freq": 40.9,
+              "fgm": 1.7,
+              "fga": 4.1,
+              "fg_pct": 41.5,
+              "mpg": 22.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pullup_freq",
+      "title": "Pull-Up FREQ% Allowed L10 Games",
+      "description": "",
+      "is_percent": true,
+      "player_count": 3,
+      "display_stat": "freq",
+      "teams": [
+        {
+          "team": "Thunder",
+          "opponent": "Timberwolves",
+          "value": 19.2,
+          "rank": 1,
+          "players": [
+            {
+              "name": "Anthony Edwards",
+              "team": "",
+              "freq": 53.6,
+              "fgm": 4.5,
+              "fga": 11.1,
+              "fg_pct": 40.9,
+              "mpg": 35.2
+            },
+            {
+              "name": "Mike Conley",
+              "team": "",
+              "freq": 37.0,
+              "fgm": 0.4,
+              "fga": 1.5,
+              "fg_pct": 26.7,
+              "mpg": 18.6
+            },
+            {
+              "name": "Jaden McDaniels",
+              "team": "",
+              "freq": 29.6,
+              "fgm": 1.3,
+              "fga": 3.2,
+              "fg_pct": 41.5,
+              "mpg": 32.1
+            }
+          ]
+        },
+        {
+          "team": "Mavericks",
+          "opponent": "Hornets",
+          "value": 22.5,
+          "rank": 4,
+          "players": [
+            {
+              "name": "Tre Mann",
+              "team": "",
+              "freq": 43.6,
+              "fgm": 1.1,
+              "fga": 3.4,
+              "fg_pct": 32.7,
+              "mpg": 16.3
+            },
+            {
+              "name": "LaMelo Ball",
+              "team": "",
+              "freq": 38.6,
+              "fgm": 2.0,
+              "fga": 6.4,
+              "fg_pct": 30.8,
+              "mpg": 27.2
+            },
+            {
+              "name": "Brandon Miller",
+              "team": "",
+              "freq": 33.9,
+              "fgm": 2.1,
+              "fga": 5.6,
+              "fg_pct": 37.7,
+              "mpg": 30.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "less10_fgm",
+      "title": "Less Than 10 Ft FGM Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 4,
+      "display_stat": "freq",
+      "teams": [
+        {
+          "team": "Pistons",
+          "opponent": "Suns",
+          "value": 19.0,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Mark Williams",
+              "team": "",
+              "freq": 93.1,
+              "fgm": 4.7,
+              "fga": 6.9,
+              "fg_pct": 67.7,
+              "mpg": 24.0
+            },
+            {
+              "name": "Oso Ighodaro",
+              "team": "",
+              "freq": 89.2,
+              "fgm": 2.2,
+              "fga": 3.4,
+              "fg_pct": 63.7,
+              "mpg": 20.0
+            },
+            {
+              "name": "Ryan Dunn",
+              "team": "",
+              "freq": 52.3,
+              "fgm": 1.7,
+              "fga": 3.0,
+              "fg_pct": 58.6,
+              "mpg": 20.5
+            },
+            {
+              "name": "Jamaree Bouyea",
+              "team": "",
+              "freq": 45.7,
+              "fgm": 1.9,
+              "fga": 2.6,
+              "fg_pct": 73.6,
+              "mpg": 15.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "less10_freq",
+      "title": "Less Than 10 Ft FREQ% Allowed L10 Games",
+      "description": "",
+      "is_percent": true,
+      "player_count": 4,
+      "display_stat": "freq",
+      "teams": [
+        {
+          "team": "Bucks",
+          "opponent": "Wizards",
+          "value": 38.6,
+          "rank": 5,
+          "players": [
+            {
+              "name": "Marvin Bagley III",
+              "team": "",
+              "freq": 88.7,
+              "fgm": 3.7,
+              "fga": 5.7,
+              "fg_pct": 64.9,
+              "mpg": 19.3
+            },
+            {
+              "name": "Alex Sarr",
+              "team": "",
+              "freq": 67.5,
+              "fgm": 5.5,
+              "fga": 9.6,
+              "fg_pct": 56.8,
+              "mpg": 28.6
+            },
+            {
+              "name": "Justin Champagnie",
+              "team": "",
+              "freq": 63.6,
+              "fgm": 2.2,
+              "fga": 3.5,
+              "fg_pct": 62.7,
+              "mpg": 18.8
+            },
+            {
+              "name": "Bilal Coulibaly",
+              "team": "",
+              "freq": 52.1,
+              "fgm": 2.1,
+              "fga": 4.2,
+              "fg_pct": 50.9,
+              "mpg": 26.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spotup_ppg",
+      "title": "Spot-Up PPG Allowed",
+      "description": "",
+      "is_percent": false,
+      "player_count": 4,
+      "display_stat": "freq",
+      "teams": [
+        {
+          "team": "Pistons",
+          "opponent": "Suns",
+          "value": 24.8,
+          "rank": 1,
+          "players": [
+            {
+              "name": "Royce O'Neale",
+              "team": "PHX",
+              "poss": 4.4,
+              "pts": 5.0,
+              "ppp": 1.14,
+              "freq": 43.2,
+              "mpg": 29.5
+            },
+            {
+              "name": "Jordan Goodwin",
+              "team": "PHX",
+              "poss": 3.9,
+              "pts": 3.6,
+              "ppp": 0.9,
+              "freq": 41.8,
+              "mpg": 21.7
+            },
+            {
+              "name": "Ryan Dunn",
+              "team": "PHX",
+              "poss": 2.5,
+              "pts": 2.1,
+              "ppp": 0.84,
+              "freq": 35.8,
+              "mpg": 20.5
+            },
+            {
+              "name": "Grayson Allen",
+              "team": "PHX",
+              "poss": 5.2,
+              "pts": 6.6,
+              "ppp": 1.26,
+              "freq": 32.4,
+              "mpg": 29.8
+            }
+          ]
+        },
+        {
+          "team": "Timberwolves",
+          "opponent": "Thunder",
+          "value": 24.9,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Luguentz Dort",
+              "team": "OKC",
+              "poss": 5.8,
+              "pts": 6.5,
+              "ppp": 1.14,
+              "freq": 63.5,
+              "mpg": 27.6
+            },
+            {
+              "name": "Aaron Wiggins",
+              "team": "OKC",
+              "poss": 4.8,
+              "pts": 4.5,
+              "ppp": 0.95,
+              "freq": 44.3,
+              "mpg": 23.7
+            },
+            {
+              "name": "Kenrich Williams",
+              "team": "OKC",
+              "poss": 2.5,
+              "pts": 2.4,
+              "ppp": 0.95,
+              "freq": 42.3,
+              "mpg": 15.5
+            },
+            {
+              "name": "Isaiah Joe",
+              "team": "OKC",
+              "poss": 3.4,
+              "pts": 4.5,
+              "ppp": 1.32,
+              "freq": 41.0,
+              "mpg": 20.0
+            }
+          ]
+        },
+        {
+          "team": "Rockets",
+          "opponent": "Hawks",
+          "value": 25.1,
+          "rank": 3,
+          "players": [
+            {
+              "name": "Mouhamed Gueye",
+              "team": "ATL",
+              "poss": 1.9,
+              "pts": 1.6,
+              "ppp": 0.82,
+              "freq": 39.2,
+              "mpg": 16.0
+            },
+            {
+              "name": "V\u00edt Krej\u010d\u00ed",
+              "team": "ATL",
+              "poss": 2.6,
+              "pts": 3.2,
+              "ppp": 1.25,
+              "freq": 33.6,
+              "mpg": 22.2
+            },
+            {
+              "name": "Luke Kennard",
+              "team": "ATL",
+              "poss": 2.0,
+              "pts": 3.0,
+              "ppp": 1.51,
+              "freq": 31.6,
+              "mpg": 20.6
+            },
+            {
+              "name": "Zaccharie Risacher",
+              "team": "ATL",
+              "poss": 3.3,
+              "pts": 2.7,
+              "ppp": 0.82,
+              "freq": 29.9,
+              "mpg": 24.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pr_handler_ppg",
+      "title": "P&R Ball-Handler PPG Allowed",
+      "description": "",
+      "is_percent": false,
+      "player_count": 2,
+      "display_stat": "freq",
+      "teams": [
+        {
+          "team": "Nets",
+          "opponent": "Nuggets",
+          "value": 9.3,
+          "rank": 1,
+          "players": [
+            {
+              "name": "Jamal Murray",
+              "team": "DEN",
+              "poss": 8.1,
+              "pts": 8.6,
+              "ppp": 1.05,
+              "freq": 35.4,
+              "mpg": 35.5
+            },
+            {
+              "name": "Jalen Pickett",
+              "team": "DEN",
+              "poss": 1.3,
+              "pts": 1.1,
+              "ppp": 0.79,
+              "freq": 21.0,
+              "mpg": 18.8
+            }
+          ]
+        },
+        {
+          "team": "Suns",
+          "opponent": "Pistons",
+          "value": 13.2,
+          "rank": 4,
+          "players": [
+            {
+              "name": "Cade Cunningham",
+              "team": "DET",
+              "poss": 9.6,
+              "pts": 9.2,
+              "ppp": 0.95,
+              "freq": 38.2,
+              "mpg": 35.4
+            },
+            {
+              "name": "Daniss Jenkins",
+              "team": "DET",
+              "poss": 2.6,
+              "pts": 1.6,
+              "ppp": 0.61,
+              "freq": 29.2,
+              "mpg": 16.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pr_rollman_ppg",
+      "title": "P&R Roll Man PPG Allowed",
+      "description": "",
+      "is_percent": false,
+      "player_count": 2,
+      "display_stat": "freq",
+      "teams": [
+        {
+          "team": "Pistons",
+          "opponent": "Suns",
+          "value": 5.5,
+          "rank": 1,
+          "players": [
+            {
+              "name": "Mark Williams",
+              "team": "PHX",
+              "poss": 1.8,
+              "pts": 2.2,
+              "ppp": 1.2,
+              "freq": 19.4,
+              "mpg": 24.0
+            },
+            {
+              "name": "Oso Ighodaro",
+              "team": "PHX",
+              "poss": 1.0,
+              "pts": 1.0,
+              "ppp": 0.98,
+              "freq": 17.7,
+              "mpg": 20.0
+            }
+          ]
+        },
+        {
+          "team": "Nuggets",
+          "opponent": "Nets",
+          "value": 5.6,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Day'Ron Sharpe",
+              "team": "BKN",
+              "poss": 1.2,
+              "pts": 1.3,
+              "ppp": 1.1,
+              "freq": 15.2,
+              "mpg": 18.2
+            },
+            {
+              "name": "Nic Claxton",
+              "team": "BKN",
+              "poss": 1.3,
+              "pts": 1.6,
+              "ppp": 1.3,
+              "freq": 10.9,
+              "mpg": 29.6
+            }
+          ]
+        },
+        {
+          "team": "Suns",
+          "opponent": "Pistons",
+          "value": 5.8,
+          "rank": 3,
+          "players": [
+            {
+              "name": "Jalen Duren",
+              "team": "DET",
+              "poss": 2.3,
+              "pts": 3.3,
+              "ppp": 1.41,
+              "freq": 15.2,
+              "mpg": 28.2
+            },
+            {
+              "name": "Isaiah Stewart",
+              "team": "DET",
+              "poss": 1.3,
+              "pts": 1.3,
+              "ppp": 1.04,
+              "freq": 13.6,
+              "mpg": 23.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transition_ppg",
+      "title": "Transition PPG Allowed",
+      "description": "",
+      "is_percent": false,
+      "player_count": 0,
+      "display_stat": "none",
+      "teams": [
+        {
+          "team": "Thunder",
+          "opponent": "Timberwolves",
+          "value": 18.8,
+          "rank": 1,
+          "players": []
+        },
+        {
+          "team": "Suns",
+          "opponent": "Pistons",
+          "value": 20.8,
+          "rank": 4,
+          "players": []
+        }
+      ]
+    },
+    {
+      "id": "opp_oreb",
+      "title": "Opponent O-Reb Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 0,
+      "display_stat": "none",
+      "teams": [
+        {
+          "team": "Bulls",
+          "opponent": "Heat",
+          "value": 8.4,
+          "rank": 1,
+          "players": []
+        },
+        {
+          "team": "Timberwolves",
+          "opponent": "Thunder",
+          "value": 9.8,
+          "rank": 3,
+          "players": []
+        },
+        {
+          "team": "Nets",
+          "opponent": "Nuggets",
+          "value": 9.8,
+          "rank": 4,
+          "players": []
+        },
+        {
+          "team": "Bucks",
+          "opponent": "Wizards",
+          "value": 9.8,
+          "rank": 5,
+          "players": []
+        }
+      ]
+    },
+    {
+      "id": "opp_reb",
+      "title": "Opponent Reb Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 0,
+      "display_stat": "none",
+      "teams": [
+        {
+          "team": "Hornets",
+          "opponent": "Mavericks",
+          "value": 36.0,
+          "rank": 1,
+          "players": []
+        },
+        {
+          "team": "Pistons",
+          "opponent": "Suns",
+          "value": 41.1,
+          "rank": 5,
+          "players": []
+        }
+      ]
+    },
+    {
+      "id": "opp_ast",
+      "title": "Opponent Assists Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 0,
+      "display_stat": "none",
+      "teams": [
+        {
+          "team": "Pistons",
+          "opponent": "Suns",
+          "value": 20.5,
+          "rank": 1,
+          "players": []
+        },
+        {
+          "team": "Nuggets",
+          "opponent": "Nets",
+          "value": 23.9,
+          "rank": 4,
+          "players": []
+        },
+        {
+          "team": "Suns",
+          "opponent": "Pistons",
+          "value": 24.2,
+          "rank": 5,
+          "players": []
+        }
+      ]
+    },
+    {
+      "id": "opp_pts",
+      "title": "Opponent PPG Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 0,
+      "display_stat": "none",
+      "teams": [
+        {
+          "team": "Pistons",
+          "opponent": "Suns",
+          "value": 100.5,
+          "rank": 1,
+          "players": []
+        },
+        {
+          "team": "Hornets",
+          "opponent": "Mavericks",
+          "value": 104.8,
+          "rank": 3,
+          "players": []
+        },
+        {
+          "team": "Thunder",
+          "opponent": "Timberwolves",
+          "value": 106.0,
+          "rank": 4,
+          "players": []
+        }
+      ]
+    },
+    {
+      "id": "ra_fgm",
+      "title": "Restricted Area FGM Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 3,
+      "display_stat": "zone_pct",
+      "teams": [
+        {
+          "team": "Pistons",
+          "opponent": "Suns",
+          "value": 13.1,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Mark Williams",
+              "team": "PHX",
+              "zone_pct": 77.6,
+              "mpg": 24.0
+            },
+            {
+              "name": "Oso Ighodaro",
+              "team": "PHX",
+              "zone_pct": 70.8,
+              "mpg": 20.0
+            },
+            {
+              "name": "Ryan Dunn",
+              "team": "PHX",
+              "zone_pct": 57.7,
+              "mpg": 20.5
+            }
+          ]
+        },
+        {
+          "team": "Hornets",
+          "opponent": "Mavericks",
+          "value": 14.4,
+          "rank": 5,
+          "players": [
+            {
+              "name": "Dwight Powell",
+              "team": "DAL",
+              "zone_pct": 110.0,
+              "mpg": 15.3
+            },
+            {
+              "name": "Daniel Gafford",
+              "team": "DAL",
+              "zone_pct": 83.3,
+              "mpg": 20.6
+            },
+            {
+              "name": "Brandon Williams",
+              "team": "DAL",
+              "zone_pct": 59.1,
+              "mpg": 22.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mr_fga",
+      "title": "Mid-Range FGA Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 2,
+      "display_stat": "zone_pct",
+      "teams": [
+        {
+          "team": "Nets",
+          "opponent": "Nuggets",
+          "value": 7.4,
+          "rank": 4,
+          "players": [
+            {
+              "name": "Jamal Murray",
+              "team": "DEN",
+              "zone_pct": 21.2,
+              "mpg": 35.5
+            },
+            {
+              "name": "Jalen Pickett",
+              "team": "DEN",
+              "zone_pct": 20.4,
+              "mpg": 18.8
+            }
+          ]
+        },
+        {
+          "team": "Pistons",
+          "opponent": "Suns",
+          "value": 7.9,
+          "rank": 5,
+          "players": [
+            {
+              "name": "Dillon Brooks",
+              "team": "PHX",
+              "zone_pct": 22.2,
+              "mpg": 31.1
+            },
+            {
+              "name": "Collin Gillespie",
+              "team": "PHX",
+              "zone_pct": 12.3,
+              "mpg": 28.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "corner3_fga",
+      "title": "Corner 3PA Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 2,
+      "display_stat": "zone_pct",
+      "teams": [
+        {
+          "team": "Pistons",
+          "opponent": "Suns",
+          "value": 7.3,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Ryan Dunn",
+              "team": "PHX",
+              "zone_pct": 31.6,
+              "mpg": 20.5
+            },
+            {
+              "name": "Jordan Goodwin",
+              "team": "PHX",
+              "zone_pct": 19.5,
+              "mpg": 21.7
+            }
+          ]
+        },
+        {
+          "team": "Heat",
+          "opponent": "Bulls",
+          "value": 7.5,
+          "rank": 3,
+          "players": [
+            {
+              "name": "Isaac Okoro",
+              "team": "CHI",
+              "zone_pct": 28.4,
+              "mpg": 25.1
+            },
+            {
+              "name": "Matas Buzelis",
+              "team": "CHI",
+              "zone_pct": 16.1,
+              "mpg": 27.9
+            }
+          ]
+        },
+        {
+          "team": "Rockets",
+          "opponent": "Hawks",
+          "value": 8.5,
+          "rank": 4,
+          "players": [
+            {
+              "name": "Mouhamed Gueye",
+              "team": "ATL",
+              "zone_pct": 34.1,
+              "mpg": 16.0
+            },
+            {
+              "name": "Luke Kennard",
+              "team": "ATL",
+              "zone_pct": 23.1,
+              "mpg": 20.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "atb3_fga",
+      "title": "Above Break 3PA Allowed L10 Games",
+      "description": "",
+      "is_percent": false,
+      "player_count": 3,
+      "display_stat": "zone_pct",
+      "teams": [
+        {
+          "team": "Kings",
+          "opponent": "76ers",
+          "value": 24.2,
+          "rank": 2,
+          "players": [
+            {
+              "name": "Quentin Grimes",
+              "team": "PHI",
+              "zone_pct": 44.9,
+              "mpg": 30.5
+            },
+            {
+              "name": "Jared McCain",
+              "team": "PHI",
+              "zone_pct": 38.5,
+              "mpg": 17.1
+            },
+            {
+              "name": "Paul George",
+              "team": "PHI",
+              "zone_pct": 36.9,
+              "mpg": 30.3
+            }
+          ]
+        },
+        {
+          "team": "Suns",
+          "opponent": "Pistons",
+          "value": 24.2,
+          "rank": 3,
+          "players": [
+            {
+              "name": "Duncan Robinson",
+              "team": "DET",
+              "zone_pct": 57.6,
+              "mpg": 28.6
+            },
+            {
+              "name": "Jaden Ivey",
+              "team": "DET",
+              "zone_pct": 41.8,
+              "mpg": 17.0
+            },
+            {
+              "name": "Caris LeVert",
+              "team": "DET",
+              "zone_pct": 39.4,
+              "mpg": 19.7
+            }
+          ]
+        },
+        {
+          "team": "Thunder",
+          "opponent": "Timberwolves",
+          "value": 24.3,
+          "rank": 4,
+          "players": [
+            {
+              "name": "Donte DiVincenzo",
+              "team": "MIN",
+              "zone_pct": 56.5,
+              "mpg": 31.8
+            },
+            {
+              "name": "Mike Conley",
+              "team": "MIN",
+              "zone_pct": 55.0,
+              "mpg": 18.6
+            },
+            {
+              "name": "Anthony Edwards",
+              "team": "MIN",
+              "zone_pct": 36.9,
+              "mpg": 35.2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "updated": "2026-01-29 01:29:05 ET",
+  "games_today": 8,
+  "matchups": [
+    {
+      "home": "76ers",
+      "away": "Kings"
+    },
+    {
+      "home": "Bucks",
+      "away": "Wizards"
+    },
+    {
+      "home": "Bulls",
+      "away": "Heat"
+    },
+    {
+      "home": "Hawks",
+      "away": "Rockets"
+    },
+    {
+      "home": "Mavericks",
+      "away": "Hornets"
+    },
+    {
+      "home": "Nuggets",
+      "away": "Nets"
+    },
+    {
+      "home": "Suns",
+      "away": "Pistons"
+    },
+    {
+      "home": "Timberwolves",
+      "away": "Thunder"
+    }
+  ]
 }
