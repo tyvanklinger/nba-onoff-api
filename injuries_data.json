@@ -10,12 +10,20 @@
         "status": "Out"
       },
       {
+        "name": "Gary Harris",
+        "status": "Out"
+      },
+      {
         "name": "Kevin Porter Jr.",
         "status": "Out"
       },
       {
         "name": "Taurean Prince",
         "status": "Out"
+      },
+      {
+        "name": "Cole Anthony",
+        "status": "Questionable"
       }
     ],
     "Washington Wizards": [
@@ -54,70 +62,30 @@
         "status": "Out"
       },
       {
-        "name": "Malik Monk",
-        "status": "Questionable"
+        "name": "Russell Westbrook",
+        "status": "Out"
       },
       {
-        "name": "Russell Westbrook",
+        "name": "Malik Monk",
         "status": "Questionable"
       }
     ],
     "Philadelphia 76ers": [
       {
         "name": "Charles Bassey",
-        "status": "Doubtful"
+        "status": "Out"
       },
       {
         "name": "MarJon Beauchamp",
-        "status": "Doubtful"
+        "status": "Out"
       },
       {
         "name": "Johni Broome",
-        "status": "Doubtful"
+        "status": "Out"
       },
       {
         "name": "Quentin Grimes",
         "status": "Questionable"
-      }
-    ],
-    "Miami Heat": [
-      {
-        "name": "Vladislav Goldin",
-        "status": "Out"
-      },
-      {
-        "name": "Terry Rozier",
-        "status": "Out"
-      },
-      {
-        "name": "Jahmir Young",
-        "status": "Out"
-      }
-    ],
-    "Chicago Bulls": [
-      {
-        "name": "Zach Collins",
-        "status": "Out"
-      },
-      {
-        "name": "Noa Essengue",
-        "status": "Out"
-      },
-      {
-        "name": "Josh Giddey",
-        "status": "Out"
-      },
-      {
-        "name": "Kevin Huerter",
-        "status": "Out"
-      },
-      {
-        "name": "Yuki Kawamura",
-        "status": "Out"
-      },
-      {
-        "name": "Jalen Smith",
-        "status": "Out"
       }
     ],
     "Brooklyn Nets": [
@@ -240,11 +208,13 @@
     ]
   },
   "not_yet_submitted": [
-    "Atlanta Hawks",
-    "Houston Rockets",
+    "Miami Heat",
     "Dallas Mavericks",
+    "Charlotte Hornets",
     "Minnesota Timberwolves",
-    "Charlotte Hornets"
+    "Houston Rockets",
+    "Chicago Bulls",
+    "Atlanta Hawks"
   ],
-  "updated": "2026-01-29 11:01 AM ET"
+  "updated": "2026-01-29 12:59 PM ET"
 }
