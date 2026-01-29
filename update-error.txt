@@ -1,3 +1,4 @@
 /bin/bash: /Users/tyvanklinger/Documents/nba-onoff-api/update-all-teams.sh: Operation not permitted
 /bin/bash: /Users/tyvanklinger/Documents/nba-onoff-api/update-all-teams.sh: Operation not permitted
 /bin/bash: /Users/tyvanklinger/Documents/nba-onoff-api/update-all-teams.sh: Operation not permitted
+/bin/bash: /Users/tyvanklinger/Documents/nba-onoff-api/update-all-teams.sh: Operation not permitted
