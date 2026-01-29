@@ -1,1 +1,573 @@
 zsh: command not found: 0
+==========================================
+Funnels refresh: Thu Jan 29 00:00:02 EST 2026
+==========================================
+
+==================================================
+Building Funnels Data
+==================================================
+
+Fetching games for 2026-01-29...
+  ✓ Found 8 games tomorrow
+Fetching player stats...
+  ✓ Loaded stats for 514 players
+Fetching injury report...
+  ✓ Found latest: Injury-Report_2026-01-28_11_45PM.pdf
+  ✓ Loaded 118 OUT/DOUBTFUL players
+
+==================================================
+TODAY'S GAMES:
+==================================================
+  76ers vs Kings
+  Wizards vs Bucks
+  Bulls vs Heat
+  Hawks vs Rockets
+  Mavericks vs Hornets
+  Nuggets vs Nets
+  Suns vs Pistons
+  Timberwolves vs Thunder
+
+
+Fetching defensive stats...
+  ✓ Catch and Shoot
+  ✓ Pull-Up
+  ✓ Less Than 10 Ft
+  ✓ Shot Zones
+  ✓ Opponent Stats
+
+Fetching synergy stats...
+  ✓ Spot-Up
+  ✓ P&R Ball Handler
+  ✓ P&R Roll Man
+  ✓ Transition
+
+Processing funnels...
+  Processing Catch & Shoot FGM Allowed L10 Games...
+  Processing Catch & Shoot FREQ% Allowed L10 Games...
+  Processing Pull-Up FGM Allowed L10 Games...
+  Processing Pull-Up FREQ% Allowed L10 Games...
+  Processing Less Than 10 Ft FGM Allowed L10 Games...
+  Processing Less Than 10 Ft FREQ% Allowed L10 Games...
+  Processing Spot-Up PPG Allowed...
+  Processing P&R Ball-Handler PPG Allowed...
+  Processing P&R Roll Man PPG Allowed...
+  Processing Transition PPG Allowed...
+  Processing Opponent O-Reb Allowed L10 Games...
+  Processing Opponent Reb Allowed L10 Games...
+  Processing Opponent Assists Allowed L10 Games...
+  Processing Opponent PPG Allowed L10 Games...
+  Processing Restricted Area FGM Allowed L10 Games...
+  Processing Mid-Range FGA Allowed L10 Games...
+  Processing Corner 3PA Allowed L10 Games...
+  Processing Above Break 3PA Allowed L10 Games...
+
+============================================================
+OVERS - Teams that ALLOW the most:
+============================================================
+
+🔥 Catch & Shoot FGM Allowed L10 Games
+--------------------------------------------------
+   #2 Bucks (13.4) vs Wizards
+      → Wizards players FREQ%:
+         • Bilal Coulibaly - 38.4% FREQ
+         • Tre Johnson - 35.2% FREQ
+         • Justin Champagnie - 34.3% FREQ
+         • Bub Carrington - 30.4% FREQ
+   #3 76ers (13.2) vs Kings
+      → Kings players FREQ%:
+         • Keon Ellis - 48.0% FREQ
+         • Nique Clifford - 34.8% FREQ
+         • Russell Westbrook - 33.0% FREQ
+         • Dennis Schröder - 28.6% FREQ
+   #4 Thunder (12.6) vs Timberwolves
+      → Timberwolves players FREQ%:
+         • Donte DiVincenzo - 62.5% FREQ
+         • Mike Conley - 48.8% FREQ
+         • Naz Reid - 47.1% FREQ
+         • Jaden McDaniels - 22.3% FREQ
+   #5 Nets (12.4) vs Nuggets
+      → Nuggets players FREQ%:
+         • Spencer Jones - 59.2% FREQ
+         • Tim Hardaway Jr. - 56.0% FREQ
+         • Jalen Pickett - 39.3% FREQ
+         • Peyton Watson - 29.2% FREQ
+
+🔥 Catch & Shoot FREQ% Allowed L10 Games
+--------------------------------------------------
+   #4 Hornets (36.2%) vs Mavericks
+      → Mavericks players FREQ%:
+         • Jeremiah Robinson-Earl - 47.1% FREQ
+         • Max Christie - 44.3% FREQ
+         • P.J. Washington - 32.5% FREQ
+         • Naji Marshall - 27.1% FREQ
+   #5 Thunder (36.1%) vs Timberwolves
+      → Timberwolves players FREQ%:
+         • Donte DiVincenzo - 62.5% FREQ
+         • Mike Conley - 48.8% FREQ
+         • Naz Reid - 47.1% FREQ
+         • Jaden McDaniels - 22.3% FREQ
+
+🔥 Pull-Up FGM Allowed L10 Games
+--------------------------------------------------
+   #1 Heat (10.8) vs Bulls
+      → Bulls players Pull-Up FREQ%:
+         • Coby White - 31.2% FREQ
+         • Patrick Williams - 21.4% FREQ
+         • Matas Buzelis - 9.5% FREQ
+   #4 Mavericks (10.2) vs Hornets
+      → Hornets players Pull-Up FREQ%:
+         • Tre Mann - 43.6% FREQ
+         • LaMelo Ball - 38.6% FREQ
+         • Brandon Miller - 33.9% FREQ
+
+🔥 Pull-Up FREQ% Allowed L10 Games
+--------------------------------------------------
+   #2 Heat (29.5%) vs Bulls
+      → Bulls players Pull-Up FREQ%:
+         • Coby White - 31.2% FREQ
+         • Patrick Williams - 21.4% FREQ
+         • Matas Buzelis - 9.5% FREQ
+
+🔥 Less Than 10 Ft FGM Allowed L10 Games
+--------------------------------------------------
+   #1 Heat (24.6) vs Bulls
+      → Bulls players FREQ%:
+         • Ayo Dosunmu - 55.3% FREQ
+         • Isaac Okoro - 53.1% FREQ
+         • Matas Buzelis - 50.1% FREQ
+         • Nikola Vučević - 47.5% FREQ
+   #2 Nuggets (24.6) vs Nets
+      → Nets players FREQ%:
+         • Nic Claxton - 89.7% FREQ
+         • Day'Ron Sharpe - 85.2% FREQ
+         • Danny Wolf - 47.5% FREQ
+         • Terance Mann - 43.6% FREQ
+   #3 Wizards (24.6) vs Bucks
+      → Bucks players FREQ%:
+         • Kyle Kuzma - 61.0% FREQ
+         • Kevin Porter Jr. - 40.0% FREQ
+         • Ryan Rollins - 39.4% FREQ
+         • Cole Anthony - 37.1% FREQ
+   #4 Kings (24.5) vs 76ers
+      → 76ers players FREQ%:
+         • Adem Bona - 94.5% FREQ
+         • Andre Drummond - 75.0% FREQ
+         • Trendon Watford - 73.0% FREQ
+         • Dominick Barlow - 68.6% FREQ
+
+🔥 Less Than 10 Ft FREQ% Allowed L10 Games
+--------------------------------------------------
+   #2 Kings (46.7%) vs 76ers
+      → 76ers players FREQ%:
+         • Adem Bona - 94.5% FREQ
+         • Andre Drummond - 75.0% FREQ
+         • Trendon Watford - 73.0% FREQ
+         • Dominick Barlow - 68.6% FREQ
+   #3 Nuggets (45.6%) vs Nets
+      → Nets players FREQ%:
+         • Nic Claxton - 89.7% FREQ
+         • Day'Ron Sharpe - 85.2% FREQ
+         • Danny Wolf - 47.5% FREQ
+         • Terance Mann - 43.6% FREQ
+   #4 Timberwolves (44.8%) vs Thunder
+      → Thunder players FREQ%:
+         • Isaiah Hartenstein - 78.9% FREQ
+         • Chet Holmgren - 51.7% FREQ
+         • Aaron Wiggins - 41.1% FREQ
+         • Cason Wallace - 38.2% FREQ
+   #5 Wizards (44.8%) vs Bucks
+      → Bucks players FREQ%:
+         • Kyle Kuzma - 61.0% FREQ
+         • Kevin Porter Jr. - 40.0% FREQ
+         • Ryan Rollins - 39.4% FREQ
+         • Cole Anthony - 37.1% FREQ
+
+🔥 Spot-Up PPG Allowed
+--------------------------------------------------
+   #2 Thunder (33.6) vs Timberwolves
+      → Timberwolves players FREQ%:
+         • Jaden McDaniels - 37.2% FREQ
+         • Mike Conley - 33.2% FREQ
+         • Donte DiVincenzo - 32.5% FREQ
+         • Naz Reid - 31.1% FREQ
+   #3 Nets (32.6) vs Nuggets
+      → Nuggets players FREQ%:
+         • Spencer Jones - 41.9% FREQ
+         • Tim Hardaway Jr. - 32.4% FREQ
+         • Jalen Pickett - 30.2% FREQ
+         • Peyton Watson - 24.4% FREQ
+   #4 Bucks (31.8) vs Wizards
+      → Wizards players FREQ%:
+         • Justin Champagnie - 26.2% FREQ
+         • Bilal Coulibaly - 25.5% FREQ
+         • Alex Sarr - 21.8% FREQ
+         • Tre Johnson - 21.8% FREQ
+
+🔥 P&R Ball-Handler PPG Allowed
+--------------------------------------------------
+   #2 Timberwolves (17.3) vs Thunder
+      → Thunder players FREQ%:
+         • Shai Gilgeous-Alexander - 36.5% FREQ
+         • Cason Wallace - 13.3% FREQ
+   #4 76ers (16.9) vs Kings
+      → Kings players FREQ%:
+         • Dennis Schröder - 36.7% FREQ
+         • Russell Westbrook - 26.0% FREQ
+
+🔥 P&R Roll Man PPG Allowed
+--------------------------------------------------
+   #2 Bulls (7.9) vs Heat
+      → Heat players FREQ%:
+         • Bam Adebayo - 9.3% FREQ
+         • Kel'el Ware - 5.0% FREQ
+   #3 Timberwolves (7.8) vs Thunder
+      → Thunder players FREQ%:
+         • Jaylin Williams - 21.7% FREQ
+         • Isaiah Hartenstein - 19.9% FREQ
+   #4 Hawks (7.7) vs Rockets
+      → Rockets players FREQ%:
+         • Alperen Sengun - 9.2% FREQ
+         • Jabari Smith Jr. - 5.4% FREQ
+
+🔥 Transition PPG Allowed
+--------------------------------------------------
+   #4 Wizards (26.5) vs Bucks
+   #5 Nets (26.0) vs Nuggets
+
+🔥 Opponent O-Reb Allowed L10 Games
+--------------------------------------------------
+   #1 Thunder (14.7) vs Timberwolves
+   #3 76ers (13.8) vs Kings
+   #4 Kings (13.6) vs 76ers
+   #5 Suns (13.0) vs Pistons
+
+🔥 Opponent Reb Allowed L10 Games
+--------------------------------------------------
+   #1 Thunder (49.1) vs Timberwolves
+   #2 Hawks (47.3) vs Rockets
+   #3 Heat (46.8) vs Bulls
+   #5 Nuggets (46.7) vs Nets
+
+🔥 Opponent Assists Allowed L10 Games
+--------------------------------------------------
+   #2 76ers (30.9) vs Kings
+   #4 Bucks (28.3) vs Wizards
+   #5 Nets (28.2) vs Nuggets
+
+🔥 Opponent PPG Allowed L10 Games
+--------------------------------------------------
+   #2 Heat (121.4) vs Bulls
+   #3 Wizards (118.6) vs Bucks
+   #5 76ers (117.4) vs Kings
+
+🔥 Restricted Area FGM Allowed L10 Games
+--------------------------------------------------
+   #1 Wizards (19.7) vs Bucks
+      → Bucks players Restricted Area % (% of FGM that are in the Restricted Area):
+         • Kyle Kuzma - 55.3%
+         • Ryan Rollins - 38.7%
+         • Kevin Porter Jr. - 34.5%
+   #2 Nuggets (18.3) vs Nets
+      → Nets players Restricted Area % (% of FGM that are in the Restricted Area):
+         • Day'Ron Sharpe - 80.0%
+         • Nic Claxton - 74.0%
+         • Danny Wolf - 48.1%
+   #4 Timberwolves (18.1) vs Thunder
+      → Thunder players Restricted Area % (% of FGM that are in the Restricted Area):
+         • Isaiah Hartenstein - 72.9%
+         • Chet Holmgren - 52.2%
+         • Aaron Wiggins - 38.5%
+   #5 Mavericks (18.0) vs Hornets
+      → Hornets players Restricted Area % (% of FGM that are in the Restricted Area):
+         • Ryan Kalkbrenner - 86.8%
+         • Moussa Diabaté - 84.4%
+         • Collin Sexton - 46.9%
+
+🔥 Mid-Range FGA Allowed L10 Games
+--------------------------------------------------
+   #5 Bucks (11.2) vs Wizards
+      → Wizards players Mid-Range % (% of FGA that are in the Mid-Range):
+         • Khris Middleton - 34.1%
+         • Bub Carrington - 17.4%
+
+🔥 Corner 3PA Allowed L10 Games
+--------------------------------------------------
+   #2 Thunder (12.9) vs Timberwolves
+      → Timberwolves players Corner 3 % (% of FGA that are Corner Threes):
+         • Mike Conley - 22.5%
+         • Donte DiVincenzo - 19.4%
+   #5 Mavericks (11.3) vs Hornets
+      → Hornets players Corner 3 % (% of FGA that are Corner Threes):
+         • Josh Green - 43.2%
+         • Sion James - 27.1%
+
+🔥 Above Break 3PA Allowed L10 Games
+--------------------------------------------------
+   #2 Hornets (31.4) vs Mavericks
+      → Mavericks players Above Break 3 % (% of FGA that are ABTB Threes):
+         • D'Angelo Russell - 40.4%
+         • Max Christie - 35.5%
+         • Ryan Nembhard - 30.3%
+   #4 Heat (30.3) vs Bulls
+      → Bulls players Above Break 3 % (% of FGA that are ABTB Threes):
+         • Coby White - 46.7%
+         • Patrick Williams - 44.8%
+         • Matas Buzelis - 31.2%
+
+============================================================
+UNDERS - Teams that ALLOW the least:
+============================================================
+
+❄️ Catch & Shoot FGM Allowed L10 Games
+--------------------------------------------------
+   #1 Nuggets (7.9) vs Nets
+      → Nets players FREQ%:
+         • Tyrese Martin - 47.5% FREQ
+         • Egor Dëmin - 42.9% FREQ
+         • Drake Powell - 40.7% FREQ
+         • Nolan Traore - 39.6% FREQ
+   #2 Pistons (8.0) vs Suns
+      → Suns players FREQ%:
+         • Royce O'Neale - 64.0% FREQ
+         • Ryan Dunn - 43.7% FREQ
+         • Jordan Goodwin - 43.5% FREQ
+         • Grayson Allen - 38.7% FREQ
+   #5 Mavericks (9.1) vs Hornets
+      → Hornets players FREQ%:
+         • Josh Green - 71.4% FREQ
+         • Sion James - 53.5% FREQ
+         • Tidjane Salaün - 48.2% FREQ
+         • Kon Knueppel - 48.1% FREQ
+
+❄️ Catch & Shoot FREQ% Allowed L10 Games
+--------------------------------------------------
+   #2 Pistons (28.2%) vs Suns
+      → Suns players FREQ%:
+         • Royce O'Neale - 64.0% FREQ
+         • Ryan Dunn - 43.7% FREQ
+         • Jordan Goodwin - 43.5% FREQ
+         • Grayson Allen - 38.7% FREQ
+   #3 Heat (28.2%) vs Bulls
+      → Bulls players FREQ%:
+         • Nikola Vučević - 44.5% FREQ
+         • Patrick Williams - 42.7% FREQ
+         • Isaac Okoro - 42.5% FREQ
+         • Matas Buzelis - 38.6% FREQ
+   #4 Nuggets (28.5%) vs Nets
+      → Nets players FREQ%:
+         • Tyrese Martin - 47.5% FREQ
+         • Egor Dëmin - 42.9% FREQ
+         • Drake Powell - 40.7% FREQ
+         • Nolan Traore - 39.6% FREQ
+   #5 Rockets (28.9%) vs Hawks
+      → Hawks players FREQ%:
+         • Vít Krejčí - 63.5% FREQ
+         • Luke Kennard - 56.9% FREQ
+         • Corey Kispert - 51.8% FREQ
+         • Mouhamed Gueye - 46.6% FREQ
+
+❄️ Pull-Up FGM Allowed L10 Games
+--------------------------------------------------
+   #1 Thunder (6.0) vs Timberwolves
+      → Timberwolves players Pull-Up FREQ%:
+         • Anthony Edwards - 53.6% FREQ
+         • Mike Conley - 37.0% FREQ
+         • Jaden McDaniels - 29.6% FREQ
+   #2 Timberwolves (6.7) vs Thunder
+      → Thunder players Pull-Up FREQ%:
+         • Shai Gilgeous-Alexander - 57.7% FREQ
+         • Kenrich Williams - 22.4% FREQ
+         • Isaiah Joe - 19.4% FREQ
+   #3 Hornets (6.9) vs Mavericks
+      → Mavericks players Pull-Up FREQ%:
+         • Ryan Nembhard - 56.6% FREQ
+         • D'Angelo Russell - 50.9% FREQ
+         • Max Christie - 26.0% FREQ
+   #4 Wizards (7.6) vs Bucks
+      → Bucks players Pull-Up FREQ%:
+         • Cole Anthony - 44.6% FREQ
+         • Kevin Porter Jr. - 42.0% FREQ
+         • Ryan Rollins - 35.4% FREQ
+   #5 76ers (7.6) vs Kings
+      → Kings players Pull-Up FREQ%:
+         • DeMar DeRozan - 53.9% FREQ
+         • Zach LaVine - 41.4% FREQ
+         • Malik Monk - 40.9% FREQ
+
+❄️ Pull-Up FREQ% Allowed L10 Games
+--------------------------------------------------
+   #1 Thunder (19.2%) vs Timberwolves
+      → Timberwolves players Pull-Up FREQ%:
+         • Anthony Edwards - 53.6% FREQ
+         • Mike Conley - 37.0% FREQ
+         • Jaden McDaniels - 29.6% FREQ
+   #4 Mavericks (22.5%) vs Hornets
+      → Hornets players Pull-Up FREQ%:
+         • Tre Mann - 43.6% FREQ
+         • LaMelo Ball - 38.6% FREQ
+         • Brandon Miller - 33.9% FREQ
+
+❄️ Less Than 10 Ft FGM Allowed L10 Games
+--------------------------------------------------
+   #2 Pistons (19.0) vs Suns
+      → Suns players FREQ%:
+         • Mark Williams - 93.1% FREQ
+         • Oso Ighodaro - 89.2% FREQ
+         • Ryan Dunn - 52.3% FREQ
+         • Jamaree Bouyea - 45.7% FREQ
+
+❄️ Less Than 10 Ft FREQ% Allowed L10 Games
+--------------------------------------------------
+   #5 Bucks (38.6%) vs Wizards
+      → Wizards players FREQ%:
+         • Marvin Bagley III - 88.7% FREQ
+         • Alex Sarr - 67.5% FREQ
+         • Justin Champagnie - 63.6% FREQ
+         • Bilal Coulibaly - 52.1% FREQ
+
+❄️ Spot-Up PPG Allowed
+--------------------------------------------------
+   #1 Pistons (24.8) vs Suns
+      → Suns players FREQ%:
+         • Royce O'Neale - 43.2% FREQ
+         • Jordan Goodwin - 41.8% FREQ
+         • Ryan Dunn - 35.8% FREQ
+         • Grayson Allen - 32.4% FREQ
+   #2 Timberwolves (24.9) vs Thunder
+      → Thunder players FREQ%:
+         • Luguentz Dort - 63.5% FREQ
+         • Aaron Wiggins - 44.3% FREQ
+         • Kenrich Williams - 42.3% FREQ
+         • Isaiah Joe - 41.0% FREQ
+   #3 Rockets (25.1) vs Hawks
+      → Hawks players FREQ%:
+         • Mouhamed Gueye - 39.2% FREQ
+         • Vít Krejčí - 33.6% FREQ
+         • Luke Kennard - 31.6% FREQ
+         • Onyeka Okongwu - 28.1% FREQ
+
+❄️ P&R Ball-Handler PPG Allowed
+--------------------------------------------------
+   #1 Nets (9.3) vs Nuggets
+      → Nuggets players FREQ%:
+         • Jamal Murray - 35.4% FREQ
+         • Jalen Pickett - 21.0% FREQ
+   #4 Suns (13.2) vs Pistons
+      → Pistons players FREQ%:
+         • Cade Cunningham - 38.2% FREQ
+         • Daniss Jenkins - 29.2% FREQ
+
+❄️ P&R Roll Man PPG Allowed
+--------------------------------------------------
+   #1 Pistons (5.5) vs Suns
+      → Suns players FREQ%:
+         • Mark Williams - 19.4% FREQ
+         • Oso Ighodaro - 17.7% FREQ
+   #2 Nuggets (5.6) vs Nets
+      → Nets players FREQ%:
+         • Day'Ron Sharpe - 15.2% FREQ
+         • Nic Claxton - 10.9% FREQ
+   #3 Suns (5.8) vs Pistons
+      → Pistons players FREQ%:
+         • Jalen Duren - 15.2% FREQ
+         • Isaiah Stewart - 13.6% FREQ
+
+❄️ Transition PPG Allowed
+--------------------------------------------------
+   #1 Thunder (18.8) vs Timberwolves
+   #4 Suns (20.8) vs Pistons
+
+❄️ Opponent O-Reb Allowed L10 Games
+--------------------------------------------------
+   #1 Bulls (8.4) vs Heat
+   #3 Timberwolves (9.8) vs Thunder
+   #4 Nets (9.8) vs Nuggets
+   #5 Bucks (9.8) vs Wizards
+
+❄️ Opponent Reb Allowed L10 Games
+--------------------------------------------------
+   #1 Hornets (36.0) vs Mavericks
+   #5 Pistons (41.1) vs Suns
+
+❄️ Opponent Assists Allowed L10 Games
+--------------------------------------------------
+   #1 Pistons (20.5) vs Suns
+   #4 Nuggets (23.9) vs Nets
+   #5 Suns (24.2) vs Pistons
+
+❄️ Opponent PPG Allowed L10 Games
+--------------------------------------------------
+   #1 Pistons (100.5) vs Suns
+   #3 Hornets (104.8) vs Mavericks
+   #4 Thunder (106.0) vs Timberwolves
+
+❄️ Restricted Area FGM Allowed L10 Games
+--------------------------------------------------
+   #2 Pistons (13.1) vs Suns
+      → Suns players Restricted Area % (% of FGM that are in the Restricted Area):
+         • Mark Williams - 77.6%
+         • Oso Ighodaro - 70.8%
+         • Ryan Dunn - 57.7%
+   #5 Hornets (14.4) vs Mavericks
+      → Mavericks players Restricted Area % (% of FGM that are in the Restricted Area):
+         • Dwight Powell - 110.0%
+         • Daniel Gafford - 83.3%
+         • Brandon Williams - 59.1%
+
+❄️ Mid-Range FGA Allowed L10 Games
+--------------------------------------------------
+   #4 Nets (7.4) vs Nuggets
+      → Nuggets players Mid-Range % (% of FGA that are in the Mid-Range):
+         • Jamal Murray - 21.2%
+         • Jalen Pickett - 20.4%
+   #5 Pistons (7.9) vs Suns
+      → Suns players Mid-Range % (% of FGA that are in the Mid-Range):
+         • Dillon Brooks - 22.2%
+         • Collin Gillespie - 12.3%
+
+❄️ Corner 3PA Allowed L10 Games
+--------------------------------------------------
+   #2 Pistons (7.3) vs Suns
+      → Suns players Corner 3 % (% of FGA that are Corner Threes):
+         • Ryan Dunn - 31.6%
+         • Jordan Goodwin - 19.5%
+   #3 Heat (7.5) vs Bulls
+      → Bulls players Corner 3 % (% of FGA that are Corner Threes):
+         • Isaac Okoro - 28.4%
+         • Matas Buzelis - 16.1%
+   #4 Rockets (8.5) vs Hawks
+      → Hawks players Corner 3 % (% of FGA that are Corner Threes):
+         • Mouhamed Gueye - 34.1%
+         • Luke Kennard - 23.1%
+
+❄️ Above Break 3PA Allowed L10 Games
+--------------------------------------------------
+   #2 Kings (24.2) vs 76ers
+      → 76ers players Above Break 3 % (% of FGA that are ABTB Threes):
+         • Quentin Grimes - 44.9%
+         • Jared McCain - 38.5%
+         • Paul George - 36.9%
+   #3 Suns (24.2) vs Pistons
+      → Pistons players Above Break 3 % (% of FGA that are ABTB Threes):
+         • Duncan Robinson - 57.6%
+         • Jaden Ivey - 41.8%
+         • Caris LeVert - 39.4%
+   #4 Thunder (24.3) vs Timberwolves
+      → Timberwolves players Above Break 3 % (% of FGA that are ABTB Threes):
+         • Donte DiVincenzo - 56.5%
+         • Mike Conley - 55.0%
+         • Anthony Edwards - 36.9%
+
+============================================================
+Note: Qualifier to be shown is 15 MPG & 15 GP.
+Players who are OUT or DOUBTFUL are excluded.
+============================================================
+
+✓ Saved to funnels_data.json
+
+Done!
+[main 4864bd9] Funnels refresh 2026-01-29 00:05
+ 1 file changed, 1797 insertions(+), 1840 deletions(-)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+✓ Done: Thu Jan 29 00:05:54 EST 2026
