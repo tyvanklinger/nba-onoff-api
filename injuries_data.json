@@ -336,6 +336,24 @@
         "status": "Questionable"
       }
     ],
+    "Detroit Pistons": [
+      {
+        "name": "Isaac Jones",
+        "status": "Out"
+      },
+      {
+        "name": "Wendell Moore Jr.",
+        "status": "Out"
+      },
+      {
+        "name": "Tolu Smith",
+        "status": "Out"
+      },
+      {
+        "name": "Caris LeVert",
+        "status": "Doubtful"
+      }
+    ],
     "Golden State Warriors": [
       {
         "name": "Jimmy Butler III",
@@ -352,6 +370,42 @@
       {
         "name": "Jonathan Kuminga",
         "status": "Out"
+      }
+    ],
+    "San Antonio Spurs": [
+      {
+        "name": "Harrison Ingram",
+        "status": "Out"
+      },
+      {
+        "name": "David JonesGarcia",
+        "status": "Out"
+      },
+      {
+        "name": "Jeremy Sochan",
+        "status": "Out"
+      },
+      {
+        "name": "Stanley Umude",
+        "status": "Out"
+      }
+    ],
+    "Indiana Pacers": [
+      {
+        "name": "Tyrese Haliburton",
+        "status": "Out"
+      },
+      {
+        "name": "Obi Toppin",
+        "status": "Out"
+      },
+      {
+        "name": "Taelon Peter",
+        "status": "Doubtful"
+      },
+      {
+        "name": "Ethan Thompson",
+        "status": "Doubtful"
       }
     ],
     "Chicago Bulls": [
@@ -387,10 +441,26 @@
         "name": "Coby White",
         "status": "Questionable"
       }
+    ],
+    "Miami Heat": [
+      {
+        "name": "Tyler Herro",
+        "status": "Out"
+      },
+      {
+        "name": "Norman Powell",
+        "status": "Out"
+      },
+      {
+        "name": "Terry Rozier",
+        "status": "Out"
+      },
+      {
+        "name": "Davion Mitchell",
+        "status": "Doubtful"
+      }
     ]
   },
-  "not_yet_submitted": [
-    "Detroit Pistons"
-  ],
-  "updated": "2026-01-30 04:01 PM ET"
+  "not_yet_submitted": [],
+  "updated": "2026-01-30 04:51 PM ET"
 }
