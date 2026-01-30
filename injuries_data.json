@@ -2,16 +2,12 @@
   "injuries": {
     "Los Angeles Lakers": [
       {
-        "name": "Adou Thiero",
+        "name": "Austin Reaves",
         "status": "Out"
       },
       {
-        "name": "Luka Doncic",
-        "status": "Questionable"
-      },
-      {
-        "name": "Austin Reaves",
-        "status": "Questionable"
+        "name": "Adou Thiero",
+        "status": "Out"
       }
     ],
     "Washington Wizards": [
@@ -120,20 +116,16 @@
         "status": "Out"
       },
       {
-        "name": "Miles McBride",
-        "status": "Doubtful"
-      },
-      {
         "name": "Trey Jemison III",
-        "status": "Questionable"
-      },
-      {
-        "name": "Dillon Jones",
-        "status": "Questionable"
+        "status": "Out"
       },
       {
         "name": "Kevin McCullar Jr.",
-        "status": "Questionable"
+        "status": "Out"
+      },
+      {
+        "name": "Miles McBride",
+        "status": "Doubtful"
       }
     ],
     "Sacramento Kings": [
@@ -372,22 +364,38 @@
         "status": "Out"
       }
     ],
-    "San Antonio Spurs": [
+    "Atlanta Hawks": [
       {
-        "name": "Harrison Ingram",
+        "name": "N'Faly Dante",
         "status": "Out"
       },
       {
-        "name": "David JonesGarcia",
+        "name": "Onyeka Okongwu",
         "status": "Out"
       },
       {
-        "name": "Jeremy Sochan",
+        "name": "Kristaps Porzingis",
         "status": "Out"
       },
       {
-        "name": "Stanley Umude",
-        "status": "Out"
+        "name": "RayJ Dennis",
+        "status": "Doubtful"
+      },
+      {
+        "name": "Nikola Djurisic",
+        "status": "Doubtful"
+      },
+      {
+        "name": "Caleb Houstan",
+        "status": "Doubtful"
+      },
+      {
+        "name": "Jalen Johnson",
+        "status": "Questionable"
+      },
+      {
+        "name": "Zaccharie Risacher",
+        "status": "Questionable"
       }
     ],
     "Indiana Pacers": [
@@ -405,6 +413,20 @@
       },
       {
         "name": "Ethan Thompson",
+        "status": "Doubtful"
+      }
+    ],
+    "Philadelphia 76ers": [
+      {
+        "name": "Charles Bassey",
+        "status": "Doubtful"
+      },
+      {
+        "name": "MarJon Beauchamp",
+        "status": "Doubtful"
+      },
+      {
+        "name": "Johni Broome",
         "status": "Doubtful"
       }
     ],
@@ -459,8 +481,98 @@
         "name": "Davion Mitchell",
         "status": "Doubtful"
       }
+    ],
+    "Minnesota Timberwolves": [
+      {
+        "name": "Enrique Freeman",
+        "status": "Out"
+      },
+      {
+        "name": "Terrence Shannon Jr.",
+        "status": "Out"
+      },
+      {
+        "name": "Rocco Zikarsky",
+        "status": "Out"
+      }
+    ],
+    "Dallas Mavericks": [
+      {
+        "name": "Anthony Davis",
+        "status": "Out"
+      },
+      {
+        "name": "Dante Exum",
+        "status": "Out"
+      },
+      {
+        "name": "Kyrie Irving",
+        "status": "Out"
+      },
+      {
+        "name": "Dereck Lively II",
+        "status": "Out"
+      },
+      {
+        "name": "Miles Kelly",
+        "status": "Doubtful"
+      }
+    ],
+    "Houston Rockets": [
+      {
+        "name": "Steven Adams",
+        "status": "Out"
+      },
+      {
+        "name": "Tristen Newton",
+        "status": "Out"
+      },
+      {
+        "name": "Fred VanVleet",
+        "status": "Out"
+      }
+    ],
+    "San Antonio Spurs": [
+      {
+        "name": "Harrison Ingram",
+        "status": "Out"
+      },
+      {
+        "name": "David JonesGarcia",
+        "status": "Out"
+      },
+      {
+        "name": "Jeremy Sochan",
+        "status": "Out"
+      },
+      {
+        "name": "Stanley Umude",
+        "status": "Out"
+      }
+    ],
+    "Charlotte Hornets": [
+      {
+        "name": "PJ Hall",
+        "status": "Out"
+      },
+      {
+        "name": "Liam McNeeley",
+        "status": "Out"
+      },
+      {
+        "name": "Mason Plumlee",
+        "status": "Out"
+      },
+      {
+        "name": "Antonio Reeves",
+        "status": "Out"
+      },
+      {
+        "name": "KJ Simpson",
+        "status": "Out"
+      }
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-30 04:51 PM ET"
+  "updated": "2026-01-30 06:00 PM ET"
 }
