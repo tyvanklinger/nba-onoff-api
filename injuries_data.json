@@ -138,14 +138,6 @@
         "status": "Out"
       },
       {
-        "name": "A.J. Lawson",
-        "status": "Out"
-      },
-      {
-        "name": "Alijah Martin",
-        "status": "Out"
-      },
-      {
         "name": "Jakob Poeltl",
         "status": "Out"
       }
@@ -267,11 +259,11 @@
   },
   "not_yet_submitted": [
     "Washington Wizards",
-    "Denver Nuggets",
+    "Brooklyn Nets",
     "Phoenix Suns",
     "Detroit Pistons",
-    "Brooklyn Nets",
+    "Denver Nuggets",
     "Sacramento Kings"
   ],
-  "updated": "2026-01-30 09:08 AM ET"
+  "updated": "2026-01-30 10:57 AM ET"
 }
