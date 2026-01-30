@@ -218,6 +218,12 @@
         "status": "Questionable"
       }
     ],
+    "Phoenix Suns": [
+      {
+        "name": "Devin Booker",
+        "status": "Out"
+      }
+    ],
     "Los Angeles Clippers": [
       {
         "name": "Bradley Beal",
@@ -347,11 +353,44 @@
         "name": "Jonathan Kuminga",
         "status": "Out"
       }
+    ],
+    "Chicago Bulls": [
+      {
+        "name": "Zach Collins",
+        "status": "Out"
+      },
+      {
+        "name": "Noa Essengue",
+        "status": "Out"
+      },
+      {
+        "name": "Tre Jones",
+        "status": "Out"
+      },
+      {
+        "name": "Nikola Vucevic",
+        "status": "Doubtful"
+      },
+      {
+        "name": "Josh Giddey",
+        "status": "Questionable"
+      },
+      {
+        "name": "Emanuel Miller",
+        "status": "Questionable"
+      },
+      {
+        "name": "Jalen Smith",
+        "status": "Questionable"
+      },
+      {
+        "name": "Coby White",
+        "status": "Questionable"
+      }
     ]
   },
   "not_yet_submitted": [
-    "Detroit Pistons",
-    "Phoenix Suns"
+    "Detroit Pistons"
   ],
-  "updated": "2026-01-30 02:48 PM ET"
+  "updated": "2026-01-30 04:01 PM ET"
 }
