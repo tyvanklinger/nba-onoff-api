@@ -1090,3 +1090,17 @@ Players who are OUT or DOUBTFUL are excluded.
 ✓ Saved to funnels_data.json
 
 Done!
+[main 7aa0c87] Funnels refresh 2026-01-30 01:10
+ 2 files changed, 2062 insertions(+), 1925 deletions(-)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+fatal: No rebase in progress?
+To github.com:tyvanklinger/nba-onoff-api.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'git@github.com:tyvanklinger/nba-onoff-api.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+✓ Done: Fri Jan 30 01:10:15 EST 2026
