@@ -36,7 +36,7 @@ teams=(
 
 for team in "${teams[@]}"; do
   echo "Updating $team..."
-  python3 "python/${team} 2025-2026.py" --update
+  /opt/homebrew/bin/python3 "python/${team} 2025-2026.py" --update
   sleep 2
 done
 
