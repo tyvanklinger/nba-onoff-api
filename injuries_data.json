@@ -14,6 +14,32 @@
         "status": "Questionable"
       }
     ],
+    "Washington Wizards": [
+      {
+        "name": "Marvin Bagley III",
+        "status": "Out"
+      },
+      {
+        "name": "Tre Johnson",
+        "status": "Out"
+      },
+      {
+        "name": "Khris Middleton",
+        "status": "Out"
+      },
+      {
+        "name": "Tristan Vukcevic",
+        "status": "Out"
+      },
+      {
+        "name": "Cam Whitmore",
+        "status": "Out"
+      },
+      {
+        "name": "Trae Young",
+        "status": "Out"
+      }
+    ],
     "Memphis Grizzlies": [
       {
         "name": "Santi Aldama",
@@ -91,11 +117,11 @@
     "New York Knicks": [
       {
         "name": "Pacome Dadiet",
-        "status": "Questionable"
+        "status": "Out"
       },
       {
-        "name": "Josh Hart",
-        "status": "Questionable"
+        "name": "Miles McBride",
+        "status": "Doubtful"
       },
       {
         "name": "Trey Jemison III",
@@ -103,10 +129,6 @@
       },
       {
         "name": "Dillon Jones",
-        "status": "Questionable"
-      },
-      {
-        "name": "Miles McBride",
         "status": "Questionable"
       },
       {
@@ -210,11 +232,19 @@
         "status": "Out"
       },
       {
+        "name": "Kevin Love",
+        "status": "Out"
+      },
+      {
         "name": "Lauri Markkanen",
         "status": "Out"
       },
       {
         "name": "Georges Niang",
+        "status": "Out"
+      },
+      {
+        "name": "Jusuf Nurkic",
         "status": "Out"
       },
       {
@@ -224,14 +254,6 @@
       {
         "name": "Oscar Tshiebwe",
         "status": "Out"
-      },
-      {
-        "name": "Kevin Love",
-        "status": "Questionable"
-      },
-      {
-        "name": "Jusuf Nurkic",
-        "status": "Questionable"
       },
       {
         "name": "Cody Williams",
@@ -258,12 +280,11 @@
     ]
   },
   "not_yet_submitted": [
-    "Washington Wizards",
-    "Brooklyn Nets",
-    "Phoenix Suns",
-    "Detroit Pistons",
     "Denver Nuggets",
+    "Brooklyn Nets",
+    "Detroit Pistons",
+    "Phoenix Suns",
     "Sacramento Kings"
   ],
-  "updated": "2026-01-30 10:57 AM ET"
+  "updated": "2026-01-30 12:56 PM ET"
 }
