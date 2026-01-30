@@ -104,10 +104,6 @@
       {
         "name": "Fred VanVleet",
         "status": "Out"
-      },
-      {
-        "name": "Alperen Sengun",
-        "status": "Questionable"
       }
     ],
     "Atlanta Hawks": [
@@ -222,18 +218,6 @@
       {
         "name": "Naji Marshall",
         "status": "Out"
-      },
-      {
-        "name": "Moussa Cisse",
-        "status": "Questionable"
-      },
-      {
-        "name": "Miles Kelly",
-        "status": "Questionable"
-      },
-      {
-        "name": "Brandon Williams",
-        "status": "Questionable"
       }
     ],
     "Brooklyn Nets": [
@@ -316,12 +300,12 @@
         "status": "Out"
       },
       {
-        "name": "Jalen Green",
+        "name": "Koby Brea",
         "status": "Out"
       },
       {
-        "name": "Collin Gillespie",
-        "status": "Questionable"
+        "name": "Jalen Green",
+        "status": "Out"
       }
     ],
     "Oklahoma City Thunder": [
@@ -344,10 +328,6 @@
       {
         "name": "Jalen Williams",
         "status": "Out"
-      },
-      {
-        "name": "Cason Wallace",
-        "status": "Questionable"
       }
     ],
     "Minnesota Timberwolves": [
@@ -366,10 +346,6 @@
       {
         "name": "Rocco Zikarsky",
         "status": "Out"
-      },
-      {
-        "name": "Rudy Gobert",
-        "status": "Questionable"
       }
     ],
     "Los Angeles Lakers": [
@@ -553,8 +529,97 @@
         "name": "Luke Travers",
         "status": "Out"
       }
+    ],
+    "Los Angeles Clippers": [
+      {
+        "name": "Bradley Beal",
+        "status": "Out"
+      },
+      {
+        "name": "Bogdan Bogdanovic",
+        "status": "Out"
+      },
+      {
+        "name": "Derrick Jones Jr.",
+        "status": "Out"
+      },
+      {
+        "name": "Chris Paul",
+        "status": "Out"
+      },
+      {
+        "name": "TyTy Washington Jr.",
+        "status": "Out"
+      },
+      {
+        "name": "Kawhi Leonard",
+        "status": "Questionable"
+      }
+    ],
+    "Utah Jazz": [
+      {
+        "name": "Elijah Harkless",
+        "status": "Out"
+      },
+      {
+        "name": "Walker Kessler",
+        "status": "Out"
+      },
+      {
+        "name": "Lauri Markkanen",
+        "status": "Out"
+      },
+      {
+        "name": "Georges Niang",
+        "status": "Out"
+      },
+      {
+        "name": "John Tonje",
+        "status": "Out"
+      },
+      {
+        "name": "Oscar Tshiebwe",
+        "status": "Out"
+      },
+      {
+        "name": "Kevin Love",
+        "status": "Questionable"
+      },
+      {
+        "name": "Jusuf Nurkic",
+        "status": "Questionable"
+      },
+      {
+        "name": "Cody Williams",
+        "status": "Questionable"
+      }
+    ],
+    "Golden State Warriors": [
+      {
+        "name": "Jimmy Butler III",
+        "status": "Out"
+      },
+      {
+        "name": "LJ Cryer",
+        "status": "Out"
+      },
+      {
+        "name": "Seth Curry",
+        "status": "Out"
+      },
+      {
+        "name": "Jonathan Kuminga",
+        "status": "Out"
+      }
     ]
   },
-  "not_yet_submitted": [],
-  "updated": "2026-01-29 06:53 PM ET"
+  "not_yet_submitted": [
+    "Phoenix Suns",
+    "Detroit Pistons",
+    "Denver Nuggets",
+    "Sacramento Kings",
+    "Washington Wizards",
+    "Brooklyn Nets"
+  ],
+  "updated": "2026-01-30 12:00 AM ET"
 }
