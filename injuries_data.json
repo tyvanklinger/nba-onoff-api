@@ -54,11 +54,19 @@
         "status": "Out"
       },
       {
+        "name": "Jahmai Mashack",
+        "status": "Out"
+      },
+      {
         "name": "Ja Morant",
         "status": "Out"
       },
       {
         "name": "Scotty Pippen Jr.",
+        "status": "Out"
+      },
+      {
+        "name": "Javon Small",
         "status": "Out"
       }
     ],
@@ -120,12 +128,12 @@
         "status": "Out"
       },
       {
-        "name": "Kevin McCullar Jr.",
+        "name": "Miles McBride",
         "status": "Out"
       },
       {
-        "name": "Miles McBride",
-        "status": "Doubtful"
+        "name": "Kevin McCullar Jr.",
+        "status": "Out"
       }
     ],
     "Sacramento Kings": [
@@ -574,5 +582,5 @@
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-30 06:00 PM ET"
+  "updated": "2026-01-30 06:53 PM ET"
 }
