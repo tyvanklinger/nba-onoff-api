@@ -54,16 +54,16 @@
         "status": "Out"
       },
       {
+        "name": "Ty Jerome",
+        "status": "Out"
+      },
+      {
         "name": "Ja Morant",
         "status": "Out"
       },
       {
         "name": "Scotty Pippen Jr.",
         "status": "Out"
-      },
-      {
-        "name": "Ty Jerome",
-        "status": "Doubtful"
       }
     ],
     "New Orleans Pelicans": [
@@ -136,7 +136,25 @@
         "status": "Questionable"
       }
     ],
+    "Sacramento Kings": [
+      {
+        "name": "Keegan Murray",
+        "status": "Out"
+      },
+      {
+        "name": "Domantas Sabonis",
+        "status": "Out"
+      },
+      {
+        "name": "Russell Westbrook",
+        "status": "Out"
+      }
+    ],
     "Boston Celtics": [
+      {
+        "name": "Jaylen Brown",
+        "status": "Out"
+      },
       {
         "name": "Ron Harper Jr.",
         "status": "Out"
@@ -150,8 +168,8 @@
         "status": "Out"
       },
       {
-        "name": "Jaylen Brown",
-        "status": "Doubtful"
+        "name": "Amari Williams",
+        "status": "Out"
       }
     ],
     "Toronto Raptors": [
@@ -194,6 +212,10 @@
       {
         "name": "Luke Travers",
         "status": "Out"
+      },
+      {
+        "name": "Craig Porter Jr.",
+        "status": "Questionable"
       }
     ],
     "Los Angeles Clippers": [
@@ -216,10 +238,58 @@
       {
         "name": "TyTy Washington Jr.",
         "status": "Out"
+      }
+    ],
+    "Denver Nuggets": [
+      {
+        "name": "Tamar Bates",
+        "status": "Out"
       },
       {
-        "name": "Kawhi Leonard",
+        "name": "Christian Braun",
+        "status": "Out"
+      },
+      {
+        "name": "Aaron Gordon",
+        "status": "Out"
+      },
+      {
+        "name": "Cameron Johnson",
+        "status": "Out"
+      },
+      {
+        "name": "Curtis Jones",
+        "status": "Out"
+      },
+      {
+        "name": "Nikola Jokic",
         "status": "Questionable"
+      }
+    ],
+    "Brooklyn Nets": [
+      {
+        "name": "Noah Clowney",
+        "status": "Out"
+      },
+      {
+        "name": "Tyson Etienne",
+        "status": "Out"
+      },
+      {
+        "name": "Haywood Highsmith",
+        "status": "Out"
+      },
+      {
+        "name": "Chaney Johnson",
+        "status": "Out"
+      },
+      {
+        "name": "Michael Porter Jr.",
+        "status": "Out"
+      },
+      {
+        "name": "Ziaire Williams",
+        "status": "Out"
       }
     ],
     "Utah Jazz": [
@@ -280,11 +350,8 @@
     ]
   },
   "not_yet_submitted": [
-    "Denver Nuggets",
-    "Brooklyn Nets",
     "Detroit Pistons",
-    "Phoenix Suns",
-    "Sacramento Kings"
+    "Phoenix Suns"
   ],
-  "updated": "2026-01-30 12:56 PM ET"
+  "updated": "2026-01-30 02:48 PM ET"
 }
