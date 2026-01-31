@@ -108,14 +108,6 @@
       {
         "name": "Blake Wesley",
         "status": "Out"
-      },
-      {
-        "name": "Deni Avdija",
-        "status": "Questionable"
-      },
-      {
-        "name": "Robert Williams III",
-        "status": "Questionable"
       }
     ],
     "New York Knicks": [
@@ -206,16 +198,16 @@
         "status": "Out"
       },
       {
+        "name": "Craig Porter Jr.",
+        "status": "Out"
+      },
+      {
         "name": "Max Strus",
         "status": "Out"
       },
       {
         "name": "Luke Travers",
         "status": "Out"
-      },
-      {
-        "name": "Craig Porter Jr.",
-        "status": "Questionable"
       }
     ],
     "Phoenix Suns": [
@@ -266,10 +258,6 @@
       {
         "name": "Curtis Jones",
         "status": "Out"
-      },
-      {
-        "name": "Nikola Jokic",
-        "status": "Questionable"
       }
     ],
     "Brooklyn Nets": [
@@ -330,15 +318,15 @@
       {
         "name": "Oscar Tshiebwe",
         "status": "Out"
-      },
-      {
-        "name": "Cody Williams",
-        "status": "Questionable"
       }
     ],
     "Detroit Pistons": [
       {
         "name": "Isaac Jones",
+        "status": "Out"
+      },
+      {
+        "name": "Caris LeVert",
         "status": "Out"
       },
       {
@@ -348,10 +336,6 @@
       {
         "name": "Tolu Smith",
         "status": "Out"
-      },
-      {
-        "name": "Caris LeVert",
-        "status": "Doubtful"
       }
     ],
     "Golden State Warriors": [
@@ -582,5 +566,5 @@
     ]
   },
   "not_yet_submitted": [],
-  "updated": "2026-01-30 06:53 PM ET"
+  "updated": "2026-01-30 11:50 PM ET"
 }
