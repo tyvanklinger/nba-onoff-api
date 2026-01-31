@@ -55,7 +55,7 @@ for team in "${teams[@]}"; do
   echo "========================================"
   echo "[$current/$total] Building: $team"
   echo "========================================"
-  python3 "python/${team} 2025-2026.py" --build
+  /opt/homebrew/bin/python3 "python/${team} 2025-2026.py" --build
   
   if [ $? -eq 0 ]; then
     echo "SUCCESS: $team"

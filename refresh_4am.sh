@@ -5,6 +5,7 @@ echo "=========================================="
 echo "4 AM Data Refresh: $(date)"
 echo "=========================================="
 
+<<<<<<< Updated upstream
 # Remove any stale lock file
 rm -f .git/index.lock
 
@@ -27,6 +28,18 @@ git add .
 git commit -m "🏀 Auto-update NBA data $(date +'%Y-%m-%d')" || true
 git pull --rebase || git pull || true
 git push
+=======
+echo ">>> Updating Minutes data..."
+/opt/homebrew/bin/python3 generate_minutes.py
 
-echo ""
+echo ">>> Updating On/Off data..."
+./update-all-teams.sh
+
+echo ">>> Pushing..."
+git add .
+git commit -m "4 AM refresh $(date +'%Y-%m-%d %H:%M')" || true
+git pull --rebase || git rebase --abort
+git push || echo "Push failed"
+>>>>>>> Stashed changes
+
 echo "✓ Done: $(date)"
