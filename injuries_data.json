@@ -76,7 +76,15 @@
         "status": "Out"
       },
       {
+        "name": "Josh Giddey",
+        "status": "Out"
+      },
+      {
         "name": "Tre Jones",
+        "status": "Out"
+      },
+      {
+        "name": "Jalen Smith",
         "status": "Out"
       },
       {
@@ -84,20 +92,8 @@
         "status": "Doubtful"
       },
       {
-        "name": "Josh Giddey",
-        "status": "Questionable"
-      },
-      {
-        "name": "Emanuel Miller",
-        "status": "Questionable"
-      },
-      {
-        "name": "Jalen Smith",
-        "status": "Questionable"
-      },
-      {
         "name": "Coby White",
-        "status": "Questionable"
+        "status": "Doubtful"
       }
     ],
     "Miami Heat": [
@@ -210,8 +206,8 @@
     ]
   },
   "not_yet_submitted": [
-    "Memphis Grizzlies",
-    "New Orleans Pelicans"
+    "New Orleans Pelicans",
+    "Memphis Grizzlies"
   ],
-  "updated": "2026-01-31 10:48 AM ET"
+  "updated": "2026-01-31 12:00 PM ET"
 }
